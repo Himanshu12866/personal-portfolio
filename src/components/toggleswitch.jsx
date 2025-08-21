@@ -65,8 +65,7 @@ export default function GsapToggle() {
       {/* Sun Icon */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width=""
-        height=""
+     
         ref={sunRef}
         fill="#331D2C"
         viewBox="0 0 16 16"
@@ -78,8 +77,7 @@ export default function GsapToggle() {
       <svg
         ref={moonRef}
         xmlns="http://www.w3.org/2000/svg"
-        width=""
-        height=""
+        
         fill="#ff7700"
         className="w-8 h-8 absolute"
         viewBox="0 0 16 16"

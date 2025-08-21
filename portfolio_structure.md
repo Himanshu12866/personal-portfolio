@@ -1,6 +1,7 @@
 # 📂 Portfolio Structure Plan for Himanshu Kumar Mishra
 
 ## 1. Home Page
+
 - **Navbar** (sticky, smooth scroll)
 - **Hero Banner**
   - Name
@@ -17,6 +18,7 @@
 ---
 
 ## 2. About Page
+
 - **Brief Introduction**
 - **Work Experience (detailed)**
 - **Certifications**
@@ -27,6 +29,7 @@
 ---
 
 ## 3. Skills / Technologies Page
+
 - **Skills Categorized:**
   - Frontend (React, Tailwind, GSAP, etc.)
   - Backend (Node.js, Express.js)
@@ -40,20 +43,22 @@
 ---
 
 ## 4. Projects Page
+
 - **Project Grid / Cards**
   - Each project card shows:
     - Project name
     - Screenshot thumbnail
     - Tech stack tags
     - Short description
-    - Button → *View Case Study*
+    - Button → _View Case Study_
 - **Footer**
 
 ### Project Details Page (for each project)
+
 - **Project Overview**
   - Title + logo (if any)
   - Brief description
-  - Links → *Live Demo*, *GitHub*
+  - Links → _Live Demo_, _GitHub_
 - **My Role / Contribution**
   - What you built / contributed
 - **Tools & Technologies Used**
@@ -70,16 +75,18 @@
 ---
 
 ## 5. Contact Page
+
 - **Contact Form** (name, email, message)
 - **Social Media Links** (LinkedIn, GitHub, etc.)
 - **Location (optional map)**
 - **Direct Links** → Email / WhatsApp buttons
-- **Call-to-Action Line**: *“Let’s build something amazing together 🚀”*
+- **Call-to-Action Line**: _“Let’s build something amazing together 🚀”_
 - **Footer**
 
 ---
 
 ## Optional / Extra Sections
+
 - **Blog / Articles Page** → Few technical writeups (e.g., building apps with MERN).
 - **Testimonials / Recommendations Page** → Short feedback from mentors/trainers/colleagues.
 - **Achievements / Hackathons** → Highlight competitions / recognitions.
@@ -87,11 +94,11 @@
 
 ---
 
+## Font Families
 
-## Font Families 
 - **Headings** - https://fonts.google.com/specimen/Mozilla+Headline [Mozilla Headline]
 - **Paragraphs** - http://fonts.google.com/specimen/Raleway [Raleway]
-- **Code or Language Name** - https://fonts.google.com/specimen/JetBrains+Mono?preview.text=const%20c%20%3D%20%22sds%22&query=JetBrains+Mono [JetBrains Mono] 
+- **Code or Language Name** - https://fonts.google.com/specimen/JetBrains+Mono?preview.text=const%20c%20%3D%20%22sds%22&query=JetBrains+Mono [JetBrains Mono]
 
 ---
 
@@ -101,7 +108,12 @@
 -- **Paragraph for light theme** #273755 [blue]
 -- **Paragraph for dark theme** #ffffff [white]
 
+## For THE Glassy Effect
 
+https://css.glass/
+
+## Reference Website
+
+https://orbai-template.framer.website/
 
 ✅ This structure ensures your portfolio looks **professional, detailed, and recruiter-friendly**, with proper case studies for projects.
-
