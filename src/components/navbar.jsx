@@ -57,7 +57,7 @@ const Navbar = () => {
                   />
                 </svg>
               </div>
-              <div className="md:flex hidden justify-center items-center">
+              <div className="w-20 md:flex hidden justify-center items-center">
                 <GsapToggle />
               </div>
             </div>
