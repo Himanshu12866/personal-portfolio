@@ -19,9 +19,8 @@ const Navbar = () => {
     <>
       <div className="p-2">
         <nav
-          className={`${
-            !darkMode ? "bg-[#7c6a6a2b]" : "bg-[#f5f5f533]"
-          }  rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)]  md:mx-4 mx-2 backdrop-blur-[5px] `}
+          className={`${!darkMode ? "bg-[#7c6a6a2b]" : "bg-[#f5f5f533]"
+            }  rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)]  md:mx-4 mx-2 backdrop-blur-[5px] `}
         >
           <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center w-48">
@@ -44,7 +43,7 @@ const Navbar = () => {
               </ul>
             </div>{" "}
             <div class="flex  space-x-3 md:space-x-0 ">
-              <div className="flex justify-center lg:hidden items-center">
+              <button onClick={() => setMobName(!mobNav)} className="flex justify-center lg:hidden items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -56,7 +55,7 @@ const Navbar = () => {
                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
                   />
                 </svg>
-              </div>
+              </button>
               <div className="w-20 md:flex hidden justify-center items-center">
                 <GsapToggle />
               </div>
@@ -65,19 +64,37 @@ const Navbar = () => {
         </nav>
       </div>
 
-      {mobNav ? (
-        <div className="w-full absolute top-0 h-screen p-4 bg-black">
-          <div className="flex justify-between">
-            <a href="/" class="flex items-center w-48">
-              <img
-                src={!darkMode ? dark_logo : light_logo}
-                className=""
-                alt="Flowbite Logo"
-              />
-            </a>
-          </div>
+      <div className={`w-full absolute ${mobNav ? "traslate-y-0" : "-translate-y-full"} top-0 h-screen p-4 flex flex-col gap-4 bg-[#1e1d1d]`}>
+        <div className="flex justify-between sm:mx-8 mx-4 mt-2">
+          <a href="/" class="flex items-center w-48">
+            <img
+              src={ light_logo}
+              className=""
+              alt="Flowbite Logo"
+            />
+          </a>
+          <button onClick={() => setMobName(!mobNav)}>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+              className="w-10 h-10"
+              fill="white" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+          </button>
         </div>
-      ) : null}
+        <div className="sm:mx-8 mx-4 mt-8">
+          <ul className="flex flex-col gap-4 text-2xl font-heading capitalize text-white">
+            {links.map((item, index) => (
+              <Link to={item.link} className="main-nav-links" key={index}>
+                {item.name}
+              </Link>
+            ))}
+            <li className="bg-[#ffffffb7] flex justify-between items-center rounded-lg text-lg px-4 backdrop-blur-[5px]">
+            <span>Change Theme</span>   <GsapToggle />
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </>
   );
 };
