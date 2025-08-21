@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { darkMode } = useContext(AppContext);
-  const [mobNav, setMobName] = useState(true);
+  const [mobNav, setMobName] = useState(false);
   const links = [
     { name: "home", link: "/" },
     { name: "about", link: "/about" },
