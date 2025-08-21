@@ -1,13 +1,22 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Raleway:wght@400;500;700&family=Mozilla+Headline:wght@400;700&display=swap");
+
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+:root {
+  --bg-color: #ffffff;
+  --text-color: #331D2C;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[data-theme="dark"] {
+  --bg-color: #331D2C;
+  --text-color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #ff7700;
 }
