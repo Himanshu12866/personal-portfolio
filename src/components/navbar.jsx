@@ -4,7 +4,9 @@ import light_logo from "../assets/icons_logos/mern_black_mode-01.png";
 import GsapToggle from "./toggleswitch";
 import { AppContext } from "../context/datacontext";
 import { Link } from "react-router-dom";
-
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import XIcon from '@mui/icons-material/X';
+import GitHubIcon from '@mui/icons-material/GitHub';
 const Navbar = () => {
   const { darkMode } = useContext(AppContext);
   const [mobNav, setMobName] = useState(false);
@@ -68,20 +70,20 @@ const Navbar = () => {
         <div className="flex justify-between sm:mx-8 mx-4 mt-2">
           <a href="/" class="flex items-center w-48">
             <img
-              src={ light_logo}
+              src={light_logo}
               className=""
               alt="Flowbite Logo"
             />
           </a>
           <button onClick={() => setMobName(!mobNav)}>
-            <svg xmlns="http://www.w3.org/2000/svg" 
+            <svg xmlns="http://www.w3.org/2000/svg"
               className="w-10 h-10"
               fill="white" viewBox="0 0 16 16">
               <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
             </svg>
           </button>
         </div>
-        <div className="sm:mx-8 mx-4 mt-8">
+        <div className="sm:mx-8 mx-4 mt-4">
           <ul className="flex flex-col gap-4 text-2xl font-heading capitalize text-white">
             {links.map((item, index) => (
               <Link to={item.link} className="main-nav-links" key={index}>
@@ -89,7 +91,12 @@ const Navbar = () => {
               </Link>
             ))}
             <li className="bg-[#ffffffb7] flex justify-between items-center rounded-lg text-lg px-4 backdrop-blur-[5px]">
-            <span>Change Theme</span>   <GsapToggle />
+              <span>Change Theme</span>   <GsapToggle />
+            </li>
+            <li className="flex justify-start items-center gap-8 text-4xl">
+              <span><LinkedInIcon fontSize="30px"/></span>
+              <span><GitHubIcon fontSize="30px"/></span>
+              <span><XIcon fontSize="30px"/></span>
             </li>
           </ul>
         </div>
