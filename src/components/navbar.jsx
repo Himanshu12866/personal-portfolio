@@ -3,17 +3,24 @@ import dark_logo from "../assets/icons_logos/mern_light_mode.svg";
 import light_logo from "../assets/icons_logos/mern_black_mode.svg";
 import GsapToggle from "./toggleswitch";
 import { AppContext } from "../context/datacontext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-
   const { darkMode } = useContext(AppContext);
+  const links = [
+    { name: "home", link: "/" },
+    { name: "about", link: "/about" },
+    { name: "projcts", link: "/projcts" },
+    { name: "skills", link: "/skills" },
+    { name: "contact", link: "/contact" },
+  ];
   return (
     <div className="">
       <nav class="">
         <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" class="flex items-center">
             <img
-              src={!darkMode  ? dark_logo : light_logo}
+              src={!darkMode ? dark_logo : light_logo}
               class="w-60"
               alt="Flowbite Logo"
             />
@@ -48,11 +55,15 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            class="items-center justify-between hidden w-full font-heading md:flex md:w-auto md:order-1"
             id="navbar-cta"
           >
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row">
-              <li>kjcnejkfc</li>
+            <ul class="flex flex-col font-medium p-4 md:p-0 uppercase text-lg mt-4 md:space-x-8  md:flex-row">
+              {links.map((item, index) => (
+                <Link to={item.link} className="main-nav-links" key={index}>
+                  {item.name}
+                </Link>
+              ))}
             </ul>
           </div>
         </div>

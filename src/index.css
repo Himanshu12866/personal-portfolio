@@ -6,17 +6,18 @@ html {
 }
 :root {
   --bg-color: #ffffff;
-  --text-color: #331D2C;
+  --text-color: #331d2c;
 }
 
 [data-theme="dark"] {
-  --bg-color: #331D2C;
+  --bg-color: #331d2c;
   --text-color: #ffffff;
 }
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5 , li {
   color: #ff7700;
+  font-family: "Mozilla Headline", sans-serif;
 }
