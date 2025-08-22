@@ -77,7 +77,6 @@ export default function GsapToggle() {
       <svg
         ref={moonRef}
         xmlns="http://www.w3.org/2000/svg"
-        
         fill="#ff7700"
         className="w-8 h-8 absolute"
         viewBox="0 0 16 16"

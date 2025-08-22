@@ -25,7 +25,6 @@ const HomeBanner = () => {
   const { darkMode } = useContext(AppContext);
   const cardStyle = {
     backdropFilter: "blur(5px)",
-
     borderRadius: "10px",
     boxShadow: `
       rgba(0, 0, 0, 0.07) 0px 0.706592px 0.706592px -0.583333px,
@@ -42,7 +41,7 @@ const HomeBanner = () => {
     borderRight: "0px solid",
   };
   return (
-    <div className="w-full relative flex justify-center items-center h-screen pt-28 pb-8 top-0">
+    <div className="w-full relative flex justify-center items-center lg:h-screen pt-28 pb-16 top-0">
       {/* Video Section With Fallback images */}
       <div className="absolute w-full h-full top-0">
         {!vdoError ? (

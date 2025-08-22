@@ -7,7 +7,9 @@ export default {
       fontFamily: {
         heading: ["Mozilla Headline", "sans-serif"],
         para: ["Raleway", "sans-serif"]
-
+      },
+      screens: {
+        "3xl": "1650px"
       }
     },
   },

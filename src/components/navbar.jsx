@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="px-2 pb-2 pt-3 absolute top-0 z-10 w-full">
+      <div className="px-2 pb-2 pt-3 fixed top-0 z-10 w-full">
         <nav
           style={cardStyle}
           className={`${
@@ -83,7 +83,7 @@ const Navbar = () => {
                   />
                 </svg>
               </button>
-              <div className="w-20 md:flex hidden justify-center items-center">
+              <div className="w-20 lg:flex hidden justify-center items-center">
                 <GsapToggle />
               </div>
             </div>

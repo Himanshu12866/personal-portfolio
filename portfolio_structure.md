@@ -116,4 +116,8 @@ https://css.glass/
 
 https://orbai-template.framer.website/
 
+## Programming Languages Icons
+
+https://icons8.com/
+
 ✅ This structure ensures your portfolio looks **professional, detailed, and recruiter-friendly**, with proper case studies for projects.
