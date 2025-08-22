@@ -5,7 +5,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["Mozilla Headline", "sans-serif"]
+        heading: ["Mozilla Headline", "sans-serif"],
+        para: ["Raleway", "sans-serif"]
+
       }
     },
   },

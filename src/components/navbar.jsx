@@ -4,9 +4,9 @@ import light_logo from "../assets/icons_logos/mern_black_mode-01.png";
 import GsapToggle from "./toggleswitch";
 import { AppContext } from "../context/datacontext";
 import { Link } from "react-router-dom";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import XIcon from '@mui/icons-material/X';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import XIcon from "@mui/icons-material/X";
+import GitHubIcon from "@mui/icons-material/GitHub";
 const Navbar = () => {
   const { darkMode } = useContext(AppContext);
   const [mobNav, setMobName] = useState(false);
@@ -17,14 +17,36 @@ const Navbar = () => {
     { name: "skills", link: "/skills" },
     { name: "contact", link: "/contact" },
   ];
+  const cardStyle = {
+    backdropFilter: "blur(5px)",
+
+    borderRadius: "10px",
+    //   boxShadow: `
+    //   rgba(0, 0, 0, 0.07) 0px 0.706592px 0.706592px -0.583333px,
+    //   rgba(0, 0, 0, 0.07) 0px 1.80656px 1.80656px -1.16667px,
+    //   rgba(0, 0, 0, 0.07) 0px 3.62176px 3.62176px -1.75px,
+    //   rgba(0, 0, 0, 0.06) 0px 6.8656px 6.8656px -2.33333px,
+    //   rgba(0, 0, 0, 0.05) 0px 13.6468px 13.6468px -2.91667px,
+    //   rgba(0, 0, 0, 0.03) 0px 30px 30px -3.5px,
+    //   rgb(255, 255, 255) 0px 3px 1px 0px inset
+    // `,
+    opacity: 1,
+    borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
+
+    borderLeft: "0px solid",
+    borderRight: "0px solid",
+  };
+
   return (
     <>
-      <div className="p-2">
+      <div className="px-2 pb-2 pt-3 absolute top-0 z-10 w-full">
         <nav
-          className={`${!darkMode ? "bg-[#7c6a6a2b]" : "bg-[#f5f5f533]"
-            }  rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)]  md:mx-4 mx-2 backdrop-blur-[5px] `}
+          style={cardStyle}
+          className={`${
+            !darkMode ? "bg-[#f5f5f52d]" : "bg-[#f5f5f533]"
+          }  rounded-2xl shadow-[2px_4px_30px_rgba(0,0,0,0.1)]  md:mx-4 mx-2 backdrop-blur-[5px] `}
         >
-          <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 py-1">
             <a href="/" class="flex items-center w-48">
               <img
                 src={!darkMode ? dark_logo : light_logo}
@@ -45,7 +67,10 @@ const Navbar = () => {
               </ul>
             </div>{" "}
             <div class="flex  space-x-3 md:space-x-0 ">
-              <button onClick={() => setMobName(!mobNav)} className="flex justify-center lg:hidden items-center">
+              <button
+                onClick={() => setMobName(!mobNav)}
+                className="flex justify-center lg:hidden items-center"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -66,19 +91,22 @@ const Navbar = () => {
         </nav>
       </div>
 
-      <div className={`w-full absolute ${mobNav ? "traslate-y-0" : "-translate-y-full"} top-0 h-screen p-4 flex flex-col gap-4 bg-[#1e1d1d]`}>
+      <div
+        className={`w-full absolute ${
+          mobNav ? "traslate-y-0 flex" : "-translate-y-full hidden"
+        } top-0 h-screen p-4  flex-col z-10 gap-4 bg-[#1e1d1d]`}
+      >
         <div className="flex justify-between sm:mx-8 mx-4 mt-2">
           <a href="/" class="flex items-center w-48">
-            <img
-              src={light_logo}
-              className=""
-              alt="Flowbite Logo"
-            />
+            <img src={light_logo} className="" alt="Flowbite Logo" />
           </a>
           <button onClick={() => setMobName(!mobNav)}>
-            <svg xmlns="http://www.w3.org/2000/svg"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
               className="w-10 h-10"
-              fill="white" viewBox="0 0 16 16">
+              fill="white"
+              viewBox="0 0 16 16"
+            >
               <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
             </svg>
           </button>
@@ -91,17 +119,22 @@ const Navbar = () => {
               </Link>
             ))}
             <li className="bg-[#ffffffb7] flex justify-between items-center rounded-lg text-lg px-4 backdrop-blur-[5px]">
-              <span>Change Theme</span>   <GsapToggle />
+              <span>Change Theme</span> <GsapToggle />
             </li>
             <li className="flex justify-start items-center gap-8 text-4xl">
-              <span><LinkedInIcon fontSize="30px"/></span>
-              <span><GitHubIcon fontSize="30px"/></span>
-              <span><XIcon fontSize="30px"/></span>
+              <span>
+                <LinkedInIcon fontSize="30px" />
+              </span>
+              <span>
+                <GitHubIcon fontSize="30px" />
+              </span>
+              <span>
+                <XIcon fontSize="30px" />
+              </span>
             </li>
           </ul>
         </div>
       </div>
-
     </>
   );
 };
