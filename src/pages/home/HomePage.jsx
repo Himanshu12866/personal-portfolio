@@ -3,6 +3,7 @@ import HomeBanner from "../../components/home/HomeBanner";
 import HomeQuote from "../../components/home/HomeQuote";
 import HomeAbout from "../../components/home/HomeAbout";
 import HomeSkills from "../../components/home/HomeSkills";
+import HomeProjects from "../../components/home/HomeProjects";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <HomeQuote />
       <HomeAbout />
       <HomeSkills />
+      <HomeProjects />
     </>
   );
 };
