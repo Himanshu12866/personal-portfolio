@@ -50,7 +50,7 @@ const HomeProjects = () => {
           >
             Company Project
           </div>
-          <h2 className="text-3xl">Livvon Conforts</h2>
+          <h2 className="text-3xl">Livvon Comforts</h2>
           <div className="flex flex-col gap-2 items-start">
             <h3 className="text-xl">Teck Stack:</h3><p className="text-lg font-para font-medium">ReactJS , NodeJS, Material UI,MongoDB, Tailwind CSS </p>
           </div>
