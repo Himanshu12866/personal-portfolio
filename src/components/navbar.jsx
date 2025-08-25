@@ -19,20 +19,9 @@ const Navbar = () => {
   ];
   const cardStyle = {
     backdropFilter: "blur(5px)",
-
     borderRadius: "10px",
-    //   boxShadow: `
-    //   rgba(0, 0, 0, 0.07) 0px 0.706592px 0.706592px -0.583333px,
-    //   rgba(0, 0, 0, 0.07) 0px 1.80656px 1.80656px -1.16667px,
-    //   rgba(0, 0, 0, 0.07) 0px 3.62176px 3.62176px -1.75px,
-    //   rgba(0, 0, 0, 0.06) 0px 6.8656px 6.8656px -2.33333px,
-    //   rgba(0, 0, 0, 0.05) 0px 13.6468px 13.6468px -2.91667px,
-    //   rgba(0, 0, 0, 0.03) 0px 30px 30px -3.5px,
-    //   rgb(255, 255, 255) 0px 3px 1px 0px inset
-    // `,
     opacity: 1,
     borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
-
     borderLeft: "0px solid",
     borderRight: "0px solid",
   };
@@ -55,10 +44,10 @@ const Navbar = () => {
               />
             </a>
             <div
-              class="items-center justify-between hidden w-full font-heading lg:flex md:w-auto "
+              className="items-center justify-between hidden w-full font-heading lg:flex md:w-auto "
               id="navbar-cta"
             >
-              <ul class="flex flex-col font-medium p-4 md:p-0 uppercase text-lg  md:space-x-8  md:flex-row">
+              <ul className="flex flex-col font-medium p-4 md:p-0 uppercase text-lg  md:space-x-8  md:flex-row">
                 {links.map((item, index) => (
                   <Link to={item.link} className="main-nav-links" key={index}>
                     {item.name}
@@ -66,7 +55,7 @@ const Navbar = () => {
                 ))}
               </ul>
             </div>{" "}
-            <div class="flex  space-x-3 md:space-x-0 ">
+            <div className="flex  space-x-3 md:space-x-0 ">
               <button
                 onClick={() => setMobName(!mobNav)}
                 className="flex justify-center lg:hidden items-center"

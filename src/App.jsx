@@ -6,6 +6,8 @@ import AboutPage from "./pages/about/AboutPage";
 import ProjectPage from "./pages/projects/ProjectPage";
 import SkillsPage from "./pages/skills/SkillsPage";
 import ContactPage from "./pages/contact/ContactPage";
+import Footer from "./components/footer";
+
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
