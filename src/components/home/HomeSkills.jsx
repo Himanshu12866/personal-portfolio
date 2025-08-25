@@ -70,7 +70,7 @@ const HomeSkills = () => {
           >
             Frontend
           </div>
-          <div className="flex flex-row gap-2 justify-between mt-3 items-center">
+          <div className="flex flex-row gap-2 font-code justify-between mt-3 items-center">
             <img src={reactjs} alt="reactjs" />
             <p className="text-2xl">React JS</p>{" "}
             <div className=" flex justify-start px-2 items-center">
@@ -81,7 +81,7 @@ const HomeSkills = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-row gap-2 justify-between items-center">
+          <div className="flex flex-row gap-2 justify-between font-cod items-center">
             <img src={javascript} alt="reactjs" />
             <p className="text-2xl">JavaScript</p>{" "}
             <div className=" flex justify-start px-2 items-center">
@@ -92,7 +92,7 @@ const HomeSkills = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-row gap-2 justify-between items-center">
+          <div className="flex flex-row gap-2 font-cod justify-between items-center">
             <img src={html} alt="reactjs" />
             <p className="text-2xl">HTML 5</p>{" "}
             <div className=" flex justify-start px-2 items-center">
@@ -103,7 +103,7 @@ const HomeSkills = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-row gap-2 justify-between items-center">
+          <div className="flex flex-row gap-2 font-cod justify-between items-center">
             <img src={css} alt="reactjs" />
             <p className="text-2xl">CSS</p>{" "}
             <div className=" flex justify-start px-2 items-center">

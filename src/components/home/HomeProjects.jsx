@@ -30,7 +30,7 @@ const HomeProjects = () => {
         }`}
     >
       <h2 className="text-4xl font-bold">Things I’ve Built</h2>
-      <div className="xl:w-4/5 3xl:w-3/5 w-full lg:p-0 p-4 grid xl:gap-8 gap-2 lg:grid-cols-2 grid-cols-1  ">
+      <div className="xl:w-4/5 3xl:w-3/5 w-full xl:p-0 p-4 grid xl:gap-8 gap-2 lg:grid-cols-2 grid-cols-1  ">
         <div
           className={` flex flex-col justify-between gap-5 p-4 px-8 rounded-[20px] relative  pb-6 backdrop-blur-sm ${!darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
             } 

@@ -6,7 +6,8 @@ export default {
     extend: {
       fontFamily: {
         heading: ["Mozilla Headline", "sans-serif"],
-        para: ["Raleway", "sans-serif"]
+        para: ["Raleway", "sans-serif"],
+        code: ["JetBrains Mono", "sans-serif"],
       },
       screens: {
         "3xl": "1650px"
