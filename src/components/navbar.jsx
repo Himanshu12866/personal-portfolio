@@ -29,12 +29,12 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="px-2 pb-2 pt-3 fixed top-0 z-10 w-full">
+      <div className="px-2 pb-2 pt-3 fixed top-0 z-20 w-full">
         <nav
           style={cardStyle}
           className={`${
             darkMode ? "bg-[#f5f5f52d]" : "bg-[#f5f5f533]"
-          }  rounded-2xl shadow-[2px_4px_30px_rgba(0,0,0,0.1)]  md:mx-4 mx-2 backdrop-blur-[5px] `}
+          }  rounded-2xl shadow-[2px_4px_30px_rgba(0,0,0,0.1)] z-10  md:mx-4 mx-2 backdrop-blur-[5px] `}
         >
           <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 py-1">
             <a href="/" className="flex items-center w-48">
@@ -89,7 +89,7 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed top-0 left-0 w-full h-screen p-4 flex flex-col z-10 gap-4 bg-[#1e1d1d]"
+            className="fixed top-0 left-0 w-full h-screen overflow-y-auto p-4 flex flex-col z-30 gap-4 bg-[#1e1d1d]"
           >
             <div className="flex justify-between sm:mx-8 mx-4 mt-2">
               <a href="/" className="flex items-center w-48">
@@ -118,7 +118,7 @@ const Navbar = () => {
                     {item.name}
                   </Link>
                 ))}
-                <li className="bg-[#ffffffb7] flex justify-between items-center rounded-lg text-lg p-4 backdrop-blur-[5px]">
+                <li className="bg-[#ffffffb7] text-black flex justify-between items-center rounded-lg text-lg ps-4 py-4 pe-8 backdrop-blur-[5px]">
                   <span>Change Theme</span> <GsapToggle />
                 </li>
                 <li className="flex justify-start items-center gap-8 text-4xl">
