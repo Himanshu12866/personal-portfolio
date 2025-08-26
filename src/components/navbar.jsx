@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { AnimatePresence, motion } from "framer-motion";
 const Navbar = () => {
   const { darkMode } = useContext(AppContext);
   const [mobNav, setMobName] = useState(false);
@@ -32,7 +33,7 @@ const Navbar = () => {
         <nav
           style={cardStyle}
           className={`${
-            !darkMode ? "bg-[#f5f5f52d]" : "bg-[#f5f5f533]"
+            darkMode ? "bg-[#f5f5f52d]" : "bg-[#f5f5f533]"
           }  rounded-2xl shadow-[2px_4px_30px_rgba(0,0,0,0.1)]  md:mx-4 mx-2 backdrop-blur-[5px] `}
         >
           <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 py-1">
@@ -80,50 +81,56 @@ const Navbar = () => {
         </nav>
       </div>
 
-      <div
-        className={`w-full absolute ${
-          mobNav ? "traslate-y-0 flex" : "-translate-y-full hidden"
-        } top-0 h-screen p-4  flex-col z-10 gap-4 bg-[#1e1d1d]`}
-      >
-        <div className="flex justify-between sm:mx-8 mx-4 mt-2">
-          <a href="/" className="flex items-center w-48">
-            <img src={light_logo} className="" alt="Flowbite Logo" />
-          </a>
-          <button onClick={() => setMobName(!mobNav)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-10"
-              fill="white"
-              viewBox="0 0 16 16"
-            >
-              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-            </svg>
-          </button>
-        </div>
-        <div className="sm:mx-8 mx-4 mt-4">
-          <ul className="flex flex-col gap-4 text-2xl font-heading capitalize text-white">
-            {links.map((item, index) => (
-              <Link to={item.link} className="main-nav-links" key={index}>
-                {item.name}
-              </Link>
-            ))}
-            <li className="bg-[#ffffffb7] flex justify-between items-center rounded-lg text-lg px-4 backdrop-blur-[5px]">
-              <span>Change Theme</span> <GsapToggle />
-            </li>
-            <li className="flex justify-start items-center gap-8 text-4xl">
-              <span>
-                <LinkedInIcon fontSize="30px" />
-              </span>
-              <span>
-                <GitHubIcon fontSize="30px" />
-              </span>
-              <span>
-                <XIcon fontSize="30px" />
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <AnimatePresence>
+        {mobNav && (
+          <motion.div
+            key="mobileNav"
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: "-100%", opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="fixed top-0 left-0 w-full h-screen p-4 flex flex-col z-10 gap-4 bg-[#1e1d1d]"
+          >
+            <div className="flex justify-between sm:mx-8 mx-4 mt-2">
+              <a href="/" className="flex items-center w-48">
+                <img src={light_logo} alt="logo" />
+              </a>
+              <button onClick={() => setMobName(false)}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-10 h-10"
+                  fill="white"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg>
+              </button>
+            </div>
+            <div className="sm:mx-8 mx-4 mt-2">
+              <ul className="flex flex-col gap-4 text-2xl font-heading capitalize text-white">
+                {links.map((item, index) => (
+                  <Link
+                    to={item.link}
+                    className="main-nav-links"
+                    key={index}
+                    onClick={() => setMobName(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <li className="bg-[#ffffffb7] flex justify-between items-center rounded-lg text-lg p-4 backdrop-blur-[5px]">
+                  <span>Change Theme</span> <GsapToggle />
+                </li>
+                <li className="flex justify-start items-center gap-8 text-4xl">
+                  <LinkedInIcon fontSize="30px" />
+                  <GitHubIcon fontSize="30px" />
+                  <XIcon fontSize="30px" />
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

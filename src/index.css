@@ -6,7 +6,7 @@ html {
   overflow-x: hidden;
 }
 :root {
-  --bg-color: #f5f5f5f;
+  --bg-color: #f5f5f5;
   --text-color: #331d2c;
 }
 
@@ -14,11 +14,16 @@ html {
   --bg-color: #331d2c;
   --text-color: #ffffff;
 }
-h1,
-h2,
-h3,
-h4,
-h5  {
-  color: #ff7700;
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Raleway", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #ff7700; /* ✅ use variable instead of hardcoding */
   font-family: "Mozilla Headline", sans-serif;
 }
+

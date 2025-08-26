@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import dark_logo from "../assets/icons_logos/mern_light_mode.png";
 import light_logo from "../assets/icons_logos/mern_black_mode-01.png";
 import GitHubIcon from "@mui/icons-material/GitHub";

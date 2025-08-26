@@ -1,24 +1,26 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import gsap from "gsap";
 import { AppContext } from "../context/datacontext";
+
 export default function GsapToggle() {
-  const [isDark, setIsDark] = useState(false);
   const { darkMode, toggleDarkMode } = useContext(AppContext);
+  const [isDark, setIsDark] = useState(darkMode); // initialize from context
   const sunRef = useRef(null);
   const moonRef = useRef(null);
 
   const toggleTheme = () => {
-    setIsDark(!isDark);
+    const newTheme = !isDark;
+    setIsDark(newTheme);
     toggleDarkMode();
-    console.log("theme mode is light ? " + darkMode);
-    // Switch attribute (light/dark)
+
+    // set theme attribute on html tag
     document.documentElement.setAttribute(
       "data-theme",
-      !isDark ? "dark" : "light"
+      newTheme ? "dark" : "light"
     );
 
-    if (!isDark) {
-      // Animate Sun → Moon
+    if (newTheme) {
+      // Sun → Moon
       gsap.to(sunRef.current, {
         scale: 0,
         rotate: 90,
@@ -34,7 +36,7 @@ export default function GsapToggle() {
         },
       });
     } else {
-      // Animate Moon → Sun
+      // Moon → Sun
       gsap.to(moonRef.current, {
         scale: 0,
         rotate: -90,
@@ -53,26 +55,35 @@ export default function GsapToggle() {
   };
 
   useEffect(() => {
-    gsap.set(moonRef.current, { scale: 0 });
-  }, []);
+    // on mount, set correct icon according to theme
+    if (isDark) {
+      gsap.set(sunRef.current, { scale: 0, rotate: 90 });
+      gsap.set(moonRef.current, { scale: 1, rotate: 0 });
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      gsap.set(moonRef.current, { scale: 0, rotate: -90 });
+      gsap.set(sunRef.current, { scale: 1, rotate: 0 });
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  }, [isDark]);
 
   return (
     <button
       onClick={toggleTheme}
       title="theme"
-      className="p-2 flex items-center justify-center"
+      className="p-2 flex items-center justify-center relative"
     >
       {/* Sun Icon */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
-     
         ref={sunRef}
         fill="#331D2C"
         viewBox="0 0 16 16"
-        className="w-12 h-12"
+        className="w-12 h-12 absolute"
       >
         <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
       </svg>
+
       {/* Moon Icon */}
       <svg
         ref={moonRef}
