@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <>
       <div
-        className={`flex justify-center w-full px-4  pt-12 ${
+        className={`flex justify-center w-full px-4 z-10 pt-12 ${
           !darkMode
             ? "bg-[rgba(222,222,222,0.9)]"
             : "bg-[rgba(69,69,69,1)] inset-0"
@@ -39,7 +39,7 @@ const Footer = () => {
           style={cardStyle}
           className={`${
             !darkMode ? "bg-[#f5f5f52d]" : "bg-[#f5f5f533]"
-          } shadow-[2px_4px_30px_rgba(0,0,0,0.1)] flex justify-center flex-col backdrop-blur-[5px] 2xl:ps-20 xl:ps-8 lg:ps-16 md:ps-8 overflow-hidden rounded-t-xl`}
+          } shadow-[2px_4px_30px_rgba(0,0,0,0.1)] flex justify-center z-10 flex-col backdrop-blur-[5px] 2xl:ps-20 xl:ps-8 lg:ps-16 md:ps-8 overflow-hidden rounded-t-xl`}
         >
           <div className="w-full grid xl:grid-cols-4 sm:grid-cols-2 gap-10 xl:gap-0 2xl:p-12 md:p-10 p-6">
             {/* Left Logo + Info */}
@@ -152,7 +152,7 @@ const Footer = () => {
                   {" "}
                   Let's connect!{" "}
                 </label>
-                <div className="flex lg:flex-row flex-col lg:items-center mt-6 gap-4">
+                <div className="flex lg:flex-row flex-col lg:items-center mt-6 z-[5] gap-4">
                   <input
                     type="email"
                     placeholder="Your Email"

@@ -32,7 +32,7 @@ const HomeProjects = () => {
       <h2 className="text-4xl font-bold">Things I’ve Built</h2>
       <div className="xl:w-4/5 3xl:w-3/5 w-full xl:p-0 p-4 grid xl:gap-8 gap-2 lg:grid-cols-2 grid-cols-1  ">
         <div
-          className={` flex flex-col justify-between gap-5 p-4 px-8 rounded-[20px] relative  pb-6 backdrop-blur-sm ${!darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
+          className={` flex flex-col justify-between gap-5 p-4 px-8 z-[3] rounded-[20px] relative  pb-6 backdrop-blur-sm ${!darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
             } 
   opacity-100
   shadow-[0px_0.706592px_0.706592px_-0.666667px_rgba(0,0,0,0.08),
@@ -99,7 +99,7 @@ const HomeProjects = () => {
           </div>
         </div>
         <div
-          className={` flex flex-col gap-5 flex-between p-4 px-8 rounded-[20px] pb-6 relative  backdrop-blur-sm ${!darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
+          className={` flex flex-col gap-5 flex-between p-4 px-8 z-[3] rounded-[20px] pb-6 relative  backdrop-blur-sm ${!darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
             } 
   opacity-100
   shadow-[0px_0.706592px_0.706592px_-0.666667px_rgba(0,0,0,0.08),

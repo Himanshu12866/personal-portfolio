@@ -66,7 +66,7 @@ const HomeBanner = () => {
         {darkMode ? <div className="absolute inset-0 bg-black/70"></div> : null}
       </div>
 
-      <main className="grid lg:grid-cols-2 grid-cols-1 xl:gap-12 gap-6 px-4 z-[5]">
+      <main className="grid lg:grid-cols-2 grid-cols-1 xl:gap-12 gap-6 px-4 z-[4]">
         <div className="flex flex-col justify-center lg:order-1 order-2 lg:ps-0 md:ps-8 ps-0 ">
           <p
             style={cardStyle}
