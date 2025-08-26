@@ -41,7 +41,7 @@ const HomeBanner = () => {
     borderRight: "0px solid",
   };
   return (
-    <div className="w-full relative flex justify-center items-center lg:h-screen pt-28 pb-16 top-0">
+    <div className="w-full relative flex justify-center items-center lg:h-screen pt-28 pb-16 overflow-hidden top-0">
       {/* Video Section With Fallback images */}
       <div className="absolute w-full h-full top-0">
         {!vdoError ? (

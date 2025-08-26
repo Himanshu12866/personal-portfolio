@@ -35,8 +35,8 @@ const Navbar = () => {
             !darkMode ? "bg-[#f5f5f52d]" : "bg-[#f5f5f533]"
           }  rounded-2xl shadow-[2px_4px_30px_rgba(0,0,0,0.1)]  md:mx-4 mx-2 backdrop-blur-[5px] `}
         >
-          <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 py-1">
-            <a href="/" class="flex items-center w-48">
+          <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 py-1">
+            <a href="/" className="flex items-center w-48">
               <img
                 src={!darkMode ? dark_logo : light_logo}
                 className=""
@@ -67,7 +67,7 @@ const Navbar = () => {
                   fill="currentColor"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
                   />
                 </svg>
@@ -86,7 +86,7 @@ const Navbar = () => {
         } top-0 h-screen p-4  flex-col z-10 gap-4 bg-[#1e1d1d]`}
       >
         <div className="flex justify-between sm:mx-8 mx-4 mt-2">
-          <a href="/" class="flex items-center w-48">
+          <a href="/" className="flex items-center w-48">
             <img src={light_logo} className="" alt="Flowbite Logo" />
           </a>
           <button onClick={() => setMobName(!mobNav)}>

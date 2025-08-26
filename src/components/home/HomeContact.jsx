@@ -130,7 +130,7 @@ const HomeContact = () => {
                                     className={`bg-transparent py-3 outline-none px-4 rounded-[10px] 
 
 ${darkMode
-                                            ? "placeholder:text-white shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_0px_0px_rgba(0,0,0,0.02)]"
+                                            ? "placeholder:text-white shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_8px_4px_rgba(0,0,0,0.2)]"
                                             : "shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_1px_0px_rgb(255,255,255)]"
                                         }
 
@@ -146,7 +146,7 @@ ${darkMode
                                     className={`bg-transparent py-3 outline-none px-4 rounded-[10px] 
 
 ${darkMode
-                                            ? "placeholder:text-white shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_0px_0px_rgba(0,0,0,0.02)]"
+                                            ? "placeholder:text-white shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_8px_4px_rgba(0,0,0,0.2)]"
                                             : "shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_1px_0px_rgb(255,255,255)]"
                                         }
 
@@ -166,7 +166,7 @@ ${darkMode
                                     className={`bg-transparent py-3 outline-none px-4 rounded-[10px] 
 
 ${darkMode
-                                            ? "placeholder:text-white shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_0px_0px_rgba(0,0,0,0.02)]"
+                                            ? "placeholder:text-white shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_8px_4px_rgba(0,0,0,0.2)]"
                                             : "shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_1px_0px_rgb(255,255,255)]"
                                         }
 
@@ -182,7 +182,7 @@ ${darkMode
                                     className={`bg-transparent py-3 outline-none px-4 rounded-[10px] 
 
 ${darkMode
-                                            ? "placeholder:text-white shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_0px_0px_rgba(0,0,0,0.02)]"
+                                            ? "placeholder:text-white shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_8px_4px_rgba(0,0,0,0.2)]"
                                             : "shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_1px_0px_rgb(255,255,255)]"
                                         }
 
@@ -201,7 +201,7 @@ ${darkMode
                                     className={`bg-transparent py-3 outline-none px-4 rounded-[10px] 
 
 ${darkMode
-                                            ? "shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_0px_0px_rgba(0,0,0,0.02)] placeholder:text-white"
+                                            ? "shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_8px_4px_rgba(0,0,0,0.2)] placeholder:text-white"
                                             : "shadow-[0px_0.7066px_0.7066px_-0.6666px_rgba(0,0,0,0.08),0px_1.8065px_1.8065px_-1.3333px_rgba(0,0,0,0.08),0px_3.6217px_3.6217px_-2px_rgba(0,0,0,0.07),0px_6.8656px_6.8656px_-2.6666px_rgba(0,0,0,0.07),0px_13.6467px_13.6467px_-3.3333px_rgba(0,0,0,0.05),0px_30px_30px_-4px_rgba(0,0,0,0.02),inset_0px_3px_1px_0px_rgb(255,255,255)]"
                                         }
 
