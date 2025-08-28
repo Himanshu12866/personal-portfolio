@@ -9,7 +9,7 @@ const HomeQuote = () => {
   flex flex-col items-center justify-center 
 
   2xl:px-80 xl:px-40 md:py-[100px] py-16
-  w-full relative z-[2] 
+  w-full relative 
   flex-none flex-nowrap 
   h-min 
   overflow-visible 
