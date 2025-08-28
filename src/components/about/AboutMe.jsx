@@ -1,11 +1,42 @@
-import React, { useContext } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import { AppContext } from "../../context/datacontext";
 import about_pic from "../../assets/images/about_pic.png";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import html from "../../assets/icons_logos/icons8-html-5-48.png";
+import css from "../../assets/icons_logos/icons8-css-48.png";
+import javascript from "../../assets/icons_logos/icons8-javascript-48.png";
+import reactjs from "../../assets/icons_logos/icons8-react-48.png";
+import nodejs from "../../assets/icons_logos/icons8-nodejs-48.png";
+import express from "../../assets/icons_logos/icons8-express-js-50.png";
+import mongodb from "../../assets/icons_logos/icons8-mongodb-48.png";
+import tailwind from "../../assets/icons_logos/icons8-tailwind-css-48.png";
+import gcp from "../../assets/icons_logos/icons8-google-cloud-48.png";
+import mui from "../../assets/icons_logos/icons8-material-ui-48.png";
+import git from "../../assets/icons_logos/icons8-git-48.png";
+import adobeI from "../../assets/icons_logos/icons8-adobe-illustrator-48.png";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const AboutMe = () => {
   const { darkMode } = useContext(AppContext);
+
+  const skills = [
+    { name: "HTML", icon: html },
+    { name: "CSS", icon: css },
+    { name: "JavaScript", icon: javascript },
+    { name: "React JS", icon: reactjs },
+    { name: "Node.js", icon: nodejs },
+    { name: "Express.js", icon: express },
+    { name: "MongoDB", icon: mongodb },
+    { name: "Tailwind CSS", icon: tailwind },
+    { name: "Google Cloud", icon: gcp },
+    { name: "Material UI", icon: mui },
+    { name: "Git", icon: git },
+    { name: "Adobe Illustrator", icon: adobeI },
+  ];
   const cardStyle = {
     backdropFilter: "blur(5px)",
     borderRadius: "10px",
@@ -23,19 +54,55 @@ const AboutMe = () => {
     borderLeft: "0px solid",
     borderRight: "0px solid",
   };
+  const containerRef = useRef(null);
+  const stickyLeftRef = useRef(null); // Ref for the left section (image)
+  useEffect(() => {
+    let trigger;
+    const createScrollTrigger = () => {
+      if (
+        window.innerWidth >= 1024 &&
+        containerRef.current &&
+        stickyLeftRef.current
+      ) {
+        trigger = ScrollTrigger.create({
+          trigger: containerRef.current,
+          start: "top 10%", // Start pinning at top
+          end: "bottom bottom", // End when container bottom reaches viewport bottom
+          pin: stickyLeftRef.current,
+          pinSpacing: false, // Let GSAP handle spacing
+        });
+      }
+    };
+
+    createScrollTrigger();
+
+    const handleResize = () => {
+      if (trigger) trigger.kill();
+      createScrollTrigger();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      if (trigger) trigger.kill();
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full py-20   shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)]   ${
+     
+      className={`flex justify-center flex-col gap-24 items-center w-full py-20  shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)]   ${
         !darkMode
           ? "bg-[rgba(222,222,222,0.9)]"
           : "bg-[rgba(69,69,69,1)] inset-0"
       }`}
     >
       <div
-        className="xl:w-4/5 3xl:w-3/5 w-full flex lg:flex-row flex-col gap-4 p-4
-  "
+        className="xl:w-4/5 3xl:w-3/5  w-full  flex lg:flex-row 2xl:h-[160vh] 3xl:h-[150vh] xl:h-[164vh] lg:h-[170vh]  flex-col gap-4 p-4
+  "  ref={containerRef}
       >
         <div
+          ref={stickyLeftRef}
           className={`lg:w-5/12 flex flex-col gap-4 z-[3] w-full    
  `}
         >
@@ -86,7 +153,7 @@ const AboutMe = () => {
               <button
                 className={`bg-[#f5f5f5] ${
                   darkMode ? "text-black" : ""
-                } rounded-[10px] font-para  sm:w-48 w-full font-medium sm:px-8 px-4 py-3 opacity-100 hover:opacity-60 transition-all hover:duration-200 shadow-[rgba(158,158,158,0.69)_0px_0.706592px_0.706592px_-0.583333px,rgba(158,158,158,0.68)_0px_1.80656px_1.80656px_-1.16667px,rgba(158,158,158,0.65)_0px_3.62176px_3.62176px_-1.75px,rgba(158,158,158,0.61)_0px_6.8656px_6.8656px_-2.33333px,rgba(158,158,158,0.52)_0px_13.6468px_13.6468px_-2.91667px,rgba(158,158,158,0.3)_0px_30px_30px_-3.5px,rgba(255,255,255,1)_0px_3px_1px_0px_inset]`}
+                } rounded-[10px] font-para  sm:w-48 w-full  font-medium sm:px-8 px-4 py-3 opacity-100 hover:opacity-60 transition-all hover:duration-200 shadow-[rgba(158,158,158,0.69)_0px_0.706592px_0.706592px_-0.583333px,rgba(158,158,158,0.68)_0px_1.80656px_1.80656px_-1.16667px,rgba(158,158,158,0.65)_0px_3.62176px_3.62176px_-1.75px,rgba(158,158,158,0.61)_0px_6.8656px_6.8656px_-2.33333px,rgba(158,158,158,0.52)_0px_13.6468px_13.6468px_-2.91667px,rgba(158,158,158,0.3)_0px_30px_30px_-3.5px,rgba(255,255,255,1)_0px_3px_1px_0px_inset]`}
               >
                 <a href="/">
                   Contact Me <ArrowOutwardIcon />
@@ -97,7 +164,7 @@ const AboutMe = () => {
         </div>
 
         <div
-          className={`lg:w-7/12  w-full flex flex-col z-[3] gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
+          className={`lg:w-7/12  w-full flex flex-col lg:h-[1100px] z-[3] gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
             !darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
           } 
   opacity-100
@@ -187,6 +254,20 @@ const AboutMe = () => {
 
           {/* Tech Stack */}
 
+          <p
+            style={cardStyle}
+            className=" w-32 pt-2 px-2 sm:ms-4 text-center text-lg sm:text-xl font-heading"
+          >
+            {" "}
+            Tech Stack
+          </p>
+          <div className="flex flex-row flex-wrap lg:gap-3 gap-4 mt-2 px-2 pb-12 justify-start items-center">
+            {skills.map((item, index) => (
+              <p key={index} className="w-12 flex justify-center items-center">
+                <img src={item.icon} alt={item.name} />
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -194,5 +275,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-//https://www.instagram.com/novatalesmedia/ https://www.facebook.com/novatalesdigital https://www.linkedin.com/company/novatales/ https://www.youtube.com/@NovaTalesMedia

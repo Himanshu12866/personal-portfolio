@@ -180,5 +180,3 @@ const HomeAbout = () => {
 };
 
 export default HomeAbout;
-
-//https://www.instagram.com/novatalesmedia/ https://www.facebook.com/novatalesdigital https://www.linkedin.com/company/novatales/ https://www.youtube.com/@NovaTalesMedia
