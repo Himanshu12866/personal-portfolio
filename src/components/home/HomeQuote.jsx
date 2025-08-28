@@ -13,7 +13,7 @@ const HomeQuote = () => {
   flex-none flex-nowrap 
   h-min 
   overflow-visible 
-  backdrop-blur-[10px]  text-center
+  backdrop-blur-[5px]  text-center
    ${
      !darkMode ? "bg-[rgba(222,222,222,0.9)]" : "bg-[rgba(69,69,69,1)] inset-0"
    }  md:text-4xl text-2xl

@@ -180,7 +180,7 @@ ${
           <div>
             <hr className="border-t border-gray-300 mx-6" />
             <p className="text-center text-lg font-para m-6">
-              © 2025 Himanshu K. Mishra. All rights reserved.
+              © 2025 Himanshu | All rights reserved.
             </p>
           </div>
         </div>
