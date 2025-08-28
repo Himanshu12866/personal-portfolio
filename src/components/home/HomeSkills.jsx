@@ -17,7 +17,6 @@ import mui from "../../assets/icons_logos/icons8-material-ui-48.png";
 import git from "../../assets/icons_logos/icons8-git-48.png";
 import adobeI from "../../assets/icons_logos/icons8-adobe-illustrator-48.png";
 
-
 const HomeSkills = () => {
   const { darkMode } = useContext(AppContext);
   const cardStyle = {
@@ -260,5 +259,3 @@ const HomeSkills = () => {
 };
 
 export default HomeSkills;
-
-//https://www.instagram.com/novatalesmedia/ https://www.facebook.com/novatalesdigital https://www.linkedin.com/company/novatales/ https://www.youtube.com/@NovaTalesMedia

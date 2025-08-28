@@ -90,7 +90,6 @@ const AboutMe = () => {
   }, []);
   return (
     <div
-     
       className={`flex justify-center flex-col gap-24 items-center w-full py-20  shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)]   ${
         !darkMode
           ? "bg-[rgba(222,222,222,0.9)]"
@@ -99,7 +98,8 @@ const AboutMe = () => {
     >
       <div
         className="xl:w-4/5 3xl:w-3/5  w-full  flex lg:flex-row 2xl:h-[160vh] 3xl:h-[150vh] xl:h-[164vh] lg:h-[170vh]  flex-col gap-4 p-4
-  "  ref={containerRef}
+  "
+        ref={containerRef}
       >
         <div
           ref={stickyLeftRef}
@@ -190,12 +190,12 @@ const AboutMe = () => {
             high-performance web apps."
           </p>
           <p className="text-xl text-justify font-para py-2 px-2">
-            I’m Himanshu, a MERN Stack developer with hands-on experience in React
-            JS and modern web technologies. I specialize in creating scalable,
-            user-friendly interfaces and love building digital products that
-            solve real problems. With 1+ year of professional experience, I
-            thrive in dynamic environments and enjoy collaborating with teams to
-            bring ideas to life.
+            I’m Himanshu, a MERN Stack developer with hands-on experience in
+            React JS and modern web technologies. I specialize in creating
+            scalable, user-friendly interfaces and love building digital
+            products that solve real problems. With 1+ year of professional
+            experience, I thrive in dynamic environments and enjoy collaborating
+            with teams to bring ideas to life.
           </p>
 
           {/* My Hobbies  */}
