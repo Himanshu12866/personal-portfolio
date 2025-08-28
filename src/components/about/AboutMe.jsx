@@ -190,10 +190,10 @@ const AboutMe = () => {
             high-performance web apps."
           </p>
           <p className="text-xl text-justify font-para py-2 px-2">
-            I’m Himanshu, a frontend developer with hands-on experience in React
+            I’m Himanshu, a MERN Stack developer with hands-on experience in React
             JS and modern web technologies. I specialize in creating scalable,
             user-friendly interfaces and love building digital products that
-            solve real problems.With 1+ year of professional experience, I
+            solve real problems. With 1+ year of professional experience, I
             thrive in dynamic environments and enjoy collaborating with teams to
             bring ideas to life.
           </p>
