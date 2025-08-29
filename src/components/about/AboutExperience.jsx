@@ -65,13 +65,13 @@ const AboutExperience = () => {
 
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full pb-20 p-4 ${
+      className={`flex justify-center flex-col gap-24 items-center w-full pb-20 pt-10 p-4 ${
         !darkMode
           ? "bg-[rgba(222,222,222,0.9)]"
           : "bg-[rgba(69,69,69,1)] inset-0"
       }`}
     >
-      <h2 className="text-4xl font-bold">Professional Journey</h2>
+      <h2 className="text-4xl font-bold pb-8">Professional Journey</h2>
       <div
         style={cardStyle}
         className={`xl:w-4/5 3xl:w-3/5 z-[2] w-full p-4 ${

@@ -97,7 +97,7 @@ const AboutMe = () => {
       }`}
     >
       <div
-        className="xl:w-4/5 3xl:w-3/5  w-full  flex lg:flex-row 2xl:h-[160vh] 3xl:h-[150vh] xl:h-[164vh] lg:h-[170vh]  flex-col gap-4 p-4
+        className="xl:w-4/5 3xl:w-3/5  w-full  flex lg:flex-row 2xl:h-[160vh] 3xl:h-[150vh] xl:min-h-[164vh] lg:h-[170vh]  flex-col gap-4 p-4
   "
         ref={containerRef}
       >
@@ -164,7 +164,7 @@ const AboutMe = () => {
         </div>
 
         <div
-          className={`lg:w-7/12  w-full flex flex-col lg:h-[1100px] z-[3] gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
+          className={`lg:w-7/12  w-full flex flex-col lg:h-[1150px] z-[3] gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
             !darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
           } 
   opacity-100
