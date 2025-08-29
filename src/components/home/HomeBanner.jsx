@@ -130,7 +130,7 @@ const HomeBanner = () => {
           <img
             src={main_pic}
             alt="personal photo_"
-            className=" bg-[#f5f5f552] w-80 lg:w-auto backdrop-blur-sm rounded-full"
+            className=" bg-[#f5f5f552] w-80 xl:w-[500px] 2xl:w-auto backdrop-blur-sm rounded-full"
           />
         </div>
       </main>
