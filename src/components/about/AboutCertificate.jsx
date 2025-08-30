@@ -61,7 +61,7 @@ const AboutCertificate = () => {
 
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full mt-20 py-20 p-4 ${
+      className={`flex justify-center flex-col gap-24 items-center w-full mt-4 py-20 p-4 ${
         !darkMode
           ? "bg-[rgba(222,222,222,0.9)]"
           : "bg-[rgba(69,69,69,1)] inset-0"
@@ -146,7 +146,7 @@ const AboutCertificate = () => {
               style={cardStyle}
               className="w-44 pt-2 px-4  text-left text-lg sm:text-xl font-heading"
             >
-              Company Intro
+              Institute Intro
             </div>
             <p className="text-xl text-justify font-para pt-2 pb-1 px-2">
               Naresh IT is a premier software training institute offering
@@ -155,9 +155,9 @@ const AboutCertificate = () => {
             </p>
             <div
               style={cardStyle}
-              className="w-44 pt-2 px-4 mt-4 text-left text-lg sm:text-xl font-heading"
+              className="w-52 pt-2 px-4 mt-4 text-left text-lg sm:text-xl font-heading"
             >
-              About My Role
+              About My Training
             </div>
             <p className="text-xl text-justify font-para pt-2 pb-1 px-2">
               As a trainee in UI Full Stack with ReactJS, I worked on building
