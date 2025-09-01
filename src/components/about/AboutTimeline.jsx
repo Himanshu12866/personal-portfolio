@@ -41,23 +41,13 @@ const AboutTimeline = () => {
           : "bg-[rgba(69,69,69,1)] inset-0"
       }`}
     >
-      <h2 className="text-4xl font-bold">Academic Journey</h2>
+      <h2 className="sm:text-4xl text-3xl font-bold">Academic Journey</h2>
       <div
-        className="xl:w-4/5 3xl:w-3/5 w-full flex lg:flex-row flex-col gap-4 p-4
+        className="xl:w-4/5 3xl:w-3/5 w-full grid lg:grid-cols-2 gap-4 p-4
   "
       >
-        <Timeline position={window.innerWidth < 1024 ? "left" : "alternate-reverse"}>
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
-              <TimelineDot color="secondary">
-                <SchoolIcon />
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: "12px", px: 2 }}>
-              <div
-                className={` w-full z-[3] flex flex-col justify-end text-left gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
+       <div
+                className={` w-full z-[3] flex flex-col justify-end text-left gap-5 sm:p-4 px-8 rounded-[20px] backdrop-blur-sm ${
                   !darkMode
                     ? "bg-[rgba(245,245,245,0.9)] "
                     : "bg-[#f5f5f552] inset-0"
@@ -79,31 +69,31 @@ const AboutTimeline = () => {
                   <h3>Post Graduation</h3>
                 </div>
 
-                <div className="flex flex-row gap-3 justify-between  text-xl font-para font-medium">
+                <div className="flex sm:flex-row flex-col gap-3 justify-between  text-xl font-para font-medium">
                   <h3>
                     <WorkspacePremiumIcon /> Program :
                   </h3>{" "}
                   <p>Master of Science</p>
                 </div>
-                <div className="flex flex-row gap-3 justify-between  text-xl font-para font-medium">
+                <div className="flex sm:flex-row flex-col gap-3 justify-between  text-xl font-para font-medium">
                   <h3>
                     <LaptopIcon /> Specialization :
                   </h3>{" "}
                   <p>Computer Science</p>
                 </div>
-                <div className="flex flex-row gap-3 text-xl justify-between  font-para font-medium">
+                <div className="flex sm:flex-row flex-col gap-3 text-xl justify-between  font-para font-medium">
                   <h3 className="w-36 flex-shrink-0">
                     <BusinessIcon /> University :
                   </h3>
-                  <p className="text-right">Awadhesh Pratap Singh University</p>
+                  <p className="sm:text-right text-left">Awadhesh Pratap Singh University</p>
                 </div>
-                <div className="flex flex-row gap-3 text-xl justify-between  font-para font-medium">
+                <div className="flex sm:flex-row flex-col gap-3 text-xl justify-between  font-para font-medium">
                   <h3>
                     <CalendarMonthIcon /> Timeline :
                   </h3>{" "}
                   <p>July 2022 – June 2024</p>
                 </div>
-                <div className="flex flex-row gap-3 text-xl justify-between  font-para font-medium">
+                <div className="flex sm:flex-row flex-col gap-3 text-xl justify-between  font-para font-medium">
                   <h3>
                     <LocationOnIcon /> Location :
                   </h3>{" "}
@@ -123,19 +113,7 @@ const AboutTimeline = () => {
                   </p>
                 </div>
               </div>
-            </TimelineContent>
-          </TimelineItem>
-
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot color="primary">
-                <SchoolIcon />
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: "12px", px: 2 }}>
-              <div
+                 <div
                 className={` w-full z-[3] flex flex-col justify-end text-left gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
                   !darkMode
                     ? "bg-[rgba(245,245,245,0.9)] "
@@ -201,9 +179,7 @@ const AboutTimeline = () => {
                   </p>
                 </div>
               </div>
-            </TimelineContent>
-          </TimelineItem>
-        </Timeline>
+     
       </div>
     </div>
   );
