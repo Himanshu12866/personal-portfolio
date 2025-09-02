@@ -6,12 +6,12 @@ html {
   overflow-x: hidden;
 }
 :root {
-  --bg-color: rgba(222,222,222,0.9);
+  --bg-color: rgba(222, 222, 222, 0.9);
   --text-color: #331d2c;
 }
 
 [data-theme="dark"] {
-  --bg-color: rgba(69,69,69,1);
+  --bg-color: rgba(69, 69, 69, 1);
   --text-color: #ffffff;
 }
 
@@ -22,8 +22,11 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-h1, h2, h3, h4, h5 {
-  color: #ff7700; /* ✅ use variable instead of hardcoding */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #f59e0b;
   font-family: "Mozilla Headline", sans-serif;
 }
-

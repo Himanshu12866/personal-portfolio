@@ -104,7 +104,7 @@
 
 ## Colors
 
--- **Heading for light abd dark theme** #ff7700 [orange]
+-- **Heading for light abd dark theme** #f59e0b [orange]
 -- **Paragraph for light theme** #273755 [blue]
 -- **Paragraph for dark theme** #ffffff [white]
 
@@ -119,5 +119,11 @@ https://orbai-template.framer.website/
 ## Programming Languages Icons
 
 https://icons8.com/
+
+
+## For the Animaion 
+
+https://magicui.design/
+
 
 ✅ This structure ensures your portfolio looks **professional, detailed, and recruiter-friendly**, with proper case studies for projects.

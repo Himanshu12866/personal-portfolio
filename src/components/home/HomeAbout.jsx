@@ -91,7 +91,7 @@ const HomeAbout = () => {
             <p>Hyderabad, India</p>
           </div>
           <p className="text-xl mt-3 font-medium font-heading">Quick Links</p>
-          <div className="flex flex-row lg:justify-between md:justify-start justify-between lg:gap-0  items-center text-[#ff7700] gap-2 pb-4 px-8 text-4xl">
+          <div className="flex flex-row lg:justify-between md:justify-start justify-between lg:gap-0  items-center text-[#f59e0b] gap-2 pb-4 px-8 text-4xl">
             <a
               className="hover:text-[#e69494] transition-all hover:duration-200"
               href="https://www.instagram.com/novatalesmedia/"
@@ -162,7 +162,7 @@ const HomeAbout = () => {
             into smooth digital experiences.
           </p>
           <p className="text-xl text-justify font-para py-2 px-2">
-            Beyond coding, I’m curious, always learning, and believe in building
+            Beyond coding, I'm always curious about learning and believe in building
             products that not only work but also connect with people. I value
             teamwork and love exploring new technologies.
           </p>

@@ -1,12 +1,5 @@
 // import * as React from 'react';
 import React, { useContext } from "react";
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import SchoolIcon from "@mui/icons-material/School";
 import BusinessIcon from "@mui/icons-material/Business";
 import LaptopIcon from "@mui/icons-material/Laptop";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
@@ -35,7 +28,7 @@ const AboutTimeline = () => {
   };
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full py-20  ${
+      className={`flex justify-center flex-col lg:gap-24 gap-12 items-center w-full md:py-20 py-10  ${
         !darkMode
           ? "bg-[rgba(222,222,222,0.9)]"
           : "bg-[rgba(69,69,69,1)] inset-0"
@@ -43,15 +36,13 @@ const AboutTimeline = () => {
     >
       <h2 className="sm:text-4xl text-3xl font-bold">Academic Journey</h2>
       <div
-        className="xl:w-4/5 3xl:w-3/5 w-full grid lg:grid-cols-2 gap-4 p-4
+        className="xl:w-4/5 3xl:w-3/5 w-full grid lg:grid-cols-2 gap-6 grid-cols-1 p-4
   "
       >
        <div
-                className={` w-full z-[3] flex flex-col justify-end text-left gap-5 sm:p-4 px-8 rounded-[20px] backdrop-blur-sm ${
-                  !darkMode
-                    ? "bg-[rgba(245,245,245,0.9)] "
-                    : "bg-[#f5f5f552] inset-0"
-                } 
+                className={` w-full z-[3] flex flex-col justify-end text-left gap-3 md:gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
+            !darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
+          } 
   opacity-100
   shadow-[0px_0.706592px_0.706592px_-0.666667px_rgba(0,0,0,0.08),
           0px_1.80656px_1.80656px_-1.33333px_rgba(0,0,0,0.08),
@@ -60,13 +51,13 @@ const AboutTimeline = () => {
           0px_13.6468px_13.6468px_-3.33333px_rgba(0,0,0,0.05),
           0px_30px_30px_-4px_rgba(0,0,0,0.02),
           inset_0px_3px_1px_0px_rgb(255,255,255)]`}
-                style={cardStyle}
+          style={cardStyle}
               >
                 <div
                   style={cardStyle}
-                  className="w-60 pt-2 px-4 text-center  text-lg sm:text-xl font-heading"
+                  className="w-60 pt-2  text-center  text-lg sm:text-xl font-heading"
                 >
-                  <h3>Post Graduation</h3>
+                  <p>Post Graduation</p>
                 </div>
 
                 <div className="flex sm:flex-row flex-col gap-3 justify-between  text-xl font-para font-medium">
@@ -104,7 +95,7 @@ const AboutTimeline = () => {
                   <h3>
                     <InfoIcon /> Highlights :
                   </h3>{" "}
-                  <p className="text-justify">
+                  <p className="text-left">
                     Gained advanced knowledge in Web Technologies, Database
                     Systems, and Software Engineering Worked on academic
                     projects using MERN stack and explored real-time application
@@ -114,7 +105,7 @@ const AboutTimeline = () => {
                 </div>
               </div>
                  <div
-                className={` w-full z-[3] flex flex-col justify-end text-left gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
+                className={` w-full z-[3] flex flex-col justify-end text-left md:gap-5 gap-3 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
                   !darkMode
                     ? "bg-[rgba(245,245,245,0.9)] "
                     : "bg-[#f5f5f552] inset-0"
@@ -133,34 +124,34 @@ const AboutTimeline = () => {
                   style={cardStyle}
                   className="w-60 pt-2 px-4 text-center  text-lg sm:text-xl font-heading"
                 >
-                  <h3>Graduation</h3>
+                  <p>Graduation</p>
                 </div>
 
-                <div className="flex flex-row gap-3 justify-between  text-xl font-para font-medium">
+                <div className="flex sm:flex-row flex-col gap-3 justify-between  text-xl font-para font-medium">
                   <h3>
                     <WorkspacePremiumIcon /> Program :
                   </h3>{" "}
                   <p>Bachelor of Science</p>
                 </div>
-                <div className="flex flex-row gap-3 justify-between  text-xl font-para font-medium">
+                <div className="flex sm:flex-row flex-col gap-3 justify-between  text-xl font-para font-medium">
                   <h3>
                     <LaptopIcon /> Specialization :
                   </h3>{" "}
                   <p>Mathematics</p>
                 </div>
-                <div className="flex flex-row gap-3 text-xl justify-between  font-para font-medium">
+               <div className="flex sm:flex-row flex-col gap-3 text-xl justify-between  font-para font-medium">
                   <h3 className="w-36 flex-shrink-0">
                     <BusinessIcon /> University :
                   </h3>
-                  <p className="text-right">Awadhesh Pratap Singh University</p>
+                  <p className="sm:text-right text-left">Awadhesh Pratap Singh University</p>
                 </div>
-                <div className="flex flex-row gap-3 text-xl justify-between  font-para font-medium">
+                <div className="flex sm:flex-row flex-col gap-3 text-xl justify-between  font-para font-medium">
                   <h3>
                     <CalendarMonthIcon /> Timeline :
                   </h3>{" "}
                   <p>July 2019 – June 2022</p>
                 </div>
-                <div className="flex flex-row gap-3 text-xl justify-between  font-para font-medium">
+                <div className="flex sm:flex-row flex-col gap-3 text-xl justify-between  font-para font-medium">
                   <h3>
                     <LocationOnIcon /> Location :
                   </h3>{" "}
@@ -170,7 +161,7 @@ const AboutTimeline = () => {
                   <h3>
                     <InfoIcon /> Highlights :
                   </h3>{" "}
-                  <p className="text-justify">
+                  <p className="text-left">
                     Built strong foundation in Algebra, Calculus, and Statistics
                     Developed logical and analytical problem-solving mindset
                     Parallelly explored programming & web development, leading

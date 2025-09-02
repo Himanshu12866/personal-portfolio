@@ -63,14 +63,14 @@ const HomeProjects = () => {
             <div className="text-lg overflow-hidden font-para font-medium pt-4 sm:px-4 px-0">
               <ul>
                 <li className="flex flex-row gap-2 justify-start sm:items-center items-start">
-                  <VerifiedIcon className="text-[#ff7700]" /> Developed product listing, cart, and checkout features.
+                  <VerifiedIcon className="text-[#f59e0b]" /> Developed product listing, cart, and checkout features.
                 </li>
                 <li className="flex flex-row gap-2 justify-start sm:items-center items-start mt-2">
-                  <VerifiedIcon className="text-[#ff7700]" /> Implemented live inventory tracking with MongoDB.</li>
+                  <VerifiedIcon className="text-[#f59e0b]" /> Implemented live inventory tracking with MongoDB.</li>
                 <li className="flex flex-row gap-2 justify-start sm:items-center items-startr mt-2">
-                  <VerifiedIcon className="text-[#ff7700]" /> Integrated Razorpay for payments.</li>
+                  <VerifiedIcon className="text-[#f59e0b]" /> Integrated Razorpay for payments.</li>
                 <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-                  <VerifiedIcon className="text-[#ff7700]" /> Built admin dashboard for CRUD operations.</li>
+                  <VerifiedIcon className="text-[#f59e0b]" /> Built admin dashboard for CRUD operations.</li>
               </ul>
             </div>
           </div>
@@ -131,13 +131,13 @@ const HomeProjects = () => {
             <div className="text-lg overflow-hidden font-para font-medium pt-4 sm:px-4 px-0">
               <ul>
                 <li className="flex flex-row gap-2 justify-start sm:items-center items-start">
-                  <VerifiedIcon className="text-[#ff7700]" /> Designed responsive UI with React & Tailwind CSS.</li>
+                  <VerifiedIcon className="text-[#f59e0b]" /> Designed responsive UI with React & Tailwind CSS.</li>
                 <li className="flex flex-row gap-2 justify-start sm:items-center items-start mt-2">
-                  <VerifiedIcon className="text-[#ff7700]" /> Integrated JWT-based user, doctor & admin login.</li>
+                  <VerifiedIcon className="text-[#f59e0b]" /> Integrated JWT-based user, doctor & admin login.</li>
                 <li className="flex flex-row gap-2 justify-start sm:items-center items-start mt-2">
-                  <VerifiedIcon className="text-[#ff7700]" /> Integrated JWT-based user, doctor & admin login.</li>
+                  <VerifiedIcon className="text-[#f59e0b]" /> Integrated JWT-based user, doctor & admin login.</li>
                 <li className="flex flex-row gap-2 justify-start sm:items-center items-start mt-2">
-                  <VerifiedIcon className="text-[#ff7700]" /> Developed admin panel for managing doctors & users.</li>
+                  <VerifiedIcon className="text-[#f59e0b]" /> Developed admin panel for managing doctors & users.</li>
               </ul>
             </div>
           </div>

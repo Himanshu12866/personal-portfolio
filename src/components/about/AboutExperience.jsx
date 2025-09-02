@@ -122,7 +122,7 @@ const AboutExperience = () => {
               <p>Hyderabad, India</p>
             </div>
             <p className="text-xl mt-3 font-medium font-heading">Quick Links</p>
-            <div className="flex flex-row lg:justify-between md:justify-start justify-between lg:gap-0  items-center text-[#ff7700] gap-2 pb-4 px-8 text-4xl">
+            <div className="flex flex-row lg:justify-between md:justify-start justify-between lg:gap-0  items-center text-[#f59e0b] gap-2 pb-4 px-8 text-4xl">
               <a
                 className="hover:text-[#e69494] transition-all hover:duration-200"
                 href="https://www.instagram.com/novatalesmedia/"
@@ -228,7 +228,7 @@ const AboutExperience = () => {
                     key={index}
                     className="flex flex-row gap-2 justify-start ism:items-center items-start my-3"
                   >
-                    <VerifiedIcon className="text-[#ff7700]" />
+                    <VerifiedIcon className="text-[#f59e0b]" />
                     {item}
                   </li>
                 ))}
@@ -241,7 +241,7 @@ const AboutExperience = () => {
                     key={index}
                     className="flex flex-row gap-2 justify-start ism:items-center items-start my-4"
                   >
-                    <VerifiedIcon className="text-[#ff7700]" />
+                    <VerifiedIcon className="text-[#f59e0b]" />
                     {item}
                   </li>
                 ))}

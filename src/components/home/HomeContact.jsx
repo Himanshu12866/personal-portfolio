@@ -140,8 +140,7 @@ const HomeContact = () => {
               <LocalPhoneIcon fontSize="40px" />
             </button>
             <p className="text-xl text-justify font-para pt-2 pb-1 px-2 font-normal">
-              Feel free to book a call if that’s more convenient and easier for
-              you!
+              Feel free to call me anytime according to your convenience
             </p>
             <a
               href="tel:+917804825835"

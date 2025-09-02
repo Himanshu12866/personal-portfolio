@@ -20,6 +20,7 @@ function App() {
           background: "var(--bg-color)",
           color: "var(--text-color)",
           minHeight: "100vh",
+          overflowX:"hidden"
         }}
       >
         <Navbar />

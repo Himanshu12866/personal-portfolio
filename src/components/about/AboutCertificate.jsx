@@ -61,7 +61,7 @@ const AboutCertificate = () => {
 
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full mt-4 py-20 p-4 ${
+      className={`flex justify-center flex-col gap-24 items-center w-full mt-4 pt-10 p-4 ${
         !darkMode
           ? "bg-[rgba(222,222,222,0.9)]"
           : "bg-[rgba(69,69,69,1)] inset-0"
@@ -70,7 +70,7 @@ const AboutCertificate = () => {
       <h2 className="text-4xl font-bold">Certifications</h2>
       <div
         style={cardStyle}
-        className={`xl:w-4/5 3xl:w-3/5 z-[2] w-full p-4 ${
+        className={`xl:w-4/5 3xl:w-3/5 z-[2] w-full md:p-4 p-2 ${
           !darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
         } opacity-100
   shadow-[0px_0.706592px_0.706592px_-0.666667px_rgba(0,0,0,0.08),
@@ -120,7 +120,7 @@ const AboutCertificate = () => {
             <p className="text-xl mt-3 font-medium font-heading">
               View Certificate
             </p>
-            <div className="flex flex-row lg:justify-between md:justify-start justify-between lg:gap-0  items-center text-[#ff7700] gap-2 pb-4 px-8 text-4xl">
+            <div className="flex flex-row lg:justify-between md:justify-start justify-between lg:gap-0  items-center text-[#f59e0b] gap-2 pb-4 px-8 text-4xl">
               <a
                 className="hover:text-[#e69494] transition-all flex flex-row gap-2 justify-center items-center hover:duration-200"
                 href="https://www.linkedin.com/in/himanshumishra17/overlay/1753120822194/single-media-viewer/?profileId=ACoAAEkM3QcBjPvIjOKMhGc660O63MHWeinwVuM
@@ -199,7 +199,7 @@ const AboutCertificate = () => {
                     key={index}
                     className="flex flex-row gap-2 justify-start ism:items-center items-start my-3"
                   >
-                    <VerifiedIcon className="text-[#ff7700]" />
+                    <VerifiedIcon className="text-[#f59e0b]" />
                     {item}
                   </li>
                 ))}
@@ -212,7 +212,7 @@ const AboutCertificate = () => {
                     key={index}
                     className="flex flex-row gap-2 justify-start ism:items-center items-start my-4"
                   >
-                    <VerifiedIcon className="text-[#ff7700]" />
+                    <VerifiedIcon className="text-[#f59e0b]" />
                     {item}
                   </li>
                 ))}

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import dark_logo from "../assets/icons_logos/mern_light_mode.png";
-import light_logo from "../assets/icons_logos/mern_black_mode-01.png";
+import dark_logo from "../assets/icons_logos/mern_black_mode-01.png";
+import light_logo from "../assets/icons_logos/mern_light_mode.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
@@ -59,20 +59,20 @@ const Footer = () => {
               </p>
 
               <p className="text-lg font-para flex items-center gap-2 group">
-                <EmailIcon className="group-hover:text-[#ff7700] transition-all duration-200" />
+                <EmailIcon className="group-hover:text-[#f59e0b] transition-all duration-200" />
                 <a
                   href="mailto:manshu010m@gmail.com"
-                  className="group-hover:text-[#ff7700] transition-all duration-200"
+                  className="group-hover:text-[#f59e0b] transition-all duration-200"
                 >
                   manshu010m@gmail.com
                 </a>
               </p>
 
               <p className="text-lg font-para flex items-center gap-2 group">
-                <PhoneIcon className="group-hover:text-[#ff7700] transition-all duration-200" />
+                <PhoneIcon className="group-hover:text-[#f59e0b] transition-all duration-200" />
                 <a
                   href="tel:+917804825835"
-                  className="group-hover:text-[#ff7700] transition-all duration-200"
+                  className="group-hover:text-[#f59e0b] transition-all duration-200"
                 >
                   +91 78048 25835
                 </a>
@@ -86,7 +86,7 @@ const Footer = () => {
                   <Link
                     key={index}
                     to={item.link}
-                    className="hover:text-[#ff7700] w-28  transition-all duration-200"
+                    className="hover:text-[#f59e0b] w-28  transition-all duration-200"
                   >
                     {item.name}
                   </Link>
@@ -116,9 +116,9 @@ const Footer = () => {
                     href="https://github.com/himanshu12866"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="flex items-center gap-3 hover:text-[#ff7700] transition-all duration-200"
+                    className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
                   >
-                    <GitHubIcon className="text-[#ff7700]" />{" "}
+                    <GitHubIcon className="text-[#f59e0b]" />{" "}
                     <span>Github</span>
                   </a>
                 </li>
@@ -127,9 +127,9 @@ const Footer = () => {
                     href="https://linkedin.com/in/himanshumishra17/"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="flex items-center gap-3 hover:text-[#ff7700] transition-all duration-200"
+                    className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
                   >
-                    <LinkedInIcon className="text-[#ff7700]" />{" "}
+                    <LinkedInIcon className="text-[#f59e0b]" />{" "}
                     <span>LinkedIn</span>
                   </a>
                 </li>
@@ -138,9 +138,9 @@ const Footer = () => {
                     href="https://twitter.com/hema_nshu"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="flex items-center gap-3 hover:text-[#ff7700] transition-all duration-200"
+                    className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
                   >
-                    <XIcon className="text-[#ff7700]" />{" "}
+                    <XIcon className="text-[#f59e0b]" />{" "}
                     <span>Twitter (X)</span>
                   </a>
                 </li>

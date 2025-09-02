@@ -97,7 +97,7 @@ const AboutMe = () => {
       }`}
     >
       <div
-        className="xl:w-4/5 3xl:w-3/5  w-full  flex lg:flex-row 2xl:h-[160vh] 3xl:h-[150vh] xl:min-h-[164vh] lg:h-[170vh]  flex-col gap-4 p-4
+        className="xl:w-4/5 3xl:w-3/5  w-full  flex lg:flex-row 2xl:h-[166vh] 3xl:h-[157vh] xl:h-[170vh] lg:h-[177vh]  flex-col gap-4 p-4
   "
         ref={containerRef}
       >
@@ -186,18 +186,33 @@ const AboutMe = () => {
             About Me
           </p>
           <p className="text-xl text-justify font-para pt-2 pb-1 px-2">
-            "Frontend Developer with 1+ year of experience building responsive,
+            "Currently, I'm a Frontend developer with 1+ year of experience building responsive,
             high-performance web apps."
           </p>
           <p className="text-xl text-justify font-para py-2 px-2">
-            I’m Himanshu, a MERN Stack developer with hands-on experience in
+            I'm Himanshu, a professionally trained MERN stack developer with hands-on experience in
             React JS and modern web technologies. I specialize in creating
             scalable, user-friendly interfaces and love building digital
             products that solve real problems. With 1+ year of professional
             experience, I thrive in dynamic environments and enjoy collaborating
             with teams to bring ideas to life.
           </p>
+          {/* Tech Stack */}
 
+          <p
+            style={cardStyle}
+            className=" w-32 pt-2 px-2 sm:ms-4 text-center text-lg sm:text-xl font-heading"
+          >
+            {" "}
+            Tech Stack
+          </p>
+          <div className="flex flex-row flex-wrap lg:gap-3 gap-4 mt-2 px-2 pb-6 justify-start items-center">
+            {skills.map((item, index) => (
+              <p key={index} className="w-12 flex justify-center items-center">
+                <img src={item.icon} alt={item.name} />
+              </p>
+            ))}
+          </div>
           {/* My Hobbies  */}
           <p
             style={cardStyle}
@@ -208,19 +223,19 @@ const AboutMe = () => {
           </p>
           <ul className="text-xl text-justify font-para pt-2 pb-1 px-2">
             <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#ff7700]" /> Reading books –
+              <VerifiedIcon className="text-[#f59e0b]" /> Reading books –
               especially tech & self-growth related.
             </li>
             <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#ff7700]" />
+              <VerifiedIcon className="text-[#f59e0b]" />
               Listening to music & exploring new genres.
             </li>
             <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#ff7700]" />
+              <VerifiedIcon className="text-[#f59e0b]" />
               Staying updated on global trends & innovations.
             </li>
             <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#ff7700]" /> Engaging in political
+              <VerifiedIcon className="text-[#f59e0b]" /> Engaging in political
               talks & discussions to explore diverse perspectives.
             </li>
           </ul>
@@ -235,39 +250,22 @@ const AboutMe = () => {
           </p>
           <ul className="text-xl text-left font-para pt-2 pb-1 px-2">
             <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#ff7700]" />
+              <VerifiedIcon className="text-[#f59e0b]" />
               Quick learner & adaptive.
             </li>
             <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#ff7700]" />
+              <VerifiedIcon className="text-[#f59e0b]" />
               Problem-solving mindset.
             </li>
             <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#ff7700]" />
+              <VerifiedIcon className="text-[#f59e0b]" />
               Detail-oriented UI design approach.
             </li>
             <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#ff7700]" />
+              <VerifiedIcon className="text-[#f59e0b]" />
               Strong foundation in React & JavaScript.
             </li>
           </ul>
-
-          {/* Tech Stack */}
-
-          <p
-            style={cardStyle}
-            className=" w-32 pt-2 px-2 sm:ms-4 text-center text-lg sm:text-xl font-heading"
-          >
-            {" "}
-            Tech Stack
-          </p>
-          <div className="flex flex-row flex-wrap lg:gap-3 gap-4 mt-2 px-2 pb-12 justify-start items-center">
-            {skills.map((item, index) => (
-              <p key={index} className="w-12 flex justify-center items-center">
-                <img src={item.icon} alt={item.name} />
-              </p>
-            ))}
-          </div>
         </div>
       </div>
     </div>

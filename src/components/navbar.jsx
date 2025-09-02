@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import dark_logo from "../assets/icons_logos/mern_light_mode.png";
-import light_logo from "../assets/icons_logos/mern_black_mode-01.png";
+import dark_logo from "../assets/icons_logos/mern_black_mode-01.png";
+import light_logo from "../assets/icons_logos/mern_light_mode.png";
 import GsapToggle from "./toggleswitch";
 import { AppContext } from "../context/datacontext";
 import { Link } from "react-router-dom";
@@ -14,8 +14,8 @@ const Navbar = () => {
   const links = [
     { name: "home", link: "/" },
     { name: "about", link: "/about" },
-    { name: "projects", link: "/projcts" },
     { name: "skills", link: "/skills" },
+    { name: "projects", link: "/projcts" },
     { name: "contact", link: "/contact" },
   ];
   const cardStyle = {
