@@ -76,12 +76,12 @@ const SkillsOrbit = () => {
                 </div>
 
                 {/* Inner Orbit */}
-                <div className={`absolute w-[175px] h-[175px] rounded-full border ${darkMode ? 'border-white' : 'border-black'} animate-spin-slow`}>
+                <div className={`absolute w-[174px] h-[174px] rounded-full border ${darkMode ? 'border-white' : 'border-black'} animate-spin-slow`}>
                     {icons2.map((icon, i) => {
                         const angle = (i / icons2.length) * 2 * Math.PI;
-                        const orbitRadius = 83;
-                        const x = orbitRadius + orbitRadius * Math.cos(angle) - 12;
-                        const y = orbitRadius + orbitRadius * Math.sin(angle) - 12;
+                        const orbitRadius = 84;
+                        const x = orbitRadius + orbitRadius * Math.cos(angle) - 13;
+                        const y = orbitRadius + orbitRadius * Math.sin(angle) - 13;
                         return (
                             <img
                                 key={i}
