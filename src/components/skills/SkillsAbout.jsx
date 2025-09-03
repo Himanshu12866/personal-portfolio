@@ -26,18 +26,18 @@ const SkillsAbout = () => {
 
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full py-20 px-8 shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] ${!darkMode
+      className={`flex justify-center flex-col gap-24 items-center w-full py-20 sm:px-8 px-4 shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] ${!darkMode
         ? "bg-[rgba(222,222,222,0.9)]"
         : "bg-[rgba(69,69,69,1)] inset-0"
         }`}
     >
-    <div className="lg:w-4/5 w-full grid grid-cols-2">
-   <SkillsOrbit />
+      <div className="xl:w-4/5 w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-8">
+        <SkillsOrbit />
 
-   
-      <div
-        className={`  flex flex-col gap-5 p-4 md:px-8 px-6 rounded-[20px] z-[5] backdrop-blur-sm ${!darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
-          } 
+
+        <div
+          className={`  flex flex-col gap-5 p-4 md:px-8 px-6 rounded-[20px] z-[5] backdrop-blur-sm ${!darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
+            } 
   opacity-100
   shadow-[0px_0.706592px_0.706592px_-0.666667px_rgba(0,0,0,0.08),
           0px_1.80656px_1.80656px_-1.33333px_rgba(0,0,0,0.08),
@@ -46,13 +46,22 @@ const SkillsAbout = () => {
           0px_13.6468px_13.6468px_-3.33333px_rgba(0,0,0,0.05),
           0px_30px_30px_-4px_rgba(0,0,0,0.02),
           inset_0px_3px_1px_0px_rgb(255,255,255)]`}
-        style={cardStyle}
-      >
-        <div>
+          style={cardStyle}
+        >
+          <div>
+            <h2 className="md:text-3xl text-2xl font-heading pb-2">
+              "   Not appearance, not luck — only skills define the craft"
+            </h2>
+            <p className="text-xl text-justify font-para py-2">
+              Each skill I carry isn’t just a checkbox on a résumé — it’s a tool I’ve tested, refined, and mastered through real projects. From frontend finesse to backend logic, my craft is built on discipline, curiosity, and the drive to turn concepts into seamless digital experiences.
+            </p>
+            <p className="text-xl text-justify font-para py-2">
+              Below, I’ve organized my skills into clear categories — so you can see not just what I know, but how I apply it across different parts of development.            </p>
+          </div>
+
         </div>
 
       </div>
-        </div>
     </div>
   );
 };
