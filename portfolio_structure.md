@@ -123,7 +123,7 @@ https://icons8.com/
 
 ## For the Animaion 
 
-https://magicui.design/
+
 
 
 ✅ This structure ensures your portfolio looks **professional, detailed, and recruiter-friendly**, with proper case studies for projects.

@@ -1,0 +1,47 @@
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-left 55s linear infinite;
+}
+
+.marquee-content span {
+  font-size: 170px;
+  font-weight: 500;
+  
+  /* -webkit-text-stroke: 2px white; */
+  margin-right: 2rem;
+  text-transform: uppercase;
+  font-family: "robout";
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@media screen and (max-width: 1600px) {
+    .marquee-content span {
+        font-size: 120px;
+    }
+}
+@media screen and (max-width:992px) {
+  .marquee-content span
+  {
+      font-size: 50px;
+  }
+}
