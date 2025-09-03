@@ -1,88 +1,58 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../context/datacontext";
-import nodejs from "../../assets/icons_logos/icons8-nodejs-48.png";
-import express from "../../assets/icons_logos/icons8-express-js-50.png";
-import mongodb from "../../assets/icons_logos/icons8-mongodb-48.png";
-import tailwind from "../../assets/icons_logos/icons8-tailwind-css-48.png";
+import SkillsOrbit from "./SkillsOrbit";
+
 
 const SkillsAbout = () => {
   const { darkMode } = useContext(AppContext);
 
-  const icons = [nodejs, express, mongodb, tailwind];
-  const icons2 = [nodejs, express, mongodb, tailwind];
-  const icons3 = [nodejs, express, mongodb, tailwind];
+  const cardStyle = {
+    backdropFilter: "blur(5px)",
+    borderRadius: "10px",
+    boxShadow: `
+      rgba(0, 0, 0, 0.07) 0px 0.706592px 0.706592px -0.583333px,
+      rgba(0, 0, 0, 0.07) 0px 1.80656px 1.80656px -1.16667px,
+      rgba(0, 0, 0, 0.07) 0px 3.62176px 3.62176px -1.75px,
+      rgba(0, 0, 0, 0.06) 0px 6.8656px 6.8656px -2.33333px,
+      rgba(0, 0, 0, 0.05) 0px 13.6468px 13.6468px -2.91667px,
+      rgba(0, 0, 0, 0.03) 0px 30px 30px -3.5px,
+      rgb(255, 255, 255) 0px 0px 1px 0px inset
+    `,
+    opacity: 1,
+    borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
+    borderLeft: "0px solid",
+    borderRight: "0px solid",
+  };
 
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full py-20 shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] ${
-        !darkMode
-          ? "bg-[rgba(222,222,222,0.9)]"
-          : "bg-[rgba(69,69,69,1)] inset-0"
-      }`}
+      className={`flex justify-center flex-col gap-24 items-center w-full py-20 px-8 shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] ${!darkMode
+        ? "bg-[rgba(222,222,222,0.9)]"
+        : "bg-[rgba(69,69,69,1)] inset-0"
+        }`}
     >
-      <div className="relative w-[400px] h-[400px] flex items-center justify-center">
-        {/* Center */}
-        <div className="w-16 h-16 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg z-10">
-          ⚡
+    <div className="lg:w-4/5 w-full grid grid-cols-2">
+   <SkillsOrbit />
+
+   
+      <div
+        className={`  flex flex-col gap-5 p-4 md:px-8 px-6 rounded-[20px] z-[5] backdrop-blur-sm ${!darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
+          } 
+  opacity-100
+  shadow-[0px_0.706592px_0.706592px_-0.666667px_rgba(0,0,0,0.08),
+          0px_1.80656px_1.80656px_-1.33333px_rgba(0,0,0,0.08),
+          0px_3.62176px_3.62176px_-2px_rgba(0,0,0,0.07),
+          0px_6.8656px_6.8656px_-2.66667px_rgba(0,0,0,0.07),
+          0px_13.6468px_13.6468px_-3.33333px_rgba(0,0,0,0.05),
+          0px_30px_30px_-4px_rgba(0,0,0,0.02),
+          inset_0px_3px_1px_0px_rgb(255,255,255)]`}
+        style={cardStyle}
+      >
+        <div>
         </div>
 
-        {/* Outer Orbit */}
-        <div className="absolute w-[350px] h-[350px] rounded-full border border-gray-300 animate-spin-slow">
-          {icons.map((icon, i) => {
-            const angle = (i / icons.length) * 2 * Math.PI;
-            const orbitRadius = 175;
-            const x = orbitRadius + orbitRadius * Math.cos(angle) - 20;
-            const y = orbitRadius + orbitRadius * Math.sin(angle) - 20;
-            return (
-              <img
-                key={i}
-                src={icon}
-                alt="skill"
-                className="w-10 h-10 absolute"
-                style={{ left: `${x}px`, top: `${y}px` }}
-              />
-            );
-          })}
-        </div>
-
-        {/* Middle Orbit (NEW) */}
-        <div className="absolute w-[280px] h-[280px] rounded-full border border-gray-300 animate-spin-slow-reverse">
-          {icons3.map((icon, i) => {
-            const angle = (i / icons3.length) * 2 * Math.PI;
-            const orbitRadius = 140;
-            const x = orbitRadius + orbitRadius * Math.cos(angle) - 18;
-            const y = orbitRadius + orbitRadius * Math.sin(angle) - 18;
-            return (
-              <img
-                key={i}
-                src={icon}
-                alt="skill"
-                className="w-9 h-9 absolute"
-                style={{ left: `${x}px`, top: `${y}px` }}
-              />
-            );
-          })}
-        </div>
-
-        {/* Inner Orbit */}
-        <div className="absolute w-[180px] h-[180px] rounded-full border border-gray-300 animate-spin-slow">
-          {icons2.map((icon, i) => {
-            const angle = (i / icons2.length) * 2 * Math.PI;
-            const orbitRadius = 85;
-            const x = orbitRadius + orbitRadius * Math.cos(angle) - 12;
-            const y = orbitRadius + orbitRadius * Math.sin(angle) - 12;
-            return (
-              <img
-                key={i}
-                src={icon}
-                alt="skill"
-                className="w-8 h-8 absolute"
-                style={{ left: `${x}px`, top: `${y}px` }}
-              />
-            );
-          })}
-        </div>
       </div>
+        </div>
     </div>
   );
 };
