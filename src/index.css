@@ -6,12 +6,12 @@ html {
   overflow-x: hidden;
 }
 :root {
-  --bg-color: rgba(222, 222, 222, 0.9);
+  --bg-color: #dededee6;
   --text-color: #331d2c;
 }
 
 [data-theme="dark"] {
-  --bg-color: rgba(69, 69, 69, 1);
+  --bg-color: #454545;
   --text-color: #ffffff;
 }
 

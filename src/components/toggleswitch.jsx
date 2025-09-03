@@ -18,7 +18,7 @@ export default function GsapToggle() {
       scale: 0,
       opacity: 1,
       display: "block",
-      backgroundColor: newTheme ? "#000000" : "#ffffff", // blast color
+      backgroundColor: newTheme ? "#454545" : "#d9d9d9", // blast color
     });
 
     gsap.to(overlay, {
@@ -29,7 +29,6 @@ export default function GsapToggle() {
         // toggle theme when overlay is covering
         setIsDark(newTheme);
         toggleDarkMode();
-
         document.documentElement.setAttribute(
           "data-theme",
           newTheme ? "dark" : "light"
