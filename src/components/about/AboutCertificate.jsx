@@ -112,7 +112,7 @@ const AboutCertificate = () => {
               </h3>{" "}
               <p>Hyderabad, India</p>
             </div>
-            <p className="text-xl mt-3 font-medium font-heading">
+            {/* <p className="text-xl mt-3 font-medium font-heading">
               View Certificate
             </p>
             <div className="flex flex-row lg:justify-between md:justify-start justify-between lg:gap-0  items-center text-[#f59e0b] gap-2 pb-4 px-8 text-4xl">
@@ -134,10 +134,10 @@ const AboutCertificate = () => {
                 </svg>
                 <span className="text-lg"> UI Full Stack With React</span>{" "}
               </a>
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-col lg:w-8/12 gap-2  p-2">
-            <div
+            {/* <div
               style={cardStyle}
               className="w-44 pt-2 px-4  text-left text-lg sm:text-xl font-heading"
             >
@@ -147,7 +147,7 @@ const AboutCertificate = () => {
               Naresh IT is a premier software training institute offering
               hands-on courses in full stack development and emerging
               technologies, helping learners gain industry-ready skills.
-            </p>
+            </p> */}
             <div
               style={cardStyle}
               className="w-52 pt-2 px-4 mt-4 text-left text-lg sm:text-xl font-heading"
@@ -176,6 +176,31 @@ const AboutCertificate = () => {
                   <img src={item.icon} alt={item.name} />
                 </p>
               ))}
+            </div>
+            <div>
+               <p className="text-xl mt-3 font-medium font-heading">
+              View Certificate
+            </p>
+            <div className="flex flex-row lg:justify-between md:justify-start justify-between lg:gap-0  items-center text-[#f59e0b] gap-2 pb-4 px-8 text-4xl">
+              <a
+                className="hover:text-[#e69494] transition-all flex flex-row gap-2 justify-center items-center hover:duration-200"
+                href="https://www.linkedin.com/in/himanshumishra17/overlay/1753120822194/single-media-viewer/?profileId=ACoAAEkM3QcBjPvIjOKMhGc660O63MHWeinwVuM
+"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-9"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z" />
+                  <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z" />
+                </svg>
+                <span className="text-lg"> UI Full Stack With React</span>{" "}
+              </a>
+            </div>
             </div>
           </div>
         </div>
