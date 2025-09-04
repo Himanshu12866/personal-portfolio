@@ -74,12 +74,12 @@ const CustomCursor = () => {
     position: "absolute",
     width: "8px", zIndex:1,
     height: "8px",
-    background: "#ff0080", // neon pink dot
+    background: "#00f0ff", // neon pink dot
     borderRadius: "50%",
     pointerEvents: "none",
     transform: "translate(-50%, -50%)",
     boxShadow:
-      "0 0 5px #ff0080, 0 0 10px #ff0080, 0 0 20px #ff0080", // glowing center
+      "0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff", // glowing center
   }}
 ></div>
 

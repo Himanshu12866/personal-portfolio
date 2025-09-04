@@ -18,14 +18,14 @@ const Navbar = () => {
     { name: "projects", link: "/projcts" },
     { name: "contact", link: "/contact" },
   ];
-  const cardStyle = {
-    backdropFilter: "blur(5px)",
-    borderRadius: "10px",
-    opacity: 1,
-    borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
-    borderLeft: "0px solid",
-    borderRight: "0px solid",
-  };
+  // const cardStyle = {
+  //   backdropFilter: "blur(5px)",
+  //   borderRadius: "10px",
+  //   opacity: 1,
+  //   borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
+  //   borderLeft: "0px solid",
+  //   borderRight: "0px solid",
+  // };
 
   return (
     <>
