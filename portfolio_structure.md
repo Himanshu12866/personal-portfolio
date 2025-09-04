@@ -121,9 +121,9 @@ https://orbai-template.framer.website/
 https://icons8.com/
 
 
-## For the Animaion 
+## For the NEUMORPHISM Shadow
 
-
+https://freefrontend.com/css-neumorphism-examples/
 
 
 ✅ This structure ensures your portfolio looks **professional, detailed, and recruiter-friendly**, with proper case studies for projects.

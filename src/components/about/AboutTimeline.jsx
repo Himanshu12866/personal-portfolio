@@ -41,21 +41,15 @@ const AboutTimeline = () => {
       >
        <div
                 className={` w-full z-[3] flex flex-col justify-end text-left gap-3 md:gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
-            !darkMode ? "bg-[rgba(245,245,245,0.9)] " : "bg-[#f5f5f552] inset-0"
-          } 
-  opacity-100
-  shadow-[0px_0.706592px_0.706592px_-0.666667px_rgba(0,0,0,0.08),
-          0px_1.80656px_1.80656px_-1.33333px_rgba(0,0,0,0.08),
-          0px_3.62176px_3.62176px_-2px_rgba(0,0,0,0.07),
-          0px_6.8656px_6.8656px_-2.66667px_rgba(0,0,0,0.07),
-          0px_13.6468px_13.6468px_-3.33333px_rgba(0,0,0,0.05),
-          0px_30px_30px_-4px_rgba(0,0,0,0.02),
-          inset_0px_3px_1px_0px_rgb(255,255,255)]`}
-          style={cardStyle}
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
+        
               >
                 <div
                   style={cardStyle}
-                  className="w-60 pt-2  text-center  text-lg sm:text-xl font-heading"
+                  className="w-60   text-center  text-lg sm:text-xl font-heading"
                 >
                   <p>Post Graduation</p>
                 </div>
@@ -106,19 +100,11 @@ const AboutTimeline = () => {
               </div>
                  <div
                 className={` w-full z-[3] flex flex-col justify-end text-left md:gap-5 gap-3 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
-                  !darkMode
-                    ? "bg-[rgba(245,245,245,0.9)] "
-                    : "bg-[#f5f5f552] inset-0"
-                } 
-  opacity-100
-  shadow-[0px_0.706592px_0.706592px_-0.666667px_rgba(0,0,0,0.08),
-          0px_1.80656px_1.80656px_-1.33333px_rgba(0,0,0,0.08),
-          0px_3.62176px_3.62176px_-2px_rgba(0,0,0,0.07),
-          0px_6.8656px_6.8656px_-2.66667px_rgba(0,0,0,0.07),
-          0px_13.6468px_13.6468px_-3.33333px_rgba(0,0,0,0.05),
-          0px_30px_30px_-4px_rgba(0,0,0,0.02),
-          inset_0px_3px_1px_0px_rgb(255,255,255)]`}
-                style={cardStyle}
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
+               
               >
                 <div
                   style={cardStyle}
