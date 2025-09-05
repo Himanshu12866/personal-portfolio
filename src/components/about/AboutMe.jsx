@@ -90,11 +90,7 @@ const AboutMe = () => {
   }, []);
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full py-20  shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)]   ${
-        !darkMode
-          ? "bg-[rgba(222,222,222,0.9)]"
-          : "bg-[rgba(69,69,69,1)] inset-0"
-      }`}
+      className={`flex justify-center flex-col gap-24 items-center w-full py-20  shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] `}
     >
       <div
         className="xl:w-4/5 3xl:w-3/5  w-full  flex lg:flex-row 2xl:h-[166vh] 3xl:h-[157vh] xl:h-[170vh] lg:h-[177vh]  flex-col gap-6 p-4
@@ -107,10 +103,10 @@ const AboutMe = () => {
  `}
         >
           <div
-            className={` z-[3] flex rounded-[10px] p-2 backdrop-blur-sm ${
+            className={` z-[3] flex rounded-[10px] p-2  ${
               !darkMode
-                ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-                : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                ? " rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
             }`}
           >
             <img src={about_pic} alt="about page illustration" />
@@ -119,7 +115,7 @@ const AboutMe = () => {
             className={` z-[3] flex justify-center gap-4 items-center rounded-[10px] px-2 py-3 backdrop-blur-sm ${
               !darkMode
                 ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-                : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
             }`}
           >
             <div className=" flex justify-center items-center">
@@ -151,7 +147,7 @@ const AboutMe = () => {
           className={`lg:w-7/12  w-full flex flex-col lg:h-[1150px] z-[3] gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
               !darkMode
                 ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-                : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
             }`}
          
         >
@@ -251,3 +247,19 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+
+
+
+
+// ${
+//               !darkMode
+//                 ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+//                 : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+//             }`}
+
+
+// ${
+//         !darkMode
+//           ? "bg-[rgba(222,222,222,0.9)]"
+//           : "bg-[rgba(69,69,69,1)] inset-0"
+//       }

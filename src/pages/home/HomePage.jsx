@@ -5,6 +5,7 @@ import HomeAbout from "../../components/home/HomeAbout";
 import HomeSkills from "../../components/home/HomeSkills";
 import HomeProjects from "../../components/home/HomeProjects";
 import HomeContact from "../../components/home/HomeContact";
+import ScrollSKills from "../../components/home/ScrollSKills";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <HomeQuote />
       <HomeAbout />
       <HomeSkills />
+      <ScrollSKills />
       <HomeProjects />
       <HomeContact />
     </>

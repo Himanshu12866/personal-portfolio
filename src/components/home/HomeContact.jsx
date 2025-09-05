@@ -61,11 +61,7 @@ const HomeContact = () => {
   // };
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full py-20  ${
-        !darkMode
-          ? "bg-[rgba(222,222,222,0.9)]"
-          : "bg-[rgba(69,69,69,1)] inset-0"
-      }`}
+      className={`flex justify-center flex-col gap-24 items-center w-full py-20 `}
     >
       <h2 className="text-4xl font-bold text-center">Open for Opportunities</h2>
       <div

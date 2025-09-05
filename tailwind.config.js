@@ -10,7 +10,10 @@ export default {
         code: ["JetBrains Mono", "sans-serif"],
       },
       screens: {
-        "3xl": "1650px"
+        "3xl": "1650px",
+        "4xl": "1900px",
+        "5xl": "2200px",
+        "6xl": "2560px",
       }
     },
   },

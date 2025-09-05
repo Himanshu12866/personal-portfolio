@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
-import fallback from "../../assets/images/home_banner_fallback.png";
-import home_video from "../../assets/video/home_banner.mp4";
+// import fallback from "../../assets/images/home_banner_fallback.png";
+// import home_video from "../../assets/video/home_banner.mp4";
 import main_pic from "../../assets/images/home_pic-01.png";
 import { AppContext } from "../../context/datacontext";
 import { motion, AnimatePresence } from "framer-motion";
@@ -21,7 +21,7 @@ const HomeBanner = () => {
     }, 3000); // har 3 sec baad change hoga
     return () => clearInterval(interval);
   }, []);
-  const [vdoError, setVdoError] = useState(false);
+  // const [vdoError, setVdoError] = useState(false);
   const { darkMode } = useContext(AppContext);
   // const cardStyle = {
   //   backdropFilter: "blur(5px)",
@@ -44,7 +44,7 @@ const HomeBanner = () => {
     <div className="w-full relative flex justify-center items-center lg:h-screen pt-28 pb-16 overflow-hidden top-0">
       {/* Video Section With Fallback images */}
       <div className="absolute w-full h-full top-0">
-        {!vdoError ? (
+        {/* {!vdoError ? (
           <video
             className="w-full h-full z-0 object-cover"
             muted
@@ -62,11 +62,11 @@ const HomeBanner = () => {
             alt="Home banner fallback"
             className="w-full h-full object-cover"
           />
-        )}
-        {darkMode ? <div className="absolute inset-0 bg-black/70"></div> : null}
+        )} */}
+        {/* {darkMode ? <div className="absolute inset-0 bg-black/70"></div> : null} */}
       </div>
 
-      <main className="grid lg:grid-cols-2 grid-cols-1 xl:gap-12 gap-6 px-4 z-[4]">
+      <div className="grid lg:grid-cols-2 grid-cols-1 xl:gap-12 gap-6 px-4 z-[4]">
         <div className="flex flex-col justify-center lg:order-1 order-2 lg:ps-0 md:ps-8 ps-0 ">
           <p
             
@@ -141,7 +141,7 @@ const HomeBanner = () => {
             className=" bg-[#f5f5f552] w-80 xl:w-[500px] 2xl:w-auto backdrop-blur-sm rounded-full"
           />
         </div>
-      </main>
+      </div>
     </div>
   );
 };

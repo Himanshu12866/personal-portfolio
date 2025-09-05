@@ -29,11 +29,7 @@ const Footer = () => {
   return (
     <>
       <div
-        className={`flex justify-center w-full px-4 z-10 pt-12 ${
-          !darkMode
-            ? "bg-[rgba(222,222,222,0.9)]"
-            : "bg-[rgba(69,69,69,1)] inset-0"
-        }`}
+        className={`flex justify-center w-full px-4 z-10 pt-12 `}
       >
         <div
           style={cardStyle}

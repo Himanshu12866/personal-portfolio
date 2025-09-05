@@ -127,3 +127,42 @@ https://freefrontend.com/css-neumorphism-examples/
 
 
 ✅ This structure ensures your portfolio looks **professional, detailed, and recruiter-friendly**, with proper case studies for projects.
+
+
+  useLayoutEffect(() => {
+    const items = gsap.utils.toArray(listRef.current.querySelectorAll("li"));
+
+    gsap.set(items, { opacity: 0.2 });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: mainRef.current,
+        start: "top top",
+        end: `+=${words.length * window.innerHeight * 0.6}`,
+        scrub: true,
+        pin: true,
+      },
+    });
+    items.forEach((item) => {
+      tl.to(item, { opacity: 1, duration: 0.5 }).to(
+        item,
+        { opacity: 0.2, duration: 0.5 },
+        "+=0.2"
+      );
+    });
+
+    tl.to(items[items.length - 1], { opacity: 1, duration: 0.5 });
+
+    gsap.to(document.documentElement, {
+      "--hue": 360,
+      ease: "none",
+      scrollTrigger: {
+        trigger: mainRef.current,
+        start: "top top",
+        end: `+=${words.length * window.innerHeight * 0.6}`,
+        scrub: true,
+      },
+    });
+
+    return () => ScrollTrigger.getAll().forEach((st) => st.kill());
+  }, []);
