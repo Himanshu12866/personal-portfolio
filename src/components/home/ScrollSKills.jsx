@@ -19,7 +19,6 @@ const words = [
   "follow.",
   "innovate.",
   "test.",
-
   "scale.",
   "do it.",
 ];

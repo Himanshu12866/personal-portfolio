@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AppContext } from "../../context/datacontext";
 
 const HomeQuote = () => {
-  const { darkMode } = useContext(AppContext);
+  // const { darkMode } = useContext(AppContext);
   return (
     <div
       className={`
