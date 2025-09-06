@@ -39,17 +39,6 @@ export default function ScrollSkills() {
     };
 
     createScrollTrigger();
-    // const handleResize = () => {
-    //   if (trigger) trigger.kill();
-    //   createScrollTrigger();
-    // };
-
-    // window.addEventListener("resize", handleResize);
-
-    // return () => {
-    //   if (trigger) trigger.kill();
-    //   window.removeEventListener("resize", handleResize);
-    // };
   }, []);
 
   return (

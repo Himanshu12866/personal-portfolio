@@ -6,6 +6,7 @@ import HomeSkills from "../../components/home/HomeSkills";
 import HomeProjects from "../../components/home/HomeProjects";
 import HomeContact from "../../components/home/HomeContact";
 import ScrollSKills from "../../components/home/ScrollSKills";
+import SkillScroller from "../../components/home/HomeScrollSkills";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <HomeBanner />
       <HomeQuote />
       <HomeAbout />
+      {/* <SkillScroller /> */}
       <HomeSkills />
       <ScrollSKills />
       <HomeProjects />
