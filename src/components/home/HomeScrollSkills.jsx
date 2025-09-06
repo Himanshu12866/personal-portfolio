@@ -111,109 +111,109 @@ export default function SkillScrollerScrollBoost() {
     const { darkMode } = useContext(AppContext);
     const frontend = [
         {
-        name: "ReactJS",
-        icon: reactjs
-    }, {
-        name: "JavaScript",
-        icon: javascript
-    }, {
-        name: "TailwindCSS",
-        icon: tailwind
-    }, {
-        name: "MaterialUI",
-        icon: mui
-    }, {
-        name: "HTML5",
-        icon: html
-    }, {
-        name: "CSS3",
-        icon: css
-    },
-    {
-        name: "Bootstrap",
-        icon: bootsstrap
-    },
-    {
-        name: "SASS",
-        icon: sass
-    },
+            name: "ReactJS",
+            icon: reactjs
+        }, {
+            name: "JavaScript",
+            icon: javascript
+        }, {
+            name: "TailwindCSS",
+            icon: tailwind
+        }, {
+            name: "MaterialUI",
+            icon: mui
+        }, {
+            name: "HTML5",
+            icon: html
+        }, {
+            name: "CSS3",
+            icon: css
+        },
         {
-        name: "ReactJS",
-        icon: reactjs
-    }, {
-        name: "JavaScript",
-        icon: javascript
-    }, {
-        name: "TailwindCSS",
-        icon: tailwind
-    }, {
-        name: "MaterialUI",
-        icon: mui
-    }, {
-        name: "HTML5",
-        icon: html
-    }, {
-        name: "CSS3",
-        icon: css
-    },
-    {
-        name: "Bootstrap",
-        icon: bootsstrap
-    },
-    {
-        name: "SASS",
-        icon: sass
-    },
+            name: "Bootstrap",
+            icon: bootsstrap
+        },
+        {
+            name: "SASS",
+            icon: sass
+        },
+        {
+            name: "ReactJS",
+            icon: reactjs
+        }, {
+            name: "JavaScript",
+            icon: javascript
+        }, {
+            name: "TailwindCSS",
+            icon: tailwind
+        }, {
+            name: "MaterialUI",
+            icon: mui
+        }, {
+            name: "HTML5",
+            icon: html
+        }, {
+            name: "CSS3",
+            icon: css
+        },
+        {
+            name: "Bootstrap",
+            icon: bootsstrap
+        },
+        {
+            name: "SASS",
+            icon: sass
+        },
     ];
     const backend = [
         {
-        name: "NodeJS",
-        icon: nodejs
-    }, {
-        name: "ExpressJS",
-        icon: express
-    }, {
-        name: "MongoDB",
-        icon: mongodb
-    }, {
-        name: "Github",
-        icon: github
-    }, {
-        name: "Git",
-        icon: git
-    },
+            name: "NodeJS",
+            icon: nodejs
+        }, {
+            name: "ExpressJS",
+            icon: express
+        }, {
+            name: "MongoDB",
+            icon: mongodb
+        }, {
+            name: "Github",
+            icon: github
+        }, {
+            name: "Git",
+            icon: git
+        },
         {
-        name: "NodeJS",
-        icon: nodejs
-    }, {
-        name: "ExpressJS",
-        icon: express
-    }, {
-        name: "MongoDB",
-        icon: mongodb
-    }, {
-        name: "Github",
-        icon: github
-    }, {
-        name: "Git",
-        icon: git
-    },
+            name: "NodeJS",
+            icon: nodejs
+        }, {
+            name: "ExpressJS",
+            icon: express
+        }, {
+            name: "MongoDB",
+            icon: mongodb
+        }, {
+            name: "Github",
+            icon: github
+        }, {
+            name: "Git",
+            icon: git
+        },
         {
-        name: "NodeJS",
-        icon: nodejs
-    }, {
-        name: "ExpressJS",
-        icon: express
-    }, {
-        name: "MongoDB",
-        icon: mongodb
-    }, {
-        name: "Github",
-        icon: github
-    }, {
-        name: "Git",
-        icon: git
-    },
+            name: "NodeJS",
+            icon: nodejs
+        }, {
+            name: "ExpressJS",
+            icon: express
+        }, {
+            name: "MongoDB",
+            icon: mongodb
+        }, {
+            name: "Github",
+            icon: github
+        }, {
+            name: "Git",
+            icon: git
+        },
     ];
     const tools = [
 
@@ -284,8 +284,21 @@ export default function SkillScrollerScrollBoost() {
     ]
     return (
         <section className="w-full flex justify-between flex-col gap-4 space-y-2 relative">
-            <div className={`pointer-events-none absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-${!darkMode ? 'white' : 'black'} to-transparent`} />
-            <div className={`pointer-events-none absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-${!darkMode ? 'white' : 'black'} to-transparent`} />
+            <div
+                className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 md:w-32  z-10"
+                style={{
+                    background: `linear-gradient(to right, ${darkMode ? "#191919" : "#dededee6"
+                        }, transparent)`,
+                }}
+            />
+            <div
+                className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 md:w-32 z-10"
+                style={{
+                    background: `linear-gradient(to left, ${darkMode ? "#191919" : "#dededee6"
+                        }, transparent)`,
+                }}
+            />
+
             <MarqueeRow items={frontend} direction="left" baseSpeed={0.08} />
             <MarqueeRow items={backend} direction="right" baseSpeed={0.08} />
             <MarqueeRow items={tools} direction="left" baseSpeed={0.08} />

@@ -54,7 +54,7 @@ body {
   position: fixed;
   background: linear-gradient(
         90deg,
-        rgba(112, 131, 133, 0.534) 1px,
+        #70838588 1px,
         transparent 1px
       )
       0 0 / var(--size) var(--size),

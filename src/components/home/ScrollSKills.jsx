@@ -33,7 +33,7 @@ export default function ScrollSkills() {
           start: "top 50%", // Start pinning at top
           end: `bottom ${window.innerWidth < 500 ? "60%" : "80%"} `, // End when container bottom reaches viewport bottom
           pin: listRef.current,
-          
+          pinSpacing: false,
         });
       }
     };
@@ -46,7 +46,7 @@ export default function ScrollSkills() {
       <section
         ref={mainRef}
         
-        className="content grid grid-cols-2 w-full max-h-[160vh] sm:min-h-[420vh] font-semibold"
+        className="content grid grid-cols-2 w-full  font-semibold"
       >
         <div ref={listRef} className="flex justify-end xl:text-8xl sm:text-6xl text-2xl lg:text-7xl sm:pe-10 pe-4">
           <h2>Things,I can </h2>
