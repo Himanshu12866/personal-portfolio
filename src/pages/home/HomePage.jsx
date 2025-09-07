@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomeBanner from "../../components/home/HomeBanner";
 import HomeQuote from "../../components/home/HomeQuote";
 import HomeAbout from "../../components/home/HomeAbout";
@@ -8,6 +8,12 @@ import HomeContact from "../../components/home/HomeContact";
 import ScrollSKills from "../../components/home/ScrollSKills";
 
 const HomePage = () => {
+   useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }, [])
   return (
     <>
       <title>Himanshu | MERN Stack & Frontend Developer Portfolio</title>

@@ -25,11 +25,7 @@ const SkillsAbout = () => {
 
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full py-20 sm:px-8 px-4 shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] ${
-        !darkMode
-          ? "bg-[rgba(222,222,222,0.9)]"
-          : "bg-[rgba(69,69,69,1)] inset-0"
-      }`}
+      className={`flex justify-center flex-col gap-24 items-center w-full py-20 sm:px-8 px-4 shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] `}
     >
       <div className="xl:w-4/5 w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-8">
         <SkillsOrbit />
