@@ -24,10 +24,7 @@ const MarqueeRow = ({ items = [], direction = "left", baseSpeed = 0.08 }) => {
     const pos = useRef(0);
     const [oneSetWidth, setOneSetWidth] = useState(0);
     const { darkMode } = useContext(AppContext);
-
-    // speed factor state (boosts when scrolling)
     const boost = useRef(1);
-
     useEffect(() => {
         const el = containerRef.current;
         if (!el) return;
@@ -36,7 +33,6 @@ const MarqueeRow = ({ items = [], direction = "left", baseSpeed = 0.08 }) => {
         };
         requestAnimationFrame(measure);
         window.addEventListener("resize", measure);
-
         // Listen to scroll wheel
         const handleWheel = (e) => {
             const dirFactor = direction === "left" ? -1 : 1;
@@ -47,7 +43,6 @@ const MarqueeRow = ({ items = [], direction = "left", baseSpeed = 0.08 }) => {
             }
         };
         window.addEventListener("wheel", handleWheel, { passive: true });
-
         return () => {
             window.removeEventListener("resize", measure);
             window.removeEventListener("wheel", handleWheel);
@@ -69,16 +64,13 @@ const MarqueeRow = ({ items = [], direction = "left", baseSpeed = 0.08 }) => {
                 boost.current = 1;
             }
         }
-
         const move = speed * delta;
         pos.current += move;
-
         if (pos.current <= -oneSetWidth) {
             pos.current += oneSetWidth;
         } else if (pos.current > 0) {
             pos.current -= oneSetWidth;
         }
-
         containerRef.current.style.transform = `translateX(${pos.current}px)`;
     });
 

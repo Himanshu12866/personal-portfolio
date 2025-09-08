@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -31,7 +32,7 @@ export default function ScrollSkills() {
         trigger = ScrollTrigger.create({
           trigger: mainRef.current,
           start: "top 50%", // Start pinning at top
-          end: `bottom ${window.innerWidth < 500 ? "60%" : "80%"} `, // End when container bottom reaches viewport bottom
+          end: `bottom ${window.innerWidth < 500 ? "60%" : "70%"} `, // End when container bottom reaches viewport bottom
           pin: listRef.current,
           pinSpacing: false,
         });
