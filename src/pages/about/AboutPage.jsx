@@ -5,6 +5,8 @@ import AboutExperience from "../../components/about/AboutExperience";
 import AboutCertificate from "../../components/about/AboutCertificate";
 import EducationTimeline from "../../components/about/AboutTimeline";
 import { useLenis } from "../../components/SmoothScroll";
+import ScrollVelocity from "../../components/about/AboutScroll";
+import CurvedLoop from "../../components/about/AboutScroll";
 
 const AboutPage = () => {
   const lenisRef = useLenis();
@@ -18,6 +20,8 @@ const AboutPage = () => {
       <AboutExperience />
       <AboutCertificate />
       <EducationTimeline />
+      <CurvedLoop marqueeText="🍔 Eat 😴 Sleep 💻 Code 🔁 Repeat ⚡ React 🎨 Tailwind 🛠️ Node 🗄️ Mongo ☕ Coffee 💡 Ideas 🖥️ Coding 📦 Deploy 🎮 Game 🎶 Music 💻 Code 🌍 Explore" />
+    <div className="mt-40"></div>
     </>
   );
 };

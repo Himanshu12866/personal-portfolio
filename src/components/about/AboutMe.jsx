@@ -15,8 +15,10 @@ import tailwind from "../../assets/icons_logos/icons8-tailwind-css-48.png";
 import gcp from "../../assets/icons_logos/icons8-google-cloud-48.png";
 import mui from "../../assets/icons_logos/icons8-material-ui-48.png";
 import git from "../../assets/icons_logos/icons8-git-48.png";
-import adobeI from "../../assets/icons_logos/icons8-adobe-illustrator-48.png";
+import github_light from "../../assets/icons_logos/icons8-github-48.png"
+import github from "../../assets/icons_logos/icons8-git-48 (1).png"
 
+import  express_light from "../../assets/icons_logos/icons8-express-js-48.png"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -29,13 +31,13 @@ const AboutMe = () => {
     { name: "JavaScript", icon: javascript },
     { name: "React JS", icon: reactjs },
     { name: "Node.js", icon: nodejs },
-    { name: "Express.js", icon: express },
+    { name: "Express.js", icon: darkMode ? express_light : express },
     { name: "MongoDB", icon: mongodb },
     { name: "Tailwind CSS", icon: tailwind },
     { name: "Google Cloud", icon: gcp },
     { name: "Material UI", icon: mui },
     { name: "Git", icon: git },
-    { name: "Adobe Illustrator", icon: adobeI },
+    { name: "GitHub", icon: darkMode ? github_light : github },
   ];
   const cardStyle = {
     backdropFilter: "blur(5px)",
@@ -103,9 +105,9 @@ const AboutMe = () => {
  `}
         >
           <div
-            className={` z-[3] flex rounded-[10px] p-2 backdrop-blur-[2px]  ${
+            className={` z-[3] flex rounded-[10px] p-2 backdrop-blur-sm  ${
               !darkMode
-                ? " rounded-xl  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                ? "bg-[rgba(245,245,245,0.9)] rounded-xl  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
                 : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
             }`}
           >
@@ -119,7 +121,13 @@ const AboutMe = () => {
             }`}
           >
             <div className=" flex justify-center items-center">
-              <button className="bg-black font-para  sm:w-48 w-full text-white sm:px-8 px-4 py-3 font-medium rounded-[10px] opacity-100 hover:opacity-60 transition-all hover:duration-200 shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]">
+              <button
+                className={`bg-black font-para  sm:w-48 w-full text-white sm:px-8 px-4 py-3 font-medium rounded-[10px] opacity-100 hover:opacity-60 transition-all hover:duration-200 ${
+                  !darkMode
+                    ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
+                    : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                }`}
+              >
                 <a
                   href="./HimanshuResume.pdf"
                   target="_blank"
@@ -145,11 +153,10 @@ const AboutMe = () => {
 
         <div
           className={`lg:w-7/12  w-full flex flex-col lg:h-[1150px] z-[3] gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
-              !darkMode
-                ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-                : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-            }`}
-         
+            !darkMode
+              ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+              : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+          }`}
         >
           {/* Brief About my self */}
           <p
@@ -160,16 +167,16 @@ const AboutMe = () => {
             About Me
           </p>
           <p className="text-xl text-justify font-para pt-2 pb-1 px-2">
-            "Currently, I'm a Frontend developer with 1+ year of experience building responsive,
-            high-performance web apps."
+            "Currently, I'm a Frontend developer with 1+ year of experience
+            building responsive, high-performance web apps."
           </p>
           <p className="text-xl text-justify font-para py-2 px-2">
-            I'm Himanshu, a professionally trained MERN stack developer with hands-on experience in
-            React JS and modern web technologies. I specialize in creating
-            scalable, user-friendly interfaces and love building digital
-            products that solve real problems. With 1+ year of professional
-            experience, I thrive in dynamic environments and enjoy collaborating
-            with teams to bring ideas to life.
+            I'm Himanshu, a professionally trained MERN stack developer with
+            hands-on experience in React JS and modern web technologies. I
+            specialize in creating scalable, user-friendly interfaces and love
+            building digital products that solve real problems. With 1+ year of
+            professional experience, I thrive in dynamic environments and enjoy
+            collaborating with teams to bring ideas to life.
           </p>
           {/* Tech Stack */}
 
@@ -248,15 +255,11 @@ const AboutMe = () => {
 
 export default AboutMe;
 
-
-
-
 // ${
 //               !darkMode
 //                 ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
 //                 : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
 //             }`}
-
 
 // ${
 //         !darkMode

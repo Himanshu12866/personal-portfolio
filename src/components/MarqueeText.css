@@ -18,10 +18,10 @@
   font-size: 170px;
   font-weight: 500;
   
-  /* -webkit-text-stroke: 2px white; */
+  -webkit-text-stroke: 2px white;
   margin-right: 2rem;
-  text-transform: uppercase;
-  font-family: "robout";
+
+ 
 }
 
 @keyframes scroll-left {

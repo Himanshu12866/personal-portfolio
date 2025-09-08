@@ -6,14 +6,13 @@ import HomeSkills from "../../components/home/HomeSkills";
 import HomeProjects from "../../components/home/HomeProjects";
 import HomeContact from "../../components/home/HomeContact";
 import ScrollSKills from "../../components/home/ScrollSKills";
+import { useLenis } from "../../components/SmoothScroll";
 
 const HomePage = () => {
-   useEffect(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      })
-    }, [])
+   const lenisRef = useLenis();
+     useEffect(() => {
+       lenisRef?.current?.scrollTo(0); // top of the page
+     }, []);
   return (
     <>
       <title>Himanshu | MERN Stack & Frontend Developer Portfolio</title>

@@ -17,6 +17,9 @@ import aws from "../../assets/icons_logos/icons8-aws-48.png"
 import github from "../../assets/icons_logos/icons8-git-48 (1).png"
 import bootsstrap from "../../assets/icons_logos/icons8-bootstrap-48.png"
 import sass from "../../assets/icons_logos/icons8-sass-48.png"
+import github_light from "../../assets/icons_logos/icons8-github-48.png"
+import aws_light from "../../assets/icons_logos/aws_white.png"
+import  express_light from "../../assets/icons_logos/icons8-express-js-48.png"
 import adobeI from "../../assets/icons_logos/icons8-adobe-illustrator-48.png";
 import { AppContext } from "../../context/datacontext";
 const MarqueeRow = ({ items = [], direction = "left", baseSpeed = 0.08 }) => {
@@ -76,11 +79,11 @@ const MarqueeRow = ({ items = [], direction = "left", baseSpeed = 0.08 }) => {
 
     return (
         <div className="relative overflow-hidden w-full">
-            {/* left fade */}
+           
 
             <div
                 ref={containerRef}
-                className="flex gap-6 items-center "
+                className="flex gap-6 items-center z-10"
             >
                 {[...items, ...items].map((txt, i) => (
                     <div
@@ -88,7 +91,7 @@ const MarqueeRow = ({ items = [], direction = "left", baseSpeed = 0.08 }) => {
                         className={`${!darkMode
                             ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
                             : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-                            } w-80 px-10 py-2   text-lg flex items-center my-1 justify-center backdrop-blur-sm gap-3 font-semibold`}
+                            } w-80 px-10 py-2   text-lg flex items-center my-1 justify-center backdrop-blur-sm z-[5] gap-3 font-semibold`}
                         style={{ minWidth: '220px' }}
                     >
                         <span>{txt.name}</span> <img src={txt.icon} className="w-10" alt={txt.name} />
@@ -163,13 +166,13 @@ export default function SkillScrollerScrollBoost() {
             icon: nodejs
         }, {
             name: "ExpressJS",
-            icon: express
+            icon: darkMode ? express_light : express
         }, {
             name: "MongoDB",
             icon: mongodb
         }, {
             name: "Github",
-            icon: github
+           icon: darkMode ? github_light : github
         }, {
             name: "Git",
             icon: git
@@ -179,13 +182,13 @@ export default function SkillScrollerScrollBoost() {
             icon: nodejs
         }, {
             name: "ExpressJS",
-            icon: express
+            icon: darkMode ? express_light : express
         }, {
             name: "MongoDB",
             icon: mongodb
         }, {
             name: "Github",
-            icon: github
+         icon: darkMode ? github_light : github
         }, {
             name: "Git",
             icon: git
@@ -195,13 +198,13 @@ export default function SkillScrollerScrollBoost() {
             icon: nodejs
         }, {
             name: "ExpressJS",
-            icon: express
+            icon: darkMode ? express_light : express
         }, {
             name: "MongoDB",
             icon: mongodb
         }, {
             name: "Github",
-            icon: github
+             icon: darkMode ? github_light : github
         }, {
             name: "Git",
             icon: git
@@ -214,7 +217,7 @@ export default function SkillScrollerScrollBoost() {
             icon: gcp
         }, {
             name: "AWS  ",
-            icon: aws
+            icon: darkMode ? aws_light : aws
         }, {
             name: "AdobeIllustrator",
             icon: adobeI
@@ -230,7 +233,7 @@ export default function SkillScrollerScrollBoost() {
             icon: gcp
         }, {
             name: "AWS  ",
-            icon: aws
+            icon: darkMode ? aws_light : aws
         }, {
             name: "AdobeIllustrator",
             icon: adobeI
@@ -246,7 +249,7 @@ export default function SkillScrollerScrollBoost() {
             icon: gcp
         }, {
             name: "AWS  ",
-            icon: aws
+            icon: darkMode ? aws_light : aws
         }, {
             name: "AdobeIllustrator",
             icon: adobeI
@@ -275,7 +278,7 @@ export default function SkillScrollerScrollBoost() {
         },
     ]
     return (
-        <section className="w-full flex justify-between flex-col gap-4 space-y-2 relative">
+        <section className="w-full flex justify-between flex-col z-10 gap-4 space-y-2 relative">
             <div
                 className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 md:w-32  z-10"
                 style={{

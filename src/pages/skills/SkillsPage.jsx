@@ -3,12 +3,13 @@ import SkillBanner from "../../components/skills/SkillBanner";
 import SkillsAbout from "../../components/skills/SkillsAbout";
 import SkillsCards from "../../components/skills/SkillsCards";
 import SkillProcess from "../../components/skills/SkillProcess";
+import { useLenis } from "../../components/SmoothScroll";
+import MarqueeText from "../../components/MarqueeText";
+import CurvedLoop from "../../components/about/AboutScroll";
 const SkillsPage = () => {
+  const lenisRef = useLenis();
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    lenisRef?.current?.scrollTo(0); // top of the page
   }, []);
   return (
     <div>
@@ -16,7 +17,13 @@ const SkillsPage = () => {
       <SkillsAbout />
       <SkillsCards />
       <SkillProcess />
-      {/* <GsapScrollCarousel /> */}
+      {/* <MarqueeText /> */}
+      <CurvedLoop speed={3}
+        curveAmount={20}
+        direction="left"
+        interactive={true}
+        marqueeText="🍔 Eat 😴 Sleep 💻 Code 🔁 Repeat"
+      />
     </div>
   );
 };
