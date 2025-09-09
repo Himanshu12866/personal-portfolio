@@ -20,7 +20,7 @@ const AboutPage = () => {
       <AboutExperience />
       <AboutCertificate />
       <EducationTimeline />
-      <CurvedLoop marqueeText="🍔 Eat 😴 Sleep 💻 Code 🔁 Repeat ⚡ React 🎨 Tailwind 🛠️ Node 🗄️ Mongo ☕ Coffee 💡 Ideas 🖥️ Coding 📦 Deploy 🎮 Game 🎶 Music 💻 Code 🌍 Explore" />
+      <CurvedLoop direction="right" marqueeText="⚡ React 🎨 Tailwind 🛠️ Node 🗄️ Mongo ☕ Coffee 💡 Ideas 🖥️ Coding 📦 Deploy 🎮 Game 🎶 Music 💻 Code 🌍 Explore" />
     <div className="mt-40"></div>
     </>
   );

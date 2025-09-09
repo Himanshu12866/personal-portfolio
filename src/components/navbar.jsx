@@ -15,7 +15,7 @@ const Navbar = () => {
     { name: "home", link: "/" },
     { name: "about", link: "/about" },
     { name: "skills", link: "/skills" },
-    { name: "projects", link: "/projcts" },
+    { name: "projects", link: "/projects" },
     { name: "contact", link: "/contact" },
   ];
   // const cardStyle = {

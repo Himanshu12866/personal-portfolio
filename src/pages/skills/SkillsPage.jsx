@@ -20,7 +20,7 @@ const SkillsPage = () => {
       {/* <MarqueeText /> */}
       <CurvedLoop speed={3}
         curveAmount={20}
-        direction="left"
+        direction="right"
         interactive={true}
         marqueeText="🍔 Eat 😴 Sleep 💻 Code 🔁 Repeat"
       />

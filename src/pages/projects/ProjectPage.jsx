@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import ProjectBanner from "../../components/projects/ProjectBanner";
+import ProjectAbout from "../../components/projects/ProjectAbout";
 
 const ProjectPage = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+      <ProjectBanner />
+      <ProjectAbout />
+    </>
+  );
+};
 
-export default ProjectPage
+export default ProjectPage;
