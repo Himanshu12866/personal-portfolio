@@ -10,10 +10,9 @@ const ProjectAbout = () => {
       className={`flex justify-center flex-col gap-24 items-center w-full py-20 sm:px-8 px-4 shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] `}
     >
       <div className="xl:w-4/5 w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-8">
-      <div  className="p-4">
-
-        <MagnetLines />
-      </div>
+        <div className="p-4">
+          <MagnetLines />
+        </div>
         <div
           className={`  flex flex-col gap-5 p-4 md:px-8 px-6 rounded-[20px] z-[5] backdrop-blur-sm ${
             !darkMode
