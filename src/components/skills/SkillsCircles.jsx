@@ -74,7 +74,6 @@ const SkillsCircles = () => {
                 margin: "50px auto"
             }}
         >
-    
         </div>
 
     );

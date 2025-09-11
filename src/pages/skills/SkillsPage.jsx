@@ -4,7 +4,7 @@ import SkillsAbout from "../../components/skills/SkillsAbout";
 import SkillsCards from "../../components/skills/SkillsCards";
 import SkillProcess from "../../components/skills/SkillProcess";
 import { useLenis } from "../../components/SmoothScroll";
-import MarqueeText from "../../components/MarqueeText";
+// import MarqueeText from "../../components/MarqueeText";
 import CurvedLoop from "../../components/about/AboutScroll";
 const SkillsPage = () => {
   const lenisRef = useLenis();
@@ -22,7 +22,7 @@ const SkillsPage = () => {
         curveAmount={20}
         direction="right"
         interactive={true}
-        marqueeText="🍔 Eat 😴 Sleep 💻 Code 🔁 Repeat"
+        marqueeText="🔁 Repeat  😴 Sleep 💻 Code 🍔 Eat 🔁 Repeat  😴 Sleep 💻 Code 🍔 Eat 🔁 Repeat  😴 Sleep 💻 Code 🍔 Eat"
       />
     </div>
   );

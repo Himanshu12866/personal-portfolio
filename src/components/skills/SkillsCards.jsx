@@ -1,49 +1,42 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AppContext } from "../../context/datacontext";
-import reactlogo from "../../assets/images/react.png";
 import Tilt from "react-parallax-tilt";
-import javascript from "../../assets/images/javascript.png";
-import css from "../../assets/images/icons8-css-256.png";
-import html from "../../assets/images/html.png";
-import tailwind from "../../assets/images/tailwind-css.png";
-import bootstrap from "../../assets/images/icons8-bootstrap-256.png";
-import sass from "../../assets/images/icons8-sass-256.png";
-import mui from "../../assets/images/icons8-material-ui-256.png";
-import nodejs from "../../assets/images/nodejs.png";
 import expresslight from "../../assets/images/express.png";
 import expressdark from "../../assets/images/icons8-express-js-256.png";
-import mongodb from "../../assets/images/mongodb (1).png";
-import git from "../../assets/images/git.png";
-import postman from "../../assets/icons_logos/postman_256.png"
-import gcp from "../../assets/images/icons8-google-cloud-256.png"
-import aws from "../../assets/images/icons8-aws-256.png"
-import adobe from "../../assets/images/adobe-illustrator.png"
-import aws_dark from "../../assets/images/aws_dark.png"
+import aws from "../../assets/images/icons8-aws-256.png";
+import aws_dark from "../../assets/images/aws_dark.png";
 const SkillsCards = () => {
-  const { darkMode } = useContext(AppContext);
-  const frontendIcons = [
-    { name: "React JS", img: reactlogo },
-    { name: "JavaScript", img: javascript },
-    { name: "CSS3", img: css },
-    { name: "HTML5", img: html },
-    { name: "Tailwind CSS", img: tailwind },
-    { name: "Bootstrap", img: bootstrap },
-    { name: "Sass", img: sass },
-    { name: "Material UI", img: mui },
-  ];
-  const BackendIcons = [
-    { name: "Node JS", img: nodejs },
-    { name: "Express JS", img: !darkMode ? expresslight : expressdark },
-    { name: "MongoDB", img: mongodb },
-    { name: "Git", img: git },
-  ];
-  const additionalIcons = [
-{ name: "Postman", img: postman },
-{ name: "GCP", img: gcp },
-{ name: "AWS", img: darkMode ? aws : aws_dark },
-{ name: "Adobe I", img: adobe },
+  const { darkMode, skills } = useContext(AppContext);
+  const frontendIcons = skills?.icons?.filter(
+    (item) => item.category === "frontend"
+  ) || [];
 
-  ]
+  const BackendIcons = skills?.icons?.filter(
+    (item) => item.category === "backend"
+  ) || [];
+  const additionalIcons =skills?.icons?.filter(
+    (item) => item.category === "tools"
+  ) || [];
+  
+  useEffect(() => {
+    console.log(skills)
+  },[])
+//   function resolveIconSrc(icon, theme) {
+//   const darkMode = theme === "dark";
+//   if (!icon) return ""; 
+
+//   if (icon.name === "Express.js") {
+//     return darkMode
+//       ? (typeof expressdark_large !== "undefined" ? expressdark : expresslight)   
+//       : (typeof expresslight_large !== "undefined" ? expresslight : expresslight);
+//   }
+//   if (icon.name === "AWS") {
+//     return darkMode
+//       ? (typeof aws_dark_large !== "undefined" ? aws_dark : aws_dark)
+//       : (typeof aws_large !== "undefined" ? aws: aws);
+//   }
+//   return icon.iconlarge || icon.iconsmall || "";
+// }
   return (
     <>
       <div
@@ -65,7 +58,7 @@ const SkillsCards = () => {
               scale={1.02}
             >
               <div className="inner-element flex justify-center items-center">
-                <img src={icon.img} className=" w-20" alt="react-logo" />
+                <img src={icon.iconlarge} className=" w-20" alt="react-logo" />
               </div>
               <h3 className="py-3 text-center md:text-2xl xl:text-3xl text-xl">
                 {icon.name}
@@ -77,7 +70,7 @@ const SkillsCards = () => {
       <div
         className={`flex justify-center flex-col gap-24 items-center w-full py-20  `}
       >
-        <h2 className="text-4xl font-bold">Backend Tech</h2> 
+        <h2 className="text-4xl font-bold">Backend Tech</h2>
         <div className="xl:w-4/5 3xl:w-3/5 w-full xl:p-0 p-4 grid gap-6 lg:grid-cols-4 grid-cols-2  ">
           {BackendIcons.map((icon, index) => (
             <Tilt
@@ -94,7 +87,7 @@ const SkillsCards = () => {
             >
               <div className="inner-element flex justify-center items-center">
                 <img
-                  src={icon.img}
+                  src={icon.name === "Express.js" ? (darkMode ? expressdark : expresslight) : icon.iconlarge }
                   className="md:w-24 md:h-24 w-20"
                   alt="react-logo"
                 />
@@ -126,7 +119,7 @@ const SkillsCards = () => {
             >
               <div className="inner-element flex justify-center items-center">
                 <img
-                  src={icon.img}
+                  src={icon.name === "AWS" ? (darkMode ? aws : aws_dark) : icon.iconlarge }
                   className="md:w-24 md:h-24 w-20"
                   alt="react-logo"
                 />

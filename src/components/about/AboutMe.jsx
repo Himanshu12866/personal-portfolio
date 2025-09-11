@@ -4,41 +4,16 @@ import about_pic from "../../assets/images/about_pic.png";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import html from "../../assets/icons_logos/icons8-html-5-48.png";
-import css from "../../assets/icons_logos/icons8-css-48.png";
-import javascript from "../../assets/icons_logos/icons8-javascript-48.png";
-import reactjs from "../../assets/icons_logos/icons8-react-48.png";
-import nodejs from "../../assets/icons_logos/icons8-nodejs-48.png";
 import express from "../../assets/icons_logos/icons8-express-js-50.png";
-import mongodb from "../../assets/icons_logos/icons8-mongodb-48.png";
-import tailwind from "../../assets/icons_logos/icons8-tailwind-css-48.png";
-import gcp from "../../assets/icons_logos/icons8-google-cloud-48.png";
-import mui from "../../assets/icons_logos/icons8-material-ui-48.png";
-import git from "../../assets/icons_logos/icons8-git-48.png";
-import github_light from "../../assets/icons_logos/icons8-github-48.png"
-import github from "../../assets/icons_logos/icons8-git-48 (1).png"
-
-import  express_light from "../../assets/icons_logos/icons8-express-js-48.png"
+import express_light from "../../assets/icons_logos/icons8-express-js-48.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const AboutMe = () => {
-  const { darkMode } = useContext(AppContext);
-
-  const skills = [
-    { name: "HTML", icon: html },
-    { name: "CSS", icon: css },
-    { name: "JavaScript", icon: javascript },
-    { name: "React JS", icon: reactjs },
-    { name: "Node.js", icon: nodejs },
-    { name: "Express.js", icon: darkMode ? express_light : express },
-    { name: "MongoDB", icon: mongodb },
-    { name: "Tailwind CSS", icon: tailwind },
-    { name: "Google Cloud", icon: gcp },
-    { name: "Material UI", icon: mui },
-    { name: "Git", icon: git },
-    { name: "GitHub", icon: darkMode ? github_light : github },
-  ];
+  const { darkMode, aboutData, skills } = useContext(AppContext);
+  // optional chaining + fallback
+  const profileData = aboutData?.data?.profile || {};
+  const skilssIcon = skills?.icons || [];
   const cardStyle = {
     backdropFilter: "blur(5px)",
     borderRadius: "10px",
@@ -75,34 +50,29 @@ const AboutMe = () => {
         });
       }
     };
-
     createScrollTrigger();
-
     const handleResize = () => {
       if (trigger) trigger.kill();
       createScrollTrigger();
     };
-
     window.addEventListener("resize", handleResize);
-
     return () => {
       if (trigger) trigger.kill();
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  console.log(profileData);
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full py-20  shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] `}
+      className={`flex justify-center flex-col gap-24 items-center w-full py-20 shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] `}
     >
       <div
-        className="xl:w-4/5 3xl:w-3/5  w-full  flex lg:flex-row 2xl:h-[166vh] 3xl:h-[157vh] xl:h-[170vh] lg:h-[177vh]  flex-col gap-6 p-4
-  "
+        className="xl:w-4/5 3xl:w-3/5  w-full  flex lg:flex-row 2xl:h-[166vh] 3xl:h-[157vh] xl:h-[170vh] lg:h-[177vh]  flex-col gap-6 p-4"
         ref={containerRef}
       >
         <div
           ref={stickyLeftRef}
-          className={`lg:w-5/12 flex flex-col gap-4 z-[3] w-full    
- `}
+          className={`lg:w-5/12 flex flex-col gap-4 z-[3] w-full`}
         >
           <div
             className={` z-[3] flex rounded-[10px] p-2 backdrop-blur-sm  ${
@@ -111,7 +81,10 @@ const AboutMe = () => {
                 : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
             }`}
           >
-            <img src={about_pic} alt="about page illustration" />
+            <img
+              src={profileData.pic || about_pic}
+              alt="about page illustration"
+            />
           </div>
           <div
             className={` z-[3] flex justify-center gap-4 items-center rounded-[10px] px-2 py-3 backdrop-blur-sm ${
@@ -150,9 +123,8 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-
         <div
-          className={`lg:w-7/12  w-full flex flex-col lg:h-[1150px] z-[3] gap-5 p-4 px-8 rounded-[20px] backdrop-blur-sm ${
+          className={`lg:w-7/12  w-full flex flex-col lg:h-[1150px] z-[3] gap-5 p-4 sm:px-8 px-4 rounded-[20px] backdrop-blur-sm ${
             !darkMode
               ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
               : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
@@ -166,20 +138,13 @@ const AboutMe = () => {
             {" "}
             About Me
           </p>
-          <p className="text-xl text-justify font-para pt-2 pb-1 px-2">
-            "Currently, I'm a Frontend developer with 1+ year of experience
-            building responsive, high-performance web apps."
+          <p className="text-xl text-left font-para pt-2 pb-1 px-2">
+            "{profileData.aboutmeparagraph}""
           </p>
-          <p className="text-xl text-justify font-para py-2 px-2">
-            I'm Himanshu, a professionally trained MERN stack developer with
-            hands-on experience in React JS and modern web technologies. I
-            specialize in creating scalable, user-friendly interfaces and love
-            building digital products that solve real problems. With 1+ year of
-            professional experience, I thrive in dynamic environments and enjoy
-            collaborating with teams to bring ideas to life.
+          <p className="text-xl text-left font-para py-2 px-2">
+            {profileData.description}
           </p>
           {/* Tech Stack */}
-
           <p
             style={cardStyle}
             className=" w-32 pt-2 px-2 sm:ms-4 text-center text-lg sm:text-xl font-heading"
@@ -188,9 +153,18 @@ const AboutMe = () => {
             Tech Stack
           </p>
           <div className="flex flex-row flex-wrap lg:gap-3 gap-4 mt-2 px-2 pb-6 justify-start items-center">
-            {skills.map((item, index) => (
+            {skilssIcon.map((item, index) => (
               <p key={index} className="w-12 flex justify-center items-center">
-                <img src={item.icon} alt={item.name} />
+                <img
+                  src={
+                    item.name === "Express.js"
+                      ? !darkMode
+                        ? express
+                        : express_light
+                      : item.iconsmall
+                  }
+                  alt={item.name}
+                />
               </p>
             ))}
           </div>
@@ -203,24 +177,15 @@ const AboutMe = () => {
             Hobbies
           </p>
           <ul className="text-xl text-justify font-para pt-2 pb-1 px-2">
-            <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#f59e0b]" /> Reading books –
-              especially tech & self-growth related.
-            </li>
-            <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#f59e0b]" />
-              Listening to music & exploring new genres.
-            </li>
-            <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#f59e0b]" />
-              Staying updated on global trends & innovations.
-            </li>
-            <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#f59e0b]" /> Engaging in political
-              talks & discussions to explore diverse perspectives.
-            </li>
+            {profileData.hobbies?.map((item, index) => (
+              <li
+                key={(index * index) / 2}
+                className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2"
+              >
+                <VerifiedIcon className="text-[#f59e0b]" /> {item}
+              </li>
+            ))}
           </ul>
-
           {/* My Strengths */}
           <p
             style={cardStyle}
@@ -230,22 +195,14 @@ const AboutMe = () => {
             Strengths
           </p>
           <ul className="text-xl text-left font-para pt-2 pb-1 px-2">
-            <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#f59e0b]" />
-              Quick learner & adaptive.
-            </li>
-            <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#f59e0b]" />
-              Problem-solving mindset.
-            </li>
-            <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#f59e0b]" />
-              Detail-oriented UI design approach.
-            </li>
-            <li className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2">
-              <VerifiedIcon className="text-[#f59e0b]" />
-              Strong foundation in React & JavaScript.
-            </li>
+            {profileData.strength?.map((item, index) => (
+              <li
+                key={(index * index) / 2}
+                className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2"
+              >
+                <VerifiedIcon className="text-[#f59e0b]" /> {item}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

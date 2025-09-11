@@ -5,9 +5,7 @@ import AboutExperience from "../../components/about/AboutExperience";
 import AboutCertificate from "../../components/about/AboutCertificate";
 import EducationTimeline from "../../components/about/AboutTimeline";
 import { useLenis } from "../../components/SmoothScroll";
-import ScrollVelocity from "../../components/about/AboutScroll";
 import CurvedLoop from "../../components/about/AboutScroll";
-
 const AboutPage = () => {
   const lenisRef = useLenis();
   useEffect(() => {
