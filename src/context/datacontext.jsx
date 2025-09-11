@@ -11,6 +11,7 @@ const AppContextProvider = (props) => {
   const [skills, setSkills] = useState([]);
   const [homeData, setHomeData] = useState([]);
   const [aboutData, setAboutData] = useState([]);
+  const [projects, setProjects] = useState([]);
   const data = portfolioData;
 
   const toggleDarkMode = () => {
@@ -24,6 +25,8 @@ const AppContextProvider = (props) => {
       setHomeData(homepagedata.data);
       const aboutpagedata = portfolioData.find((item) => item.id === 2);
       setAboutData(aboutpagedata);
+      const projectData = portfolioData.find((item) => item.id === 3);
+      setProjects(projectData.data);
     }
   }, [data]);
   // Listen for system theme changes (live update)
@@ -54,6 +57,7 @@ const AppContextProvider = (props) => {
     skills,
     homeData,
     aboutData,
+    projects
   };
   return (
     <AppContext.Provider value={values}>{props.children}</AppContext.Provider>

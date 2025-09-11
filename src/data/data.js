@@ -35,6 +35,13 @@ import reactlogo from "../assets/images/react.png";
 //company logos
 import novatales from "../assets/icons_logos/novatales.png"
 import naresh from "../assets/icons_logos/naresh-it-logo2.png"
+// projects images
+
+import livvon_customer from "../assets/images/livvon.png"
+import livvon_admin from "../assets/images/livvon_admin.png"
+import magnaid from "../assets/images/magnaid.png"
+import conceiva from "../assets/images/conceiva.png"
+import cdc_usa from "../assets/images/cdc_usa.png"
 
 const portfolioData = [
     // Skills Data and icons
@@ -78,7 +85,7 @@ const portfolioData = [
                 iconlarge: expressdark_large,
                 category: "backend",
             },
-           
+
             {
                 name: "MongoDB",
                 iconsmall: mongodb,
@@ -127,7 +134,7 @@ const portfolioData = [
                 iconlarge: git_large,
                 category: "backend",
             },
-           
+
             {
                 name: "Postman",
                 iconsmall: postman_large,
@@ -171,7 +178,7 @@ const portfolioData = [
                 title: "Projects",
                 projects: [
                     {
-                        projectType:"Company Porject",
+                        projectType: "Company Porject",
                         projectId: 121,
                         projectName: "Livvon Comforts",
                         projectDesc:
@@ -193,7 +200,7 @@ const portfolioData = [
                         ],
                     },
                     {
-                        projectId: 122,projectType:"Personal Porject",
+                        projectId: 122, projectType: "Personal Porject",
                         projectName: "Dr. Booking Web App",
                         projectDesc:
                             "A platform where patients can register, book appointments, make payments, and users/doctors/admin can manage appointments and profiles.",
@@ -224,75 +231,75 @@ const portfolioData = [
     {
         id: 2,
         title: "About Page Data",
-        data: 
-            {
-                profile: {
-                    pic: "",
-                    aboutmeparagraph:
-                        "Currently, I'm a Frontend developer with 1+ year of experience building responsive, high-performance web apps.",
-                    description:
-                        "I'm Himanshu, a professionally trained MERN stack developer with hands-on experience in React JS and modern web technologies. I specialize in creating scalable, user-friendly interfaces and love building digital products that solve real problems. With 1+ year of professional experience, I thrive in dynamic environments and enjoy collaborating with teams to bring ideas to life.",
-                    hobbies: [
-                        "Reading books – especially tech & self-growth related",
-                        "Listening to music & exploring new genres",
-                        "Staying updated on global trends & innovations",
-                        "Engaging in political talks & discussions to explore diverse perspectives",
-                    ],
-                    strength: [
-                        "Quick learner & adaptive",
-                        "Problem-solving mindset",
-                        "Detail-oriented UI design approach",
-                        "Strong foundation in React & JavaScript",
-                    ],
-                },
-                experience: [
-                    {
-                        id: 1,
-                        company: "NovaTales Media LLP",
-                        role: "Frontend Developer",
-                        logo: novatales,
-                        location: "Hyderabad, Telangana",
-                        duration: "November 2024 – Present",
-                        description:
-                            "As a Frontend Developer, I took ownership of crafting engaging and high-performing user interfaces that not only aligned with brand goals but also elevated the overall digital experience. My role involved building reusable UI components, optimizing performance, collaborating cross-functionally with design and marketing teams, and ensuring seamless integration of campaigns into web platforms. Beyond just coding screens, I focused on delivering user-centric, accessible, and scalable solutions that directly impacted engagement and retention.",
-                        responsibilities: [
-                            "Developed responsive and interactive UI components using React, ensuring smooth cross-device compatibility",
-                            "Enhanced site performance and accessibility, improving engagement and user retention",
-                            "Implemented API integrations and optimized state management for seamless data flow",
-                            "Contributed to backend development, building and refining RESTful APIs in Node.js",
-                            "Worked on database operations (MongoDB) for secure storage, queries, and data consistency",
-                            "Collaborated with design and marketing teams to deliver scalable, campaign-ready features",
-                        ],
-                        locationlink: "",
-                        companyLink: "https://novatales.com/",
-                    },
+        data:
+        {
+            profile: {
+                pic: "",
+                aboutmeparagraph:
+                    "Currently, I'm a Frontend developer with 1+ year of experience building responsive, high-performance web apps.",
+                description:
+                    "I'm Himanshu, a professionally trained MERN stack developer with hands-on experience in React JS and modern web technologies. I specialize in creating scalable, user-friendly interfaces and love building digital products that solve real problems. With 1+ year of professional experience, I thrive in dynamic environments and enjoy collaborating with teams to bring ideas to life.",
+                hobbies: [
+                    "Reading books – especially tech & self-growth related",
+                    "Listening to music & exploring new genres",
+                    "Staying updated on global trends & innovations",
+                    "Engaging in political talks & discussions to explore diverse perspectives",
                 ],
-                certificate: [
-                    {
-                        id: 1,
-                        company: "Naresh IT",
-                        role: "UI Full Stack With ReactJS",
-                        logo: naresh,
-                        location: "Hyderabad, Telangana",
-                        duration: "April - August 2024",
-                        description:
-                            "As a trainee in UI Full Stack with ReactJS, I worked on building responsive web applications using the MERN stack. My role involved developing reusable UI components, implementing APIs, managing databases, and enhancing overall performance and scalability of applications.",
-                        responsibilities: [
-                            "Developed responsive and interactive UI components with ReactJS for cross-device compatibility",
-                            "Implemented RESTful APIs using Node.js and Express.js for backend communication",
-                            "Designed and managed MongoDB databases for secure data handling",
-                            "Enhanced site performance and optimized state management for seamless user experience",
-                            "Collaborated on projects simulating real-world applications using Git & GitHub",
-                            "Performed thorough testing and debugging to ensure application reliability and functionality",
-                        ],
-                        locationlink: "",
-                        companyLink: "https://novatales.com/",
-                        certificateName:"UI Full Stack With React",
-                        certificateLink:"https://www.linkedin.com/in/himanshumishra17/overlay/1753120822194/single-media-viewer/?profileId=ACoAAEkM3QcBjPvIjOKMhGc660O63MHWeinwVuM"
-                    },
+                strength: [
+                    "Quick learner & adaptive",
+                    "Problem-solving mindset",
+                    "Detail-oriented UI design approach",
+                    "Strong foundation in React & JavaScript",
                 ],
             },
-        
+            experience: [
+                {
+                    id: 1,
+                    company: "NovaTales Media LLP",
+                    role: "Frontend Developer",
+                    logo: novatales,
+                    location: "Hyderabad, Telangana",
+                    duration: "November 2024 – Present",
+                    description:
+                        "As a Frontend Developer, I took ownership of crafting engaging and high-performing user interfaces that not only aligned with brand goals but also elevated the overall digital experience. My role involved building reusable UI components, optimizing performance, collaborating cross-functionally with design and marketing teams, and ensuring seamless integration of campaigns into web platforms. Beyond just coding screens, I focused on delivering user-centric, accessible, and scalable solutions that directly impacted engagement and retention.",
+                    responsibilities: [
+                        "Developed responsive and interactive UI components using React, ensuring smooth cross-device compatibility",
+                        "Enhanced site performance and accessibility, improving engagement and user retention",
+                        "Implemented API integrations and optimized state management for seamless data flow",
+                        "Contributed to backend development, building and refining RESTful APIs in Node.js",
+                        "Worked on database operations (MongoDB) for secure storage, queries, and data consistency",
+                        "Collaborated with design and marketing teams to deliver scalable, campaign-ready features",
+                    ],
+                    locationlink: "",
+                    companyLink: "https://novatales.com/",
+                },
+            ],
+            certificate: [
+                {
+                    id: 1,
+                    company: "Naresh IT",
+                    role: "UI Full Stack With ReactJS",
+                    logo: naresh,
+                    location: "Hyderabad, Telangana",
+                    duration: "April - August 2024",
+                    description:
+                        "As a trainee in UI Full Stack with ReactJS, I worked on building responsive web applications using the MERN stack. My role involved developing reusable UI components, implementing APIs, managing databases, and enhancing overall performance and scalability of applications.",
+                    responsibilities: [
+                        "Developed responsive and interactive UI components with ReactJS for cross-device compatibility",
+                        "Implemented RESTful APIs using Node.js and Express.js for backend communication",
+                        "Designed and managed MongoDB databases for secure data handling",
+                        "Enhanced site performance and optimized state management for seamless user experience",
+                        "Collaborated on projects simulating real-world applications using Git & GitHub",
+                        "Performed thorough testing and debugging to ensure application reliability and functionality",
+                    ],
+                    locationlink: "",
+                    companyLink: "https://novatales.com/",
+                    certificateName: "UI Full Stack With React",
+                    certificateLink: "https://www.linkedin.com/in/himanshumishra17/overlay/1753120822194/single-media-viewer/?profileId=ACoAAEkM3QcBjPvIjOKMhGc660O63MHWeinwVuM"
+                },
+            ],
+        },
+
     },
     {
         id: 3,
@@ -301,38 +308,115 @@ const portfolioData = [
             professinalprojects: [
                 {
                     category: "Professional",
-                    projectName: "",
+                    projectName: "Livvon Comforts E-commerce Web App",
                     projectCardPic: "",
                     projectDesc: "",
-                    projectDemo: "",
+                    path: "/admin",
                     projectStudy: "",
                     projectChallange: "",
                     myContribution: "",
                     outcomes: "",
+                    status: "",
+                    duration: "",
                     screenShots: [
                         {
                             title: "",
                             image: "",
                         },
+
                     ],
+                    image: livvon_customer,
+                    text: " Livvon E-Commerce Web App",
                 },
                 {
                     category: "Professional",
-                    projectName: "",
+                    projectName: "Livvon Comforts E-commerce Web App",
                     projectCardPic: "",
                     projectDesc: "",
-                    projectDemo: "",
+                    path: "",
                     projectStudy: "",
                     projectChallange: "",
                     myContribution: "",
                     outcomes: "",
+                    status: "",
+                    duration: "",
                     screenShots: [
                         {
                             title: "",
                             image: "",
                         },
+
                     ],
+                    image: livvon_admin,
+                    text: " Livvon Admin Panel",
                 },
+                {
+                    category: "Professional",
+                    projectName: "Livvon Comforts E-commerce Web App",
+                    projectCardPic: "",
+                    projectDesc: "",
+                    path: "",
+                    projectStudy: "",
+                    projectChallange: "",
+                    myContribution: "",
+                    outcomes: "",
+                    status: "",
+                    duration: "",
+                    screenShots: [
+                        {
+                            title: "",
+                            image: "",
+                        },
+
+                    ],
+                    image: magnaid,
+                    text: " Magnaid Healthcare",
+                },
+                {
+                    category: "Professional",
+                    projectName: "Livvon Comforts E-commerce Web App",
+                    projectCardPic: "",
+                    projectDesc: "",
+                    path: "",
+                    projectStudy: "",
+                    projectChallange: "",
+                    myContribution: "",
+                    outcomes: "",
+                    status: "",
+                    duration: "",
+                    screenShots: [
+                        {
+                            title: "",
+                            image: "",
+                        },
+
+                    ],
+                    image: conceiva,
+                    text: " Conceiva Fertility",
+                },
+                {
+                    category: "Professional",
+                    projectName: "Livvon Comforts E-commerce Web App",
+                    projectCardPic: "",
+                    projectDesc: "",
+                    path: "",
+                    projectStudy: "",
+                    projectChallange: "",
+                    myContribution: "",
+                    outcomes: "",
+                    status: "",
+                    duration: "",
+                    screenShots: [
+                        {
+                            title: "",
+                            image: "",
+                        },
+
+                    ],
+                    image: cdc_usa,
+                    text: "CDC Diagnostics",
+                },
+
             ],
         },
     },

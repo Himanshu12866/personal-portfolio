@@ -3,12 +3,23 @@ import CircularGallery from "./ProjectCircular";
 import { AppContext } from "../../context/datacontext";
 
 const ProjectsAll = () => {
-  const { darkMode } = useContext(AppContext);
+  const { darkMode, projects } = useContext(AppContext);
+  const professionalProjects = projects?.professinalprojects || [];
+  console.log("Professional Projects:", professionalProjects);
+  const items = professionalProjects.map(item => {
+    return {
+      image: item.image,
+      text: item.text,
+      path: item.path
+    };
+  });
+
+
   return (
     <>
       <div>
-              <h2 className="text-4xl font-bold text-center pt-20">Professional Journey</h2>
-        <CircularGallery textColor={`${darkMode ? "white" : "black"}`} />
+        <h2 className="text-4xl font-bold text-center pt-20">Professional Journey</h2>
+        <CircularGallery  items={items} textColor={`${darkMode ? "white" : "black"}`} />
       </div>
     </>
   );
