@@ -251,6 +251,43 @@ return tl;
 }
 
 
+Case Study Page
+│
+├── 1. Header / Intro
+│     ├── Project Title
+│     ├── Short Description (2–3 lines)
+│     ├── Role + Tech Stack badges
+│
+├── 2. Project Context
+│     ├── Problem Statement
+│     ├── Goals (bullet points)
+│
+├── 3. Development Process
+│     ├── Main Challenges
+│     ├── Solutions / Approach
+│     ├── Key Features implemented
+│
+├── 4. Features Showcase
+│     ├── Responsive Design
+│     ├── API Integrations
+│     ├── Animations
+│     ├── Performance Improvements
+│
+├── 5. Results / Outcomes
+│     ├── Final Achievements
+│     ├── What was improved or delivered
+│     ├── Learnings (if personal project)
+│
+├── 6. Visual Gallery
+│     ├── Project Screenshots in Mockups
+│     ├── Before/After (if any)
+│
+└── 7. Links & Navigation
+      ├── Live Demo Button
+      ├── GitHub / Repo (if shareable)
+      ├── Back to Projects / Next Project
+
+
 
   <div
           className={` flex flex-col gap-5 z-[3] p-4 sm:px-8 px-4 rounded-[20px] backdrop-blur-sm ${

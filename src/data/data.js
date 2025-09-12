@@ -41,7 +41,7 @@ import livvon_customer from "../assets/images/livvon.png"
 import livvon_admin from "../assets/images/livvon_admin.png"
 import magnaid from "../assets/images/magnaid.png"
 import conceiva from "../assets/images/conceiva.png"
-import cdc_usa from "../assets/images/cdc_usa.png"
+import cdc_usa from "../assets/images/3274.jpg"
 
 const portfolioData = [
     // Skills Data and icons
@@ -301,6 +301,10 @@ const portfolioData = [
         },
 
     },
+
+    // About Page data completed 
+
+    // Project Page Data and case study pages
     {
         id: 3,
         title: "Projects Page Data",
@@ -325,7 +329,7 @@ const portfolioData = [
                         },
 
                     ],
-                    image: livvon_customer,
+                    image: cdc_usa,
                     text: " Livvon E-Commerce Web App",
                 },
                 {
@@ -347,7 +351,7 @@ const portfolioData = [
                         },
 
                     ],
-                    image: livvon_admin,
+                    image: cdc_usa,
                     text: " Livvon Admin Panel",
                 },
                 {
@@ -369,7 +373,7 @@ const portfolioData = [
                         },
 
                     ],
-                    image: magnaid,
+                    image: cdc_usa,
                     text: " Magnaid Healthcare",
                 },
                 {
@@ -391,7 +395,7 @@ const portfolioData = [
                         },
 
                     ],
-                    image: conceiva,
+                    image: cdc_usa,
                     text: " Conceiva Fertility",
                 },
                 {
@@ -399,7 +403,7 @@ const portfolioData = [
                     projectName: "Livvon Comforts E-commerce Web App",
                     projectCardPic: "",
                     projectDesc: "",
-                    path: "",
+                    path: "/about",
                     projectStudy: "",
                     projectChallange: "",
                     myContribution: "",
@@ -420,5 +424,6 @@ const portfolioData = [
             ],
         },
     },
+    // Project page data and case study pages data completed
 ];
 export default portfolioData;

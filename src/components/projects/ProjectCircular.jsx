@@ -380,46 +380,8 @@ class App {
       widthSegments: 100,
     });
   }
-  createMedias(
-    items,
-    bend = 1,
-    textColor,
-    borderRadius,
-    font,
-  ) {
-    const defaultItems = [
-      {
-        image: `https://picsum.photos/seed/1/800/600?grayscale`,
-        text: "Bridge",
-        path: "/netflix-projects",
-      },
-      {
-        image: `https://picsum.photos/seed/2/800/600?grayscale`,
-        text: "Desk Setup",
-        path: "/netflix-projects",
-      },
-      {
-        image: `https://picsum.photos/seed/3/800/600?grayscale`,
-        text: "Waterfall",
-        path: "/netflix-projects",
-      },
-      {
-        image: `https://picsum.photos/seed/4/800/600?grayscale`,
-        text: "Strawberries",
-        path: "/netflix-projects",
-      },
-      {
-        image: `https://picsum.photos/seed/5/800/600?grayscale`,
-        text: "Deep Diving",
-        path: "/netflix-projects",
-      },
-      {
-        image: `https://picsum.photos/seed/16/800/600?grayscale`,
-        text: "Train Track",
-        path: "/netflix-projects",
-      },
-    
-    ];
+  createMedias(items, bend = 1, textColor, borderRadius, font) {
+    const defaultItems = [];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
     this.medias = this.mediasImages.map((data, index) => {
@@ -574,13 +536,12 @@ class App {
 
 export default function CircularGallery({
   items,
-  bend =20,
+  bend = 20,
   textColor = "#ffffff",
   borderRadius = 0.05,
-  font = "bold 30px Figtree",
+  font = "900 25px",
   scrollSpeed = 2,
   scrollEase = 0.05,
- 
 }) {
   const containerRef = useRef(null);
   useEffect(() => {
@@ -592,25 +553,15 @@ export default function CircularGallery({
       font,
       scrollSpeed,
       scrollEase,
-   
     });
     return () => {
       app.destroy();
     };
-  }, [
-    items,
-    bend,
-    textColor,
-    borderRadius,
-    font,
-    scrollSpeed,
-    scrollEase,
-   
-  ]);
+  }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
 
   return (
     <div
-      className="w-full h-[600px] overflow-hidden cursor-grab my-32 active:cursor-grabbing"
+      className="w-full h-[600px] overflow-hidden cursor-grab my-32 z-10 active:cursor-grabbing"
       ref={containerRef}
     />
   );

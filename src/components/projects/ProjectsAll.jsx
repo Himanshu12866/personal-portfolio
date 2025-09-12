@@ -14,12 +14,12 @@ const ProjectsAll = () => {
     };
   });
 
-
+console.log(items)
   return (
     <>
       <div>
         <h2 className="text-4xl font-bold text-center pt-20">Professional Journey</h2>
-        <CircularGallery  items={items} textColor={`${darkMode ? "white" : "black"}`} />
+        <CircularGallery  items={items} textColor={`#ff7700`} />
       </div>
     </>
   );
