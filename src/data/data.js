@@ -310,12 +310,14 @@ const portfolioData = [
         title: "Projects Page Data",
         data: {
             professinalprojects: [
+
+                // Project 1
                 {
                     category: "Professional",
-                    projectName: "Livvon Comforts E-commerce Web App",
+                    projectName: "Livvon Comforts – E-Commerce Web Application",
                     projectCardPic: "",
                     projectDesc: "",
-                    path: "/admin",
+                    path: "admin",
                     projectStudy: "",
                     projectChallange: "",
                     myContribution: "",
@@ -332,95 +334,59 @@ const portfolioData = [
                     image: cdc_usa,
                     text: " Livvon E-Commerce Web App",
                 },
+
+                // Project 2
+
                 {
                     category: "Professional",
-                    projectName: "Livvon Comforts E-commerce Web App",
-                    projectCardPic: "",
-                    projectDesc: "",
-                    path: "",
-                    projectStudy: "",
-                    projectChallange: "",
-                    myContribution: "",
-                    outcomes: "",
-                    status: "",
-                    duration: "",
-                    screenShots: [
-                        {
+                    header: {
+                        title: "Livvon Comforts – E-Commerce Web Application",
+                        description: "Livvon Comforts is a modern e-commerce web application designed to provide customers with a seamless shopping experience for mattresses, pillows, and related comfort products. Inspired by leading platforms like Amazon and Flipkart, the project focuses on delivering a clean, reliable, and user-friendly interface where customers can explore, purchase, and manage their comfort essentials with ease.",
+                        duration: "Navember 2024 - May-2024",
+
+                    },
+                    context: {
+                        title: "Problem Statement / Intention",
+                        goals: [
+                            "Eliminate unnecessary steps in the shopping journey.",
+                            "Simplify the interface to avoid confusion and save time.",
+                            "Provide a hassle-free shopping experience.",
+                            "Enable customers to book products in a straightforward way.",
+                            "Deliver a clean experience with no distractions or 'hocus-pocus'."
+                        ]
+                    },
+                    process: {
+                        title: "Process",
+                        challenge: [
+                            "Maintaining consistency across the UI while scaling the project.",
+                            "Raw CSS made the codebase hard to manage and less reusable.",
+                            "Product filtering experience was clunky and slow."
+                        ],
+                        myContribution: [
+                            "Migrated the UI from raw CSS to Tailwind CSS for scalable and maintainable design.",
+                            "Standardized design tokens and improved responsiveness across pages.",
+                            "Implemented dynamic category-based product filtering in React.",
+                            "Enhanced overall user experience by simplifying browsing and checkout flow."
+                        ]
+                    },
+                    outcomes: {
+                        title: "",
+                        results: [],
+                    },
+                    visualgallery: {
+                        title: "",
+                        screenShots: [{
                             title: "",
                             image: "",
-                        },
-
-                    ],
+                        },],
+                    },
+                    navigation: {
+                        demo: "",
+                        repo: ""
+                    },
                     image: cdc_usa,
                     text: " Livvon Admin Panel",
                 },
-                {
-                    category: "Professional",
-                    projectName: "Livvon Comforts E-commerce Web App",
-                    projectCardPic: "",
-                    projectDesc: "",
-                    path: "",
-                    projectStudy: "",
-                    projectChallange: "",
-                    myContribution: "",
-                    outcomes: "",
-                    status: "",
-                    duration: "",
-                    screenShots: [
-                        {
-                            title: "",
-                            image: "",
-                        },
-
-                    ],
-                    image: cdc_usa,
-                    text: " Magnaid Healthcare",
-                },
-                {
-                    category: "Professional",
-                    projectName: "Livvon Comforts E-commerce Web App",
-                    projectCardPic: "",
-                    projectDesc: "",
-                    path: "",
-                    projectStudy: "",
-                    projectChallange: "",
-                    myContribution: "",
-                    outcomes: "",
-                    status: "",
-                    duration: "",
-                    screenShots: [
-                        {
-                            title: "",
-                            image: "",
-                        },
-
-                    ],
-                    image: cdc_usa,
-                    text: " Conceiva Fertility",
-                },
-                {
-                    category: "Professional",
-                    projectName: "Livvon Comforts E-commerce Web App",
-                    projectCardPic: "",
-                    projectDesc: "",
-                    path: "/about",
-                    projectStudy: "",
-                    projectChallange: "",
-                    myContribution: "",
-                    outcomes: "",
-                    status: "",
-                    duration: "",
-                    screenShots: [
-                        {
-                            title: "",
-                            image: "",
-                        },
-
-                    ],
-                    image: cdc_usa,
-                    text: "CDC Diagnostics",
-                },
-
             ],
         },
     },
