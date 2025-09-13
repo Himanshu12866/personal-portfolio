@@ -310,35 +310,12 @@ const portfolioData = [
         title: "Projects Page Data",
         data: {
             professinalprojects: [
-
-                // Project 1
-                {
-                    category: "Professional",
-                    projectName: "Livvon Comforts – E-Commerce Web Application",
-                    projectCardPic: "",
-                    projectDesc: "",
-                    path: "admin",
-                    projectStudy: "",
-                    projectChallange: "",
-                    myContribution: "",
-                    outcomes: "",
-                    status: "",
-                    duration: "",
-                    screenShots: [
-                        {
-                            title: "",
-                            image: "",
-                        },
-
-                    ],
-                    image: cdc_usa,
-                    text: " Livvon E-Commerce Web App",
-                },
-
                 // Project 2
 
                 {
                     category: "Professional",
+                    slug: "livvon-customer-portal",
+                    techUsed: [""],
                     header: {
                         title: "Livvon Comforts – E-Commerce Web Application",
                         description: "Livvon Comforts is a modern e-commerce web application designed to provide customers with a seamless shopping experience for mattresses, pillows, and related comfort products. Inspired by leading platforms like Amazon and Flipkart, the project focuses on delivering a clean, reliable, and user-friendly interface where customers can explore, purchase, and manage their comfort essentials with ease.",
@@ -370,9 +347,193 @@ const portfolioData = [
                         ]
                     },
                     outcomes: {
-                        title: "",
-                        results: [],
+                        title: "Outcomes",
+                        results: [
+                            "Delivered a modern, responsive, and scalable UI.",
+                            "Improved product discovery with category-based filtering.",
+                            "Simplified the shopping journey for customers.",
+                            "Enhanced performance and design consistency across the app.",
+                            "Gained hands-on experience in migrating large projects to Tailwind CSS."
+                        ]
                     },
+
+                    visualgallery: {
+                        title: "",
+                        screenShots: [{
+                            title: "",
+                            image: "",
+                        },],
+                    },
+                    navigation: {
+                        demo: "",
+                        repo: ""
+                    },
+                    image: cdc_usa,
+                    text: " Livvon Admin Panel",
+                },
+                {
+                    category: "Professional",
+                    slug: "livvon-customer-portal",
+                    techUsed: [""],
+                    header: {
+                        title: "Livvon Comforts – E-Commerce Web Application",
+                        description: "Livvon Comforts is a modern e-commerce web application designed to provide customers with a seamless shopping experience for mattresses, pillows, and related comfort products. Inspired by leading platforms like Amazon and Flipkart, the project focuses on delivering a clean, reliable, and user-friendly interface where customers can explore, purchase, and manage their comfort essentials with ease.",
+                        duration: "Navember 2024 - May-2024",
+
+                    },
+                    context: {
+                        title: "Problem Statement / Intention",
+                        goals: [
+                            "Eliminate unnecessary steps in the shopping journey.",
+                            "Simplify the interface to avoid confusion and save time.",
+                            "Provide a hassle-free shopping experience.",
+                            "Enable customers to book products in a straightforward way.",
+                            "Deliver a clean experience with no distractions or 'hocus-pocus'."
+                        ]
+                    },
+                    process: {
+                        title: "Process",
+                        challenge: [
+                            "Maintaining consistency across the UI while scaling the project.",
+                            "Raw CSS made the codebase hard to manage and less reusable.",
+                            "Product filtering experience was clunky and slow."
+                        ],
+                        myContribution: [
+                            "Migrated the UI from raw CSS to Tailwind CSS for scalable and maintainable design.",
+                            "Standardized design tokens and improved responsiveness across pages.",
+                            "Implemented dynamic category-based product filtering in React.",
+                            "Enhanced overall user experience by simplifying browsing and checkout flow."
+                        ]
+                    },
+                    outcomes: {
+                        title: "Outcomes",
+                        results: [
+                            "Delivered a modern, responsive, and scalable UI.",
+                            "Improved product discovery with category-based filtering.",
+                            "Simplified the shopping journey for customers.",
+                            "Enhanced performance and design consistency across the app.",
+                            "Gained hands-on experience in migrating large projects to Tailwind CSS."
+                        ]
+                    },
+
+                    visualgallery: {
+                        title: "",
+                        screenShots: [{
+                            title: "",
+                            image: "",
+                        },],
+                    },
+                    navigation: {
+                        demo: "",
+                        repo: ""
+                    },
+                    image: cdc_usa,
+                    text: " Livvon Admin Panel",
+                },
+                {
+                    category: "Professional",
+                    slug: "livvon-customer-portal",
+                    techUsed: [""],
+                    header: {
+                        title: "Livvon Comforts – E-Commerce Web Application",
+                        description: "Livvon Comforts is a modern e-commerce web application designed to provide customers with a seamless shopping experience for mattresses, pillows, and related comfort products. Inspired by leading platforms like Amazon and Flipkart, the project focuses on delivering a clean, reliable, and user-friendly interface where customers can explore, purchase, and manage their comfort essentials with ease.",
+                        duration: "Navember 2024 - May-2024",
+
+                    },
+                    context: {
+                        title: "Problem Statement / Intention",
+                        goals: [
+                            "Eliminate unnecessary steps in the shopping journey.",
+                            "Simplify the interface to avoid confusion and save time.",
+                            "Provide a hassle-free shopping experience.",
+                            "Enable customers to book products in a straightforward way.",
+                            "Deliver a clean experience with no distractions or 'hocus-pocus'."
+                        ]
+                    },
+                    process: {
+                        title: "Process",
+                        challenge: [
+                            "Maintaining consistency across the UI while scaling the project.",
+                            "Raw CSS made the codebase hard to manage and less reusable.",
+                            "Product filtering experience was clunky and slow."
+                        ],
+                        myContribution: [
+                            "Migrated the UI from raw CSS to Tailwind CSS for scalable and maintainable design.",
+                            "Standardized design tokens and improved responsiveness across pages.",
+                            "Implemented dynamic category-based product filtering in React.",
+                            "Enhanced overall user experience by simplifying browsing and checkout flow."
+                        ]
+                    },
+                    outcomes: {
+                        title: "Outcomes",
+                        results: [
+                            "Delivered a modern, responsive, and scalable UI.",
+                            "Improved product discovery with category-based filtering.",
+                            "Simplified the shopping journey for customers.",
+                            "Enhanced performance and design consistency across the app.",
+                            "Gained hands-on experience in migrating large projects to Tailwind CSS."
+                        ]
+                    },
+
+                    visualgallery: {
+                        title: "",
+                        screenShots: [{
+                            title: "",
+                            image: "",
+                        },],
+                    },
+                    navigation: {
+                        demo: "",
+                        repo: ""
+                    },
+                    image: cdc_usa,
+                    text: " Livvon Admin Panel",
+                },
+                {
+                    category: "Professional",
+                    slug: "livvon-customer-portal",
+                    techUsed: [""],
+                    header: {
+                        title: "Livvon Comforts – E-Commerce Web Application",
+                        description: "Livvon Comforts is a modern e-commerce web application designed to provide customers with a seamless shopping experience for mattresses, pillows, and related comfort products. Inspired by leading platforms like Amazon and Flipkart, the project focuses on delivering a clean, reliable, and user-friendly interface where customers can explore, purchase, and manage their comfort essentials with ease.",
+                        duration: "Navember 2024 - May-2024",
+
+                    },
+                    context: {
+                        title: "Problem Statement / Intention",
+                        goals: [
+                            "Eliminate unnecessary steps in the shopping journey.",
+                            "Simplify the interface to avoid confusion and save time.",
+                            "Provide a hassle-free shopping experience.",
+                            "Enable customers to book products in a straightforward way.",
+                            "Deliver a clean experience with no distractions or 'hocus-pocus'."
+                        ]
+                    },
+                    process: {
+                        title: "Process",
+                        challenge: [
+                            "Maintaining consistency across the UI while scaling the project.",
+                            "Raw CSS made the codebase hard to manage and less reusable.",
+                            "Product filtering experience was clunky and slow."
+                        ],
+                        myContribution: [
+                            "Migrated the UI from raw CSS to Tailwind CSS for scalable and maintainable design.",
+                            "Standardized design tokens and improved responsiveness across pages.",
+                            "Implemented dynamic category-based product filtering in React.",
+                            "Enhanced overall user experience by simplifying browsing and checkout flow."
+                        ]
+                    },
+                    outcomes: {
+                        title: "Outcomes",
+                        results: [
+                            "Delivered a modern, responsive, and scalable UI.",
+                            "Improved product discovery with category-based filtering.",
+                            "Simplified the shopping journey for customers.",
+                            "Enhanced performance and design consistency across the app.",
+                            "Gained hands-on experience in migrating large projects to Tailwind CSS."
+                        ]
+                    },
+
                     visualgallery: {
                         title: "",
                         screenShots: [{

@@ -12,12 +12,13 @@ import CustomCursor from "./components/CustomCursor";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import CaseStudy from "./components/projects/CaseStudy";
 function App() {
-   useEffect(() => {
+  useEffect(() => {
     AOS.init({
       duration: 1000,   // animation duration (ms)
       once: true,       // run only once
-      easing: "ease-in-out", 
+      easing: "ease-in-out",
     });
   }, []);
   return (
@@ -29,7 +30,7 @@ function App() {
           background: "var(--bg-color)",
           color: "var(--text-color)",
           minHeight: "100vh",
-          overflowX:"hidden"
+          overflowX: "hidden"
         }}
       >
         <Navbar />
@@ -39,6 +40,7 @@ function App() {
           <Route path="/projects" element={<ProjectPage />} />
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/projects/case-study/:slug" element={<CaseStudy />} />
         </Routes>
         <Footer />
       </div>
