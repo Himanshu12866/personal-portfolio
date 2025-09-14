@@ -308,10 +308,8 @@ const portfolioData = [
     {
         id: 3,
         title: "Projects Page Data",
-        data: {
-            professinalprojects: [
+        data: [
                 // Project 2
-
                 {
                     category: "Professional",
                     slug: "livvon-customer-portal",
@@ -373,7 +371,7 @@ const portfolioData = [
                 },
                 {
                     category: "Professional",
-                    slug: "livvon-customer-portal",
+                    slug: "livvon-admin-panell",
                     techUsed: [""],
                     header: {
                         title: "Livvon Comforts – E-Commerce Web Application",
@@ -432,7 +430,7 @@ const portfolioData = [
                 },
                 {
                     category: "Professional",
-                    slug: "livvon-customer-portal",
+                    slug: "conceiva-fertility",
                     techUsed: [""],
                     header: {
                         title: "Livvon Comforts – E-Commerce Web Application",
@@ -491,7 +489,7 @@ const portfolioData = [
                 },
                 {
                     category: "Professional",
-                    slug: "livvon-customer-portal",
+                    slug: "magnaid-healthcare",
                     techUsed: [""],
                     header: {
                         title: "Livvon Comforts – E-Commerce Web Application",
@@ -548,8 +546,8 @@ const portfolioData = [
                     image: cdc_usa,
                     text: " Livvon Admin Panel",
                 },
+            
             ],
-        },
     },
     // Project page data and case study pages data completed
 ];
