@@ -108,17 +108,15 @@ const Masonry = ({
       setImagesReady(true);
     });
   }, [items]);
-  useEffect(() => {
-    preloadImages(items.map((i) => i.img)).then(() => setImagesReady(true));
-  }, [items]);
-  const grid = useMemo(() => {
-    if (!width || !imagesReady) return [];
+
+  const { positions, height: masonryHeight } = useMemo(() => {
+    if (!width || !imagesReady) return { positions: [], height: 0 };
     const colHeights = new Array(columns).fill(0);
     const gap = 16;
     const totalGaps = (columns - 1) * gap;
     const columnWidth = (width - totalGaps) / columns;
 
-    return items.map((child, idx) => {
+    const positions = items.map((child, idx) => {
       const size = imageSizes[idx];
       const aspectRatio = size.width / size.height;
       const height = columnWidth / aspectRatio; // auto-scale height
@@ -129,12 +127,16 @@ const Masonry = ({
 
       return { ...child, x, y, w: columnWidth, h: height };
     });
+
+    const height = colHeights.length > 0 ? Math.max(...colHeights) - gap : 0;
+
+    return { positions, height };
   }, [columns, items, width, imagesReady, imageSizes]);
 
   const hasMounted = useRef(false);
   useLayoutEffect(() => {
     if (!imagesReady) return;
-    grid.forEach((item, index) => {
+    positions.forEach((item, index) => {
       const selector = `[data-key="${item.id}"]`;
       const animProps = { x: item.x, y: item.y, width: item.w, height: item.h };
       if (!hasMounted.current) {
@@ -170,7 +172,7 @@ const Masonry = ({
 
     hasMounted.current = true;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
+  }, [positions, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
   const handleMouseEnter = (id, element) => {
     if (scaleOnHover) {
       gsap.to(`[data-key="${id}"]`, {
@@ -218,11 +220,11 @@ const Masonry = ({
   return (
     <>
       {boxIndex !== null && (
-        <div className="fixed top-0 left-0 w-full h-screen bg-black/90 z-50 flex justify-center items-center p-10">
+        <div className="fixed top-0 left-0 w-full h-screen bg-black/90 z-50 flex justify-center items-center p-4 md:p-10">
           <img
             src={items[boxIndex].img}
             alt="modal-img"
-            className="rounded-2xl"
+            className="max-w-full max-h-full object-contain rounded-2xl"
           />
 
           {/* Close Button */}
@@ -251,12 +253,12 @@ const Masonry = ({
         </div>
       )}
 
-      <div ref={containerRef} className="">
-        {grid.map((item, index) => (
+      <div ref={containerRef} className="relative" style={{ height: masonryHeight }}>
+        {positions.map((item, index) => (
           <div
             key={item.id}
             data-key={item.id}
-            className="absolute  cursor-pointer bg-red-300 p-4 "
+            className="absolute  cursor-pointer"
             style={{ willChange: "transform, width,  opacity" }}
             onClick={() => openModalBox(item, index)}
             onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
