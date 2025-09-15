@@ -6,11 +6,6 @@ const ProjectPage = () => {
   return (
     <>
       <ProjectBanner />
-      {/* <div className="w-full h-4/5">
-
-
-      <Particles />
-      </div> */}
       <ProjectAbout />
       <ProjectsAll />
     </>
