@@ -569,6 +569,7 @@ const portfolioData = [
 
         ],
     },
+    
     // Project page data and case study pages data completed
 ];
 export default portfolioData;
