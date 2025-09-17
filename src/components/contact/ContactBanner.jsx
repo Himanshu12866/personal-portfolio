@@ -1,8 +1,8 @@
 import React from 'react'
 
-const AboutBanner = () => {
+const ContactBanner = () => {
    const words = [
-    "K","n","o","w"," ","M","e"," ","B","e","t","t","e","r"
+    "C","o","n","t","a","c","t"," ","M","e"
   ]
   return (
     <div className='flex justify-center items-center pt-48 pb-36 w-full bg-transparent'>
@@ -16,4 +16,4 @@ const AboutBanner = () => {
   )
 }
 
-export default AboutBanner
+export default ContactBanner

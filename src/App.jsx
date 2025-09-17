@@ -16,8 +16,8 @@ import CaseStudy from "./components/projects/CaseStudy";
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,   // animation duration (ms)
-      once: true,       // run only once
+      duration: 1000, // animation duration (ms)
+      once: true, // run only once
       easing: "ease-in-out",
     });
   }, []);
@@ -25,14 +25,15 @@ function App() {
     <SmoothScrollWrapper>
       <CustomCursor />
       <div
-        className="App"
+        className=""
         style={{
           background: "var(--bg-color)",
           color: "var(--text-color)",
           minHeight: "100vh",
-          overflowX: "hidden"
+          overflowX: "hidden",
         }}
       >
+    
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />

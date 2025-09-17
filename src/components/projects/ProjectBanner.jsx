@@ -9,7 +9,7 @@ const ProjectBanner = () => {
         <h1 className='text-8xl font-bold tracking-wide'>
           { words.map((word , index) => <span data-aos="fade-up" data-aos-delay={index*50}>{word}</span>)}
         </h1>
-        <p className='font-code mt-4'>Home - Skills</p>
+       
       </div>
     </div>
   )

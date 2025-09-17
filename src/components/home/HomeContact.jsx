@@ -42,28 +42,16 @@ const HomeContact = () => {
     };
   }, []);
 
-  // const cardStyle = {
-  //   backdropFilter: "blur(5px)",
-  //   borderRadius: "10px",
-  //   boxShadow: `
-  //     rgba(0, 0, 0, 0.07) 0px 0.706592px 0.706592px -0.583333px,
-  //     rgba(0, 0, 0, 0.07) 0px 1.80656px 1.80656px -1.16667px,
-  //     rgba(0, 0, 0, 0.07) 0px 3.62176px 3.62176px -1.75px,
-  //     rgba(0, 0, 0, 0.06) 0px 6.8656px 6.8656px -2.33333px,
-  //     rgba(0, 0, 0, 0.05) 0px 13.6468px 13.6468px -2.91667px,
-  //     rgba(0, 0, 0, 0.03) 0px 30px 30px -3.5px,
-  //     rgb(255, 255, 255) 0px 0px 1px 0px inset
-  //   `,
-  //   opacity: 1,
-  //   borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
-  //   borderLeft: "0px solid",
-  //   borderRight: "0px solid",
+ 
   // };
   return (
     <div
       className={`flex justify-center flex-col gap-24 items-center w-full py-20 `}
     >
-      <h2 className="text-4xl font-bold text-center">Open for Opportunities</h2>
+      {
+        window.location.pathname === "/" && <h2 className="text-4xl font-bold text-center">Open for Opportunities</h2>
+      }
+      
       <div
         ref={containerRef}
         style={{ minHeight: "108vh" }}

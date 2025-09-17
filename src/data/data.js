@@ -139,7 +139,7 @@ const portfolioData = [
                 category: "tools",
             },
             {
-                name: "Adobe Illustrator",
+                name: "Illustrator",
                 iconsmall: adobe_ai,
                 iconlarge: adobe_large,
                 category: "tools",
@@ -496,7 +496,7 @@ const portfolioData = [
                     },],
                 },
                 navigation: {
-                    demo: "Visit",
+                    demo: "https://www.magnaid.com/",
                     repo: ""
                 },
                 image: magnaid,
@@ -560,7 +560,7 @@ const portfolioData = [
                     },],
                 },
                 navigation: {
-                    demo: "Visit",
+                    demo: "https://conceivafertility.com/",
                     repo: ""
                 },
                 image: conceiva,
