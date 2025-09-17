@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
 import CircularGallery from "./ProjectCircular";
 import { AppContext } from "../../context/datacontext";
-import sliderImp from "../../assets/images/project_bg-01.png"
+import prof from "../../assets/images/project_bg-01-01.png"
+import pers from "../../assets/images/personal_bg-01.png"
 const ProjectsAll = () => {
   const { projects } = useContext(AppContext);
   const professionalProjects = projects || [];
   console.log("Professional Projects:", professionalProjects);
   const items = professionalProjects.map(item => {
     return {
-      image: sliderImp,
+      image: `${item.category === "Professional" ? prof : pers}`,
       text: item.text,
       path: `/projects/case-study/${item.slug}`,
     };
