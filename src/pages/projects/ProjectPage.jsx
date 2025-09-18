@@ -1,11 +1,15 @@
-import React from 'react'
-
+import ProjectBanner from "../../components/projects/ProjectBanner";
+import ProjectAbout from "../../components/projects/ProjectAbout";
+import ProjectsAll from "../../components/projects/ProjectsAll";
+// import Particles from "../../components/projects/ProjectBG";
 const ProjectPage = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+      <ProjectBanner />
+      <ProjectAbout />
+      <ProjectsAll />
+    </>
+  );
+};
 
-export default ProjectPage
+export default ProjectPage;
