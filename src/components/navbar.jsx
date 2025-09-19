@@ -3,7 +3,7 @@ import dark_logo from "../assets/icons_logos/mern_black_mode-01.png";
 import light_logo from "../assets/icons_logos/mern_light_mode.png";
 import GsapToggle from "./toggleswitch";
 import { AppContext } from "../context/datacontext";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -18,15 +18,8 @@ const Navbar = () => {
     { name: "projects", link: "/projects" },
     { name: "contact", link: "/contact" },
   ];
-  // const cardStyle = {
-  //   backdropFilter: "blur(5px)",
-  //   borderRadius: "10px",
-  //   opacity: 1,
-  //   borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
-  //   borderLeft: "0px solid",
-  //   borderRight: "0px solid",
-  // };
-
+  const location = useLocation()
+  
   return (
     <>
       <div className="px-2 pb-2 pt-3 fixed top-0 z-20 flex justify-center items-center w-full ">
@@ -51,7 +44,7 @@ const Navbar = () => {
             >
               <ul className="flex flex-col font-medium p-4 md:p-0 uppercase text-lg  md:space-x-8  md:flex-row">
                 {links.map((item, index) => (
-                  <Link to={item.link} className="main-nav-links" key={index}>
+                  <Link to={item.link} className={`main-nav-links ${location.pathname.includes(item.name) ? 'text-[#f59e0b]' : ""}`} key={index}>
                     {item.name}
                   </Link>
                 ))}
@@ -112,7 +105,7 @@ const Navbar = () => {
                 {links.map((item, index) => (
                   <Link
                     to={item.link}
-                    className="main-nav-links"
+                    className={`${location.pathname.includes(item.name) ? 'text-[#f59e0b]' : ""} hover:text-[#f59e0b] w-28  transition-all duration-200`}
                     key={index}
                     onClick={() => setMobName(false)}
                   >

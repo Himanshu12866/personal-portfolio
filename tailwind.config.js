@@ -8,6 +8,7 @@ export default {
         heading: ["Mozilla Headline", "sans-serif"],
         para: ["Raleway", "sans-serif"],
         code: ["JetBrains Mono", "sans-serif"],
+        fancy: [ "Fredericka the Great", "serif"],
       },
       screens: {
         "3xl": "1650px",

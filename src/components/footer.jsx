@@ -5,7 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import { AppContext } from "../context/datacontext";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 
@@ -19,6 +19,7 @@ const Footer = () => {
     { name: "skills", link: "/skills" },
     { name: "contact", link: "/contact" },
   ];
+  const location = useLocation()
   const cardStyle = {
     backdropFilter: "blur(5px)",
     borderTopLeftRadius: "10px",
@@ -81,7 +82,7 @@ const Footer = () => {
                   <Link
                     key={index}
                     to={item.link}
-                    className="hover:text-[#f59e0b] w-28  transition-all duration-200"
+                    className={`${location.pathname.includes(item.name) ? 'text-[#f59e0b]' : ""} hover:text-[#f59e0b] w-28  transition-all duration-200`}
                   >
                     {item.name}
                   </Link>

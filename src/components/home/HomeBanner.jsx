@@ -6,6 +6,7 @@ import { AppContext } from "../../context/datacontext";
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import BlurText from "../BlurText";
 const roles = [
   "Web Developer",
   "MERN Stack Developer",
@@ -21,51 +22,11 @@ const HomeBanner = () => {
     }, 3000); // har 3 sec baad change hoga
     return () => clearInterval(interval);
   }, []);
-  // const [vdoError, setVdoError] = useState(false);
+
   const { darkMode } = useContext(AppContext);
-  // const cardStyle = {
-  //   backdropFilter: "blur(5px)",
-  //   borderRadius: "10px",
-  //   boxShadow: `
-  //     rgba(0, 0, 0, 0.07) 0px 0.706592px 0.706592px -0.583333px,
-  //     rgba(0, 0, 0, 0.07) 0px 1.80656px 1.80656px -1.16667px,
-  //     rgba(0, 0, 0, 0.07) 0px 3.62176px 3.62176px -1.75px,
-  //     rgba(0, 0, 0, 0.06) 0px 6.8656px 6.8656px -2.33333px,
-  //     rgba(0, 0, 0, 0.05) 0px 13.6468px 13.6468px -2.91667px,
-  //     rgba(0, 0, 0, 0.03) 0px 30px 30px -3.5px,
-  //     rgb(255, 255, 255) 0px 0px 1px 0px inset
-  //   `,
-  //   opacity: 1,
-  //   borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
-  //   borderLeft: "0px solid",
-  //   borderRight: "0px solid",
-  // };
+
   return (
     <div className="w-full relative flex justify-center items-center lg:h-screen pt-28 pb-16 overflow-hidden top-0">
-      {/* Video Section With Fallback images */}
-      <div className="absolute w-full h-full top-0">
-        {/* {!vdoError ? (
-          <video
-            className="w-full h-full z-0 object-cover"
-            muted
-            autoPlay
-            loop
-            playsInline
-            onError={() => setVdoError(true)}
-            aria-hidden="true"
-          >
-            <source src={home_video} type="video/mp4" />
-          </video>
-        ) : (
-          <img
-            src={fallback}
-            alt="Home banner fallback"
-            className="w-full h-full object-cover"
-          />
-        )} */}
-        {/* {darkMode ? <div className="absolute inset-0 bg-black/70"></div> : null} */}
-      </div>
-
       <div className="grid lg:grid-cols-2 grid-cols-1 xl:gap-12 gap-6 px-4 z-[4]">
         <div className="flex flex-col justify-center lg:order-1 order-2 lg:ps-0 md:ps-8 ps-0 ">
           <p
@@ -80,11 +41,17 @@ const HomeBanner = () => {
           </p>
 
           {/* Quote / Tagline */}
-          <p className="mt-6 text-lg md:text-4xl font-heading lg:block hidden ">
-            "You don’t just need code, <br></br>&nbsp; you need solutions."
-          </p>
+          
           <p className="mt-6 text-lg md:text-4xl font-heading lg:hidden block ">
-            "You don’t just need code, you need solutions."
+           <BlurText
+            delay={150} 
+            text=" You don’t just need code,you need solutions."
+            animateBy="words"
+            direction="bittom"
+            className="mt-6 text-lg md:text-4xl font-heading lg:block hidden "
+          >
+            "You don’t just need code, <br></br>&nbsp; you need solutions."
+          </BlurText>
           </p>
           <h1 className="md:text-5xl text-3xl md:ps-4 animate-shine md:py-4 py-2">
             Himanshu K. Mishra
