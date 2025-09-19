@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../context/datacontext";
+import SplitText from "../SplitText";
 
 const HomeQuote = () => {
   // const { darkMode } = useContext(AppContext);
@@ -18,11 +19,19 @@ const HomeQuote = () => {
   shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_-3px_1px_rgba(255,255,255,0.4)]
 `}
     >
-      <h2 className="md:px-20 px-8 font-heading tracking-wide">
-        “I craft clean UIs, build scalable web apps, and make ideas click into
-        code. From design to deployment, I don’t just develop — I deliver.”
-      </h2>
-      <p></p>
+      <SplitText delay={10}
+        duration={0.6}
+        ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        text="I craft clean UIs, build scalable web apps, and make ideas click into code. From design to deployment, I don’t just develop — I deliver."
+      className="md:px-20 font-medium px-8 font-heading text-[#f59e0b] tracking-wide"
+        
+  />
+
     </div>
   );
 };
