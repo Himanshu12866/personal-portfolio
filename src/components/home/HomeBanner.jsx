@@ -54,8 +54,8 @@ const HomeBanner = () => {
           </p>
           <h1 className="xl:text-5xl text-4xl lg:text-3xl xl:ps-4 ps-0 animate-shine md:pt-2 py-2">
             <BlurText
-              delay={100}
               text="HIMANSHU MISHRA"
+              delay={100}
               animateBy="letters"
               direction="bottom"
               className="my-4 text-[8vw] xl:text-5xl lg:text-4xl md:text-5xl font-heading  "
