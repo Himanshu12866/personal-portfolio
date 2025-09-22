@@ -43,7 +43,7 @@ const HomeBanner = () => {
 
           <p className="mt-2 text-lg md:text-4xl flex justify-center items-center ps-2 font-heading   ">
             <BlurText
-              delay={100}
+              delay={50}
               text="You don’t just need code,you  need solutions."
               animateBy="words"
               direction="bottom"
@@ -55,7 +55,7 @@ const HomeBanner = () => {
           <h1 className="xl:text-5xl text-4xl lg:text-3xl xl:ps-4 ps-0 animate-shine md:pt-2 py-2">
             <BlurText
               text="HIMANSHU MISHRA"
-              delay={100}
+              delay={50}
               animateBy="letters"
               direction="bottom"
               className="my-4 text-[8vw] xl:text-5xl lg:text-4xl md:text-5xl font-heading  "
@@ -115,7 +115,7 @@ const HomeBanner = () => {
           </div>
         </div>
         <div className="flex lg:justify-end justify-center lg:order-2 order-1 w-full">
-          <img
+          <img data-aos="zoom-in"
             src={main_pic}
             alt="personal photo_"
             className={`${!darkMode

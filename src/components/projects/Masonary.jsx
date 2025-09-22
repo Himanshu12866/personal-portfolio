@@ -1,12 +1,9 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { gsap } from "gsap";
-
 const useMedia = (queries, values, defaultValue) => {
   const get = () =>
     values[queries.findIndex((q) => matchMedia(q).matches)] ?? defaultValue;
-
   const [value, setValue] = useState(get);
-
   useEffect(() => {
     const handler = () => setValue(get);
     queries.forEach((q) => matchMedia(q).addEventListener("change", handler));
@@ -50,7 +47,6 @@ const preloadImages = async (urls) => {
   );
   return sizes;
 };
-
 const Masonry = ({
   items,
   ease = "power3.out",
@@ -101,14 +97,12 @@ const Masonry = ({
     }
   };
   const [imageSizes, setImageSizes] = useState([]);
-
   useEffect(() => {
     preloadImages(items.map((i) => i.img)).then((sizes) => {
       setImageSizes(sizes);
       setImagesReady(true);
     });
   }, [items]);
-
   const { positions, height: masonryHeight } = useMemo(() => {
     if (!width || !imagesReady) return { positions: [], height: 0 };
     const colHeights = new Array(columns).fill(0);
@@ -124,15 +118,11 @@ const Masonry = ({
       const x = col * (columnWidth + gap);
       const y = colHeights[col];
       colHeights[col] += height + gap;
-
       return { ...child, x, y, w: columnWidth, h: height };
-    });
-
+  });
     const height = colHeights.length > 0 ? Math.max(...colHeights) - gap : 0;
-
     return { positions, height };
   }, [columns, items, width, imagesReady, imageSizes]);
-
   const hasMounted = useRef(false);
   useLayoutEffect(() => {
     if (!imagesReady) return;
@@ -169,7 +159,6 @@ const Masonry = ({
         });
       }
     });
-
     hasMounted.current = true;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [positions, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
@@ -199,24 +188,19 @@ const Masonry = ({
       if (overlay) gsap.to(overlay, { opacity: 0, duration: 0.3 });
     }
   };
-
   const [boxIndex, setBoxIndex] = useState(null);
   const openModalBox = (item, index) => {
     setBoxIndex(index);
   };
-
   const closeModalBox = () => {
     setBoxIndex(null);
   };
-
   const showNext = () => {
     setBoxIndex((prev) => (prev + 1) % items.length);
   };
-
   const showPrev = () => {
     setBoxIndex((prev) => (prev - 1 + items.length) % items.length);
   };
-
   return (
     <>
       {boxIndex !== null && (
@@ -226,7 +210,6 @@ const Masonry = ({
             alt="modal-img"
             className="max-w-full max-h-full object-contain rounded-2xl"
           />
-
           {/* Close Button */}
           <button
             onClick={closeModalBox}
@@ -234,7 +217,6 @@ const Masonry = ({
           >
             Close
           </button>
-
           {/* Prev Button */}
           <button
             onClick={showPrev}
@@ -252,7 +234,6 @@ const Masonry = ({
           </button>
         </div>
       )}
-
       <div ref={containerRef} className="relative" style={{ height: masonryHeight }}>
         {positions.map((item, index) => (
           <div

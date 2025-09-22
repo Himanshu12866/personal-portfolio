@@ -8,6 +8,7 @@ import express from "../../assets/icons_logos/icons8-express-js-50.png";
 import express_light from "../../assets/icons_logos/icons8-express-js-48.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BlurText from "../BlurText";
 gsap.registerPlugin(ScrollTrigger);
 const AboutMe = () => {
   const { darkMode, aboutData, skills } = useContext(AppContext);
@@ -136,13 +137,28 @@ const AboutMe = () => {
             className=" w-32 pt-2 px-2 sm:ms-4 text-center text-lg sm:text-xl font-heading"
           >
             {" "}
-            About Me
+            <BlurText
+              text="About Me"
+              delay={20}
+              animateBy="words"
+              direction="bottom"
+            />
           </p>
           <p className="text-xl text-left font-para pt-2 pb-1 px-2">
-            "{profileData.aboutmeparagraph}""
+            <BlurText
+              text={profileData.aboutmeparagraph}
+              delay={5}
+              animateBy="words"
+              direction="bottom"
+            />
           </p>
           <p className="text-xl text-left font-para py-2 px-2">
-            {profileData.description}
+            <BlurText
+              text={profileData.description}
+              delay={10}
+              animateBy="words"
+              direction="bottom"
+            />
           </p>
           {/* Tech Stack */}
           <p
@@ -156,6 +172,8 @@ const AboutMe = () => {
             {skilssIcon.map((item, index) => (
               <p key={index} className="w-12 flex justify-center items-center">
                 <img
+                  data-aos="zoom-in"
+                  data-aos-delay={50 * index}
                   src={
                     item.name === "Express.js"
                       ? !darkMode
@@ -182,7 +200,13 @@ const AboutMe = () => {
                 key={(index * index) / 2}
                 className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2"
               >
-                <VerifiedIcon className="text-[#f59e0b]" /> {item}
+                <VerifiedIcon className="text-[#f59e0b]" />{" "}
+                <BlurText
+                  text={item}
+                  delay={5}
+                  animateBy="words"
+                  direction="bottom"
+                />
               </li>
             ))}
           </ul>
@@ -200,7 +224,13 @@ const AboutMe = () => {
                 key={(index * index) / 2}
                 className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2"
               >
-                <VerifiedIcon className="text-[#f59e0b]" /> {item}
+                <VerifiedIcon className="text-[#f59e0b]" />{" "}
+                <BlurText
+                  text={item}
+                  delay={5}
+                  animateBy="words"
+                  direction="bottom"
+                />
               </li>
             ))}
           </ul>
@@ -209,17 +239,4 @@ const AboutMe = () => {
     </div>
   );
 };
-
 export default AboutMe;
-
-// ${
-//               !darkMode
-//                 ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-//                 : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-//             }`}
-
-// ${
-//         !darkMode
-//           ? "bg-[rgba(222,222,222,0.9)]"
-//           : "bg-[rgba(69,69,69,1)] inset-0"
-//       }

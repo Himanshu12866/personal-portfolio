@@ -7,6 +7,8 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import express from "../../assets/icons_logos/icons8-express-js-50.png";
 import express_light from "../../assets/icons_logos/icons8-express-js-48.png";
+import BlurText from "../BlurText";
+import SplitText from "../SplitText";
 const AboutExperience = () => {
   const { darkMode, aboutData, skills } = useContext(AppContext);
   const experienceData = aboutData?.data?.experience || [];
@@ -32,9 +34,22 @@ const AboutExperience = () => {
     <div
       className={`flex justify-center flex-col gap-24 items-center w-full pb-20 pt-10 p-4 `}
     >
-      <h2 className="text-4xl font-bold pb-8">Professional Journey</h2>
+      <h2 className="text-4xl font-bold pb-8">
+        <SplitText
+          delay={80}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          className="text-left"
+          text="Professional Journey"
+        />
+      </h2>
       {experienceData.map((item, index) => (
-        <div key={index}
+        <div
+          key={index}
           className={`xl:w-4/5 3xl:w-3/5 z-[5] w-full p-4 
   `}
         >
@@ -52,32 +67,59 @@ const AboutExperience = () => {
               <div className="flex flex-row gap-3 pointer-events-auto mt-4 text-xl sm:ps-6 font-para font-medium">
                 <h3>
                   <BusinessIcon />
-                </h3>{" "}
+                </h3>
                 <a
                   className="border-b-[1px] border-[#747373]"
                   href={item.companyLink}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  {" "}
-                  {item.company}
+                  <BlurText
+                    text={item.company}
+                    delay={10}
+                    animateBy="words"
+                    direction="bottom"
+                  />
                 </a>
               </div>
-              <div className="flex flex-row gap-3 text-xl font-para sm:ps-6 font-medium">
+              <div className="flex flex-row gap-3 pointer-events-auto mt-4 text-xl sm:ps-6 font-para font-medium">
                 <h3>
                   <LaptopIcon />
-                </h3>{" "}
-                <p>{item.role}</p>
+                </h3>
+                <p>
+                  <BlurText
+                    text={item.role}
+                    delay={15}
+                    animateBy="words"
+                    direction="bottom"
+                  />
+                </p>
               </div>
-              <div className="flex flex-row gap-3 text-xl font-para sm:ps-6 font-medium">
+              <div className="flex flex-row gap-3 pointer-events-auto mt-4 text-xl sm:ps-6 font-para font-medium">
                 <h3>
                   <CalendarMonthIcon />
-                </h3>{" "}
-                <p>{item.duration}</p>
+                </h3>
+                <p>
+                  <BlurText
+                    text={item.duration}
+                    delay={20}
+                    animateBy="words"
+                    direction="bottom"
+                  />
+                </p>
               </div>
-              <div className="flex flex-row gap-3 text-xl font-para sm:ps-6 font-medium">
+              <div className="flex flex-row gap-3 pointer-events-auto mt-4 text-xl sm:ps-6 font-para font-medium">
                 <h3>
                   <LocationOnIcon />
-                </h3>{" "}
-                <p>{item.location}</p>
+                </h3>
+                <p>
+                  <BlurText
+                    text={item.location}
+                    delay={25}
+                    animateBy="words"
+                    direction="bottom"
+                  />
+                </p>
               </div>
             </div>
             <div
@@ -94,7 +136,12 @@ const AboutExperience = () => {
                 About My Role
               </div>
               <p className="text-xl text-justify font-para pt-2 pb-1 px-2">
-                {item.description}
+                <BlurText
+                  text={item.description}
+                  delay={2}
+                  animateBy="words"
+                  direction="bottom"
+                />
               </p>
               <div
                 style={cardStyle}
@@ -109,6 +156,8 @@ const AboutExperience = () => {
                     className="w-12 flex justify-center items-center"
                   >
                     <img
+                      data-aos="zoom-in"
+                      data-aos-delay={50 * index}
                       src={
                         item.name === "Express.js"
                           ? !darkMode
@@ -145,7 +194,12 @@ const AboutExperience = () => {
                       className="flex flex-row gap-2 justify-start ism:items-center items-start my-3"
                     >
                       <VerifiedIcon className="text-[#f59e0b]" />
-                      {item}
+                      <BlurText
+                        text={item}
+                        delay={5}
+                        animateBy="words"
+                        direction="bottom"
+                      />
                     </li>
                   ))}
                 </ul>
@@ -158,7 +212,12 @@ const AboutExperience = () => {
                       className="flex flex-row gap-2 justify-start ism:items-center items-start my-4"
                     >
                       <VerifiedIcon className="text-[#f59e0b]" />
-                      {item}
+                  <BlurText
+                        text={item}
+                        delay={5}
+                        animateBy="words"
+                        direction="bottom"
+                      />
                     </li>
                   ))}
                 </ul>

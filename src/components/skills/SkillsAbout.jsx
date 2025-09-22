@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../context/datacontext";
 import SkillsOrbit from "./SkillsOrbit";
+import SplitText from "../SplitText";
+import BlurText from "../BlurText";
 
 const SkillsAbout = () => {
   const { darkMode } = useContext(AppContext);
-
-
 
   return (
     <div
@@ -24,19 +24,39 @@ const SkillsAbout = () => {
         >
           <div>
             <h2 className="md:text-3xl text-2xl font-heading pb-2">
-              " Not appearance, not luck — only skills define the craft"
+              <SplitText
+                delay={80}
+                duration={0.6}
+                ease="power3.out"
+                splitType="words"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                className="text-left"
+                text="Not appearance, not luck — only skills define the craft"
+              />
             </h2>
             <p className="text-xl text-justify font-para py-2">
-              Each skill I carry isn’t just a checkbox on a résumé — it’s a tool
+              <BlurText
+                text="Each skill I carry isn’t just a checkbox on a résumé, it’s a tool
               I’ve tested, refined, and mastered through real projects. From
               frontend finesse to backend logic, my craft is built on
               discipline, curiosity, and the drive to turn concepts into
-              seamless digital experiences.
+              seamless digital experiences."
+                delay={5}
+                animateBy="words"
+                direction="bottom"
+              />
             </p>
             <p className="text-xl text-justify font-para pt-2">
-              Below, I’ve organized my skills into clear categories — so you can
+              <BlurText
+                text=" Below, I’ve organized my skills into clear categories — so you can
               see not just what I know, but how I apply it across different
-              parts of development.{" "}
+              parts of development."
+                delay={5}
+                animateBy="words"
+                direction="bottom"
+              />{" "}
             </p>
           </div>
         </div>

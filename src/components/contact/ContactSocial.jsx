@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { AppContext } from "../../context/datacontext";
@@ -46,9 +47,20 @@ const ContactSocial = () => {
                 <span>Twitter (X)</span>
               </a>
             </li>
+            <li>
+              <a
+                href="https://wa.me/qr/7P2XAEPKSWCDI1"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
+              >
+                <WhatsAppIcon fontSize="30px" className="text-[#f59e0b]" />{" "}
+                <span>WhatsApp</span>
+              </a>
+            </li>
           </ul>
         </div>
-        <div className="p-4 md:py-16 flex justify-start flex-col  items-start gap-8">
+        <div className="p-4 md:py-16 flex justify-between flex-col  items-start gap-8">
           <h3 className="text-4xl">My Resume</h3>
           <p className="md:text-2xl text-xl font-code">
             "I’m just one step away from creating something amazing together."

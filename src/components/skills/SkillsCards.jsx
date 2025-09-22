@@ -7,36 +7,33 @@ import aws from "../../assets/images/icons8-aws-256.png";
 import aws_dark from "../../assets/images/aws_dark.png";
 const SkillsCards = () => {
   const { darkMode, skills } = useContext(AppContext);
-  const frontendIcons = skills?.icons?.filter(
-    (item) => item.category === "frontend"
-  ) || [];
+  const frontendIcons =
+    skills?.icons?.filter((item) => item.category === "frontend") || [];
 
-  const BackendIcons = skills?.icons?.filter(
-    (item) => item.category === "backend"
-  ) || [];
-  const additionalIcons =skills?.icons?.filter(
-    (item) => item.category === "tools"
-  ) || [];
-  
+  const BackendIcons =
+    skills?.icons?.filter((item) => item.category === "backend") || [];
+  const additionalIcons =
+    skills?.icons?.filter((item) => item.category === "tools") || [];
+
   useEffect(() => {
-    console.log(skills)
-  },[])
-//   function resolveIconSrc(icon, theme) {
-//   const darkMode = theme === "dark";
-//   if (!icon) return ""; 
+    console.log(skills);
+  }, []);
+  //   function resolveIconSrc(icon, theme) {
+  //   const darkMode = theme === "dark";
+  //   if (!icon) return "";
 
-//   if (icon.name === "Express.js") {
-//     return darkMode
-//       ? (typeof expressdark_large !== "undefined" ? expressdark : expresslight)   
-//       : (typeof expresslight_large !== "undefined" ? expresslight : expresslight);
-//   }
-//   if (icon.name === "AWS") {
-//     return darkMode
-//       ? (typeof aws_dark_large !== "undefined" ? aws_dark : aws_dark)
-//       : (typeof aws_large !== "undefined" ? aws: aws);
-//   }
-//   return icon.iconlarge || icon.iconsmall || "";
-// }
+  //   if (icon.name === "Express.js") {
+  //     return darkMode
+  //       ? (typeof expressdark_large !== "undefined" ? expressdark : expresslight)
+  //       : (typeof expresslight_large !== "undefined" ? expresslight : expresslight);
+  //   }
+  //   if (icon.name === "AWS") {
+  //     return darkMode
+  //       ? (typeof aws_dark_large !== "undefined" ? aws_dark : aws_dark)
+  //       : (typeof aws_large !== "undefined" ? aws: aws);
+  //   }
+  //   return icon.iconlarge || icon.iconsmall || "";
+  // }
   return (
     <>
       <div
@@ -58,7 +55,7 @@ const SkillsCards = () => {
               scale={1.02}
             >
               <div className="inner-element flex justify-center items-center">
-                <img src={icon.iconlarge} className=" w-20" alt="react-logo" />
+                <img src={icon.iconlarge} data-aos="zoom-in" data-aos-delay={50*index} className=" w-20" alt="react-logo" />
               </div>
               <h3 className="py-3 text-center md:text-2xl xl:text-3xl text-xl">
                 {icon.name}
@@ -86,8 +83,14 @@ const SkillsCards = () => {
               scale={1.02}
             >
               <div className="inner-element flex justify-center items-center">
-                <img
-                  src={icon.name === "Express.js" ? (darkMode ? expressdark : expresslight) : icon.iconlarge }
+                <img data-aos="zoom-in" data-aos-delay={50*index}
+                  src={
+                    icon.name === "Express.js"
+                      ? darkMode
+                        ? expressdark
+                        : expresslight
+                      : icon.iconlarge
+                  }
                   className="md:w-24 md:h-24 w-20"
                   alt="react-logo"
                 />
@@ -118,8 +121,14 @@ const SkillsCards = () => {
               scale={1.02}
             >
               <div className="inner-element flex justify-center items-center">
-                <img
-                  src={icon.name === "AWS" ? (darkMode ? aws : aws_dark) : icon.iconlarge }
+                <img data-aos="zoom-in" data-aos-delay={50*index}
+                  src={
+                    icon.name === "AWS"
+                      ? darkMode
+                        ? aws
+                        : aws_dark
+                      : icon.iconlarge
+                  }
                   className="md:w-24 md:h-24 w-20"
                   alt="react-logo"
                 />

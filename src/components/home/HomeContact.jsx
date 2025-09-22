@@ -4,6 +4,8 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BlurText from "../BlurText";
+import SplitText from "../SplitText";
 gsap.registerPlugin(ScrollTrigger);
 const HomeContact = () => {
   const { darkMode } = useContext(AppContext);
@@ -42,16 +44,28 @@ const HomeContact = () => {
     };
   }, []);
 
- 
   // };
   return (
     <div
       className={`flex justify-center flex-col gap-24 items-center w-full py-20 `}
     >
-      {
-        window.location.pathname === "/" && <h2 className="text-4xl font-bold text-center">Open for Opportunities</h2>
-      }
-      
+      {window.location.pathname === "/" && (
+        <h2 className="text-4xl font-bold text-center">
+          {" "}
+          <SplitText
+            delay={80}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            className="text-left"
+            text="Open for Opportunities"
+          />
+        </h2>
+      )}
+
       <div
         ref={containerRef}
         style={{ minHeight: "108vh" }}
@@ -69,6 +83,7 @@ const HomeContact = () => {
             } `}
           >
             <button
+              data-aos="zoom-in"
               className={`bg-black flex justify-center
              items-center font-para w-16 p-2 text-4xl 
               text-white  font-medium rounded-[10px] 
@@ -86,8 +101,13 @@ const HomeContact = () => {
               <EmailIcon fontSize="40px" />
             </button>
             <p className="text-xl text-justify font-para pt-2 pb-1 px-2 font-normal">
-              Feel free to email me if you have any questions or need more
-              details!
+              <BlurText
+                text="Feel free to email me if you have any questions or need more
+              details!"
+                delay={5}
+                animateBy="letters"
+                direction="bottom"
+              />
             </p>
             <a
               href="mailto:manshu010m@gmail.com"
@@ -104,6 +124,7 @@ const HomeContact = () => {
             } `}
           >
             <button
+              data-aos="zoom-in"
               className={`bg-black flex justify-center
              items-center font-para w-16 p-2 text-4xl 
               text-white  font-medium rounded-[10px] 
@@ -121,7 +142,12 @@ const HomeContact = () => {
               <LocalPhoneIcon fontSize="40px" />
             </button>
             <p className="text-xl text-justify font-para pt-2 pb-1 px-2 font-normal">
-              Feel free to call me anytime according to your convenience
+              <BlurText
+                text="Feel free to call me anytime according to your convenience"
+                delay={10}
+                animateBy="letters"
+                direction="bottom"
+              />
             </p>
             <a
               href="tel:+917804825835"
@@ -143,7 +169,13 @@ const HomeContact = () => {
             <div>
               <div className="flex flex-col mb-2">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
-                  Name <span className="text-3xl">*</span>
+                  <BlurText
+                    text="Name"
+                    delay={5}
+                    animateBy="letters"
+                    direction="bottom"
+                  />
+                  <span className="text-3xl">*</span>
                 </label>
                 <input
                   type="text"
@@ -161,7 +193,13 @@ ${
               </div>
               <div className="flex flex-col gap-2 mb-2">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
-                  Email <span className="text-3xl">*</span>
+                  <BlurText
+                    text="Email"
+                    delay={5}
+                    animateBy="letters"
+                    direction="bottom"
+                  />{" "}
+                  <span className="text-3xl">*</span>
                 </label>
                 <input
                   type="email"
@@ -183,7 +221,13 @@ ${
             <div>
               <div className="flex flex-col gap-2 mb-2">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
-                  Phone <span className="text-3xl">*</span>
+                  <BlurText
+                    text="phone"
+                    delay={5}
+                    animateBy="letters"
+                    direction="bottom"
+                  />{" "}
+                  <span className="text-3xl">*</span>
                 </label>
                 <input
                   type="text"
@@ -199,7 +243,12 @@ ${
               </div>
               <div className="flex flex-col gap-2 mb-2">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
-                  Company/Organizaion{" "}
+                  <BlurText
+                    text="Company/Organizaion"
+                    delay={5}
+                    animateBy="letters"
+                    direction="bottom"
+                  />{" "}
                   <span className="text-3xl invisible">*</span>
                 </label>
                 <input
@@ -221,7 +270,13 @@ ${
             <div>
               <div className="flex flex-col gap-2 mb-2">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
-                  Message <span className="text-3xl">*</span>
+                  <BlurText
+                    text="Message"
+                    delay={5}
+                    animateBy="letters"
+                    direction="bottom"
+                  />{" "}
+                  <span className="text-3xl">*</span>
                 </label>
                 <textarea
                   type="email"
@@ -248,7 +303,12 @@ ${
                     : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
                 }`}
               >
-                <a href="/about">Send Message</a>
+                <BlurText
+                  text="Send Message"
+                  delay={5}
+                  animateBy="letters"
+                  direction="bottom" className="flex justify-center items-center"
+                />
               </button>
             </div>
           </form>
