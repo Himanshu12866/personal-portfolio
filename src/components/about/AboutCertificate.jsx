@@ -158,7 +158,7 @@ const AboutCertificate = () => {
                   </p>
                 ))}
               </div>
-              <div className="flex flex-row gap-4 mt-4 items-center">
+              <div className="flex md:flex-row flex-col gap-4 mt-4 md:items-center">
                 <p className="text-xl font-medium font-heading">
                   View Certificate
                 </p>
