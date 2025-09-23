@@ -79,7 +79,7 @@ const HomeAbout = () => {
               <BlurText
                 text={aboutMe.company}
                 delay={10}
-                animateBy="letters"
+                animateBy="words"
                 direction="bottom"
               />
             </a>
@@ -93,7 +93,7 @@ const HomeAbout = () => {
               <BlurText
                 text={aboutMe.role}
                 delay={15}
-                animateBy="letters"
+                animateBy="words"
                 direction="bottom"
               />
             </p>
@@ -107,7 +107,7 @@ const HomeAbout = () => {
               <BlurText
                 text={aboutMe.duration}
                 delay={20}
-                animateBy="letters"
+                animateBy="words"
                 direction="bottom"
               />
             </p>
@@ -121,7 +121,7 @@ const HomeAbout = () => {
               <BlurText
                 text={aboutMe.location}
                 delay={25}
-                animateBy="letters"
+                animateBy="words"
                 direction="bottom"
               />
             </p>
@@ -147,7 +147,7 @@ const HomeAbout = () => {
             <BlurText
               text={aboutMe.description}
               delay={5}
-              animateBy="letters"
+              animateBy="words"
               direction="bottom"
             />
           </p>
@@ -156,7 +156,7 @@ const HomeAbout = () => {
             <BlurText
               text={aboutMe.descriptiontwo}
               delay={10}
-              animateBy="letters"
+              animateBy="words"
               direction="bottom"
             />
           </p>

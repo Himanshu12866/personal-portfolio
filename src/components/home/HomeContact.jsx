@@ -47,7 +47,7 @@ const HomeContact = () => {
   // };
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full py-20 `}
+      className={`flex justify-center flex-col gap-24 items-center w-full md:py-20 `}
     >
       {window.location.pathname === "/" && (
         <h2 className="text-4xl font-bold text-center">
@@ -60,7 +60,7 @@ const HomeContact = () => {
             from={{ opacity: 0, y: 40 }}
             to={{ opacity: 1, y: 0 }}
             threshold={0.1}
-            className="text-left"
+            className="text-center"
             text="Open for Opportunities"
           />
         </h2>
@@ -105,7 +105,7 @@ const HomeContact = () => {
                 text="Feel free to email me if you have any questions or need more
               details!"
                 delay={5}
-                animateBy="letters"
+                animateBy="words"
                 direction="bottom"
               />
             </p>
@@ -145,7 +145,7 @@ const HomeContact = () => {
               <BlurText
                 text="Feel free to call me anytime according to your convenience"
                 delay={10}
-                animateBy="letters"
+                animateBy="words"
                 direction="bottom"
               />
             </p>
@@ -172,7 +172,7 @@ const HomeContact = () => {
                   <BlurText
                     text="Name"
                     delay={5}
-                    animateBy="letters"
+                    animateBy="words"
                     direction="bottom"
                   />
                   <span className="text-3xl">*</span>
@@ -196,7 +196,7 @@ ${
                   <BlurText
                     text="Email"
                     delay={5}
-                    animateBy="letters"
+                    animateBy="words"
                     direction="bottom"
                   />{" "}
                   <span className="text-3xl">*</span>
@@ -224,7 +224,7 @@ ${
                   <BlurText
                     text="phone"
                     delay={5}
-                    animateBy="letters"
+                    animateBy="words"
                     direction="bottom"
                   />{" "}
                   <span className="text-3xl">*</span>
@@ -246,7 +246,7 @@ ${
                   <BlurText
                     text="Company/Organizaion"
                     delay={5}
-                    animateBy="letters"
+                    animateBy="words"
                     direction="bottom"
                   />{" "}
                   <span className="text-3xl invisible">*</span>
@@ -273,7 +273,7 @@ ${
                   <BlurText
                     text="Message"
                     delay={5}
-                    animateBy="letters"
+                    animateBy="words"
                     direction="bottom"
                   />{" "}
                   <span className="text-3xl">*</span>
@@ -306,7 +306,7 @@ ${
                 <BlurText
                   text="Send Message"
                   delay={5}
-                  animateBy="letters"
+                  animateBy="words"
                   direction="bottom" className="flex justify-center items-center"
                 />
               </button>

@@ -297,8 +297,8 @@ class Media {
         ];
       }
     }
-    // this.scale = this.screen.height / 2500; 1440px
-    this.scale = this.screen.height / 3000;
+     const isMobile = this.screen.width < 768;
+    this.scale = this.screen.height / (isMobile ? 5200 : 3000);
     this.plane.scale.y =
       (this.viewport.height * (900 * this.scale)) / this.screen.height;
     this.plane.scale.x =
@@ -539,7 +539,7 @@ export default function CircularGallery({
   bend = 20,
   textColor = "#ffffff",
   borderRadius = 0.05,
-  font = "900 25px",
+  font = "900 30px Sans-serif",
   scrollSpeed = 2,
   scrollEase = 0.05,
 }) {
