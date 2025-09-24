@@ -10,7 +10,7 @@ const ContactSocial = () => {
   const { darkMode } = useContext(AppContext);
   return (
     <div className="flex w-full py-20  justify-center items-center shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] ">
-      <div className="xl:w-2/4 lg:4/5 w-11/12 grid md:grid-cols-2 gap-4 grid-cols-1">
+      <div className="2xl:w-2/4 xl:w-3/4 lg:4/5 w-11/12 grid md:grid-cols-2 gap-4 grid-cols-1">
         <div className="p-4 md:p-16 flex justify-center flex-col items-start  gap-4">
           <h3 className="text-4xl">Social</h3>
           <ul className="flex flex-col text-3xl font-medium mt-6 font-heading  space-y-6">

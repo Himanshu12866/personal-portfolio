@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $date    = $_POST["date"] ?? '';
 
     // Mail receiver address (apna email daal dena)
-    $to = "youremail@example.com";
+    $to = "manshu010m@gmail.com";
     $subject = "New Contact Form Submission";
 
     // Mail body

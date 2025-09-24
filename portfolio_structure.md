@@ -161,6 +161,7 @@ Case Study Page
 ├── Back to Projects / Next Project
 
 https://codepen.io/valencia123/pen/eYjpeME
+https://imagekit.io/format-converter/convert-to-webp/
 
 ✅ This structure ensures your portfolio looks **professional, detailed, and recruiter-friendly**, with proper case studies for projects.
 
