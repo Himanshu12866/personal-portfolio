@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { useEffect, useRef, useState, useMemo } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const buildKeyframes = (from, steps) => {
   const keys = new Set([...Object.keys(from), ...steps.flatMap(s => Object.keys(s))]);
@@ -28,7 +29,7 @@ const BlurText = ({
   const elements = animateBy === 'words' ? text.split(' ') : text.split('');
   const [inView, setInView] = useState(false);
   const ref = useRef(null);
-
+const location = useLocation()
   useEffect(() => {
     if (!ref.current) return;
     const observer = new IntersectionObserver(
@@ -43,7 +44,7 @@ const BlurText = ({
     observer.observe(ref.current);
     return () => observer.disconnect();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [threshold, rootMargin]);
+  }, [threshold, rootMargin , location.pathname]);
 
   const defaultFrom = useMemo(
     () =>

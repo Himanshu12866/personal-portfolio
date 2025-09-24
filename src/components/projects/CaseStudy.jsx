@@ -112,7 +112,9 @@ const CaseStudy = () => {
             <h1 className="text-4xl font-bold">{projectData?.header?.title}</h1>
             <div className="flex flex-row gap-4 mt-6">
               <Link
-                to={projectData?.navigation?.demo} rel="noopener noreferrer" target="_blank"
+                to={projectData?.navigation?.demo}
+                rel="noopener noreferrer"
+                target="_blank"
                 className={`bg-black font-para  text-white  z-[3] px-4 py-3  flex justify-center items-center gap-2 font-medium rounded-[10px] opacity-100 hover:opacity-60 transition-all hover:duration-200 ${
                   !darkMode
                     ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
@@ -121,28 +123,46 @@ const CaseStudy = () => {
               >
                 <ArrowOutwardIcon /> <span>Live</span>
               </Link>
-              <button
-                disabled={`${
-                  projectData?.category === "Professional" ? false : true
-                }`}
-                to="/skills"
-                className={`bg-black font-para  ${
-                  projectData?.category === "Professional"
-                    ? "opacity-50 cursor-not-allowed"
-                    : ""
-                } text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 hover:opacity-60 transition-all hover:duration-200 ${
-                  !darkMode
-                    ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
-                    : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-                }`}
-              >
-                <a className="flex flex-row gap-2">
-                  {" "}
-                  <GitHubIcon /> <span>Repo</span>
+              {projectData?.category === "Professional" ? (
+                <div
+                  className={`bg-black font-para  ${
+                    projectData?.category === "Professional"
+                      ? "opacity-50 cursor-not-allowed"
+                      : ""
+                  } text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 ${
+                    !darkMode
+                      ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
+                      : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                  }`}
+                >
+                  <button
+                    disabled
+                    className="flex flex-row cursor-not-allowed gap-2"
+                  >
+                    {" "}
+                    <GitHubIcon /> <span>Repo</span>
+                  </button>
+                </div>
+              ) : (
+                <a
+                  href={projectData?.navigation?.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`bg-black font-para text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 hover:opacity-60 transition-all hover:duration-200 ${
+                    !darkMode
+                      ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
+                      : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                  }`}
+                >
+                  <button className="flex flex-row gap-2">
+                    {" "}
+                    <GitHubIcon /> <span>Repo</span>
+                  </button>
                 </a>
-              </button>
+              )}
+
               <p
-                className={`bg-black font-para  text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 hover:opacity-60 transition-all hover:duration-200 ${
+                className={`bg-black font-para  text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 ${
                   !darkMode
                     ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
                     : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
@@ -254,18 +274,17 @@ const CaseStudy = () => {
                 {projectData?.visualgallery?.title}
               </h3>
               <div className="h-auto overflow-hidden">
-              
-              <Masonry
-                items={items}
-                ease="power3.out"
-                duration={0.6}
-                stagger={0.05}
-                animateFrom="bottom"
-                scaleOnHover={true}
-                hoverScale={0.95}
-                blurToFocus={true}
-                colorShiftOnHover={true}
-              />
+                <Masonry
+                  items={items}
+                  ease="power3.out"
+                  duration={0.6}
+                  stagger={0.05}
+                  animateFrom="bottom"
+                  scaleOnHover={true}
+                  hoverScale={0.95}
+                  blurToFocus={true}
+                  colorShiftOnHover={true}
+                />
               </div>
             </div>
           </div>
