@@ -10,7 +10,50 @@ gsap.registerPlugin(ScrollTrigger);
 const HomeContact = () => {
   const { darkMode } = useContext(AppContext);
   const containerRef = useRef(null);
-  const stickyLeftRef = useRef(null); // Ref for the left section (image)
+  const stickyLeftRef = useRef(null);
+  const initialFormData = {
+    name: "",
+    email: "",
+    message: "",
+    phone: "",
+    company: "",
+    date:""
+  };
+  const [formData, setFormData] = React.useState(initialFormData);
+  const [error, setError] = React.useState({});
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const validatForm = () => {
+    const newError = {};
+    if (!formData.name || formData.name.length < 3) {
+      newError.name =
+        "Name is required and should be at least 3 characters long";
+    }
+    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
+      newError.email = "A valid email is required";
+    }
+    if (!formData.message || formData.message.length < 10) {
+      newError.message =
+        "Message is required and should be at least 10 characters long";
+    }
+    if (!formData.phone) {
+      newError.phone = "Please enter a mobile number.";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newError.phone = "Mobile number should be 10 digits.";
+    }
+
+    setError(newError);
+    return Object.keys(newError).length === 0;
+  };
+  const handleSubmit = (e) => {
+    validatForm();
+    e.preventDefault();
+    const dateNow  = new Date();
+    formData.date = dateNow;
+    console.log("Form submitted:", formData);
+  };
   useEffect(() => {
     let trigger;
     const createScrollTrigger = () => {
@@ -30,14 +73,11 @@ const HomeContact = () => {
     };
 
     createScrollTrigger();
-
     const handleResize = () => {
       if (trigger) trigger.kill();
       createScrollTrigger();
     };
-
     window.addEventListener("resize", handleResize);
-
     return () => {
       if (trigger) trigger.kill();
       window.removeEventListener("resize", handleResize);
@@ -100,7 +140,7 @@ const HomeContact = () => {
             >
               <EmailIcon fontSize="40px" />
             </button>
-            <p className="text-xl text-justify font-para pt-2 pb-1 px-2 font-normal">
+            <div className="text-xl text-justify font-para pt-2 pb-1 px-2 font-normal">
               <BlurText
                 text="Feel free to email me if you have any questions or need more
               details!"
@@ -108,7 +148,7 @@ const HomeContact = () => {
                 animateBy="words"
                 direction="bottom"
               />
-            </p>
+            </div>
             <a
               href="mailto:manshu010m@gmail.com"
               className="text-lg text-justify underline underline-offset-1 font-para pb-1 px-2 font-medium"
@@ -141,14 +181,14 @@ const HomeContact = () => {
             >
               <LocalPhoneIcon fontSize="40px" />
             </button>
-            <p className="text-xl text-justify font-para pt-2 pb-1 px-2 font-normal">
+            <div className="text-xl text-justify font-para pt-2 pb-1 px-2 font-normal">
               <BlurText
                 text="Feel free to call me anytime according to your convenience"
                 delay={10}
                 animateBy="words"
                 direction="bottom"
               />
-            </p>
+            </div>
             <a
               href="tel:+917804825835"
               className="text-lg text-justify underline underline-offset-1 font-para pb-1 px-2 font-medium"
@@ -164,10 +204,10 @@ const HomeContact = () => {
               : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
           } `}
         >
-          <form className="lg:px-3">
+          <form className="lg:px-3" onSubmit={handleSubmit}>
             {/* Name and Phone Number */}
             <div>
-              <div className="flex flex-col mb-2">
+              <div className="flex flex-col mb-2 relative">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
                   <BlurText
                     text="Name"
@@ -179,19 +219,25 @@ const HomeContact = () => {
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Your Name"
-                  className={`bg-transparent py-3 outline-none px-4 rounded-[10px] 
-
-${
-  !darkMode
-    ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-    : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-} 
+                  className={`bg-transparent py-3 outline-none px-4 rounded-[10px] ${
+                    !darkMode
+                      ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                      : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                  } 
 
                   `}
                 />
+                {error.name && (
+                  <span className=" absolute -bottom-6 text-red-500 text-sm px-2 pt-1">
+                    {error.name}
+                  </span>
+                )}
               </div>
-              <div className="flex flex-col gap-2 mb-2">
+              <div className="flex flex-col gap-2 mb-2 relative">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
                   <BlurText
                     text="Email"
@@ -203,23 +249,29 @@ ${
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Your Email"
-                  className={`bg-transparent py-3 outline-none px-4 rounded-[10px] 
-
-${
-  !darkMode
-    ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-    : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-} 
+                  className={`bg-transparent py-3 outline-none px-4 rounded-[10px] ${
+                    !darkMode
+                      ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                      : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                  } 
 
                   `}
                 />
+                {error.email && (
+                  <span className=" absolute -bottom-6 text-red-500 text-sm px-2 pt-1">
+                    {error.email}
+                  </span>
+                )}
               </div>
             </div>
 
             {/* Phone Number and Company/Organization */}
             <div>
-              <div className="flex flex-col gap-2 mb-2">
+              <div className="flex flex-col gap-2 mb-2 relative">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
                   <BlurText
                     text="phone"
@@ -231,17 +283,29 @@ ${
                 </label>
                 <input
                   type="text"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={(e) => {
+                    // Sirf digits allow karega
+                    const onlyDigits = e.target.value.replace(/\D/g, "");
+                    setFormData({ ...formData, phone: onlyDigits });
+                  }}
+                  maxLength={10}
                   placeholder="Your Phone Number"
-                  className={`bg-transparent py-3 outline-none px-4 rounded-[10px] 
-${
-  !darkMode
-    ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-    : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-} 
+                  className={`bg-transparent py-3 outline-none px-4 rounded-[10px] ${
+                    !darkMode
+                      ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                      : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                  } 
                   `}
                 />
+                {error.phone && (
+                  <span className=" absolute -bottom-6 text-red-500 text-sm px-2 pt-1">
+                    {error.phone}
+                  </span>
+                )}
               </div>
-              <div className="flex flex-col gap-2 mb-2">
+              <div className="flex flex-col gap-2 mb-2 relative">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
                   <BlurText
                     text="Company/Organizaion"
@@ -252,23 +316,22 @@ ${
                   <span className="text-3xl invisible">*</span>
                 </label>
                 <input
-                  type="email"
+                  type="text"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
                   placeholder="Your Company/Organization"
-                  className={`bg-transparent py-3 outline-none px-4  rounded-[10px] 
-
-${
-  !darkMode
-    ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-    : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-} 
-
+                  className={`bg-transparent py-3 outline-none px-4  rounded-[10px] ${
+                    !darkMode
+                      ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                      : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                  } 
                   `}
                 />
               </div>
             </div>
-
             <div>
-              <div className="flex flex-col gap-2 mb-2">
+              <div className="flex flex-col gap-2 mb-2 relative">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
                   <BlurText
                     text="Message"
@@ -279,20 +342,26 @@ ${
                   <span className="text-3xl">*</span>
                 </label>
                 <textarea
-                  type="email"
+                  type="text"
+                  name="message"
+                  value={formData.message}
                   rows={4}
+                  onChange={handleChange}
                   cols={50}
                   placeholder="Your Message"
-                  className={`bg-transparent py-3 outline-none px-4 rounded-[10px] 
-
-${
-  !darkMode
-    ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-    : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-} }
+                  className={`bg-transparent py-3 outline-none px-4 rounded-[10px] ${
+                    !darkMode
+                      ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                      : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                  } }
 
                   `}
                 />
+                {error.message && (
+                  <span className=" absolute -bottom-6 text-red-500 text-sm px-2 pt-1">
+                    {error.message}
+                  </span>
+                )}
               </div>
             </div>
             <div className=" flex justify-start pt-8 items-center">
@@ -307,7 +376,8 @@ ${
                   text="Send Message"
                   delay={5}
                   animateBy="words"
-                  direction="bottom" className="flex justify-center items-center"
+                  direction="bottom"
+                  className="flex justify-center items-center"
                 />
               </button>
             </div>

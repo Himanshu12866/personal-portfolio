@@ -566,10 +566,95 @@ const portfolioData = [
                 image: conceiva,
                 text: " Conceiva Fertility",
             },
+            {
+                category: "Personal",
+                tag: "Live",
+                slug: "dr-appointment-webapp",
+                techUsed: ["React", "Node.js", "Express", "MongoDB Atlas", "Tailwind CSS", "JWT Authentication", "bcrypt", "Stripe / Razorpay Payment Gateway", "Context API"],
+                header: {
+                    title: "Dr. Appointment Booking Web App",
+                    description: "A full-stack web application designed to streamline doctor appointment bookings for patients, doctors, and administrators. Users can securely register and log in, browse available doctors, and book appointments, while doctors can manage schedules and admins oversee all operations. The application features JWT-based authentication, password hashing for security, and integrated payment gateway for seamless consultation payments.",
+                    duration: "March 2024 – May 2024",
+                    role: "Full-Stack Developer",
+                },
+                context: {
+                    title: "Problem Statement / Intention",
+                    goals: [
+                        "Provide a secure and user-friendly platform for patients to book doctor appointments.",
+                        "Allow doctors to manage their availability and view scheduled appointments.",
+                        "Enable admins to oversee users, doctors, and appointments efficiently.",
+                        "Implement secure authentication with JWT and hashed passwords.",
+                        "Integrate a payment gateway to allow patients to pay for consultations online.",
+                        "Use MongoDB cluster for scalable and reliable data storage."
+                    ]
+                },
+                process: {
+                    title: "Process",
+                    challenge: [
+                        "Creating a role-based login system for Patients, Doctors, and Admins.",
+                        "Implementing JWT authentication and bcrypt password hashing for secure access.",
+                        "Integrating MongoDB Atlas cluster for centralized and scalable data storage.",
+                        "Building CRUD functionality for users, doctors, and appointments.",
+                        "Integrating a payment gateway for online consultation fees.",
+                        "Designing a responsive and intuitive UI for all user roles."
+                    ],
+                },
+                myContribution: {
+                    title: "My Contribution",
+                    myrole: [
+                        "Developed secure role-based login and registration portals for Patients, Doctors, and Admins.",
+                        "Implemented JWT authentication and bcrypt hashing to secure user passwords.",
+                        "Built backend APIs using Node.js and Express for appointment management and payments.",
+                        "Integrated MongoDB Atlas cluster for data storage and scalability.",
+                        "Added payment gateway integration for online consultation payments.",
+                        "Designed responsive frontend using React and Tailwind CSS for all roles.",
+                        "Implemented CRUD functionality for appointments, users, and doctor schedules."
+                    ]
+                },
+                outcomes: {
+                    title: "Outcomes",
+                    results: [
+                        "Delivered a full-stack, secure, and responsive doctor appointment booking platform.",
+                        "Enabled seamless appointment booking for patients and schedule management for doctors.",
+                        "Admins can monitor and manage all operations efficiently.",
+                        "Implemented robust security with JWT authentication and hashed passwords.",
+                        "Integrated online payment for smooth consultation processing.",
+                        "Enhanced skills in full-stack development, security, role-based access, and payment integration."
+                    ]
+                },
+                visualgallery: {
+                    title: "Visual Gallery",
+                    screenShots: [
+                        {
+                            title: "Role-Based Login Portal",
+                            image: "",
+                        },
+                        {
+                            title: "Patient Booking Dashboard",
+                            image: "",
+                        },
+                        {
+                            title: "Doctor Schedule Management",
+                            image: "",
+                        },
+                        {
+                            title: "Payment Checkout Screen",
+                            image: "",
+                        }
+                    ],
+                },
+                navigation: {
+                    demo: "Visit",
+                    repo: "https://github.com/Himanshu12866/drbookwebapp"
+                },
+                image: "",
+                text: "Booking Web App",
+            }
+
 
         ],
     },
-    
+
     // Project page data and case study pages data completed
 ];
 export default portfolioData;
