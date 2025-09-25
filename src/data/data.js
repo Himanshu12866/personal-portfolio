@@ -36,10 +36,122 @@ import reactlogo from "../assets/images/react.png";
 import novatales from "../assets/icons_logos/novatales.png"
 import naresh from "../assets/icons_logos/naresh-it-logo2.png"
 // projects images
-import livvon_customer from "../assets/images/livvon.png"
-import livvon_admin from "../assets/images/livvon_admin.png"
-import magnaid from "../assets/images/magnaid.png"
-import conceiva from "../assets/images/conceiva.png"
+
+//Livvon Customer 
+import livvon_customer from "../assets/images/livvon.webp"
+import liv_cust_1 from "../assets/images/liv-cust/_liv_cust_1_converted.webp";
+import liv_cust_2 from "../assets/images/liv-cust/_liv_cust_2_converted.webp";
+import liv_cust_3 from "../assets/images/liv-cust/_liv_cust_3_converted.webp";
+import liv_cust_4 from "../assets/images/liv-cust/_liv_cust_4_converted.webp";
+import liv_cust_5 from "../assets/images/liv-cust/_liv_cust_5_converted.webp";
+import liv_cust_6 from "../assets/images/liv-cust/_liv_cust_6_converted.webp";
+import liv_cust_7 from "../assets/images/liv-cust/_liv_cust_7_converted.webp";
+import liv_cust_8 from "../assets/images/liv-cust/_liv_cust_8_converted.webp";
+import liv_cust_9 from "../assets/images/liv-cust/_liv_cust_9_converted.webp";
+import liv_cust_10 from "../assets/images/liv-cust/_liv_cust_10_converted.webp";
+import liv_cust_11 from "../assets/images/liv-cust/_liv_cust_11_converted.webp";
+import liv_cust_12 from "../assets/images/liv-cust/_liv_cust_12_converted.webp";
+import liv_cust_13 from "../assets/images/liv-cust/_liv_cust_13_converted.webp";
+import liv_cust_14 from "../assets/images/liv-cust/_liv_cust_14_converted.webp";
+import liv_cust_15 from "../assets/images/liv-cust/_liv_cust_15_converted.webp";
+import liv_cust_16 from "../assets/images/liv-cust/_liv_cust_16_converted.webp";
+import liv_cust_17 from "../assets/images/liv-cust/_liv_cust_17_converted.webp";
+import liv_cust_18 from "../assets/images/liv-cust/_liv_cust_18_converted.webp";
+import liv_cust_19 from "../assets/images/liv-cust/_liv_cust_19_converted.webp";
+import liv_cust_20 from "../assets/images/liv-cust/_liv_cust_20_converted.webp";
+
+//Livvon Admin
+import livvon_admin from "../assets/images/livvon_admin.webp"
+import liv_adm_1 from "../assets/images/liv-admin/_liv_adm_1_converted.webp";
+import liv_adm_2 from "../assets/images/liv-admin/_liv_adm_2_converted.webp";
+import liv_adm_3 from "../assets/images/liv-admin/_liv_adm_3_converted.webp";
+import liv_adm_4 from "../assets/images/liv-admin/_liv_adm_4_converted.webp";
+import liv_adm_5 from "../assets/images/liv-admin/_liv_adm_5_converted.webp";
+import liv_adm_6 from "../assets/images/liv-admin/_liv_adm_6_converted.webp";
+import liv_adm_7 from "../assets/images/liv-admin/_liv_adm_7_converted.webp";
+import liv_adm_8 from "../assets/images/liv-admin/_liv_adm_8_converted.webp";
+import liv_adm_9 from "../assets/images/liv-admin/_liv_adm_9_converted.webp";
+import liv_adm_10 from "../assets/images/liv-admin/_liv_adm_10_converted.webp";
+import liv_adm_11 from "../assets/images/liv-admin/_liv_adm_11_converted.webp";
+import liv_adm_12 from "../assets/images/liv-admin/_liv_adm_12_converted.webp";
+import liv_adm_13 from "../assets/images/liv-admin/_liv_adm_13_converted.webp";
+import liv_adm_14 from "../assets/images/liv-admin/_liv_adm_14_converted.webp";
+import liv_adm_15 from "../assets/images/liv-admin/_liv_adm_15_converted.webp";
+import liv_adm_16 from "../assets/images/liv-admin/_liv_adm_16_converted.webp";
+//MagnAid 
+import magnaid from "../assets/images/magnaid.webp"
+import magnaid_1 from "../assets/images/magnaid/magnaid_1_converted.webp";
+import magnaid_2 from "../assets/images/magnaid/magnaid_2_converted.webp";
+import magnaid_3 from "../assets/images/magnaid/magnaid_3_converted.webp";
+import magnaid_4 from "../assets/images/magnaid/magnaid_4_converted.webp";
+import magnaid_5 from "../assets/images/magnaid/magnaid_5_converted.webp";
+import magnaid_6 from "../assets/images/magnaid/magnaid_6_converted.webp";
+import magnaid_7 from "../assets/images/magnaid/magnaid_7_converted.webp";
+import magnaid_8 from "../assets/images/magnaid/magnaid_8_converted.webp";
+import magnaid_9 from "../assets/images/magnaid/magnaid_9_converted.webp";
+import magnaid_10 from "../assets/images/magnaid/magnaid_10_converted.webp";
+import magnaid_11 from "../assets/images/magnaid/magnaid_11_converted.webp";
+import magnaid_12 from "../assets/images/magnaid/magnaid_12_converted.webp";
+import magnaid_13 from "../assets/images/magnaid/magnaid_13_converted.webp";
+import magnaid_14 from "../assets/images/magnaid/magnaid_14_converted.webp";
+import magnaid_15 from "../assets/images/magnaid/magnaid_15_converted.webp";
+import magnaid_16 from "../assets/images/magnaid/magnaid_16_converted.webp";
+import magnaid_17 from "../assets/images/magnaid/magnaid_17_converted.webp";
+import magnaid_18 from "../assets/images/magnaid/magnaid_18_converted.webp";
+import magnaid_19 from "../assets/images/magnaid/magnaid_19_converted.webp";
+import magnaid_20 from "../assets/images/magnaid/magnaid_20_converted.webp";
+
+//Conceiva 
+import conceiva from "../assets/images/conceiva.webp"
+import conc_1 from "../assets/images/conceiva/conceiva_1_converted.webp";
+import conc_2 from "../assets/images/conceiva/conceiva_2_converted.webp";
+import conc_3 from "../assets/images/conceiva/conceiva_3_converted.webp";
+import conc_4 from "../assets/images/conceiva/conceiva_4_converted.webp";
+import conc_5 from "../assets/images/conceiva/conceiva_5_converted.webp";
+import conc_6 from "../assets/images/conceiva/conceiva_6_converted.webp";
+import conc_7 from "../assets/images/conceiva/conceiva_7_converted.webp";
+import conc_8 from "../assets/images/conceiva/conceiva_8_converted.webp";
+import conc_9 from "../assets/images/conceiva/conceiva_9_converted.webp";
+import conc_10 from "../assets/images/conceiva/conceiva_10_converted.webp";
+import conc_11 from "../assets/images/conceiva/conceiva_11_converted.webp";
+import conc_12 from "../assets/images/conceiva/conceiva_12_converted.webp";
+import conc_13 from "../assets/images/conceiva/conceiva_13_converted.webp";
+import conc_14 from "../assets/images/conceiva/conceiva_14_converted.webp";
+import conc_15 from "../assets/images/conceiva/conceiva_15_converted.webp";
+import conc_16 from "../assets/images/conceiva/conceiva_16_converted.webp";
+import conc_17 from "../assets/images/conceiva/conceiva_17_converted.webp";
+
+// Dr Appointment Booking WebApp Custoer
+import dr_web_cust_1 from "../assets/images/DrWebApp/dr_app_1_converted.webp";
+import dr_web_cust_2 from "../assets/images/DrWebApp/dr_app_2_converted.webp";
+import dr_web_cust_3 from "../assets/images/DrWebApp/dr_app_3_converted.webp";
+import dr_web_cust_4 from "../assets/images/DrWebApp/dr_app_4_converted.webp";
+import dr_web_cust_5 from "../assets/images/DrWebApp/dr_app_5_converted.webp";
+import dr_web_cust_6 from "../assets/images/DrWebApp/dr_app_6_converted.webp";
+import dr_web_cust_7 from "../assets/images/DrWebApp/dr_app_7_converted.webp";
+import dr_web_cust_8 from "../assets/images/DrWebApp/dr_app_8_converted.webp";
+import dr_web_cust_9 from "../assets/images/DrWebApp/dr_app_9_converted.webp";
+import dr_web_cust_10 from "../assets/images/DrWebApp/dr_app_10_converted.webp";
+import dr_web_cust_11 from "../assets/images/DrWebApp/dr_app_11_converted.webp";
+import dr_web_cust_12 from "../assets/images/DrWebApp/dr_app_12_converted.webp";
+import dr_web_cust_13 from "../assets/images/DrWebApp/dr_app_13_converted.webp";
+import dr_web_cust_14 from "../assets/images/DrWebApp/dr_app_14_converted.webp";
+import dr_web_cust_15 from "../assets/images/DrWebApp/dr_app_15_converted.webp";
+import dr_web_cust_16 from "../assets/images/DrWebApp/dr_app_16_converted.webp";
+import dr_web_cust_17 from "../assets/images/DrWebApp/dr_app_17_converted.webp";
+
+// Dr Appointment Booking WebApp Admin and Doctors
+import dr_web_admin_1 from "../assets/images/DrWebAdmin/dr_web_adm_1_converted.webp";
+import dr_web_admin_2 from "../assets/images/DrWebAdmin/dr_web_adm_2_converted.webp";
+import dr_web_admin_3 from "../assets/images/DrWebAdmin/dr_web_adm_3_converted.webp";
+import dr_web_admin_4 from "../assets/images/DrWebAdmin/dr_web_adm_4_converted.webp";
+import dr_web_admin_5 from "../assets/images/DrWebAdmin/dr_web_adm_5_converted.webp";
+import dr_web_admin_6 from "../assets/images/DrWebAdmin/dr_web_adm_6_converted.webp";
+import dr_web_admin_7 from "../assets/images/DrWebAdmin/dr_web_adm_7_converted.webp";
+import dr_web_admin_8 from "../assets/images/DrWebAdmin/dr_web_adm_8_converted.webp";
+import dr_web_admin_9 from "../assets/images/DrWebAdmin/dr_web_adm_9_converted.webp";
+import dr_web_admin_10 from "../assets/images/DrWebAdmin/dr_web_adm_10_converted.webp";
+
 const portfolioData = [
     // Skills Data and icons
     {
@@ -109,7 +221,7 @@ const portfolioData = [
             },
             {
                 name: "Bootstrap",
-                iconsmall: bootstrap, // not imported small version in your code
+                iconsmall: bootstrap,
                 iconlarge: bootstrap_large,
                 category: "frontend",
             },
@@ -359,10 +471,88 @@ const portfolioData = [
 
                 visualgallery: {
                     title: "Visual Gallery",
-                    screenShots: [{
-                        title: "",
-                        image: "",
-                    },],
+                    screenShots: [
+                        {
+                            title: "",
+                            image: liv_cust_1,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_2,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_3,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_4,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_5,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_6,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_7,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_8,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_9,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_10,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_11,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_12,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_13,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_14,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_15,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_16,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_17,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_18,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_19,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_20,
+                        },
+                    ],
                 },
                 navigation: {
                     demo: "https://livoncustomer-dev.novatales.com/",
@@ -428,7 +618,67 @@ const portfolioData = [
                     title: "Visual Gallery",
                     screenShots: [{
                         title: "",
-                        image: "",
+                        image: liv_adm_1,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_2,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_3,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_4,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_5,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_6,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_7,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_8,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_9,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_10,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_11,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_12,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_13,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_14,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_15,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_16,
                     },],
                 },
                 navigation: {
@@ -492,7 +742,83 @@ const portfolioData = [
                     title: "Visual Gallery",
                     screenShots: [{
                         title: "",
-                        image: "",
+                        image: magnaid_1,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_2,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_3,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_4,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_5,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_6,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_7,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_8,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_9,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_10,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_11,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_12,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_13,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_14,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_15,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_16,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_17,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_18,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_19,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_20,
                     },],
                 },
                 navigation: {
@@ -556,7 +882,71 @@ const portfolioData = [
                     title: "Visual Gallery",
                     screenShots: [{
                         title: "",
-                        image: "",
+                        image: conc_1,
+                    },
+                    {
+                        title: "",
+                        image: conc_2,
+                    },
+                    {
+                        title: "",
+                        image: conc_3,
+                    },
+                    {
+                        title: "",
+                        image: conc_4,
+                    },
+                    {
+                        title: "",
+                        image: conc_5,
+                    },
+                    {
+                        title: "",
+                        image: conc_6,
+                    },
+                    {
+                        title: "",
+                        image: conc_7,
+                    },
+                    {
+                        title: "",
+                        image: conc_8,
+                    },
+                    {
+                        title: "",
+                        image: conc_9,
+                    },
+                    {
+                        title: "",
+                        image: conc_10,
+                    },
+                    {
+                        title: "",
+                        image: conc_11,
+                    },
+                    {
+                        title: "",
+                        image: conc_12,
+                    },
+                    {
+                        title: "",
+                        image: conc_13,
+                    },
+                    {
+                        title: "",
+                        image: conc_14,
+                    },
+                    {
+                        title: "",
+                        image: conc_15,
+                    },
+                    {
+                        title: "",
+                        image: conc_16,
+                    },
+                    {
+                        title: "",
+                        image: conc_17,
                     },],
                 },
                 navigation: {
@@ -566,6 +956,8 @@ const portfolioData = [
                 image: conceiva,
                 text: " Conceiva Fertility",
             },
+
+            //Personal Projects 
             {
                 category: "Personal",
                 tag: "Live",
@@ -623,24 +1015,81 @@ const portfolioData = [
                     title: "Visual Gallery",
                     screenShots: [
                         {
-                            title: "Patient Login & Registration",
-                            image: "",
+                            title: "",
+                            image: dr_web_cust_1,
                         },
                         {
-                            title: "Appointment Booking Flow",
-                            image: "",
+                            title: "",
+                            image: dr_web_cust_2,
                         },
                         {
-                            title: "Payment Checkout Screen",
-                            image: "",
-                        }
+                            title: "",
+                            image: dr_web_cust_3,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_4,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_5,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_6,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_7,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_8,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_9,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_10,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_11,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_12,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_13,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_14,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_15,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_16,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_17,
+                        },
+
                     ],
                 },
                 navigation: {
                     demo: "https://drbookwebapp-frontend.onrender.com/",
                     repo: "https://github.com/Himanshu12866/drbookwebapp"
                 },
-                image: "",
+                image: dr_web_cust_3,
                 text: "Booking Web App(Patients)",
             },
             {
@@ -703,34 +1152,55 @@ const portfolioData = [
                     title: "Visual Gallery",
                     screenShots: [
                         {
-                            title: "Admin Login with OTP",
-                            image: "",
+                            title: "",
+                            image: dr_web_admin_1,
                         },
                         {
-                            title: "Admin Dashboard – Manage Doctors",
-                            image: "",
+                            title: "",
+                            image: dr_web_admin_2,
                         },
                         {
-                            title: "Doctor Dashboard – Appointment Schedule",
-                            image: "",
+                            title: "",
+                            image: dr_web_admin_3,
                         },
                         {
-                            title: "Appointment Management View",
-                            image: "",
-                        }
+                            title: "",
+                            image: dr_web_admin_4,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_5,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_6,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_7,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_8,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_9,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_10,
+                        },
+
                     ],
                 },
                 navigation: {
                     demo: "https://drbookwebapp-admin.onrender.com/",
                     repo: ""
                 },
-                image: "",
+                image: dr_web_admin_1,
                 text: "Booking Web App(Admin)",
             }
-
-
-
-
         ],
     },
 

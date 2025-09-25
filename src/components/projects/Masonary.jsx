@@ -65,7 +65,7 @@ const Masonry = ({
       "(min-width:600px)",
       "(min-width:400px)",
     ],
-    [5, 4, 3, 2],
+    [4, 4, 3, 2],
     1
   );
   const [containerRef, { width }] = useMeasure();
@@ -111,9 +111,9 @@ const Masonry = ({
     const columnWidth = (width - totalGaps) / columns;
 
     const positions = items.map((child, idx) => {
-      const size = imageSizes[idx];
+      const size = imageSizes[idx] || { width: 400, height: 500 };
       const aspectRatio = size.width / size.height;
-      const height = columnWidth / aspectRatio; // auto-scale height
+      const height = columnWidth / aspectRatio; 
       const col = colHeights.indexOf(Math.min(...colHeights));
       const x = col * (columnWidth + gap);
       const y = colHeights[col];
@@ -234,12 +234,12 @@ const Masonry = ({
           </button>
         </div>
       )}
-      <div ref={containerRef} className="relative" style={{ height: masonryHeight }}>
+      <div ref={containerRef} className="relative border-[1px] rounded-2xl p-2 border-[#c5c5c554]" style={{ height: masonryHeight }}>
         {positions.map((item, index) => (
           <div
             key={item.id}
             data-key={item.id}
-            className="absolute  cursor-pointer"
+            className="absolute   cursor-pointer"
             style={{ willChange: "transform, width,  opacity" }}
             onClick={() => openModalBox(item, index)}
             onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
