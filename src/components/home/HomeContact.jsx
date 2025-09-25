@@ -63,7 +63,7 @@ const HomeContact = () => {
         setFormData(initialFormData);
         setError({});
       } else {
-        alert("Failed to submit the form. Please try again.");
+       toast.error("Failed to submit the form. Please try again.");
         console.log("Form submission error:", response);
       }
     } catch (error) {
@@ -202,8 +202,7 @@ const HomeContact = () => {
             </div>
             <a
               href="tel:+917804825835"
-              className="text-lg text-justify underline underline-offset-1 font-para pb-1 px-2 font-medium"
-            >
+              className="text-lg text-justify underline underline-offset-1 font-para pb-1 px-2 font-medium">
               +91 78048 25835
             </a>
           </div>

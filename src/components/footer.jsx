@@ -40,13 +40,13 @@ const Footer = () => {
           <div className="w-full grid xl:grid-cols-4 sm:grid-cols-2 gap-10 xl:gap-0 2xl:p-12 md:p-10 p-6">
             {/* Left Logo + Info */}
             <div className="flex flex-col gap-4">
-              <a href="/" className="w-48">
+              <Link to="/" className="w-48">
                 <img
                   src={!darkMode ? dark_logo : light_logo}
                   alt="Logo"
                   className="w-full"
                 />
-              </a>
+              </Link>
               <h3 className="text-xl font-medium font-heading">
                 Himanshu Kumar Mishra
               </h3>

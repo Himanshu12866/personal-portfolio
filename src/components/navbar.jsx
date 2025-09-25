@@ -31,13 +31,13 @@ const Navbar = () => {
           } rounded-4xl  z-10  md:mx-4 mx-2 backdrop-blur-[5px] `}
         >
           <div className="w-full flex flex-wrap items-center justify-between  xl:px-16 px-8 py-1">
-            <a href="/" className="flex items-center w-48">
+            <Link to="/" className="flex items-center w-48">
               <img
                 src={!darkMode ? dark_logo : light_logo}
                 className=""
                 alt="Flowbite Logo"
               />
-            </a>
+            </Link>
             <div
               className="items-center justify-between hidden w-full font-heading lg:flex md:w-auto "
               id="navbar-cta"
