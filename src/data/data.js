@@ -573,7 +573,7 @@ const portfolioData = [
                 techUsed: ["React", "Node.js", "Express", "MongoDB Atlas", "Tailwind CSS", "JWT Authentication", "bcrypt", "Stripe / Razorpay Payment Gateway", "Context API"],
                 header: {
                     title: "Dr. Appointment Booking Web App",
-                    description: "A full-stack web application designed to streamline doctor appointment bookings for patients, doctors, and administrators. Users can securely register and log in, browse available doctors, and book appointments, while doctors can manage schedules and admins oversee all operations. The application features JWT-based authentication, password hashing for security, and integrated payment gateway for seamless consultation payments.",
+                    description: "A full-stack web application that allows patients to securely register, log in, browse available doctors, and book appointments online. The platform is built with JWT-based authentication, hashed passwords for security, and integrated payment gateway to streamline consultation payments.",
                     duration: "March 2024 – May 2024",
                     role: "Full-Stack Developer",
                 },
@@ -581,60 +581,53 @@ const portfolioData = [
                     title: "Problem Statement / Intention",
                     goals: [
                         "Provide a secure and user-friendly platform for patients to book doctor appointments.",
-                        "Allow doctors to manage their availability and view scheduled appointments.",
-                        "Enable admins to oversee users, doctors, and appointments efficiently.",
-                        "Implement secure authentication with JWT and hashed passwords.",
-                        "Integrate a payment gateway to allow patients to pay for consultations online.",
-                        "Use MongoDB cluster for scalable and reliable data storage."
+                        "Ensure secure authentication with JWT and hashed passwords.",
+                        "Integrate a payment gateway for online consultation payments.",
+                        "Use MongoDB cluster for scalable and reliable data storage.",
+                        "Offer a smooth and intuitive appointment booking flow."
                     ]
                 },
                 process: {
                     title: "Process",
                     challenge: [
-                        "Creating a role-based login system for Patients, Doctors, and Admins.",
-                        "Implementing JWT authentication and bcrypt password hashing for secure access.",
+                        "Implementing JWT authentication and bcrypt password hashing for patient accounts.",
                         "Integrating MongoDB Atlas cluster for centralized and scalable data storage.",
-                        "Building CRUD functionality for users, doctors, and appointments.",
+                        "Designing CRUD functionality for patient appointment bookings.",
                         "Integrating a payment gateway for online consultation fees.",
-                        "Designing a responsive and intuitive UI for all user roles."
+                        "Building a responsive and intuitive UI to ensure seamless user experience."
                     ],
                 },
                 myContribution: {
                     title: "My Contribution",
                     myrole: [
-                        "Developed secure role-based login and registration portals for Patients, Doctors, and Admins.",
-                        "Implemented JWT authentication and bcrypt hashing to secure user passwords.",
-                        "Built backend APIs using Node.js and Express for appointment management and payments.",
-                        "Integrated MongoDB Atlas cluster for data storage and scalability.",
-                        "Added payment gateway integration for online consultation payments.",
-                        "Designed responsive frontend using React and Tailwind CSS for all roles.",
-                        "Implemented CRUD functionality for appointments, users, and doctor schedules."
+                        "Developed secure login and registration system for patients.",
+                        "Implemented JWT authentication and bcrypt hashing to secure patient data.",
+                        "Built backend APIs using Node.js and Express for appointment and payment handling.",
+                        "Integrated MongoDB Atlas cluster for patient and booking data.",
+                        "Added payment gateway integration for online consultation fees.",
+                        "Designed responsive frontend using React and Tailwind CSS.",
+                        "Implemented CRUD functionality for booking appointments."
                     ]
                 },
                 outcomes: {
                     title: "Outcomes",
                     results: [
-                        "Delivered a full-stack, secure, and responsive doctor appointment booking platform.",
-                        "Enabled seamless appointment booking for patients and schedule management for doctors.",
-                        "Admins can monitor and manage all operations efficiently.",
+                        "Delivered a full-stack, secure, and responsive patient appointment booking platform.",
+                        "Enabled patients to easily register, browse doctors, and book appointments.",
                         "Implemented robust security with JWT authentication and hashed passwords.",
                         "Integrated online payment for smooth consultation processing.",
-                        "Enhanced skills in full-stack development, security, role-based access, and payment integration."
+                        "Enhanced skills in full-stack development, authentication, and payment gateway integration."
                     ]
                 },
                 visualgallery: {
                     title: "Visual Gallery",
                     screenShots: [
                         {
-                            title: "Role-Based Login Portal",
+                            title: "Patient Login & Registration",
                             image: "",
                         },
                         {
-                            title: "Patient Booking Dashboard",
-                            image: "",
-                        },
-                        {
-                            title: "Doctor Schedule Management",
+                            title: "Appointment Booking Flow",
                             image: "",
                         },
                         {
@@ -644,12 +637,98 @@ const portfolioData = [
                     ],
                 },
                 navigation: {
-                    demo: "Visit",
+                    demo: "https://drbookwebapp-frontend.onrender.com/",
                     repo: "https://github.com/Himanshu12866/drbookwebapp"
                 },
                 image: "",
-                text: "Booking Web App",
+                text: "Booking Web App(Patients)",
+            },
+            {
+                category: "Personal",
+                tag: "Live",
+                slug: "dr-admin-doctor-control",
+                techUsed: ["React", "Node.js", "Express", "MongoDB Atlas", "Tailwind CSS", "JWT Authentication", "bcrypt", "OTP Verification", "Context API"],
+                header: {
+                    title: "Doctor & Admin Control Panel",
+                    description: "A web application built for administrators and doctors to manage hospital operations. The admin has full control over managing doctors, patients, and appointments, while doctors can log in to view and manage their schedules. The system features secure authentication, CRUD operations, and a responsive dashboard interface.",
+                    duration: "May 2024 – July 2024",
+                    role: "Full-Stack Developer",
+                },
+                context: {
+                    title: "Problem Statement / Intention",
+                    goals: [
+                        "Provide an admin panel to manage hospital operations in a structured way.",
+                        "Enable the admin to add, update, or remove doctors.",
+                        "Allow the admin to view and manage patient appointments.",
+                        "Give doctors a dashboard to manage their appointment schedules.",
+                        "Implement OTP-based login with JWT authentication and bcrypt password hashing for security.",
+                        "Use MongoDB cluster for centralized, scalable data storage."
+                    ]
+                },
+                process: {
+                    title: "Process",
+                    challenge: [
+                        "Building a secure login system for Admin and Doctors.",
+                        "Implementing OTP-based authentication along with JWT and password hashing.",
+                        "Creating CRUD functionality for doctors and appointments.",
+                        "Designing separate dashboards for Admin and Doctors with appropriate permissions.",
+                        "Ensuring the system scales efficiently using MongoDB Atlas.",
+                        "Maintaining a clean and responsive UI with Tailwind CSS."
+                    ],
+                },
+                myContribution: {
+                    title: "My Contribution",
+                    myrole: [
+                        "Developed login and registration system for Admin and Doctors with OTP verification.",
+                        "Implemented JWT authentication and bcrypt password hashing for secure access.",
+                        "Built backend APIs using Node.js and Express for doctors and appointments management.",
+                        "Integrated MongoDB Atlas for storing doctors, patients, and appointment records.",
+                        "Designed separate dashboards for Admin (full control) and Doctors (schedule management).",
+                        "Implemented CRUD operations for doctors and appointments.",
+                        "Created responsive and intuitive UI using React and Tailwind CSS."
+                    ]
+                },
+                outcomes: {
+                    title: "Outcomes",
+                    results: [
+                        "Delivered a role-based doctor and admin management system.",
+                        "Admin can manage doctors and appointments seamlessly.",
+                        "Doctors can log in and view/manage their schedules.",
+                        "Implemented OTP-based login, JWT authentication, and password hashing for security.",
+                        "Enhanced hospital operations through structured CRUD-based workflows.",
+                        "Improved personal experience in handling authentication and dashboard-based applications."
+                    ]
+                },
+                visualgallery: {
+                    title: "Visual Gallery",
+                    screenShots: [
+                        {
+                            title: "Admin Login with OTP",
+                            image: "",
+                        },
+                        {
+                            title: "Admin Dashboard – Manage Doctors",
+                            image: "",
+                        },
+                        {
+                            title: "Doctor Dashboard – Appointment Schedule",
+                            image: "",
+                        },
+                        {
+                            title: "Appointment Management View",
+                            image: "",
+                        }
+                    ],
+                },
+                navigation: {
+                    demo: "https://drbookwebapp-admin.onrender.com/",
+                    repo: ""
+                },
+                image: "",
+                text: "Booking Web App(Admin)",
             }
+
+
 
 
         ],

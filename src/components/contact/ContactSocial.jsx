@@ -49,8 +49,8 @@ const ContactSocial = () => {
             </li>
             <li>
               <a
-                href="https://wa.me/qr/7P2XAEPKSWCDI1"
-                target="_blank"
+                href="https://wa.me/917804825835?text=Hello%20there!" target="_blank"
+                
                 rel="noreferrer noopener"
                 className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
               >
