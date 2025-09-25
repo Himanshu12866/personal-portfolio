@@ -12,6 +12,7 @@ import StarIcon from "@mui/icons-material/Star";
 import MemoryIcon from "@mui/icons-material/Memory";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import Masonry from "./Masonary";
+import { useLenis } from "../SmoothScroll";
 const CaseStudy = () => {
   const { projects } = useContext(AppContext);
   const [projectData, setProjectData] = useState(null);
@@ -24,41 +25,41 @@ const CaseStudy = () => {
     }
   }, [slug, projects]);
   console.log("Project Data:", projectData, slug);
-const items = projectData?.visualgallery?.screenShots?.map((img, index) => ({
-  id: index + 1,
-  img: img?.image,
-})) || [];
-console.log("Masonry Items:", items);
+  const items = projectData?.visualgallery?.screenShots?.map((img, index) => ({
+    id: index + 1,
+    img: img?.image,
+  })) || [];
+  const lenisRef = useLenis();
+  useEffect(() => {
+    lenisRef?.current?.scrollTo(0); // top of the page
+  }, []);
   return (
     <>
       <div className="flex flex-col items-center justify-center py-40 overflow-hidden">
         <div className="xl:w-3/5 md:w-4/5 w-11/12 h-auto">
           <div>
-            <h1 className="text-4xl font-bold">{projectData?.header?.title}</h1>
-            <div className="flex flex-row gap-4 mt-6">
+            <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold">{projectData?.header?.title}</h1>
+            <div className="flex flex-row sm:flex-nowrap flex-wrap gap-4 mt-6">
               <Link
                 to={projectData?.navigation?.demo}
                 rel="noopener noreferrer"
                 target="_blank"
-                className={`bg-black font-para  text-white  z-[3] px-4 py-3  flex justify-center items-center gap-2 font-medium rounded-[10px] opacity-100 hover:opacity-60 transition-all hover:duration-200 ${
-                  !darkMode
+                className={`bg-black font-para  text-white  z-[3] px-4 py-3  flex justify-center items-center gap-2 font-medium rounded-[10px] opacity-100 hover:opacity-60 transition-all hover:duration-200 ${!darkMode
                     ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
                     : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-                }`}
+                  }`}
               >
                 <ArrowOutwardIcon /> <span>Live</span>
               </Link>
               {projectData?.category === "Professional" ? (
                 <div
-                  className={`bg-black font-para  ${
-                    projectData?.category === "Professional"
+                  className={`bg-black font-para  ${projectData?.category === "Professional"
                       ? "opacity-50 cursor-not-allowed"
                       : ""
-                  } text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 ${
-                    !darkMode
+                    } text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 ${!darkMode
                       ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
                       : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-                  }`}
+                    }`}
                 >
                   <button
                     disabled
@@ -73,11 +74,10 @@ console.log("Masonry Items:", items);
                   href={projectData?.navigation?.repo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`bg-black font-para text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 hover:opacity-60 transition-all hover:duration-200 ${
-                    !darkMode
+                  className={`bg-black font-para text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 hover:opacity-60 transition-all hover:duration-200 ${!darkMode
                       ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
                       : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-                  }`}
+                    }`}
                 >
                   <button className="flex flex-row gap-2">
                     {" "}
@@ -87,11 +87,10 @@ console.log("Masonry Items:", items);
               )}
 
               <p
-                className={`bg-black font-para  text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 ${
-                  !darkMode
+                className={`bg-black font-para  text-white  flex justify-center items-center gap-2 z-[3] px-4 py-3 font-medium rounded-[10px] opacity-100 ${!darkMode
                     ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
                     : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-                }`}
+                  }`}
               >
                 <CategoryIcon /> <span>{projectData?.category}</span>
               </p>

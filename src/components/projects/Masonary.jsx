@@ -1,5 +1,19 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+// Masonry.jsx
+import React, {
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { gsap } from "gsap";
+import MuiMasonry from "@mui/lab/Masonry"; // aliased to avoid naming collision
+import Box from "@mui/material/Box";
+import { AppContext } from "../../context/datacontext";
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import CloseIcon from '@mui/icons-material/Close';
+/* ---------- helpers (kept from your original) ---------- */
 const useMedia = (queries, values, defaultValue) => {
   const get = () =>
     values[queries.findIndex((q) => matchMedia(q).matches)] ?? defaultValue;
@@ -11,23 +25,11 @@ const useMedia = (queries, values, defaultValue) => {
       queries.forEach((q) =>
         matchMedia(q).removeEventListener("change", handler)
       );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [queries]);
   return value;
 };
-const useMeasure = () => {
-  const ref = useRef(null);
-  const [size, setSize] = useState({ width: 0, height: 0 });
-  useLayoutEffect(() => {
-    if (!ref.current) return;
-    const ro = new ResizeObserver(([entry]) => {
-      const { width } = entry.contentRect;
-      setSize({ width });
-    });
-    ro.observe(ref.current);
-    return () => ro.disconnect();
-  }, []);
-  return [ref, size];
-};
+
 const preloadImages = async (urls) => {
   const sizes = await Promise.all(
     urls.map(
@@ -47,7 +49,9 @@ const preloadImages = async (urls) => {
   );
   return sizes;
 };
-const Masonry = ({
+
+/* ---------- exported component (keeps same prop names) ---------- */
+export default function Masonry({
   items,
   ease = "power3.out",
   duration = 0.6,
@@ -57,7 +61,8 @@ const Masonry = ({
   hoverScale = 0.95,
   blurToFocus = true,
   colorShiftOnHover = false,
-}) => {
+}) {
+  // keep your responsive columns behaviour
   const columns = useMedia(
     [
       "(min-width:1500px)",
@@ -68,82 +73,78 @@ const Masonry = ({
     [4, 4, 3, 2],
     1
   );
-  const [containerRef, { width }] = useMeasure();
+
+  // preload images (same as before)
   const [imagesReady, setImagesReady] = useState(false);
-  const getInitialPosition = (item) => {
-    const containerRect = containerRef.current?.getBoundingClientRect();
-    if (!containerRect) return { x: item.x, y: item.y };
-    let direction = animateFrom;
-    if (animateFrom === "random") {
-      const dirs = ["top", "bottom", "left", "right"];
-      direction = dirs[Math.floor(Math.random() * dirs.length)];
-    }
-    switch (direction) {
-      case "top":
-        return { x: item.x, y: -200 };
-      case "bottom":
-        return { x: item.x, y: window.innerHeight + 200 };
-      case "left":
-        return { x: -200, y: item.y };
-      case "right":
-        return { x: window.innerWidth + 200, y: item.y };
-      case "center":
-        return {
-          x: containerRect.width / 2 - item.w / 2,
-          y: containerRect.height / 2 - item.h / 2,
-        };
-      default:
-        return { x: item.x, y: item.y + 100 };
-    }
-  };
   const [imageSizes, setImageSizes] = useState([]);
   useEffect(() => {
+    let mounted = true;
     preloadImages(items.map((i) => i.img)).then((sizes) => {
+      if (!mounted) return;
       setImageSizes(sizes);
       setImagesReady(true);
     });
+    return () => {
+      mounted = false;
+    };
   }, [items]);
-  const { positions, height: masonryHeight } = useMemo(() => {
-    if (!width || !imagesReady) return { positions: [], height: 0 };
-    const colHeights = new Array(columns).fill(0);
-    const gap = 16;
-    const totalGaps = (columns - 1) * gap;
-    const columnWidth = (width - totalGaps) / columns;
 
-    const positions = items.map((child, idx) => {
-      const size = imageSizes[idx] || { width: 400, height: 500 };
-      const aspectRatio = size.width / size.height;
-      const height = columnWidth / aspectRatio; 
-      const col = colHeights.indexOf(Math.min(...colHeights));
-      const x = col * (columnWidth + gap);
-      const y = colHeights[col];
-      colHeights[col] += height + gap;
-      return { ...child, x, y, w: columnWidth, h: height };
-  });
-    const height = colHeights.length > 0 ? Math.max(...colHeights) - gap : 0;
-    return { positions, height };
-  }, [columns, items, width, imagesReady, imageSizes]);
+  // refs for each masonry item — animate these directly
+  const itemRefs = useRef([]);
+  useEffect(() => {
+    // reset refs when items length changes
+    itemRefs.current = [];
+  }, [items.length]);
+
   const hasMounted = useRef(false);
+
+  // animation: useLayoutEffect so it runs before paint
   useLayoutEffect(() => {
     if (!imagesReady) return;
-    positions.forEach((item, index) => {
-      const selector = `[data-key="${item.id}"]`;
-      const animProps = { x: item.x, y: item.y, width: item.w, height: item.h };
+    itemRefs.current.forEach((el, index) => {
+      if (!el) return;
+
+      // compute starting offset based on animateFrom
+      let startX = 0;
+      let startY = 0;
+      let dirs = ["top", "bottom", "left", "right"];
+      let direction = animateFrom;
+      if (animateFrom === "random") direction = dirs[Math.floor(Math.random() * dirs.length)];
+
+      switch (direction) {
+        case "top":
+          startY = -200;
+          break;
+        case "bottom":
+          startY = 200;
+          break;
+        case "left":
+          startX = -200;
+          break;
+        case "right":
+          startX = 200;
+          break;
+        case "center":
+          startX = 0;
+          startY = 0;
+          break;
+        default:
+          startY = 100;
+      }
+
       if (!hasMounted.current) {
-        const start = getInitialPosition(item);
         gsap.fromTo(
-          selector,
+          el,
           {
             opacity: 0,
-            x: start.x,
-            y: start.y,
-            width: item.w,
-            height: item.h,
+            x: startX,
+            y: startY,
             ...(blurToFocus && { filter: "blur(10px)" }),
           },
           {
             opacity: 1,
-            ...animProps,
+            x: 0,
+            y: 0,
             ...(blurToFocus && { filter: "blur(0px)" }),
             duration: 0.8,
             ease: "power3.out",
@@ -151,20 +152,31 @@ const Masonry = ({
           }
         );
       } else {
-        gsap.to(selector, {
-          ...animProps,
+        gsap.to(el, {
           duration,
           ease,
           overwrite: "auto",
         });
       }
     });
+
     hasMounted.current = true;
+
+    return () => {
+      // tidy up tweens for these refs
+      itemRefs.current.forEach((el) => {
+        try {
+          gsap.killTweensOf(el);
+        } catch (e) { }
+      });
+    };
+    // we intentionally include columns so layout changes retrigger
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [positions, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
+  }, [imagesReady, items, columns, animateFrom, stagger, duration, ease, blurToFocus]);
+  // hover handlers (operate on DOM node)
   const handleMouseEnter = (id, element) => {
     if (scaleOnHover) {
-      gsap.to(`[data-key="${id}"]`, {
+      gsap.to(element, {
         scale: hoverScale,
         duration: 0.3,
         ease: "power2.out",
@@ -177,7 +189,7 @@ const Masonry = ({
   };
   const handleMouseLeave = (id, element) => {
     if (scaleOnHover) {
-      gsap.to(`[data-key="${id}"]`, {
+      gsap.to(element, {
         scale: 1,
         duration: 0.3,
         ease: "power2.out",
@@ -188,76 +200,121 @@ const Masonry = ({
       if (overlay) gsap.to(overlay, { opacity: 0, duration: 0.3 });
     }
   };
+  // modal logic same as before
   const [boxIndex, setBoxIndex] = useState(null);
-  const openModalBox = (item, index) => {
-    setBoxIndex(index);
-  };
-  const closeModalBox = () => {
-    setBoxIndex(null);
-  };
-  const showNext = () => {
-    setBoxIndex((prev) => (prev + 1) % items.length);
-  };
-  const showPrev = () => {
-    setBoxIndex((prev) => (prev - 1 + items.length) % items.length);
-  };
+  const openModalBox = (item, index) => setBoxIndex(index);
+  const closeModalBox = () => setBoxIndex(null);
+  const showNext = () => setBoxIndex((prev) => (prev + 1) % items.length);
+  const showPrev = () => setBoxIndex((prev) => (prev - 1 + items.length) % items.length);
+  const { darkMode } = useContext(AppContext)
   return (
     <>
       {boxIndex !== null && (
-        <div className="fixed top-0 left-0 w-full h-screen bg-black/90 z-50 flex justify-center items-center p-4 md:p-10">
+        <div
+          className={`flex justify-center items-center p-5 fixed top-0 left-0 w-full h-full z-50 bg-black/80`}
+        >
           <img
             src={items[boxIndex].img}
             alt="modal-img"
-            className="max-w-full max-h-full object-contain rounded-2xl"
+            style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", borderRadius: 20 }}
           />
-          {/* Close Button */}
           <button
+            style={{
+              zIndex: "999",
+            }}
             onClick={closeModalBox}
-            className="absolute top-5 right-5 text-white bg-red-600 px-4 py-2 rounded-lg shadow"
+            className={` backdrop-blur-sm ${!darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+              } absolute top-6 right-6 p-2 w-10 h-10 rounded-full transition-opacity hover:duration-300 flex items-center justify-center flex-col text-xl font-semibold group `}
+            aria-label="Scroll to top"
           >
-            Close
+            <CloseIcon fontSize="30px" className="text-xl" />
           </button>
-          {/* Prev Button */}
           <button
             onClick={showPrev}
-            className="absolute left-5 top-1/2 -translate-y-1/2 text-white bg-gray-800 px-4 py-2 rounded-full shadow"
+            style={{
+              position: "absolute",
+              left: 20,
+              top: "50%",
+            }}
+            className={` backdrop-blur-sm ${!darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+              } absolute top-6 right-6 p-2 w-10 h-10 rounded-full transition-opacity hover:duration-300 flex items-center justify-center flex-col text-xl font-semibold group `}
+            aria-label="previous image"
           >
-            ◀
+            <NavigateBeforeIcon className="text-2xl" fontSize="30px" />
           </button>
-
-          {/* Next Button */}
           <button
             onClick={showNext}
-            className="absolute right-5 top-1/2 -translate-y-1/2 text-white bg-gray-800 px-4 py-2 rounded-full shadow"
+            style={{
+              position: "absolute",
+              right: 20,
+              top: "50%",
+            }}
+            className={` backdrop-blur-sm ${!darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+              } absolute top-6 right-6 p-2 w-10 h-10 rounded-full transition-opacity hover:duration-300 flex items-center justify-center flex-col text-xl font-semibold group `}
+            aria-label="next image"
           >
-            ▶
+            <NavigateNextIcon />
           </button>
         </div>
       )}
-      <div ref={containerRef} className="relative border-[1px] rounded-2xl p-2 border-[#c5c5c554]" style={{ height: masonryHeight }}>
-        {positions.map((item, index) => (
-          <div
-            key={item.id}
-            data-key={item.id}
-            className="absolute   cursor-pointer"
-            style={{ willChange: "transform, width,  opacity" }}
-            onClick={() => openModalBox(item, index)}
-            onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
-            onMouseLeave={(e) => handleMouseLeave(item.id, e.currentTarget)}
-          >
-            <div
-              className="relative w-full h-full bg-cover bg-center rounded-[10px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] uppercase text-[10px] leading-[10px]"
-              style={{ backgroundImage: `url(${item.img})` }}
-            >
-              {colorShiftOnHover && (
-                <div className="color-overlay absolute inset-0 rounded-[10px] bg-gradient-to-tr from-pink-500/50 to-sky-500/50 opacity-0 pointer-events-none" />
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
+
+      <Box sx={{ width: "100%", p: 1,borderRadius: 5, border:"1px solid rgba(255,255,255,0.4)", display:"flex",justifyContent:"center",alignItems:"center",mb:4 }}>
+        <MuiMasonry columns={columns} spacing={2}>
+          {items.map((item, index) => {
+            const size = imageSizes[index] || { width: 400, height: 300 };
+            const paddingTop = (size.height / size.width) * 100; // 255keeps correct aspect ratio
+
+            return (
+              <Box
+                key={item.id}
+                data-key={item.id}
+                ref={(el) => (itemRefs.current[index] = el)}
+                onClick={() => openModalBox(item, index)}
+                onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
+                onMouseLeave={(e) => handleMouseLeave(item.id, e.currentTarget)}
+                sx={{
+                  borderRadius: "10px",
+                  overflow: "hidden",
+                  cursor: "pointer",
+                  boxShadow: "0px 10px 50px -10px rgba(0,0,0,0.2)",
+                  transformOrigin: "center center",
+                }}
+              >
+                {/* paddingTop trick to maintain aspect ratio */}
+                <Box
+                  sx={{
+                    width: "100%",
+                    paddingTop: `${paddingTop}%`,
+                    backgroundImage: `url(${item.img})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    borderRadius: "10px",
+                  }}
+                />
+                {colorShiftOnHover && (
+                  <Box
+                    className="color-overlay"
+                    sx={{
+                      position: "absolute",
+                      inset: 0,
+                      borderRadius: "10px",
+                      background: "linear-gradient(to top right, rgba(236,72,153,0.5), rgba(14,165,233,0.5))",
+                      opacity: 0,
+                      pointerEvents: "none",
+                    }}
+                  />
+                )}
+              </Box>
+            );
+          })}
+        </MuiMasonry>
+      </Box>
     </>
   );
-};
-
-export default Masonry;
+}
