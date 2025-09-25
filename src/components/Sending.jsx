@@ -1,15 +1,15 @@
-import React from 'react'
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import React from "react";
+
+
 const SendingMessage = () => {
   return (
-    <div>
-      <DotLottieReact
-      src="https://lottie.host/2de8d80a-daca-433e-9d22-23789748bf31/324KrrqDl1.lottie"
-      loop
-      autoplay
-    />
-    </div>
-  )
-}
+    <div className="flex absolute top-0 z-[10]  overflow-hidden justify-center items-center">
+      <div className="w-3/5 flex flex-col h-3/5 justify-center items-center">
 
-export default SendingMessage
+        
+      </div>
+    </div>
+  );
+};
+
+export default SendingMessage;

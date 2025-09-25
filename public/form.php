@@ -1,6 +1,21 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // React formData ke fields ko capture karte hain
+// CORS headers
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+
+// Handle preflight OPTIONS request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    header("HTTP/1.1 200 OK");
+    exit(0);
+}
+
+try {
+    if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+        throw new Exception("Invalid request method");
+    }
+
+    // Capture React formData fields
     $name    = $_POST["name"] ?? '';
     $email   = $_POST["email"] ?? '';
     $message = $_POST["message"] ?? '';
@@ -8,11 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $company = $_POST["company"] ?? '';
     $date    = $_POST["date"] ?? '';
 
-    // Mail receiver address (apna email daal dena)
+    // Mail receiver address
     $to = "manshu010m@gmail.com";
     $subject = "New Contact Form Submission";
 
-    // Mail body
+    // Prepare email body
     $body = "You have received a new message:\n\n";
     $body .= "Name: " . $name . "\n";
     $body .= "Email: " . $email . "\n";
@@ -25,13 +40,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $headers = "From: " . $email . "\r\n";
     $headers .= "Reply-To: " . $email . "\r\n";
 
-    // Mail bhejo
+    // Send mail
     if (mail($to, $subject, $body, $headers)) {
-        echo json_encode(["status" => "success", "message" => "Message sent successfully."]);
+        echo json_encode([
+            "status" => "success",
+            "message" => "Message sent successfully."
+        ]);
     } else {
-        echo json_encode(["status" => "error", "message" => "Message could not be sent."]);
+        throw new Exception("Message could not be sent");
     }
-} else {
-    echo json_encode(["status" => "error", "message" => "Invalid request."]);
+} catch (Exception $e) {
+    echo json_encode([
+        "status" => "error",
+        "message" => $e->getMessage()
+    ]);
 }
 ?>

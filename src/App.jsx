@@ -14,6 +14,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import CaseStudy from "./components/projects/CaseStudy";
 import ScrollToTop from "./components/ScrollTopBtn";
+import { ToastContainer } from "react-toastify";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -24,6 +25,7 @@ function App() {
   }, []);
   return (
     <SmoothScrollWrapper>
+      <ToastContainer />
       <CustomCursor />
       <ScrollToTop />
       <div
