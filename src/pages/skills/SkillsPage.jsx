@@ -22,7 +22,7 @@ const SkillsPage = () => {
         curveAmount={20}
         direction="right"
         interactive={true}
-        marqueeText="🔁 Repeat  😴 Sleep 💻 Code 🍔 Eat 🔁 Repeat  😴 Sleep 💻 Code 🍔 Eat 🔁 Repeat  😴 Sleep 💻 Code 🍔 Eat"
+        marqueeText="🔁 Repeat 😴 Sleep 💻 Code 🍔 Eat 🔁 Repeat 😴 Sleep 💻 Code 🍔 Eat 🔁 Repeat 😴 Sleep 💻 Code 🍔 Eat"
       />
     </div>
   );
