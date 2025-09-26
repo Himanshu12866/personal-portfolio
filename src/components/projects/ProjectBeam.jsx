@@ -1,159 +1,155 @@
-import { motion } from "framer-motion";
-import { useEffect, useId, useState } from "react";
+import React, { useRef, useEffect, useState, useContext } from "react";
+import { AppContext } from "../../context/datacontext";
 
-export const AnimatedBeam = ({
-  className = "",
-  containerRef,
-  fromRef,
-  toRef,
-  curvature = 0,
-  reverse = false,
-  duration = Math.random() * 3 + 4,
-  delay = 0,
-  pathColor = "gray",
-  pathWidth = 2,
-  pathOpacity = 0.2,
-  gradientStartColor = "#ffaa40",
-  gradientStopColor = "#9c40ff",
-  startXOffset = 0,
-  startYOffset = 0,
-  endXOffset = 0,
-  endYOffset = 0,
-}) => {
-  const id = useId();
-  const [pathD, setPathD] = useState("");
-  const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 });
-  const [pathLength, setPathLength] = useState(0);
+const ProjectBeam = () => {
+  const {darkMode} = useContext(AppContext)
+  const containerRef = useRef(null);
+  const centerRef = useRef(null);
+  const sideRefs = useRef([]);
+  sideRefs.current = [];
+  const [paths, setPaths] = useState([]);
 
-  const gradientCoordinates = reverse
-    ? {
-        x1: ["90%", "-10%"],
-        x2: ["100%", "0%"],
-        y1: ["0%", "0%"],
-        y2: ["0%", "0%"],
-      }
-    : {
-        x1: ["10%", "110%"],
-        x2: ["0%", "100%"],
-        y1: ["0%", "0%"],
-        y2: ["0%", "0%"],
-      };
+  const addToRefs = (el) => {
+    if (el && !sideRefs.current.includes(el)) sideRefs.current.push(el);
+  };
+
+  const calculatePaths = () => {
+    if (!containerRef.current || !centerRef.current) return;
+
+    const containerRect = containerRef.current.getBoundingClientRect();
+    const centerRect = centerRef.current.getBoundingClientRect();
+
+    const newPaths = sideRefs.current.map((box) => {
+      const boxRect = box.getBoundingClientRect();
+
+      const startX = boxRect.left + boxRect.width / 2 - containerRect.left;
+      const startY = boxRect.top + boxRect.height / 2 - containerRect.top;
+
+      const endX = centerRect.left + centerRect.width / 2 - containerRect.left;
+      const endY = centerRect.top + centerRect.height / 2 - containerRect.top;
+
+      const offsetX = (endX - startX) / 2;
+
+      return `M ${startX} ${startY} C ${startX + offsetX} ${startY}, ${
+        endX - offsetX
+      } ${endY}, ${endX} ${endY}`;
+    });
+
+    setPaths(newPaths);
+  };
 
   useEffect(() => {
-    const updatePath = () => {
-      if (!containerRef?.current || !fromRef?.current || !toRef?.current) return;
-
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const rectA = fromRef.current.getBoundingClientRect();
-      const rectB = toRef.current.getBoundingClientRect();
-
-      const svgWidth = containerRect.width;
-      const svgHeight = containerRect.height;
-      setSvgDimensions({ width: svgWidth, height: svgHeight });
-
-      const startX = rectA.left - containerRect.left + rectA.width / 2 + startXOffset;
-      const startY = rectA.top - containerRect.top + rectA.height / 2 + startYOffset;
-      const endX = rectB.left - containerRect.left + rectB.width / 2 + endXOffset;
-      const endY = rectB.top - containerRect.top + rectB.height / 2 + endYOffset;
-
-      const controlY = startY - curvature;
-      const d = `M ${startX},${startY} Q ${(startX + endX) / 2},${controlY} ${endX},${endY}`;
-      setPathD(d);
-    };
-
-    const resizeObserver = new ResizeObserver(updatePath);
-    if (containerRef?.current) resizeObserver.observe(containerRef.current);
-
-    updatePath();
-
-    return () => resizeObserver.disconnect();
-  }, [
-    containerRef,
-    fromRef,
-    toRef,
-    curvature,
-    startXOffset,
-    startYOffset,
-    endXOffset,
-    endYOffset,
-  ]);
-
-  // calculate path length after pathD updates
-  useEffect(() => {
-    if (!pathD) return;
-
-    const tempSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    const tempPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    tempPath.setAttribute("d", pathD);
-    tempSvg.appendChild(tempPath);
-    document.body.appendChild(tempSvg);
-
-    setPathLength(tempPath.getTotalLength());
-
-    document.body.removeChild(tempSvg);
-  }, [pathD]);
+    calculatePaths();
+    window.addEventListener("resize", calculatePaths);
+    return () => window.removeEventListener("resize", calculatePaths);
+  }, []);
 
   return (
-    <svg
-      fill="none"
-      width={svgDimensions.width}
-      height={svgDimensions.height}
-      xmlns="http://www.w3.org/2000/svg"
-      className={`pointer-events-none absolute left-0 top-0 transform-gpu stroke-2 ${className}`}
-      viewBox={`0 0 ${svgDimensions.width} ${svgDimensions.height}`}
+    <div
+      ref={containerRef}
+      className="relative w-full h-96 backdrop-blur-lg flex justify-center items-center"
     >
-      {/* Base gray path */}
-      <path
-        d={pathD}
-        stroke={pathColor}
-        strokeWidth={pathWidth}
-        strokeOpacity={pathOpacity}
-        strokeLinecap="round"
-      />
+      <div className="w-1/2 h-full flex justify-between items-center relative z-10">
+        {/* Left Column */}
+        <div className="flex flex-col h-full justify-between">
+          <div
+            ref={addToRefs}
+            className={`w-20 h-20 rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
+          ></div>
+          <div
+            ref={addToRefs}
+            className={`w-20 h-20 rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
+          ></div>
+          <div
+            ref={addToRefs}
+            className={`w-20 h-20 rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
+          ></div>
+          
+        </div>
 
-      {/* Flowing beam */}
-      <motion.path
-        d={pathD}
-        strokeWidth={pathWidth}
-        stroke={`url(#${id})`}
-        strokeOpacity="1"
-        strokeLinecap="round"
-        strokeDasharray={pathLength}
-        strokeDashoffset={pathLength}
-        animate={{ strokeDashoffset: 0 }}
-        transition={{
-          repeat: Infinity,
-          duration,
-          ease: "linear",
-          repeatType: "loop",
-        }}
-      />
+        {/* Center Box */}
+        <div className="flex flex-col h-full justify-center">
+         
+          <div
+           ref={centerRef}
+            className={`w-20 h-20 rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
+          ></div>
+        </div>
 
-      <defs>
-        <motion.linearGradient
-          id={id}
-          gradientUnits="userSpaceOnUse"
-          initial={{ x1: "0%", x2: "0%", y1: "0%", y2: "0%" }}
-          animate={{
-            x1: gradientCoordinates.x1,
-            x2: gradientCoordinates.x2,
-            y1: gradientCoordinates.y1,
-            y2: gradientCoordinates.y2,
-          }}
-          transition={{
-            delay,
-            duration,
-            ease: [0.16, 1, 0.3, 1],
-            repeat: Infinity,
-            repeatDelay: 0,
-          }}
-        >
-          <stop stopColor={gradientStartColor} stopOpacity="0" />
-          <stop stopColor={gradientStartColor} />
-          <stop offset="32.5%" stopColor={gradientStopColor} />
-          <stop offset="100%" stopColor={gradientStopColor} stopOpacity="0" />
-        </motion.linearGradient>
-      </defs>
-    </svg>
+        {/* Right Column */}
+        <div className="flex flex-col h-full justify-between">
+          <div
+            ref={addToRefs}
+            className={`w-20 h-20 rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
+          ></div>
+          <div
+            ref={addToRefs}
+            className={`w-20 h-20 rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
+          ></div>
+          <div
+            ref={addToRefs}
+            className={`w-20 h-20 rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
+          ></div>
+        </div>
+      </div>
+
+      {/* SVG Curves with moving beam */}
+      <svg className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+        {paths.map((path, idx) => {
+          const randomDelay = (Math.random() * 3).toFixed(2); // 0 to 2 seconds random
+          return (
+            <g key={idx}>
+              <path
+                d={path}
+                stroke="gray"
+                fill="transparent"
+                strokeWidth="2"
+                strokeOpacity="0.2"
+              />
+              <circle r="5" fill="#0ff">
+                <animateMotion
+                  dur="3s"
+                  repeatCount="indefinite"
+                  begin={`${randomDelay}s`} 
+                  path={path}
+                  keyPoints="0;1"
+                  keyTimes="0;1"
+                />
+              </circle>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
   );
 };
+
+export default ProjectBeam;
