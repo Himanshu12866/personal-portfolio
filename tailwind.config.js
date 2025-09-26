@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["Mozilla Headline", "sans-serif"],
+        heading: ["Play", "sans-serif"],
         para: ["Raleway", "sans-serif"],
         code: ["JetBrains Mono", "sans-serif"],
         fancy: [ "Fredericka the Great", "serif"],

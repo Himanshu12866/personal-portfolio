@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Raleway:wght@400;500;700&family=Mozilla+Headline:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 html {
   margin: 0;
   padding: 0;
@@ -20,7 +23,7 @@ body {
   height: 100vh;
   width: 100vw;
   color: var(--text-color);
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -69,7 +72,7 @@ h3,
 h4,
 h5 {
   color: #f59e0b;
-  font-family: "Mozilla Headline", sans-serif;
+  font-family: "Play", sans-serif;
 }
 @keyframes spin-slow {
   from {
