@@ -8,6 +8,7 @@ import {
   Transform,
 } from "ogl";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 function debounce(func, wait) {
   let timeout;
   return function (...args) {
@@ -297,7 +298,7 @@ class Media {
         ];
       }
     }
-     const isMobile = this.screen.width < 768;
+    const isMobile = this.screen.width < 768;
     this.scale = this.screen.height / (isMobile ? 5200 : 3000);
     this.plane.scale.y =
       (this.viewport.height * (900 * this.scale)) / this.screen.height;
@@ -435,9 +436,11 @@ class App {
       (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 0.2;
     this.onCheckDebounce();
   }
-  onClick = () => {
+  onClick = (e) => {
     if (this.isDragging) return; // 🚀 ignore clicks if it was a drag
+    e.preventDefault();
 
+    // Find the closest media item to the center
     let closest = null;
     let minDist = Infinity;
 
@@ -449,9 +452,18 @@ class App {
       }
     });
 
-    if (closest && closest.link) {
-      window.location.href = closest.link;
-    }
+    if (!closest || !closest.link) return;
+
+    // --- SPA-style navigation ---
+    // If using React Router:
+    const event = new CustomEvent("navigate", { detail: closest.link });
+    window.dispatchEvent(event);
+
+    // --- Optional fallback: for non-SPA, store theme first ---
+    localStorage.setItem(
+      "theme",
+      document.documentElement.dataset.theme || "light"
+    );
   };
 
   onCheck() {
@@ -544,6 +556,7 @@ export default function CircularGallery({
   scrollEase = 0.05,
 }) {
   const containerRef = useRef(null);
+  const navigate = useNavigate();
   useEffect(() => {
     const app = new App(containerRef.current, {
       items,
@@ -554,10 +567,17 @@ export default function CircularGallery({
       scrollSpeed,
       scrollEase,
     });
+    // SPA navigation listener
+    const onNavigate = (e) => {
+      const link = e.detail;
+      if (link) navigate(link); // navigate without page reload
+    };
+    window.addEventListener("navigate", onNavigate);
     return () => {
       app.destroy();
+      window.removeEventListener("navigate", onNavigate);
     };
-  }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
+  }, [items, navigate]);
 
   return (
     <div
