@@ -23,7 +23,7 @@ const ScrollToTop = () => {
   return (
     <button
       style={{
-        zIndex: "999",
+        zIndex: "30",
       }}
       onClick={scrollToTop}
       className={` backdrop-blur-sm ${
