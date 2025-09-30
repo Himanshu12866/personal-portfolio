@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState, useMemo } from "react";
-import { useLocation } from "react-router-dom";
-
 const buildKeyframes = (from, steps) => {
   const keys = new Set([
     ...Object.keys(from),
@@ -44,7 +42,7 @@ const BlurText = ({
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [threshold, rootMargin]);
   const defaultFrom = useMemo(
     () =>

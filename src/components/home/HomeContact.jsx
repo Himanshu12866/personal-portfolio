@@ -50,8 +50,12 @@ const HomeContact = () => {
     return Object.keys(newError).length === 0;
   };
   const handleSubmit = async (e) => {
-    validatForm();
     e.preventDefault();
+    const isValid = validatForm();
+    if (!isValid) {
+      toast.warning("Please fill all the required fields correctly.");
+      return; 
+    }
     const dateNow = new Date();
     formData.date = dateNow;
     console.log("Form submitted:", formData);
@@ -63,7 +67,7 @@ const HomeContact = () => {
         setFormData(initialFormData);
         setError({});
       } else {
-       toast.error("Failed to submit the form. Please try again.");
+        toast.error("Failed to submit the form. Please try again.");
         console.log("Form submission error:", response);
       }
     } catch (error) {
@@ -83,10 +87,10 @@ const HomeContact = () => {
       ) {
         trigger = ScrollTrigger.create({
           trigger: containerRef.current,
-          start: "top 25%", 
-          end: "bottom bottom", 
+          start: "top 25%",
+          end: "bottom bottom",
           pin: stickyLeftRef.current,
-          pinSpacing: true, 
+          pinSpacing: true,
         });
       }
     };
@@ -202,7 +206,8 @@ const HomeContact = () => {
             </div>
             <a
               href="tel:+917804825835"
-              className="text-lg text-justify underline underline-offset-1 font-para pb-1 px-2 font-medium">
+              className="text-lg text-justify underline underline-offset-1 font-para pb-1 px-2 font-medium"
+            >
               +91 78048 25835
             </a>
           </div>
@@ -371,7 +376,8 @@ const HomeContact = () => {
             </div>
             <div className=" flex justify-start pt-8 items-center">
               {loading ? (
-                <button disabled
+                <button
+                  disabled
                   className={`bg-black font-para cursor-not-allowed w-full text-white sm:px-8 px-4 py-3 font-medium rounded-[10px] opacity-60  ${
                     !darkMode
                       ? "  shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px]"
