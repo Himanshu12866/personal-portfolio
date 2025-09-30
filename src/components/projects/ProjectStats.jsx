@@ -52,7 +52,7 @@ const ProjectStats = () => {
             {inView ? <CountUp end={4} duration={4} /> : null}+
           </h2>
           <p className="text-[2.5rem]  font-extrabold text-center text-transparent stroke-text">
-            Personal Builds
+            Personal Builds Projects
           </p>
         </div>
 
