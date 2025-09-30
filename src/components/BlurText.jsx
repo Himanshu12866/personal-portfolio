@@ -70,7 +70,7 @@ const BlurText = ({
     stepCount === 1 ? 0 : i / (stepCount - 1)
   );
   return (
-    <p ref={ref} className={`blur-text ${className} flex flex-wrap`}>
+    <div ref={ref} className={`blur-text ${className} flex flex-wrap`}>
       {elements.map((segment, index) => {
         const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
         const spanTransition = {
@@ -96,7 +96,7 @@ const BlurText = ({
           </motion.span>
         );
       })}
-    </p>
+    </div>
   );
 };
 

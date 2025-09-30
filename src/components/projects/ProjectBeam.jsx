@@ -1,15 +1,16 @@
 import React, { useRef, useEffect, useState, useContext } from "react";
 import { AppContext } from "../../context/datacontext";
-import react from "../../assets/icons_logos/icons8-react-48.png"
-import nodejs from "../../assets/icons_logos/icons8-nodejs-48.png"
-import tailwind from "../../assets/icons_logos/icons8-tailwind-css-48.png"
-import mongodb from "../../assets/icons_logos/icons8-mongodb-48.png"
-import express_light from "../../assets/icons_logos/icons8-express-js-48.png"
-import mui from "../../assets/icons_logos/icons8-material-ui-48.png"
+import react from "../../assets/images/react.png";
+import nodejs from "../../assets/images/nodejs.png";
+import tailwind from "../../assets/images/tailwind-css.png";
+import mongodb from "../../assets/images/mongodb (1).png";
+import express_light from "../../assets/images/icons8-express-js-256.png";
+import mui from "../../assets/images/icons8-material-ui-256.png";
 import expresslight from "../../assets/images/express.png";
-import web_app from "../../assets/images/web_app.png"
+import web_app from "../../assets/images/web_app.png";
+
 const ProjectBeam = () => {
-  const { darkMode } = useContext(AppContext)
+  const { darkMode } = useContext(AppContext);
   const containerRef = useRef(null);
   const centerRef = useRef(null);
   const sideRefs = useRef([]);
@@ -29,8 +30,9 @@ const ProjectBeam = () => {
       const endX = centerRect.left + centerRect.width / 2 - containerRect.left;
       const endY = centerRect.top + centerRect.height / 2 - containerRect.top;
       const offsetX = (endX - startX) / 2;
-      return `M ${startX} ${startY} C ${startX + offsetX} ${startY}, ${endX - offsetX
-        } ${endY}, ${endX} ${endY}`;
+      return `M ${startX} ${startY} C ${startX + offsetX} ${startY}, ${
+        endX - offsetX
+      } ${endY}, ${endX} ${endY}`;
     });
 
     setPaths(newPaths);
@@ -45,56 +47,58 @@ const ProjectBeam = () => {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-96 flex justify-center  items-center"
+      className="relative w-full h-96 lg:h-[500px] flex justify-center  items-center"
     >
-     
-      <div className="xl:w-1/2 md:w-3/4 w-11/12 h-full flex justify-between items-center relative z-10">
+      <div className="2xl:w-1/2 xl:w-2/3 md:w-3/4 w-11/12 h-full flex justify-between items-center relative z-10">
         {/* Left Column */}
         <div className="flex flex-col h-full justify-between">
           <div
             ref={addToRefs}
-            className={`md:w-20 md:h-20 w-16 h-16 flex justify-center items-center rounded-full  backdrop-blur-sm ${!darkMode
-              ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-              : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
-
+            className={`md:w-20 md:h-20 w-16 h-16 xl:w-32 xl:h-32 lg:w-28 lg:h-28 flex justify-center items-center rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
           >
-            <img src={react} alt="React" className="w-12 h-12" />
+            <img src={react} alt="React" className="w-12 lg:w-20" />
           </div>
           <div
             ref={addToRefs}
-            className={`md:w-20 md:h-20 w-16 h-16 flex justify-center items-center rounded-full  backdrop-blur-sm ${!darkMode
-              ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-              : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
+            className={`md:w-20 md:h-20 w-16 h-16 xl:w-32 xl:h-32 lg:w-28 lg:h-28 flex justify-center items-center rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
           >
-            <img src={nodejs} alt="Node.js" className="w-12 h-12 m-auto " />
+            <img src={nodejs} alt="Node.js" className="w-12 lg:w-20" />
           </div>
           <div
             ref={addToRefs}
-            className={`md:w-20 md:h-20 w-16 h-16 flex justify-center items-center rounded-full  backdrop-blur-sm ${!darkMode
-              ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-              : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
+            className={`md:w-20 md:h-20 w-16 h-16  xl:w-32 xl:h-32 lg:w-28 lg:h-28 flex justify-center items-center rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
           >
-            <img src={mongodb} alt="Tailwind CSS" className="w-12 h-12 m-auto " />
+            <img
+              src={mongodb}
+              alt="Tailwind CSS"
+              className="w-12 lg:w-20"
+            />
           </div>
-
         </div>
 
         {/* Center Box */}
         <div className="flex flex-col h-full justify-center">
-
           <div
             ref={centerRef}
-            className={`md:w-20 md:h-20 w-16 h-16 flex justify-center items-center rounded-full  backdrop-blur-sm ${!darkMode
-              ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-              : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
+            className={`md:w-20 md:h-20 w-16 h-16 xl:w-32 xl:h-32 lg:w-28 lg:h-28 flex justify-center items-center rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
           >
-
-            <img src={web_app} alt="Tailwind CSS" className=" m-auto " />
-
+            <img src={web_app} alt="Tailwind CSS" className="w-12 lg:w-28" />
           </div>
         </div>
 
@@ -102,33 +106,41 @@ const ProjectBeam = () => {
         <div className="flex flex-col h-full justify-between">
           <div
             ref={addToRefs}
-            className={`md:w-20 md:h-20 w-16 h-16 flex justify-center items-center rounded-full  backdrop-blur-sm ${!darkMode
-              ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-              : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
+            className={`md:w-20 md:h-20 w-16 h-16 xl:w-32 xl:h-32 lg:w-28 lg:h-28 flex justify-center items-center rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
           >
-            <img src={`${darkMode ? express_light : expresslight}`} alt="Tailwind CSS" className="w-12 h-12 m-auto " />
-
+            <img
+              src={`${darkMode ? express_light : expresslight}`}
+              alt="Tailwind CSS"
+            className="w-12 lg:w-20"
+            />
           </div>
           <div
             ref={addToRefs}
-            className={`md:w-20 md:h-20 w-16 h-16 flex justify-center items-center rounded-full  backdrop-blur-sm ${!darkMode
-              ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-              : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
+            className={`md:w-20 md:h-20 w-16 h-16 xl:w-32 xl:h-32 lg:w-28 lg:h-28 flex justify-center items-center rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
           >
-            <img src={tailwind} alt="Tailwind CSS" className="w-12 h-12 m-auto " />
-
+            <img
+              src={tailwind}
+              alt="Tailwind CSS"
+           className="w-12 lg:w-20"
+            />
           </div>
           <div
             ref={addToRefs}
-            className={`md:w-20 md:h-20 w-16 h-16 flex justify-center items-center rounded-full  backdrop-blur-sm ${!darkMode
-              ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-              : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
+            className={`md:w-20 md:h-20 w-16 h-16 xl:w-32 xl:h-32 lg:w-28 lg:h-28 flex justify-center items-center rounded-full  backdrop-blur-sm ${
+              !darkMode
+                ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            }`}
           >
-            <img src={mui} alt="Tailwind CSS" className="w-12 h-12 m-auto " />
-
+            <img src={mui} alt="Tailwind CSS" className="w-12 lg:w-20"  />
           </div>
         </div>
       </div>
@@ -143,7 +155,7 @@ const ProjectBeam = () => {
                 d={path}
                 stroke="gray"
                 fill="transparent"
-                strokeWidth="2"
+                strokeWidth="4"
                 strokeOpacity="0.2"
               />
               <circle r="5" fill="#0ff">

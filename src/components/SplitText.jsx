@@ -182,9 +182,9 @@ const SplitText = ({
         );
       default:
         return (
-          <p ref={ref} style={style} className={classes}>
+          <span ref={ref} style={style} className={classes}>
             {text}
-          </p>
+          </span>
         );
     }
   };

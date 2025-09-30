@@ -41,7 +41,7 @@ const HomeBanner = () => {
 
           {/* Quote / Tagline */}
 
-          <p className="mt-2 text-lg md:text-4xl flex justify-center items-center ps-2 font-heading   ">
+          <div className="mt-2 text-lg md:text-4xl flex justify-center items-center ps-2 font-heading   ">
             <BlurText
               delay={50}
               text="You don’t just need code,you  need solutions."
@@ -51,7 +51,7 @@ const HomeBanner = () => {
             >
 
             </BlurText>
-          </p>
+          </div>
           <h1 className="xl:text-5xl text-4xl lg:text-3xl xl:ps-4 ps-0 animate-shine md:pt-2 py-2">
             <BlurText
               text="HIMANSHU MISHRA"
