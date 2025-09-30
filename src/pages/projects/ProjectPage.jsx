@@ -4,6 +4,7 @@ import ProjectAbout from "../../components/projects/ProjectAbout";
 import ProjectsAll from "../../components/projects/ProjectsAll";
 import { useLenis } from "../../components/SmoothScroll";
 import { useEffect } from "react";
+import ProjectStats from "../../components/projects/ProjectStats";
 const ProjectPage = () => {
   const lenisRef = useLenis();
   useEffect(() => {
@@ -12,7 +13,9 @@ const ProjectPage = () => {
   return (
     <>
       <ProjectBanner />
+      
       <ProjectAbout />
+      <ProjectStats/>
       <ProjectsAll />
     </>
   );

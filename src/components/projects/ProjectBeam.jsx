@@ -45,8 +45,9 @@ const ProjectBeam = () => {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-96 flex justify-center items-center"
+      className="relative w-full h-96 flex justify-center  items-center"
     >
+     
       <div className="xl:w-1/2 md:w-3/4 w-11/12 h-full flex justify-between items-center relative z-10">
         {/* Left Column */}
         <div className="flex flex-col h-full justify-between">

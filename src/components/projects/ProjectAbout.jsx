@@ -1,17 +1,15 @@
-import React, { useContext } from "react";
-import { AppContext } from "../../context/datacontext";
-import MagnetLines from "./ProjectMagnet";
+import React from "react";
 import ProjectBeam from "./ProjectBeam";
-
 const ProjectAbout = () => {
-  const { darkMode } = useContext(AppContext);
-
   return (
+
+    <>
+     <h2 className="text-4xl font-bold text-center  py-36 shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)]">Code Constellation</h2>
+  
     <div
-      className={`flex justify-center  items-center w-full py-20  shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] `}
-    >
+      className={`flex justify-center  items-center w-full  `}>
       <ProjectBeam />
-    </div>
+    </div>  </>
   );
 };
 

@@ -91,7 +91,10 @@ h5 {
     transform: rotate(0deg);
   }
 }
-
+.stroke-text {
+  -webkit-text-stroke: 1px var(--text-color); /* outline thickness and color */
+  color: transparent;
+}
 .animate-spin-slow {
   animation: spin-slow 30s linear infinite;
 }
