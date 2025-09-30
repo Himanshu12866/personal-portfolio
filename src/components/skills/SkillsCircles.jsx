@@ -61,7 +61,6 @@ const SkillsCircles = () => {
             circle.innerHTML = "";
         };
     }, []);
-
     return (
         <div
             ref={circleRef}
@@ -75,7 +74,6 @@ const SkillsCircles = () => {
             }}
         >
         </div>
-
     );
 };
 

@@ -34,16 +34,16 @@ const AboutExperience = () => {
     <div
       className={`flex justify-center flex-col gap-24 items-center w-full pb-20 pt-10 p-4 `}
     >
-      <h2 className="text-4xl font-bold pb-8">
+      <h2 className="text-4xl flex justify-center items-center text-center font-bold pb-8">
         <SplitText
-          delay={80}
+          delay={40}
           duration={0.6}
           ease="power3.out"
           splitType="chars"
           from={{ opacity: 0, y: 40 }}
           to={{ opacity: 1, y: 0 }}
           threshold={0.1}
-          className="text-left"
+          className=""
           text="Professional Journey"
         />
       </h2>
@@ -62,7 +62,7 @@ const AboutExperience = () => {
               } lg:w-4/12 flex flex-col gap-4 p-2   `}
             >
               <div className="flex justify-center items-center">
-                <img src={item.logo} alt="novatales logo" />
+                <img data-aos="fade-in" src={item.logo} alt="novatales logo" />
               </div>
               <div className="flex flex-row gap-3 pointer-events-auto mt-4 text-xl sm:ps-6 font-para font-medium">
                 <h3>
@@ -133,7 +133,12 @@ const AboutExperience = () => {
                 style={cardStyle}
                 className="w-44 pt-2 px-4 mt-4 text-left text-lg sm:text-xl font-heading"
               >
-                About My Role
+                <BlurText
+                  text="About My Role"
+                  delay={20}
+                  animateBy="words"
+                  direction="bottom"
+                />
               </div>
               <p className="text-xl text-justify font-para pt-2 pb-1 px-2">
                 <BlurText
@@ -147,10 +152,15 @@ const AboutExperience = () => {
                 style={cardStyle}
                 className="w-56 pt-2 px-4 mt-4 text-left text-lg sm:text-xl font-heading"
               >
-                Technologies Used
+                <BlurText
+                  text="Technologies Used"
+                  delay={20}
+                  animateBy="words"
+                  direction="bottom"
+                />
               </div>
               <div className="flex flex-row flex-wrap lg:gap-2  mt-4 px-2 justify-start items-center">
-                {skilssIcon.map((item, index) => (
+                {skilssIcon.slice(0, 15).map((item, index) => (
                   <p
                     key={index}
                     className="w-12 flex justify-center items-center"
@@ -183,7 +193,12 @@ const AboutExperience = () => {
               style={cardStyle}
               className="w-52 pt-2 px-4 mt-4 text-center text-lg sm:text-xl font-heading"
             >
-              My Contribution
+              <BlurText
+                text="My Contribution"
+                delay={20}
+                animateBy="words"
+                direction="bottom"
+              />
             </div>
             <div className="grid lg:grid-cols-2 mt-2 gap-4">
               <div>
@@ -212,7 +227,7 @@ const AboutExperience = () => {
                       className="flex flex-row gap-2 justify-start ism:items-center items-start my-4"
                     >
                       <VerifiedIcon className="text-[#f59e0b]" />
-                  <BlurText
+                      <BlurText
                         text={item}
                         delay={5}
                         animateBy="words"

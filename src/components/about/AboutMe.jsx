@@ -166,10 +166,16 @@ const AboutMe = () => {
             className=" w-32 pt-2 px-2 sm:ms-4 text-center text-lg sm:text-xl font-heading"
           >
             {" "}
-            Tech Stack
+            <BlurText
+              text="Tech Stack"
+              delay={20}
+              animateBy="words"
+              direction="bottom"
+            />
+           
           </p>
           <div className="flex flex-row flex-wrap lg:gap-3 gap-4 mt-2 px-2 pb-6 justify-start items-center">
-            {skilssIcon.map((item, index) => (
+            {skilssIcon.slice(0,13).map((item, index) => (
               <p key={index} className="w-12 flex justify-center items-center">
                 <img
                   data-aos="zoom-in"
@@ -192,7 +198,13 @@ const AboutMe = () => {
             className=" w-32 pt-2 px-2 sm:ms-4 text-center text-lg sm:text-xl font-heading"
           >
             {" "}
-            Hobbies
+            <BlurText
+              text="Hobbies"
+              delay={20}
+              animateBy="words"
+              direction="bottom"
+            />
+            
           </p>
           <ul className="text-xl text-justify font-para pt-2 pb-1 px-2">
             {profileData.hobbies?.map((item, index) => (
@@ -215,8 +227,13 @@ const AboutMe = () => {
             style={cardStyle}
             className=" w-32 pt-2 px-2 sm:ms-4 text-center text-lg sm:text-xl font-heading"
           >
-            {" "}
-            Strengths
+            {" "} <BlurText
+              text="Strengths"
+              delay={20}
+              animateBy="words"
+              direction="bottom"
+            />
+            
           </p>
           <ul className="text-xl text-left font-para pt-2 pb-1 px-2">
             {profileData.strength?.map((item, index) => (

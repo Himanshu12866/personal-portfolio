@@ -230,7 +230,7 @@ export default function SkillScrollerScrollBoost() {
       icon: darkMode ? aws_light : aws,
     },
     {
-      name: "AdobeIllustrator",
+      name: "Illustrator",
       icon: adobeI,
     },
     {
@@ -250,7 +250,7 @@ export default function SkillScrollerScrollBoost() {
       icon: darkMode ? aws_light : aws,
     },
     {
-      name: "AdobeIllustrator",
+      name: "Illustrator",
       icon: adobeI,
     },
     {
@@ -270,7 +270,7 @@ export default function SkillScrollerScrollBoost() {
       icon: darkMode ? aws_light : aws,
     },
     {
-      name: "AdobeIllustrator",
+      name: "Illustrator",
       icon: adobeI,
     },
     {
@@ -290,7 +290,7 @@ export default function SkillScrollerScrollBoost() {
       icon: aws,
     },
     {
-      name: "AdobeIllustrator",
+      name: "Illustrator",
       icon: adobeI,
     },
     {

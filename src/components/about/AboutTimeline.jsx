@@ -58,9 +58,17 @@ const AboutTimeline = () => {
         >
           <div
             style={cardStyle}
-            className="w-60   text-center  text-lg sm:text-xl font-heading"
+            className="w-60 text-center  text-lg sm:text-xl font-heading"
           >
-            <p>Post Graduation</p>
+            <p className="px-4">
+              <BlurText
+              text="Post Graduation"
+              delay={20}
+              animateBy="words"
+              direction="bottom"
+            />
+              
+            </p>
           </div>
 
           <div className="flex sm:flex-row flex-col gap-3 justify-between  text-xl font-para font-medium">
@@ -193,7 +201,13 @@ const AboutTimeline = () => {
             style={cardStyle}
             className="w-60 pt-2 px-4 text-center  text-lg sm:text-xl font-heading"
           >
-            <p>Graduation</p>
+            <p><BlurText
+              text="Graduation"
+              delay={20}
+              animateBy="words"
+              direction="bottom"
+            />
+              </p>
           </div>
 
           <div className="flex sm:flex-row flex-col gap-3 justify-between  text-xl font-para font-medium">

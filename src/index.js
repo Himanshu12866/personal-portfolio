@@ -5,14 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AppContextProvider from './context/datacontext.jsx';
 import { BrowserRouter } from 'react-router-dom';
-import AOS from "aos";
-import "aos/dist/aos.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
-AOS.init({
-  duration: 1000,
-  once: true,
-  easing: "ease-in-out",
-});
 root.render(
   <BrowserRouter>
     <AppContextProvider>

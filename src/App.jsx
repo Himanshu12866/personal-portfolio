@@ -9,10 +9,20 @@ import ContactPage from "./pages/contact/ContactPage";
 import Footer from "./components/footer";
 import SmoothScrollWrapper from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import CaseStudy from "./components/projects/CaseStudy";
 import ScrollToTop from "./components/ScrollTopBtn";
 import { ToastContainer } from "react-toastify";
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration (ms)
+      once: true, // run only once
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <SmoothScrollWrapper>
       <ToastContainer />

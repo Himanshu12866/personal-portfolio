@@ -32,6 +32,8 @@ import gcp_large from "../assets/images/icons8-google-cloud-256.png";
 import aws_large from "../assets/images/icons8-aws-256.png";
 import adobe_large from "../assets/images/adobe-illustrator.png";
 import reactlogo from "../assets/images/react.png";
+import nextJs from "../assets/images/icons8-nextjs-96.png"
+import typescript from "../assets/images/icons8-typescript-256.png"
 //company logos
 import novatales from "../assets/icons_logos/novatales.png"
 import naresh from "../assets/icons_logos/naresh-it-logo2.png"
@@ -225,19 +227,7 @@ const portfolioData = [
                 iconlarge: bootstrap_large,
                 category: "frontend",
             },
-            {
-                name: "Google Cloud",
-                iconsmall: gcp,
-                iconlarge: gcp_large,
-                category: "tools",
-            },
-            {
-                name: "AWS",
-                iconsmall: aws_light,
-                iconlarge: aws_large,
-                category: "tools",
-            },
-            {
+             {
                 name: "Git",
                 iconsmall: git,
                 iconlarge: git_large,
@@ -251,10 +241,41 @@ const portfolioData = [
                 category: "tools",
             },
             {
+                name: "Google Cloud",
+                iconsmall: gcp,
+                iconlarge: gcp_large,
+                category: "tools",
+            },
+            {
+                name: "AWS",
+                iconsmall: aws_light,
+                iconlarge: aws_large,
+                category: "tools",
+            },
+           
+            {
                 name: "Illustrator",
                 iconsmall: adobe_ai,
                 iconlarge: adobe_large,
                 category: "tools",
+            },
+            {
+                name:"NextJs",
+                iconsmall:nextJs,
+                iconlarge:nextJs,
+                category:"learning"
+            },
+            {
+                name:"React Native",
+                   iconsmall: reactjs,
+                iconlarge: reactlogo,
+                category:"learning"
+            },
+            {
+                name:"TypeScript",
+                iconsmall:typescript,
+                iconlarge:typescript,
+                category:"learning"
             },
         ],
     },
