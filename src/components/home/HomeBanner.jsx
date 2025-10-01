@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import BlurText from "../BlurText";
+import SplitText from "../SplitText";
 const roles = [
   "Web Developer",
   "MERN Stack Developer",
@@ -29,14 +30,26 @@ const HomeBanner = () => {
     <div className="w-full relative flex justify-center items-center lg:h-screen pt-28 pb-16 overflow-hidden top-0">
       <div className="grid lg:grid-cols-2 grid-cols-1 xl:gap-12 gap-6 xl:w-4/5 w-11/12 px-4 z-[4]">
         <div className="flex flex-col justify-center items-center lg:items-start lg:order-1 order-2 lg:ps-0 xl:ps-8 ps-0 ">
-          <p data-aos="fade-up"
+          <p 
             className={`sm:w-80 w-72 py-1 px-2 sm:ms-4 text-left text-lg sm:text-xl font-para ${!darkMode
                 ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(61,61,61,0.72)_0px_0.602187px_1.08394px_-1.25px,rgba(61,61,61,0.64)_0px_2.28853px_4.11936px_-2.5px,rgba(61,61,61,0.25)_0px_10px_18px_-3.75px,rgba(0,0,0,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(0,0,0,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(0,0,0,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(0,0,0,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(0,0,0,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(0,0,0,0.15)_0px_30px_30px_-3.5px] "
                 : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
               } `}
           >
             {" "}
-            👋 Hii, Welcome to My Portfolio
+            <SplitText 
+          delay={40}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          className="text-left"
+          text=" 👋 Hii, Welcome to My Portfolio"
+        />
+            
+
           </p>
 
           {/* Quote / Tagline */}
@@ -115,7 +128,7 @@ const HomeBanner = () => {
           </div>
         </div>
         <div className="flex lg:justify-end justify-center lg:order-2 order-1 w-full">
-          <img data-aos="zoom-in"
+          <img 
             src={main_pic}
             alt="personal photo_"
             className={`${!darkMode
