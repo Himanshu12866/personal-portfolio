@@ -1,5 +1,4 @@
 // Tech icons small size
-
 import html from "../assets/icons_logos/icons8-html-5-48.png";
 import css from "../assets/icons_logos/icons8-css-48.png";
 import javascript from "../assets/icons_logos/icons8-javascript-48.png";

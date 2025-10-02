@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import dark_logo from "../assets/icons_logos/mern_black_mode-01.png";
 import light_logo from "../assets/icons_logos/mern_light_mode.png";
 import GsapToggle from "./toggleswitch";
@@ -8,9 +8,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { AnimatePresence, motion } from "framer-motion";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const Navbar = () => {
-  const { darkMode } = useContext(AppContext);
+  const { darkMode, projects } = useContext(AppContext);
   const [mobNav, setMobName] = useState(false);
+  const [perProjects, setPerProjects] = useState(false);
+  const [profProjects, setProfProjects] = useState(false);
   const links = [
     { name: "home", link: "/" },
     { name: "about", link: "/about" },
@@ -18,8 +21,19 @@ const Navbar = () => {
     { name: "projects", link: "/projects" },
     { name: "contact", link: "/contact" },
   ];
-  const location = useLocation()
-  
+  const location = useLocation();
+
+  useEffect(() => {
+    if (projects && projects.length > 0) {
+      const personal = projects.filter((item) => item.category === "Personal");
+      const professional = projects.filter(
+        (item) => item.category === "Professional"
+      );
+      setPerProjects(personal);
+      setProfProjects(professional);
+    }
+  }, [projects]);
+  console.log(perProjects, profProjects);
   return (
     <>
       <div className="px-2 pb-2 pt-3 fixed top-0 z-20 flex justify-center items-center w-full ">
@@ -43,11 +57,57 @@ const Navbar = () => {
               id="navbar-cta"
             >
               <ul className="flex flex-col font-medium p-4 md:p-0 uppercase text-lg  md:space-x-8  md:flex-row">
-                {links.map((item, index) => (
-                  <Link to={item.link} className={`main-nav-links ${location.pathname.includes(item.name) ? 'text-[#f59e0b]' : ""}`} key={index}>
-                    {item.name}
-                  </Link>
-                ))}
+                <Link
+                  to="/"
+                  className={`main-nav-links ${
+                    location.pathname === "/" ? "text-[#f59e0b]" : ""
+                  }`}
+                >
+                  Home
+                </Link>
+
+                <Link
+                  to="/about"
+                  className={`main-nav-links ${
+                    location.pathname.includes("/about") ? "text-[#f59e0b]" : ""
+                  }`}
+                >
+                  About
+                </Link>
+                <Link
+                  to="/skills"
+                  className={`main-nav-links ${
+                    location.pathname.includes("/skills")
+                      ? "text-[#f59e0b]"
+                      : ""
+                  }`}
+                >
+                  Skills
+                </Link>
+                <Link
+                  to="/projects"
+                  className={`main-nav-links flex justify-center items-center gap-1 relative ${
+                    location.pathname.includes("/projects")
+                      ? "text-[#f59e0b]"
+                      : ""
+                  }`}
+                >
+                  Projects{" "}
+                  <KeyboardArrowDownIcon fontSize="small" className="" />
+                  <div className="absolute top-8 bg-red-500 p-20">
+
+                  </div>
+                </Link>
+                <Link
+                  to="/contact"
+                  className={`main-nav-links ${
+                    location.pathname.includes("/contact")
+                      ? "text-[#f59e0b]"
+                      : ""
+                  }`}
+                >
+                  Contact
+                </Link>
               </ul>
             </div>{" "}
             <div className="flex  space-x-3 md:space-x-0 ">
@@ -105,7 +165,11 @@ const Navbar = () => {
                 {links.map((item, index) => (
                   <Link
                     to={item.link}
-                    className={`${location.pathname.includes(item.name) ? 'text-[#f59e0b]' : ""} hover:text-[#f59e0b] w-28  transition-all duration-200`}
+                    className={`${
+                      location.pathname.includes(item.name)
+                        ? "text-[#f59e0b]"
+                        : ""
+                    } hover:text-[#f59e0b] w-28  transition-all duration-200`}
                     key={index}
                     onClick={() => setMobName(false)}
                   >
