@@ -12,8 +12,8 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const Navbar = () => {
   const { darkMode, projects } = useContext(AppContext);
   const [mobNav, setMobName] = useState(false);
-  const [perProjects, setPerProjects] = useState(false);
-  const [profProjects, setProfProjects] = useState(false);
+  const [perProjects, setPerProjects] = useState([]);
+  const [profProjects, setProfProjects] = useState([]);
   const links = [
     { name: "home", link: "/" },
     { name: "about", link: "/about" },
@@ -94,8 +94,23 @@ const Navbar = () => {
                 >
                   Projects{" "}
                   <KeyboardArrowDownIcon fontSize="small" className="" />
-                  <div className="absolute top-8 bg-red-500 p-20">
+                  <div
+                    className={`absolute ${
+                      !darkMode
+                        ? "bg-[rgba(245,245,245,1)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                        : "bg-[#00000081] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                    } top-14 backdrop-blur-[10px] px-8 py-4`}
+                  >
+                    <h4 className=" text-xl px-8 font-bold">Professional</h4>
+                    <ul className="text-lg capitalize">
+                      {
+                        profProjects.map((item , index) => <Link to={item.slug}>
+                        {item.text}
+                        </Link>
 
+                        )
+                      }
+                    </ul>
                   </div>
                 </Link>
                 <Link
