@@ -12,6 +12,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const Navbar = () => {
   const { darkMode, projects } = useContext(AppContext);
   const [mobNav, setMobName] = useState(false);
+  const [dropDown, setDropDown] = useState(false)
   const [perProjects, setPerProjects] = useState([]);
   const [profProjects, setProfProjects] = useState([]);
   const links = [
@@ -38,11 +39,10 @@ const Navbar = () => {
     <>
       <div className="px-2 pb-2 pt-3 fixed top-0 z-20 flex justify-center items-center w-full ">
         <nav
-          className={`xl:w-3/4  w-full ${
-            !darkMode
-              ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-              : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-          } rounded-4xl  z-10  md:mx-4 mx-2 backdrop-blur-[5px] `}
+          className={`xl:w-3/4  w-full ${!darkMode
+            ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+            : "bg-transparent rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+            } rounded-4xl  z-10  md:mx-4 mx-2 backdrop-blur-[5px] `}
         >
           <div className="w-full flex flex-wrap items-center justify-between  xl:px-16 px-8 py-1">
             <Link to="/" className="flex items-center w-48">
@@ -59,67 +59,95 @@ const Navbar = () => {
               <ul className="flex flex-col font-medium p-4 md:p-0 uppercase text-lg  md:space-x-8  md:flex-row">
                 <Link
                   to="/"
-                  className={`main-nav-links ${
-                    location.pathname === "/" ? "text-[#f59e0b]" : ""
-                  }`}
+                  className={`main-nav-links ${location.pathname === "/" ? "text-[#f59e0b]" : ""
+                    }`}
                 >
                   Home
                 </Link>
 
                 <Link
                   to="/about"
-                  className={`main-nav-links ${
-                    location.pathname.includes("/about") ? "text-[#f59e0b]" : ""
-                  }`}
+                  className={`main-nav-links ${location.pathname.includes("/about") ? "text-[#f59e0b]" : ""
+                    }`}
                 >
                   About
                 </Link>
                 <Link
                   to="/skills"
-                  className={`main-nav-links ${
-                    location.pathname.includes("/skills")
-                      ? "text-[#f59e0b]"
-                      : ""
-                  }`}
+                  className={`main-nav-links ${location.pathname.includes("/skills")
+                    ? "text-[#f59e0b]"
+                    : ""
+                    }`}
                 >
                   Skills
                 </Link>
-                <Link
-                  to="/projects"
-                  className={`main-nav-links flex justify-center items-center gap-1 relative ${
-                    location.pathname.includes("/projects")
-                      ? "text-[#f59e0b]"
-                      : ""
-                  }`}
-                >
-                  Projects{" "}
-                  <KeyboardArrowDownIcon fontSize="small" className="" />
-                  <div
-                    className={`absolute ${
-                      !darkMode
-                        ? "bg-[rgba(245,245,245,1)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-                        : "bg-[#00000081] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-                    } top-14 backdrop-blur-[10px] px-8 py-4`}
+                <li onMouseOver={() => setDropDown(true)} className="flex justify-center items-center gap-1 relative group">
+                  <Link
+                    to="/projects"
+                    className={`main-nav-links flex justify-center items-center ${location.pathname.includes("/projects") ? "text-[#f59e0b]" : ""
+                      }`}
                   >
-                    <h4 className=" text-xl px-8 font-bold">Professional</h4>
-                    <ul className="text-lg capitalize">
-                      {
-                        profProjects.map((item , index) => <Link to={item.slug}>
-                        {item.text}
-                        </Link>
+                    Projects{" "}
+                    <KeyboardArrowDownIcon fontSize="small" className={`ml-1 group-hover:rotate-180 transition-all group-hover:duration-200 }`} />
+                  </Link>
 
-                        )
-                      }
-                    </ul>
-                  </div>
-                </Link>
+                  {/* Dropdown */}
+                  {
+                    dropDown ? <div
+                      className={`absolute left-1/2 -translate-x-1/2 top-14 
+      opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+      transition-all duration-300 ease-in-out 
+      w-[500px] grid grid-cols-2
+      ${!darkMode
+                          ? "bg-[rgba(245,245,245,1)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_1px_2px,rgba(0,0,0,0.08)_0px_2px_4px,rgba(0,0,0,0.07)_0px_4px_8px,rgba(0,0,0,0.07)_0px_8px_16px,rgba(0,0,0,0.05)_0px_16px_32px,rgba(0,0,0,0.02)_0px_32px_64px]"
+                          : "bg-[#000000c9] rounded-xl shadow-[0_0_12px_rgba(0,255,255,0.6)]"
+                        }  ps-6 py-5 z-50`}
+                    >
+                      {/* Professional */}
+                      <div>
+                        <h4 className="text-xl px-1 font-bold mb-3">Professional</h4>
+                        <ul className="text-lg capitalize flex flex-col gap-2">
+                          {profProjects.map((item, index) => (
+                            <Link
+                              key={index}
+                              to={`projects/case-study/${item.slug}`}
+                              className={`truncate w-48 hover:text-[#f59e0b] transition-colors ${location.pathname.includes(item.slug) ? "text-[#f59e0b]" : ""}`}
+                              title={item.text} onClick={() => setDropDown(false)}
+                            >
+                              {item.text}
+                            </Link>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Personal */}
+                      <div>
+                        <h4 className="text-xl px-1 font-bold mb-3">Personal</h4>
+                        <ul className="text-lg capitalize flex flex-col gap-2">
+                          {perProjects.map((item, index) => (
+                            <Link
+                              key={index}
+                              to={`projects/case-study/${item.slug}`}
+                              className="truncate w-48 hover:text-[#f59e0b] transition-colors"
+                              title={item.text} onClick={() => setDropDown(false)}
+                            >
+                              {item.text}
+                            </Link>
+                          ))}
+                        </ul>
+                      </div>
+                    </div> : null
+                  }
+
+                </li>
+
+
                 <Link
                   to="/contact"
-                  className={`main-nav-links ${
-                    location.pathname.includes("/contact")
-                      ? "text-[#f59e0b]"
-                      : ""
-                  }`}
+                  className={`main-nav-links ${location.pathname.includes("/contact")
+                    ? "text-[#f59e0b]"
+                    : ""
+                    }`}
                 >
                   Contact
                 </Link>
@@ -177,20 +205,116 @@ const Navbar = () => {
             </div>
             <div className="sm:mx-8 mx-4 mt-2">
               <ul className="flex flex-col gap-4 text-2xl font-heading capitalize text-white">
-                {links.map((item, index) => (
-                  <Link
-                    to={item.link}
-                    className={`${
-                      location.pathname.includes(item.name)
-                        ? "text-[#f59e0b]"
-                        : ""
-                    } hover:text-[#f59e0b] w-28  transition-all duration-200`}
-                    key={index}
-                    onClick={() => setMobName(false)}
+
+                <Link
+                  to="/"
+                  className={`${location.pathname === "/"
+                    ? "text-[#f59e0b]"
+                    : ""
+                    } hover:text-[#f59e0b]   transition-all duration-200`}
+                  onClick={() => setMobName(false)}
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/about"
+                  className={`${location.pathname.includes("/about")
+                    ? "text-[#f59e0b]"
+                    : ""
+                    } hover:text-[#f59e0b]   transition-all duration-200`}
+                  onClick={() => setMobName(false)}
+                >
+                  About
+                </Link>
+                <Link
+                  to="/skills"
+                  className={`${location.pathname.includes("/skills")
+                    ? "text-[#f59e0b]"
+                    : ""
+                    } hover:text-[#f59e0b]   transition-all duration-200`}
+                  onClick={() => setMobName(false)}
+                >
+                  Skills
+                </Link>
+                <li
+                  
+                  className="flex justify-start flex-col items-start gap-1 relative group"
+                >
+                  <button
+                    onClick={() => setDropDown(!dropDown)} // mobile toggle
+                    className={`main-nav-links flex justify-center items-center ${location.pathname.includes("/projects") ? "text-[#f59e0b]" : ""
+                      }`}
                   >
-                    {item.name}
-                  </Link>
-                ))}
+                    Projects{" "}
+                    <KeyboardArrowDownIcon
+                      fontSize="small"
+                      className={`ml-1 transition-transform duration-200 ${dropDown ? "rotate-180" : ""
+                        }`}
+                    />
+                  </button>
+
+                  {/* Dropdown */}
+                  {dropDown && (
+                    <div
+                      className={` md:top-14 
+        top-full mt-2 w-full md:w-[500px] grid grid-cols-1 md:grid-cols-2 gap-4
+        transition-all duration-300 ease-in-out 
+        ${!darkMode
+                          ? "bg-[rgba(245,245,245,1)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_1px_2px,rgba(0,0,0,0.08)_0px_2px_4px,rgba(0,0,0,0.07)_0px_4px_8px,rgba(0,0,0,0.07)_0px_8px_16px,rgba(0,0,0,0.05)_0px_16px_32px,rgba(0,0,0,0.02)_0px_32px_64px]"
+                          : "bg-[#000000c9] rounded-xl shadow-[0_0_12px_rgba(0,255,255,0.6)]"
+                        } backdrop-blur-[10px] px-6 py-5 z-50`}
+                    >
+                      {/* Professional */}
+                      <div>
+                        <h4 className="text-xl px-1 font-bold mb-3">Professional</h4>
+                        <ul className="text-lg capitalize flex flex-col gap-2">
+                          {profProjects.map((item, index) => (
+                            <Link
+                              key={index}
+                              to={`projects/case-study/${item.slug}`}
+                              className={`truncate w-full md:w-48 hover:text-[#f59e0b] transition-colors ${location.pathname.includes(item.slug) ? "text-[#f59e0b]" : ""
+                                }`}
+                              title={item.text}
+                              onClick={() => {setDropDown(false); setMobName(false)}}
+                            >
+                              {item.text}
+                            </Link>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Personal */}
+                      <div>
+                        <h4 className="text-xl px-1 font-bold mb-3">Personal</h4>
+                        <ul className="text-lg capitalize flex flex-col gap-2">
+                          {perProjects.map((item, index) => (
+                            <Link
+                              key={index}
+                              to={`projects/case-study/${item.slug}`}
+                              className={`truncate w-full md:w-48 hover:text-[#f59e0b] transition-colors ${location.pathname.includes(item.slug) ? "text-[#f59e0b]" : ""
+                                }`}
+                              title={item.text}
+                              onClick={() => {setDropDown(false); setMobName(false)}}    >
+                              {item.text}
+                            </Link>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                </li>
+
+                <Link
+                  to="/contact"
+                  className={`${location.pathname === "/contact"
+                    ? "text-[#f59e0b]"
+                    : ""
+                    } hover:text-[#f59e0b]  transition-all duration-200`}
+                  onClick={() => setMobName(false)}
+                >
+                  Contact Me
+                </Link>
+
                 <li className="bg-[#ffffffb7] text-black flex justify-between items-center rounded-lg text-lg ps-4 py-4 pe-8 backdrop-blur-[5px]">
                   <span>Change Theme</span> <GsapToggle />
                 </li>
