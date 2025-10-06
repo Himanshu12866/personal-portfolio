@@ -25,8 +25,7 @@ const AboutPage = () => {
         <meta property="og:title" content="About Me | Himanshu - Frontend Developer & Web Designer" />
         <meta property="og:description" content="Learn more about Himanshu, a passionate Frontend Developer & Web Designer crafting responsive and interactive websites." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourportfolio.com/about" />
-        <meta property="og:image" content="https://yourportfolio.com/about-preview.png" />
+
       <AboutBanner />
       <AboutMe />
       <AboutExperience />

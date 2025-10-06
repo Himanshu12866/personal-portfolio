@@ -25,8 +25,6 @@ const ProjectPage = () => {
         <meta property="og:title" content="Himanshu's Projects | Creative Web Development Portfolio" />
         <meta property="og:description" content="Explore Himanshu’s portfolio projects, highlighting skills in React, Tailwind CSS, JavaScript, and modern web technologies." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourportfolio.com/projects" />
-        <meta property="og:image" content="https://yourportfolio.com/projects-preview.png" />
       <ProjectBanner />
       
       <ProjectAbout />

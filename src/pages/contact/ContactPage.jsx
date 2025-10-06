@@ -30,12 +30,7 @@ const ContactPage = () => {
         property="og:description"
         content="Reach out to Himanshu for collaborations, inquiries, or web development projects. Fast and professional communication for all inquiries."
       />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://yourportfolio.com/contact" />
-      <meta
-        property="og:image"
-        content="https://yourportfolio.com/contact-preview.png"
-      />
+  
       <ContactBanner />
       <ContactSocial />
       <HomeContact />

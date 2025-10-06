@@ -26,8 +26,7 @@ const SkillsPage = () => {
         <meta property="og:title" content="Himanshu's Skills | Frontend Expertise & Modern Web Tech" />
         <meta property="og:description" content="Check out Himanshu’s skills in React, Tailwind CSS, JavaScript, Node.js, and other modern web technologies for creative, responsive projects." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourportfolio.com/skills" />
-        <meta property="og:image" content="https://yourportfolio.com/skills-preview.png" />
+     
       <SkillBanner />
       <SkillsAbout />
       <SkillsCards />

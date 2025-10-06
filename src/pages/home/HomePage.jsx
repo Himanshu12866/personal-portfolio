@@ -36,12 +36,7 @@ const HomePage = () => {
         property="og:description"
         content="Explore creative and responsive web projects built with React, Tailwind CSS, and modern web technologies."
       />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://yourportfolio.com" />
-      <meta
-        property="og:image"
-        content="https://yourportfolio.com/preview-image.png"
-      />
+     
       <HomeBanner />
       <HomeQuote />
       <HomeAbout />
