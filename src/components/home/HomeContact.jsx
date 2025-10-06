@@ -241,7 +241,7 @@ const HomeContact = () => {
                   type="text"
                   name="name"
                   value={formData.name}
-                  onChange={handleChange}
+                  onChange={handleChange} disabled={loading}
                   placeholder="Your Name"
                   className={`bg-transparent py-3 outline-none px-4 rounded-[10px] ${
                     !darkMode
@@ -270,7 +270,7 @@ const HomeContact = () => {
                   type="email"
                   name="email"
                   value={formData.email}
-                  onChange={handleChange}
+                  onChange={handleChange} disabled={loading}
                   placeholder="Your Email"
                   className={`bg-transparent py-3 outline-none px-4 rounded-[10px] ${
                     !darkMode
@@ -301,7 +301,7 @@ const HomeContact = () => {
                 <input
                   type="text"
                   name="phone"
-                  value={formData.phone}
+                  value={formData.phone} disabled={loading}
                   onChange={(e) => {
                     const onlyDigits = e.target.value.replace(/\D/g, "");
                     setFormData({ ...formData, phone: onlyDigits });
@@ -335,7 +335,7 @@ const HomeContact = () => {
                   type="text"
                   name="company"
                   value={formData.company}
-                  onChange={handleChange}
+                  onChange={handleChange} disabled={loading}
                   placeholder="Your Company/Organization"
                   className={`bg-transparent py-3 outline-none px-4  rounded-[10px] ${
                     !darkMode
@@ -359,7 +359,7 @@ const HomeContact = () => {
                 </label>
                 <textarea
                   type="text"
-                  name="message"
+                  name="message" disabled={loading}
                   value={formData.message}
                   rows={4}
                   onChange={handleChange}
