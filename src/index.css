@@ -23,7 +23,6 @@ body {
   height: 100vh;
   width: 100vw;
   color: var(--text-color);
-  /* font-family: "Raleway", sans-serif; */
   transition: background-color 0.3s, color 0.3s;
 }
 
