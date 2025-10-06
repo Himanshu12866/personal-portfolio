@@ -13,6 +13,9 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import CaseStudy from "./components/projects/CaseStudy";
+import ScrollToTop from "./components/ScrollTopBtn";
+import { ToastContainer } from "react-toastify";
+import NotFound from "./components/NotFound";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -23,7 +26,9 @@ function App() {
   }, []);
   return (
     <SmoothScrollWrapper>
+      <ToastContainer />
       <CustomCursor />
+      <ScrollToTop />
       <div
         className=""
         style={{
@@ -33,7 +38,6 @@ function App() {
           overflowX: "hidden",
         }}
       >
-    
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -42,6 +46,7 @@ function App() {
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/projects/case-study/:slug" element={<CaseStudy />} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
         <Footer />
       </div>

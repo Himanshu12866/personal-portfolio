@@ -1,16 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import dark_logo from "../assets/icons_logos/mern_black_mode-01.png";
 import light_logo from "../assets/icons_logos/mern_light_mode.png";
 import GsapToggle from "./toggleswitch";
 import { AppContext } from "../context/datacontext";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { AnimatePresence, motion } from "framer-motion";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const Navbar = () => {
-  const { darkMode } = useContext(AppContext);
+  const { darkMode, projects } = useContext(AppContext);
   const [mobNav, setMobName] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
+  const [perProjects, setPerProjects] = useState([]);
+  const [profProjects, setProfProjects] = useState([]);
   const links = [
     { name: "home", link: "/" },
     { name: "about", link: "/about" },
@@ -18,14 +22,18 @@ const Navbar = () => {
     { name: "projects", link: "/projects" },
     { name: "contact", link: "/contact" },
   ];
-  // const cardStyle = {
-  //   backdropFilter: "blur(5px)",
-  //   borderRadius: "10px",
-  //   opacity: 1,
-  //   borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
-  //   borderLeft: "0px solid",
-  //   borderRight: "0px solid",
-  // };
+  const location = useLocation();
+
+  useEffect(() => {
+    if (projects && projects.length > 0) {
+      const personal = projects.filter((item) => item.category === "Personal");
+      const professional = projects.filter(
+        (item) => item.category === "Professional"
+      );
+      setPerProjects(personal);
+      setProfProjects(professional);
+    }
+  }, [projects]);
 
   return (
     <>
@@ -38,23 +46,134 @@ const Navbar = () => {
           } rounded-4xl  z-10  md:mx-4 mx-2 backdrop-blur-[5px] `}
         >
           <div className="w-full flex flex-wrap items-center justify-between  xl:px-16 px-8 py-1">
-            <a href="/" className="flex items-center w-48">
+            <Link to="/" className="flex items-center w-48">
               <img
                 src={!darkMode ? dark_logo : light_logo}
                 className=""
                 alt="Flowbite Logo"
               />
-            </a>
+            </Link>
             <div
               className="items-center justify-between hidden w-full font-heading lg:flex md:w-auto "
               id="navbar-cta"
             >
               <ul className="flex flex-col font-medium p-4 md:p-0 uppercase text-lg  md:space-x-8  md:flex-row">
-                {links.map((item, index) => (
-                  <Link to={item.link} className="main-nav-links" key={index}>
-                    {item.name}
+                <Link
+                  to="/"
+                  className={`main-nav-links ${
+                    location.pathname === "/" ? "text-[#f59e0b]" : ""
+                  }`}
+                >
+                  Home
+                </Link>
+
+                <Link
+                  to="/about"
+                  className={`main-nav-links ${
+                    location.pathname.includes("/about") ? "text-[#f59e0b]" : ""
+                  }`}
+                >
+                  About
+                </Link>
+                <Link
+                  to="/skills"
+                  className={`main-nav-links ${
+                    location.pathname.includes("/skills")
+                      ? "text-[#f59e0b]"
+                      : ""
+                  }`}
+                >
+                  Skills
+                </Link>
+                <li
+                  onMouseOver={() => setDropDown(true)}
+                  className="flex justify-center items-center gap-1 relative group"
+                >
+                  <Link
+                    to="/projects"
+                    className={`main-nav-links flex justify-center items-center ${
+                      location.pathname.includes("/projects")
+                        ? "text-[#f59e0b]"
+                        : ""
+                    }`}
+                  >
+                    Projects{" "}
+                    <KeyboardArrowDownIcon
+                      fontSize="small"
+                      className={`ml-1 group-hover:rotate-180 transition-all group-hover:duration-200 }`}
+                    />
                   </Link>
-                ))}
+
+                  {/* Dropdown */}
+                  {dropDown ? (
+                    <div
+                      className={`absolute left-1/2 -translate-x-1/2 top-14 
+      opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+      transition-all duration-300 ease-in-out 
+      w-[500px] grid grid-cols-2
+      ${
+        !darkMode
+          ? "bg-[rgba(245,245,245,1)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_1px_2px,rgba(0,0,0,0.08)_0px_2px_4px,rgba(0,0,0,0.07)_0px_4px_8px,rgba(0,0,0,0.07)_0px_8px_16px,rgba(0,0,0,0.05)_0px_16px_32px,rgba(0,0,0,0.02)_0px_32px_64px]"
+          : "bg-[#000000c9] rounded-xl shadow-[0_0_12px_rgba(0,255,255,0.6)]"
+      }  ps-6 py-5 z-50`}
+                    >
+                      {/* Professional */}
+                      <div>
+                        <h4 className="text-xl px-1 font-bold mb-3">
+                          Professional
+                        </h4>
+                        <ul className="text-lg capitalize flex flex-col gap-2">
+                          {profProjects.map((item, index) => (
+                            <Link
+                              key={index}
+                              to={`projects/case-study/${item.slug}`}
+                              className={`truncate w-48 hover:text-[#f59e0b] transition-colors ${
+                                location.pathname.includes(item.slug)
+                                  ? "text-[#f59e0b]"
+                                  : ""
+                              }`}
+                              title={item.text}
+                              onClick={() => setDropDown(false)}
+                            >
+                              {item.text}
+                            </Link>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Personal */}
+                      <div>
+                        <h4 className="text-xl px-1 font-bold mb-3">
+                          Personal
+                        </h4>
+                        <ul className="text-lg capitalize flex flex-col gap-2">
+                          {perProjects.map((item, index) => (
+                            <Link
+                              key={index}
+                              to={`projects/case-study/${item.slug}`}
+                              className="truncate w-48 hover:text-[#f59e0b] transition-colors"
+                              title={item.text}
+                              onClick={() => setDropDown(false)}
+                            >
+                              {item.text}
+                            </Link>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  ) : null}
+                </li>
+
+                <Link
+                  to="/contact"
+                  className={`main-nav-links ${
+                    location.pathname.includes("/contact")
+                      ? "text-[#f59e0b]"
+                      : ""
+                  }`}
+                >
+                  Contact
+                </Link>
               </ul>
             </div>{" "}
             <div className="flex  space-x-3 md:space-x-0 ">
@@ -109,16 +228,132 @@ const Navbar = () => {
             </div>
             <div className="sm:mx-8 mx-4 mt-2">
               <ul className="flex flex-col gap-4 text-2xl font-heading capitalize text-white">
-                {links.map((item, index) => (
-                  <Link
-                    to={item.link}
-                    className="main-nav-links"
-                    key={index}
-                    onClick={() => setMobName(false)}
+                <Link
+                  to="/"
+                  className={`${
+                    location.pathname === "/" ? "text-[#f59e0b]" : ""
+                  } hover:text-[#f59e0b]   transition-all duration-200`}
+                  onClick={() => setMobName(false)}
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/about"
+                  className={`${
+                    location.pathname.includes("/about") ? "text-[#f59e0b]" : ""
+                  } hover:text-[#f59e0b]   transition-all duration-200`}
+                  onClick={() => setMobName(false)}
+                >
+                  About
+                </Link>
+                <Link
+                  to="/skills"
+                  className={`${
+                    location.pathname.includes("/skills")
+                      ? "text-[#f59e0b]"
+                      : ""
+                  } hover:text-[#f59e0b]   transition-all duration-200`}
+                  onClick={() => setMobName(false)}
+                >
+                  Skills
+                </Link>
+                <li className="flex justify-start flex-col items-start gap-1 relative group">
+                  <button
+                    onClick={() => setDropDown(!dropDown)} // mobile toggle
+                    className={`main-nav-links flex justify-center items-center ${
+                      location.pathname.includes("/projects")
+                        ? "text-[#f59e0b]"
+                        : ""
+                    }`}
                   >
-                    {item.name}
-                  </Link>
-                ))}
+                    Projects{" "}
+                    <KeyboardArrowDownIcon
+                      fontSize="small"
+                      className={`ml-1 transition-transform duration-200 ${
+                        dropDown ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {/* Dropdown */}
+                  {dropDown && (
+                    <div
+                      className={` md:top-14 
+        top-full mt-2 w-full md:w-[500px] grid grid-cols-1 md:grid-cols-2 gap-4
+        transition-all duration-300 ease-in-out 
+        ${
+          !darkMode
+            ? "bg-[rgba(245,245,245,1)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_1px_2px,rgba(0,0,0,0.08)_0px_2px_4px,rgba(0,0,0,0.07)_0px_4px_8px,rgba(0,0,0,0.07)_0px_8px_16px,rgba(0,0,0,0.05)_0px_16px_32px,rgba(0,0,0,0.02)_0px_32px_64px]"
+            : "bg-[#000000c9] rounded-xl shadow-[0_0_12px_rgba(0,255,255,0.6)]"
+        } backdrop-blur-[10px] px-6 py-5 z-50`}
+                    >
+                      {/* Professional */}
+                      <div>
+                        <h4 className="text-xl px-1 font-bold mb-3">
+                          Professional
+                        </h4>
+                        <ul className="text-lg capitalize flex flex-col gap-2">
+                          {profProjects.map((item, index) => (
+                            <Link
+                              key={index}
+                              to={`projects/case-study/${item.slug}`}
+                              className={`truncate w-full md:w-48 hover:text-[#f59e0b] transition-colors ${
+                                location.pathname.includes(item.slug)
+                                  ? "text-[#f59e0b]"
+                                  : ""
+                              }`}
+                              title={item.text}
+                              onClick={() => {
+                                setDropDown(false);
+                                setMobName(false);
+                              }}
+                            >
+                              {item.text}
+                            </Link>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Personal */}
+                      <div>
+                        <h4 className="text-xl px-1 font-bold mb-3">
+                          Personal
+                        </h4>
+                        <ul className="text-lg capitalize flex flex-col gap-2">
+                          {perProjects.map((item, index) => (
+                            <Link
+                              key={index}
+                              to={`projects/case-study/${item.slug}`}
+                              className={`truncate w-full md:w-48 hover:text-[#f59e0b] transition-colors ${
+                                location.pathname.includes(item.slug)
+                                  ? "text-[#f59e0b]"
+                                  : ""
+                              }`}
+                              title={item.text}
+                              onClick={() => {
+                                setDropDown(false);
+                                setMobName(false);
+                              }}
+                            >
+                              {item.text}
+                            </Link>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                </li>
+
+                <Link
+                  to="/contact"
+                  className={`${
+                    location.pathname === "/contact" ? "text-[#f59e0b]" : ""
+                  } hover:text-[#f59e0b]  transition-all duration-200`}
+                  onClick={() => setMobName(false)}
+                >
+                  Contact Me
+                </Link>
+
                 <li className="bg-[#ffffffb7] text-black flex justify-between items-center rounded-lg text-lg ps-4 py-4 pe-8 backdrop-blur-[5px]">
                   <span>Change Theme</span> <GsapToggle />
                 </li>

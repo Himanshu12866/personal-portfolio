@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Raleway:wght@400;500;700&family=Mozilla+Headline:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html {
   margin: 0;
   padding: 0;
@@ -20,7 +26,6 @@ body {
   height: 100vh;
   width: 100vw;
   color: var(--text-color);
-  font-family: "Raleway", sans-serif;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -52,12 +57,8 @@ body {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background: linear-gradient(
-        90deg,
-        #70838588 1px,
-        transparent 1px
-      )
-      0 0 / var(--size) var(--size),
+  background: linear-gradient(90deg, #70838588 1px, transparent 1px) 0 0 /
+      var(--size) var(--size),
     linear-gradient(rgba(75, 221, 221, 0.15) 1px, transparent 1px) 0 0 /
       var(--size) var(--size);
   top: 0;
@@ -73,7 +74,7 @@ h3,
 h4,
 h5 {
   color: #f59e0b;
-  font-family: "Mozilla Headline", sans-serif;
+  font-family: "Play", sans-serif;
 }
 @keyframes spin-slow {
   from {
@@ -92,10 +93,15 @@ h5 {
     transform: rotate(0deg);
   }
 }
-
+.stroke-text {
+  -webkit-text-stroke: 1px var(--text-color); /* outline thickness and color */
+  color: transparent;
+}
 .animate-spin-slow {
   animation: spin-slow 30s linear infinite;
 }
 .animate-spin-slow-reverse {
   animation: spin-slow-reverse 40s linear infinite;
 }
+
+ 

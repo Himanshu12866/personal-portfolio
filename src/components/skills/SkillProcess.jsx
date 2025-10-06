@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import { AppContext } from "../../context/datacontext";
+import SplitText from "../SplitText";
 const steps = [
   { label: "Discovery", size: 180, sxsize: 100 },
   { label: "Definition", size: 260, sxsize: 120 },
@@ -40,7 +41,20 @@ const SkillProcess = () => {
   const width = useWindowWidth();
   return (
     <div className="relative w-full max-w-3xl mx-auto my-20">
-      <h2 className="text-4xl font-bold text-center  pb-36">The Process</h2>
+      <h2 className="text-4xl font-bold text-center  pb-36">
+
+        <SplitText
+          delay={80}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          className="text-left"
+          text="The Process"
+        />
+      </h2>
       <div className="grid grid-cols-4 items-end text-center">
         {steps.map((step, i) => (
           <div

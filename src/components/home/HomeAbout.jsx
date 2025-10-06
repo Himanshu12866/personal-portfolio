@@ -5,6 +5,8 @@ import LaptopIcon from "@mui/icons-material/Laptop";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import BlurText from "../BlurText";
+import SplitText from "../SplitText";
 
 const HomeAbout = () => {
   const { darkMode, homeData } = useContext(AppContext);
@@ -34,7 +36,19 @@ const HomeAbout = () => {
 
   return (
     <div className="flex justify-center flex-col gap-24 items-center w-full py-20">
-      <h2 className="text-4xl font-bold">About Me</h2>
+      <h2 className="text-4xl font-bold">
+        <SplitText
+          delay={80}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          className="text-left"
+          text="About Me"
+        />
+      </h2>
 
       <div className="xl:w-4/5 3xl:w-3/5 w-full flex lg:flex-row flex-col gap-4 p-4">
         {/* Left Card */}
@@ -62,7 +76,12 @@ const HomeAbout = () => {
               target="_blank"
               rel="noreferrer"
             >
-              {aboutMe.company}
+              <BlurText
+                text={aboutMe.company}
+                delay={10}
+                animateBy="words"
+                direction="bottom"
+              />
             </a>
           </div>
 
@@ -70,21 +89,42 @@ const HomeAbout = () => {
             <h3>
               <LaptopIcon />
             </h3>
-            <p>{aboutMe.role}</p>
+            <p>
+              <BlurText
+                text={aboutMe.role}
+                delay={15}
+                animateBy="words"
+                direction="bottom"
+              />
+            </p>
           </div>
 
           <div className="flex flex-row gap-3 text-xl mt-2 font-para font-medium">
             <h3>
               <CalendarMonthIcon />
             </h3>
-            <p>{aboutMe.duration}</p>
+            <p>
+              <BlurText
+                text={aboutMe.duration}
+                delay={20}
+                animateBy="words"
+                direction="bottom"
+              />
+            </p>
           </div>
 
           <div className="flex flex-row gap-3 text-xl mt-2 font-para font-medium">
             <h3>
               <LocationOnIcon />
             </h3>
-            <p>{aboutMe.location}</p>
+            <p>
+              <BlurText
+                text={aboutMe.location}
+                delay={25}
+                animateBy="words"
+                direction="bottom"
+              />
+            </p>
           </div>
         </div>
 
@@ -103,11 +143,22 @@ const HomeAbout = () => {
             Personal Insight
           </p>
 
-          <p className="text-xl text-justify font-para pt-2 px-2">
-            {aboutMe.description}
+          <p className="text-xl text-left tracking-wide font-para pt-2 px-2">
+            <BlurText
+              text={aboutMe.description}
+              delay={5}
+              animateBy="words"
+              direction="bottom"
+            />
           </p>
-          <p className="text-xl text-justify font-para px-2">
-            {aboutMe.descriptiontwo}
+
+          <p className="text-xl text-left tracking-wide font-para px-2">
+            <BlurText
+              text={aboutMe.descriptiontwo}
+              delay={10}
+              animateBy="words"
+              direction="bottom"
+            />
           </p>
 
           <div className="flex justify-start px-2 items-center">

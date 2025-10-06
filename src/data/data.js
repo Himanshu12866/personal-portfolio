@@ -1,5 +1,4 @@
 // Tech icons small size
-
 import html from "../assets/icons_logos/icons8-html-5-48.png";
 import css from "../assets/icons_logos/icons8-css-48.png";
 import javascript from "../assets/icons_logos/icons8-javascript-48.png";
@@ -32,14 +31,128 @@ import gcp_large from "../assets/images/icons8-google-cloud-256.png";
 import aws_large from "../assets/images/icons8-aws-256.png";
 import adobe_large from "../assets/images/adobe-illustrator.png";
 import reactlogo from "../assets/images/react.png";
+import nextJs from "../assets/images/icons8-nextjs-96.png"
+import typescript from "../assets/images/icons8-typescript-256.png"
 //company logos
 import novatales from "../assets/icons_logos/novatales.png"
 import naresh from "../assets/icons_logos/naresh-it-logo2.png"
 // projects images
-import livvon_customer from "../assets/images/livvon.png"
-import livvon_admin from "../assets/images/livvon_admin.png"
-import magnaid from "../assets/images/magnaid.png"
-import conceiva from "../assets/images/conceiva.png"
+
+//Livvon Customer 
+import livvon_customer from "../assets/images/livvon.webp"
+import liv_cust_1 from "../assets/images/liv-cust/_liv_cust_1_converted.webp";
+import liv_cust_2 from "../assets/images/liv-cust/_liv_cust_2_converted.webp";
+import liv_cust_3 from "../assets/images/liv-cust/_liv_cust_3_converted.webp";
+import liv_cust_4 from "../assets/images/liv-cust/_liv_cust_4_converted.webp";
+import liv_cust_5 from "../assets/images/liv-cust/_liv_cust_5_converted.webp";
+import liv_cust_6 from "../assets/images/liv-cust/_liv_cust_6_converted.webp";
+import liv_cust_7 from "../assets/images/liv-cust/_liv_cust_7_converted.webp";
+import liv_cust_8 from "../assets/images/liv-cust/_liv_cust_8_converted.webp";
+import liv_cust_9 from "../assets/images/liv-cust/_liv_cust_9_converted.webp";
+import liv_cust_10 from "../assets/images/liv-cust/_liv_cust_10_converted.webp";
+import liv_cust_11 from "../assets/images/liv-cust/_liv_cust_11_converted.webp";
+import liv_cust_12 from "../assets/images/liv-cust/_liv_cust_12_converted.webp";
+import liv_cust_13 from "../assets/images/liv-cust/_liv_cust_13_converted.webp";
+import liv_cust_14 from "../assets/images/liv-cust/_liv_cust_14_converted.webp";
+import liv_cust_15 from "../assets/images/liv-cust/_liv_cust_15_converted.webp";
+import liv_cust_16 from "../assets/images/liv-cust/_liv_cust_16_converted.webp";
+import liv_cust_17 from "../assets/images/liv-cust/_liv_cust_17_converted.webp";
+import liv_cust_18 from "../assets/images/liv-cust/_liv_cust_18_converted.webp";
+import liv_cust_19 from "../assets/images/liv-cust/_liv_cust_19_converted.webp";
+import liv_cust_20 from "../assets/images/liv-cust/_liv_cust_20_converted.webp";
+
+//Livvon Admin
+import livvon_admin from "../assets/images/livvon_admin.webp"
+import liv_adm_1 from "../assets/images/liv-admin/_liv_adm_1_converted.webp";
+import liv_adm_2 from "../assets/images/liv-admin/_liv_adm_2_converted.webp";
+import liv_adm_3 from "../assets/images/liv-admin/_liv_adm_3_converted.webp";
+import liv_adm_4 from "../assets/images/liv-admin/_liv_adm_4_converted.webp";
+import liv_adm_5 from "../assets/images/liv-admin/_liv_adm_5_converted.webp";
+import liv_adm_6 from "../assets/images/liv-admin/_liv_adm_6_converted.webp";
+import liv_adm_7 from "../assets/images/liv-admin/_liv_adm_7_converted.webp";
+import liv_adm_8 from "../assets/images/liv-admin/_liv_adm_8_converted.webp";
+import liv_adm_9 from "../assets/images/liv-admin/_liv_adm_9_converted.webp";
+import liv_adm_10 from "../assets/images/liv-admin/_liv_adm_10_converted.webp";
+import liv_adm_11 from "../assets/images/liv-admin/_liv_adm_11_converted.webp";
+import liv_adm_12 from "../assets/images/liv-admin/_liv_adm_12_converted.webp";
+import liv_adm_13 from "../assets/images/liv-admin/_liv_adm_13_converted.webp";
+import liv_adm_14 from "../assets/images/liv-admin/_liv_adm_14_converted.webp";
+import liv_adm_15 from "../assets/images/liv-admin/_liv_adm_15_converted.webp";
+import liv_adm_16 from "../assets/images/liv-admin/_liv_adm_16_converted.webp";
+//MagnAid 
+import magnaid from "../assets/images/magnaid.webp"
+import magnaid_1 from "../assets/images/magnaid/magnaid_1_converted.webp";
+import magnaid_2 from "../assets/images/magnaid/magnaid_2_converted.webp";
+import magnaid_3 from "../assets/images/magnaid/magnaid_3_converted.webp";
+import magnaid_4 from "../assets/images/magnaid/magnaid_4_converted.webp";
+import magnaid_5 from "../assets/images/magnaid/magnaid_5_converted.webp";
+import magnaid_6 from "../assets/images/magnaid/magnaid_6_converted.webp";
+import magnaid_7 from "../assets/images/magnaid/magnaid_7_converted.webp";
+import magnaid_8 from "../assets/images/magnaid/magnaid_8_converted.webp";
+import magnaid_9 from "../assets/images/magnaid/magnaid_9_converted.webp";
+import magnaid_10 from "../assets/images/magnaid/magnaid_10_converted.webp";
+import magnaid_11 from "../assets/images/magnaid/magnaid_11_converted.webp";
+import magnaid_12 from "../assets/images/magnaid/magnaid_12_converted.webp";
+import magnaid_13 from "../assets/images/magnaid/magnaid_13_converted.webp";
+import magnaid_14 from "../assets/images/magnaid/magnaid_14_converted.webp";
+import magnaid_15 from "../assets/images/magnaid/magnaid_15_converted.webp";
+import magnaid_16 from "../assets/images/magnaid/magnaid_16_converted.webp";
+import magnaid_17 from "../assets/images/magnaid/magnaid_17_converted.webp";
+import magnaid_18 from "../assets/images/magnaid/magnaid_18_converted.webp";
+import magnaid_19 from "../assets/images/magnaid/magnaid_19_converted.webp";
+import magnaid_20 from "../assets/images/magnaid/magnaid_20_converted.webp";
+
+//Conceiva 
+import conceiva from "../assets/images/conceiva.webp"
+import conc_1 from "../assets/images/conceiva/conceiva_1_converted.webp";
+import conc_2 from "../assets/images/conceiva/conceiva_2_converted.webp";
+import conc_3 from "../assets/images/conceiva/conceiva_3_converted.webp";
+import conc_4 from "../assets/images/conceiva/conceiva_4_converted.webp";
+import conc_5 from "../assets/images/conceiva/conceiva_5_converted.webp";
+import conc_6 from "../assets/images/conceiva/conceiva_6_converted.webp";
+import conc_7 from "../assets/images/conceiva/conceiva_7_converted.webp";
+import conc_8 from "../assets/images/conceiva/conceiva_8_converted.webp";
+import conc_9 from "../assets/images/conceiva/conceiva_9_converted.webp";
+import conc_10 from "../assets/images/conceiva/conceiva_10_converted.webp";
+import conc_11 from "../assets/images/conceiva/conceiva_11_converted.webp";
+import conc_12 from "../assets/images/conceiva/conceiva_12_converted.webp";
+import conc_13 from "../assets/images/conceiva/conceiva_13_converted.webp";
+import conc_14 from "../assets/images/conceiva/conceiva_14_converted.webp";
+import conc_15 from "../assets/images/conceiva/conceiva_15_converted.webp";
+import conc_16 from "../assets/images/conceiva/conceiva_16_converted.webp";
+import conc_17 from "../assets/images/conceiva/conceiva_17_converted.webp";
+
+// Dr Appointment Booking WebApp Custoer
+import dr_web_cust_1 from "../assets/images/DrWebApp/dr_app_1_converted.webp";
+import dr_web_cust_2 from "../assets/images/DrWebApp/dr_app_2_converted.webp";
+import dr_web_cust_3 from "../assets/images/DrWebApp/dr_app_3_converted.webp";
+import dr_web_cust_4 from "../assets/images/DrWebApp/dr_app_4_converted.webp";
+import dr_web_cust_5 from "../assets/images/DrWebApp/dr_app_5_converted.webp";
+import dr_web_cust_6 from "../assets/images/DrWebApp/dr_app_6_converted.webp";
+import dr_web_cust_7 from "../assets/images/DrWebApp/dr_app_7_converted.webp";
+import dr_web_cust_8 from "../assets/images/DrWebApp/dr_app_8_converted.webp";
+import dr_web_cust_9 from "../assets/images/DrWebApp/dr_app_9_converted.webp";
+import dr_web_cust_10 from "../assets/images/DrWebApp/dr_app_10_converted.webp";
+import dr_web_cust_11 from "../assets/images/DrWebApp/dr_app_11_converted.webp";
+import dr_web_cust_12 from "../assets/images/DrWebApp/dr_app_12_converted.webp";
+import dr_web_cust_13 from "../assets/images/DrWebApp/dr_app_13_converted.webp";
+import dr_web_cust_14 from "../assets/images/DrWebApp/dr_app_14_converted.webp";
+import dr_web_cust_15 from "../assets/images/DrWebApp/dr_app_15_converted.webp";
+import dr_web_cust_16 from "../assets/images/DrWebApp/dr_app_16_converted.webp";
+import dr_web_cust_17 from "../assets/images/DrWebApp/dr_app_17_converted.webp";
+
+// Dr Appointment Booking WebApp Admin and Doctors
+import dr_web_admin_1 from "../assets/images/DrWebAdmin/dr_web_adm_1_converted.webp";
+import dr_web_admin_2 from "../assets/images/DrWebAdmin/dr_web_adm_2_converted.webp";
+import dr_web_admin_3 from "../assets/images/DrWebAdmin/dr_web_adm_3_converted.webp";
+import dr_web_admin_4 from "../assets/images/DrWebAdmin/dr_web_adm_4_converted.webp";
+import dr_web_admin_5 from "../assets/images/DrWebAdmin/dr_web_adm_5_converted.webp";
+import dr_web_admin_6 from "../assets/images/DrWebAdmin/dr_web_adm_6_converted.webp";
+import dr_web_admin_7 from "../assets/images/DrWebAdmin/dr_web_adm_7_converted.webp";
+import dr_web_admin_8 from "../assets/images/DrWebAdmin/dr_web_adm_8_converted.webp";
+import dr_web_admin_9 from "../assets/images/DrWebAdmin/dr_web_adm_9_converted.webp";
+import dr_web_admin_10 from "../assets/images/DrWebAdmin/dr_web_adm_10_converted.webp";
+
 const portfolioData = [
     // Skills Data and icons
     {
@@ -109,21 +222,9 @@ const portfolioData = [
             },
             {
                 name: "Bootstrap",
-                iconsmall: bootstrap, // not imported small version in your code
+                iconsmall: bootstrap,
                 iconlarge: bootstrap_large,
                 category: "frontend",
-            },
-            {
-                name: "Google Cloud",
-                iconsmall: gcp,
-                iconlarge: gcp_large,
-                category: "tools",
-            },
-            {
-                name: "AWS",
-                iconsmall: aws_light,
-                iconlarge: aws_large,
-                category: "tools",
             },
             {
                 name: "Git",
@@ -139,10 +240,41 @@ const portfolioData = [
                 category: "tools",
             },
             {
+                name: "Google Cloud",
+                iconsmall: gcp,
+                iconlarge: gcp_large,
+                category: "tools",
+            },
+            {
+                name: "AWS",
+                iconsmall: aws_light,
+                iconlarge: aws_large,
+                category: "tools",
+            },
+
+            {
                 name: "Illustrator",
                 iconsmall: adobe_ai,
                 iconlarge: adobe_large,
                 category: "tools",
+            },
+            {
+                name: "NextJs",
+                iconsmall: nextJs,
+                iconlarge: nextJs,
+                category: "learning"
+            },
+            {
+                name: "React Native",
+                iconsmall: reactjs,
+                iconlarge: reactlogo,
+                category: "learning"
+            },
+            {
+                name: "TypeScript",
+                iconsmall: typescript,
+                iconlarge: typescript,
+                category: "learning"
             },
         ],
     },
@@ -187,13 +319,13 @@ const portfolioData = [
                             "MongoDB",
                             "Tailwind CSS",
                         ],
-                        projectLink: "",
-                        projectCaseStudyLink: "",
+                        projectLink: "https://livoncustomer-dev.novatales.com/",
+                        projectCaseStudyLink: "/projects/case-study/livvon-customer-portal",
                         myContribution: [
-                            "Developed product listing, cart, and checkout features.",
-                            "Implemented live inventory tracking with MongoDB.",
-                            "Integrated Razorpay for payments.",
-                            "Built admin dashboard for CRUD operations.",
+                            "Developed product listing, cart, and checkout features",
+                            "Implemented live inventory tracking with MongoDB",
+                            "Integrated Razorpay for payments",
+                            "Built admin dashboard for CRUD operations",
                         ],
                     },
                     {
@@ -208,13 +340,21 @@ const portfolioData = [
                             "MongoDB",
                             "Tailwind CSS",
                         ],
-                        projectLink: "",
-                        projectCaseStudyLink: "",
+                        projectLink: "https://drbookwebapp-frontend.onrender.com/",
+                        projectCaseStudyLink: "/projects/case-study/dr-appointment-webapp",
                         myContribution: [
-                            "Designed responsive UI with React & Tailwind CSS.",
-                            "Integrated JWT-based user, doctor & admin login.",
-                            "Integrated JWT-based user, doctor & admin login.",
-                            "Developed admin panel for managing doctors & users.",
+                            "Designed responsive UI with React & Tailwind CSS",
+                            "Integrated JWT-based user, doctor & admin login","Developed admin panel for managing doctors & users",
+                            `Enabled 
+patients 
+to 
+easily 
+register, 
+
+and 
+book 
+appointments.`,
+                            
                         ],
                     },
                 ],
@@ -309,9 +449,9 @@ const portfolioData = [
             // Project 
             {
                 category: "Professional",
-                tag: "in progress / underway",
+                tag: "in progress",
                 slug: "livvon-customer-portal",
-                techUsed: [""],
+                techUsed: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Tailwind CSS", "Material UI", "AWS", "SCSS"],
                 header: {
                     title: "Livvon Comforts – E-Commerce Web Application",
                     description: "Livvon Comforts is a modern e-commerce web application designed to provide customers with a seamless shopping experience for mattresses, pillows, and related comfort products. Inspired by leading platforms like Amazon and Flipkart, the project focuses on delivering a clean, reliable, and user-friendly interface where customers can explore, purchase, and manage their comfort essentials with ease.",
@@ -359,10 +499,88 @@ const portfolioData = [
 
                 visualgallery: {
                     title: "Visual Gallery",
-                    screenShots: [{
-                        title: "",
-                        image: "",
-                    },],
+                    screenShots: [
+                        {
+                            title: "",
+                            image: liv_cust_1,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_2,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_3,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_4,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_5,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_6,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_7,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_8,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_9,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_10,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_11,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_12,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_13,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_14,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_15,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_16,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_17,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_18,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_19,
+                        },
+                        {
+                            title: "",
+                            image: liv_cust_20,
+                        },
+                    ],
                 },
                 navigation: {
                     demo: "https://livoncustomer-dev.novatales.com/",
@@ -373,7 +591,7 @@ const portfolioData = [
             },
             {
                 category: "Professional",
-                tag: "in progress / underway",
+                tag: "in progress",
                 slug: "livvon-admin-portal",
                 techUsed: ["React", "Tailwind CSS", "Context API", "Node.js", "Express", "MongoDB", "JWT", "OTP Authentication"],
                 header: {
@@ -428,7 +646,67 @@ const portfolioData = [
                     title: "Visual Gallery",
                     screenShots: [{
                         title: "",
-                        image: "",
+                        image: liv_adm_1,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_2,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_3,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_4,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_5,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_6,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_7,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_8,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_9,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_10,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_11,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_12,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_13,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_14,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_15,
+                    },
+                    {
+                        title: "",
+                        image: liv_adm_16,
                     },],
                 },
                 navigation: {
@@ -442,7 +720,7 @@ const portfolioData = [
                 category: "Professional",
                 tag: "live",
                 slug: "magaid-hospitals",
-                techUsed: ["React", "Tailwind CSS", "EmailJS / Form Handling", "Vercel"],
+                techUsed: ["React", "Tailwind CSS", "EmailJS / Form Handling", "Material UI"],
                 header: {
                     title: "MagAid Hospitals – Official Website & Appointment Booking",
                     description: "MagAid Hospitals website is a static yet fully functional platform designed to showcase the hospital’s services, share essential information, and allow patients to book appointments seamlessly. With a clean, modern, and responsive design, the website ensures visitors can easily explore hospital details, access service information, and schedule consultations using the integrated appointment form.",
@@ -492,7 +770,83 @@ const portfolioData = [
                     title: "Visual Gallery",
                     screenShots: [{
                         title: "",
-                        image: "",
+                        image: magnaid_1,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_2,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_3,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_4,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_5,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_6,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_7,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_8,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_9,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_10,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_11,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_12,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_13,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_14,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_15,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_16,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_17,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_18,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_19,
+                    },
+                    {
+                        title: "",
+                        image: magnaid_20,
                     },],
                 },
                 navigation: {
@@ -506,7 +860,7 @@ const portfolioData = [
                 category: "Professional",
                 tag: "live",
                 slug: "conceiva-fertility",
-                techUsed: ["React", "Tailwind CSS", "EmailJS / Form Handling", "Vercel"],
+                techUsed: ["React", "Tailwind CSS", "Material UI", "SCSS",],
                 header: {
                     title: "Conceiva Fertility – Official Website & Appointment Booking",
                     description: "Conceiva Fertility website is a static, responsive platform built to showcase specialized fertility care services for both men and women. The website highlights treatments, facilities, and expertise while providing patients with a seamless way to book appointments online through an integrated form. Its clean, user-friendly design ensures patients can quickly access vital information and connect with the clinic.",
@@ -556,7 +910,71 @@ const portfolioData = [
                     title: "Visual Gallery",
                     screenShots: [{
                         title: "",
-                        image: "",
+                        image: conc_1,
+                    },
+                    {
+                        title: "",
+                        image: conc_2,
+                    },
+                    {
+                        title: "",
+                        image: conc_3,
+                    },
+                    {
+                        title: "",
+                        image: conc_4,
+                    },
+                    {
+                        title: "",
+                        image: conc_5,
+                    },
+                    {
+                        title: "",
+                        image: conc_6,
+                    },
+                    {
+                        title: "",
+                        image: conc_7,
+                    },
+                    {
+                        title: "",
+                        image: conc_8,
+                    },
+                    {
+                        title: "",
+                        image: conc_9,
+                    },
+                    {
+                        title: "",
+                        image: conc_10,
+                    },
+                    {
+                        title: "",
+                        image: conc_11,
+                    },
+                    {
+                        title: "",
+                        image: conc_12,
+                    },
+                    {
+                        title: "",
+                        image: conc_13,
+                    },
+                    {
+                        title: "",
+                        image: conc_14,
+                    },
+                    {
+                        title: "",
+                        image: conc_15,
+                    },
+                    {
+                        title: "",
+                        image: conc_16,
+                    },
+                    {
+                        title: "",
+                        image: conc_17,
                     },],
                 },
                 navigation: {
@@ -567,9 +985,253 @@ const portfolioData = [
                 text: " Conceiva Fertility",
             },
 
+            //Personal Projects 
+            {
+                category: "Personal",
+                tag: "Live",
+                slug: "dr-appointment-webapp",
+                techUsed: ["React", "Node.js", "Express", "MongoDB Atlas", "Tailwind CSS", "JWT Authentication", "bcrypt", "Stripe / Razorpay Payment Gateway", "Context API"],
+                header: {
+                    title: "Dr. Appointment Booking Web App",
+                    description: "A full-stack web application that allows patients to securely register, log in, browse available doctors, and book appointments online. The platform is built with JWT-based authentication, hashed passwords for security, and integrated payment gateway to streamline consultation payments.",
+                    duration: "March 2024 – May 2024",
+                    role: "Full-Stack Developer",
+                },
+                context: {
+                    title: "Problem Statement / Intention",
+                    goals: [
+                        "Provide a secure and user-friendly platform for patients to book doctor appointments.",
+                        "Ensure secure authentication with JWT and hashed passwords.",
+                        "Integrate a payment gateway for online consultation payments.",
+                        "Use MongoDB cluster for scalable and reliable data storage.",
+                        "Offer a smooth and intuitive appointment booking flow."
+                    ]
+                },
+                process: {
+                    title: "Process",
+                    challenge: [
+                        "Implementing JWT authentication and bcrypt password hashing for patient accounts.",
+                        "Integrating MongoDB Atlas cluster for centralized and scalable data storage.",
+                        "Designing CRUD functionality for patient appointment bookings.",
+                        "Integrating a payment gateway for online consultation fees.",
+                        "Building a responsive and intuitive UI to ensure seamless user experience."
+                    ],
+                },
+                myContribution: {
+                    title: "My Contribution",
+                    myrole: [
+                        "Developed secure login and registration system for patients.",
+                        "Implemented JWT authentication and bcrypt hashing to secure patient data.",
+                        "Built backend APIs using Node.js and Express for appointment and payment handling.",
+                        "Integrated MongoDB Atlas cluster for patient and booking data.",
+                        "Added payment gateway integration for online consultation fees.",
+                        "Designed responsive frontend using React and Tailwind CSS.",
+                        "Implemented CRUD functionality for booking appointments."
+                    ]
+                },
+                outcomes: {
+                    title: "Outcomes",
+                    results: [
+                        "Delivered a full-stack, secure, and responsive patient appointment booking platform.",
+                        "Enabled patients to easily register, browse doctors, and book appointments.",
+                        "Implemented robust security with JWT authentication and hashed passwords.",
+                        "Integrated online payment for smooth consultation processing.",
+                        "Enhanced skills in full-stack development, authentication, and payment gateway integration."
+                    ]
+                },
+                visualgallery: {
+                    title: "Visual Gallery",
+                    screenShots: [
+                        {
+                            title: "",
+                            image: dr_web_cust_1,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_2,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_3,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_4,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_5,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_6,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_7,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_8,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_9,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_10,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_11,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_12,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_13,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_14,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_15,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_16,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_17,
+                        },
+
+                    ],
+                },
+                navigation: {
+                    demo: "https://drbookwebapp-frontend.onrender.com/",
+                    repo: "https://github.com/Himanshu12866/drbookwebapp"
+                },
+                image: dr_web_cust_3,
+                text: "Booking Web App(Patients)",
+            },
+            {
+                category: "Personal",
+                tag: "Live",
+                slug: "dr-admin-doctor-control",
+                techUsed: ["React", "Node.js", "Express", "MongoDB Atlas", "Tailwind CSS", "JWT Authentication", "bcrypt", "OTP Verification", "Context API"],
+                header: {
+                    title: "Doctor & Admin Control Panel",
+                    description: "A web application built for administrators and doctors to manage hospital operations. The admin has full control over managing doctors, patients, and appointments, while doctors can log in to view and manage their schedules. The system features secure authentication, CRUD operations, and a responsive dashboard interface.",
+                    duration: "May 2024 – July 2024",
+                    role: "Full-Stack Developer",
+                },
+                context: {
+                    title: "Problem Statement / Intention",
+                    goals: [
+                        "Provide an admin panel to manage hospital operations in a structured way.",
+                        "Enable the admin to add, update, or remove doctors.",
+                        "Allow the admin to view and manage patient appointments.",
+                        "Give doctors a dashboard to manage their appointment schedules.",
+                        "Implement OTP-based login with JWT authentication and bcrypt password hashing for security.",
+                        "Use MongoDB cluster for centralized, scalable data storage."
+                    ]
+                },
+                process: {
+                    title: "Process",
+                    challenge: [
+                        "Building a secure login system for Admin and Doctors.",
+                        "Implementing OTP-based authentication along with JWT and password hashing.",
+                        "Creating CRUD functionality for doctors and appointments.",
+                        "Designing separate dashboards for Admin and Doctors with appropriate permissions.",
+                        "Ensuring the system scales efficiently using MongoDB Atlas.",
+                        "Maintaining a clean and responsive UI with Tailwind CSS."
+                    ],
+                },
+                myContribution: {
+                    title: "My Contribution",
+                    myrole: [
+                        "Developed login and registration system for Admin and Doctors with OTP verification.",
+                        "Implemented JWT authentication and bcrypt password hashing for secure access.",
+                        "Built backend APIs using Node.js and Express for doctors and appointments management.",
+                        "Integrated MongoDB Atlas for storing doctors, patients, and appointment records.",
+                        "Designed separate dashboards for Admin (full control) and Doctors (schedule management).",
+                        "Implemented CRUD operations for doctors and appointments.",
+                        "Created responsive and intuitive UI using React and Tailwind CSS."
+                    ]
+                },
+                outcomes: {
+                    title: "Outcomes",
+                    results: [
+                        "Delivered a role-based doctor and admin management system.",
+                        "Admin can manage doctors and appointments seamlessly.",
+                        "Doctors can log in and view/manage their schedules.",
+                        "Implemented OTP-based login, JWT authentication, and password hashing for security.",
+                        "Enhanced hospital operations through structured CRUD-based workflows.",
+                        "Improved personal experience in handling authentication and dashboard-based applications."
+                    ]
+                },
+                visualgallery: {
+                    title: "Visual Gallery",
+                    screenShots: [
+                        {
+                            title: "",
+                            image: dr_web_admin_1,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_2,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_3,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_4,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_5,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_6,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_7,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_8,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_9,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_admin_10,
+                        },
+
+                    ],
+                },
+                navigation: {
+                    demo: "https://drbookwebapp-admin.onrender.com/",
+                    repo: ""
+                },
+                image: dr_web_admin_1,
+                text: "Booking Web App(Admin)",
+            }
         ],
     },
-    
+
     // Project page data and case study pages data completed
 ];
 export default portfolioData;

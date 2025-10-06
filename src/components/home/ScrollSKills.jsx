@@ -56,7 +56,7 @@ export default function ScrollSkills() {
           {words.map((w, i) => (
             <li
               key={i}
-              className="md:h-40 h-16"
+              className="md:h-40 h-16 font-heading"
               style={{
                 color: `oklch(70% 0.3 ${i * (360 / words.length)}deg)`,
               }}
