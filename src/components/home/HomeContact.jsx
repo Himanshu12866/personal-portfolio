@@ -54,16 +54,21 @@ const HomeContact = () => {
     const isValid = validatForm();
     if (!isValid) {
       toast.warning("Please fill all the required fields correctly.");
-      return; 
+      return;
     }
     const dateNow = new Date();
     formData.date = dateNow;
-    
+
     try {
       setLoding(!loading);
-      const response = await axios.post("https://formspree.io/f/mrbyljkk", formData);
+      const response = await axios.post(
+        "https://formspree.io/f/mrbyljkk",
+        formData
+      );
       if (response.status === 200) {
-        
+        toast.success(
+          "Thank you for contacting Me.Your Form Submitted Successfully"
+        );
         setFormData(initialFormData);
         setError({});
       } else {
