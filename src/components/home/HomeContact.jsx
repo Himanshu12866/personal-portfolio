@@ -61,9 +61,9 @@ const HomeContact = () => {
     
     try {
       setLoding(!loading);
-      const response = await axios.post("/form.php", formData);
+      const response = await axios.post("https://formspree.io/f/mrbyljkk", formData);
       if (response.status === 200) {
-        alert("Form submitted successfully!");
+        
         setFormData(initialFormData);
         setError({});
       } else {
