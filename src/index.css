@@ -3,6 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html {
   margin: 0;
   padding: 0;
