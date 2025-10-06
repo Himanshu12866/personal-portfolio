@@ -12,7 +12,21 @@ const AboutPage = () => {
     lenisRef?.current?.scrollTo(0); // top of the page
   }, []);
   return (
-    <>
+    <><title>Get to Know Himanshu's Personal details, Education, Experience</title>
+      <meta
+          name="description"
+          content="Learn more about Himanshu, a passionate Frontend Developer & Web Designer. Skilled in React, Tailwind CSS, JavaScript, and modern web technologies, crafting responsive and interactive websites."
+        />
+        <meta
+          name="keywords"
+          content="About Himanshu, Frontend Developer, Web Designer, React JS, Tailwind CSS, JavaScript, Portfolio, UI/UX, Personal Website, Skills, Experience"
+        />
+        {/* Open Graph */}
+        <meta property="og:title" content="About Me | Himanshu - Frontend Developer & Web Designer" />
+        <meta property="og:description" content="Learn more about Himanshu, a passionate Frontend Developer & Web Designer crafting responsive and interactive websites." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourportfolio.com/about" />
+        <meta property="og:image" content="https://yourportfolio.com/about-preview.png" />
       <AboutBanner />
       <AboutMe />
       <AboutExperience />

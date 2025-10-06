@@ -9,11 +9,8 @@ const HomeGithub = () => {
     const allProjects = homeData.find((item) => item.id === 12);
     const projectsData = allProjects?.projects || null;
     setProject(projectsData);
-    console.log("projects from effect:", projectsData);
   }, [homeData]);
-  useEffect(() => {
-    console.log("projects state updated:", projects);
-  }, [projects]);
+ 
 
   return (
     <div

@@ -15,6 +15,7 @@ import Masonry from "./Masonary";
 import { useLenis } from "../SmoothScroll";
 import BlurText from "../BlurText";
 import SplitText from "../SplitText";
+import CodeIcon from "@mui/icons-material/Code";
 const CaseStudy = () => {
   const { projects } = useContext(AppContext);
   const [projectData, setProjectData] = useState(null);
@@ -26,7 +27,7 @@ const CaseStudy = () => {
       setProjectData(data || null);
     }
   }, [slug, projects]);
-  console.log("Project Data:", projectData, slug);
+
   const items =
     projectData?.visualgallery?.screenShots?.map((img, index) => ({
       id: index + 1,
@@ -38,6 +39,35 @@ const CaseStudy = () => {
   }, []);
   return (
     <>
+      <title>
+        Himanshu's Projects Case Studies | Web Development Portfolio
+      </title>
+      <meta
+        name="description"
+        content="Detailed projects case studies by Himanshu, showcasing web development skills using React, Tailwind CSS, JavaScript, Node.js, and modern technologies. Explore challenges, solutions, and results."
+      />
+      <meta
+        name="keywords"
+        content="Himanshu, Projects Case Studies, Web Development, Portfolio, React JS, Tailwind CSS, JavaScript, Node.js, Express, MongoDB, UI/UX, Responsive Design, Project Showcase"
+      />
+      {/* Open Graph */}
+      <meta
+        property="og:title"
+        content="Himanshu's Projects Case Studies | Web Development Portfolio"
+      />
+      <meta
+        property="og:description"
+        content="Explore Himanshu’s web projects through detailed case studies, highlighting technical solutions, UI/UX design, and modern web development practices."
+      />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:url"
+        content="https://yourportfolio.com/projects-case-studies"
+      />
+      <meta
+        property="og:image"
+        content="https://yourportfolio.com/projects-case-studies-preview.png"
+      />
       <div className="flex flex-col items-center justify-center py-40 overflow-hidden">
         <div className="xl:w-3/5 md:w-4/5 w-11/12 h-auto">
           <div>
@@ -164,8 +194,20 @@ const CaseStudy = () => {
                 />
               </span>
             </div>
+            <div className="my-4 flex flex-row items-center gap-4">
+              <h3 className="text-3xl ">
+                <CodeIcon fontSize="20px" />
+              </h3>
+              <span className="font-para text-xl">
+                {projectData?.techUsed?.map((item, index) => (
+                  <span key={index}>{item} , </span>
+                ))}
+              </span>
+            </div>
             <div className="my-4 py-2">
-              <h3 className="text-2xl"> <SplitText
+              <h3 className="text-2xl">
+                {" "}
+                <SplitText
                   delay={40}
                   duration={0.6}
                   ease="power3.out"
@@ -175,7 +217,8 @@ const CaseStudy = () => {
                   threshold={0.1}
                   className="text-left"
                   text={projectData?.context?.title}
-                /></h3>
+                />
+              </h3>
               <ul className="text-xl font-para p-4">
                 {projectData?.context?.goals.map((item, index) => (
                   <li
@@ -196,7 +239,9 @@ const CaseStudy = () => {
               </ul>
             </div>
             <div className="my-4 py-2">
-              <h3 className="text-2xl">  <SplitText
+              <h3 className="text-2xl">
+                {" "}
+                <SplitText
                   delay={40}
                   duration={0.6}
                   ease="power3.out"
@@ -206,7 +251,8 @@ const CaseStudy = () => {
                   threshold={0.1}
                   className="text-left"
                   text={projectData?.process?.title}
-                /></h3>
+                />
+              </h3>
               <ul className="text-xl font-para p-4">
                 {projectData?.process?.challenge.map((item, index) => (
                   <li
@@ -228,7 +274,9 @@ const CaseStudy = () => {
               </ul>
             </div>
             <div className="my-4 py-2">
-              <h3 className="text-2xl">  <SplitText
+              <h3 className="text-2xl">
+                {" "}
+                <SplitText
                   delay={40}
                   duration={0.6}
                   ease="power3.out"
@@ -238,7 +286,8 @@ const CaseStudy = () => {
                   threshold={0.1}
                   className="text-left"
                   text={projectData?.myContribution?.title}
-                /></h3>
+                />
+              </h3>
               <ul className="text-xl font-para p-4">
                 {projectData?.myContribution?.myrole.map((item, index) => (
                   <li
@@ -293,7 +342,7 @@ const CaseStudy = () => {
             </div>
             <div className="my-4 py-2 h-auto relative min-h-screen">
               <h3 className="text-2xl pb-12">
-               <SplitText
+                <SplitText
                   delay={40}
                   duration={0.6}
                   ease="power3.out"
@@ -302,7 +351,7 @@ const CaseStudy = () => {
                   to={{ opacity: 1, y: 0 }}
                   threshold={0.1}
                   className="text-left"
-                  text=  {projectData?.visualgallery?.title}
+                  text={projectData?.visualgallery?.title}
                 />
               </h3>
               <div className="h-auto overflow-hidden">

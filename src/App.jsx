@@ -15,6 +15,7 @@ import "aos/dist/aos.css"; // Import AOS styles
 import CaseStudy from "./components/projects/CaseStudy";
 import ScrollToTop from "./components/ScrollTopBtn";
 import { ToastContainer } from "react-toastify";
+import NotFound from "./components/NotFound";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -45,6 +46,7 @@ function App() {
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/projects/case-study/:slug" element={<CaseStudy />} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
         <Footer />
       </div>

@@ -62,7 +62,7 @@ const AboutMe = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log(profileData);
+
   return (
     <div
       className={`flex justify-center flex-col gap-24 items-center w-full py-20 shadow-[inset_0_3px_1px_rgba(255,255,255,0.4),inset_0_0px_0px_rgba(255,255,255,0.4)] `}

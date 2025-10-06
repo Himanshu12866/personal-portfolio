@@ -226,7 +226,7 @@ const portfolioData = [
                 iconlarge: bootstrap_large,
                 category: "frontend",
             },
-             {
+            {
                 name: "Git",
                 iconsmall: git,
                 iconlarge: git_large,
@@ -251,7 +251,7 @@ const portfolioData = [
                 iconlarge: aws_large,
                 category: "tools",
             },
-           
+
             {
                 name: "Illustrator",
                 iconsmall: adobe_ai,
@@ -259,22 +259,22 @@ const portfolioData = [
                 category: "tools",
             },
             {
-                name:"NextJs",
-                iconsmall:nextJs,
-                iconlarge:nextJs,
-                category:"learning"
+                name: "NextJs",
+                iconsmall: nextJs,
+                iconlarge: nextJs,
+                category: "learning"
             },
             {
-                name:"React Native",
-                   iconsmall: reactjs,
+                name: "React Native",
+                iconsmall: reactjs,
                 iconlarge: reactlogo,
-                category:"learning"
+                category: "learning"
             },
             {
-                name:"TypeScript",
-                iconsmall:typescript,
-                iconlarge:typescript,
-                category:"learning"
+                name: "TypeScript",
+                iconsmall: typescript,
+                iconlarge: typescript,
+                category: "learning"
             },
         ],
     },
@@ -319,8 +319,8 @@ const portfolioData = [
                             "MongoDB",
                             "Tailwind CSS",
                         ],
-                        projectLink: "",
-                        projectCaseStudyLink: "",
+                        projectLink: "https://livoncustomer-dev.novatales.com/",
+                        projectCaseStudyLink: "/projects/case-study/livvon-customer-portal",
                         myContribution: [
                             "Developed product listing, cart, and checkout features",
                             "Implemented live inventory tracking with MongoDB",
@@ -340,13 +340,21 @@ const portfolioData = [
                             "MongoDB",
                             "Tailwind CSS",
                         ],
-                        projectLink: "",
-                        projectCaseStudyLink: "",
+                        projectLink: "https://drbookwebapp-frontend.onrender.com/",
+                        projectCaseStudyLink: "/projects/case-study/dr-appointment-webapp",
                         myContribution: [
                             "Designed responsive UI with React & Tailwind CSS",
-                            "Integrated JWT-based user, doctor & admin login",
-                            "Integrated JWT-based user, doctor & admin login",
-                            "Developed admin panel for managing doctors & users",
+                            "Integrated JWT-based user, doctor & admin login","Developed admin panel for managing doctors & users",
+                            `Enabled 
+patients 
+to 
+easily 
+register, 
+
+and 
+book 
+appointments.`,
+                            
                         ],
                     },
                 ],
@@ -441,9 +449,9 @@ const portfolioData = [
             // Project 
             {
                 category: "Professional",
-                tag: "in progress / underway",
+                tag: "in progress",
                 slug: "livvon-customer-portal",
-                techUsed: [""],
+                techUsed: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Tailwind CSS", "Material UI", "AWS", "SCSS"],
                 header: {
                     title: "Livvon Comforts – E-Commerce Web Application",
                     description: "Livvon Comforts is a modern e-commerce web application designed to provide customers with a seamless shopping experience for mattresses, pillows, and related comfort products. Inspired by leading platforms like Amazon and Flipkart, the project focuses on delivering a clean, reliable, and user-friendly interface where customers can explore, purchase, and manage their comfort essentials with ease.",
@@ -583,7 +591,7 @@ const portfolioData = [
             },
             {
                 category: "Professional",
-                tag: "in progress / underway",
+                tag: "in progress",
                 slug: "livvon-admin-portal",
                 techUsed: ["React", "Tailwind CSS", "Context API", "Node.js", "Express", "MongoDB", "JWT", "OTP Authentication"],
                 header: {
@@ -712,7 +720,7 @@ const portfolioData = [
                 category: "Professional",
                 tag: "live",
                 slug: "magaid-hospitals",
-                techUsed: ["React", "Tailwind CSS", "EmailJS / Form Handling", "Vercel"],
+                techUsed: ["React", "Tailwind CSS", "EmailJS / Form Handling", "Material UI"],
                 header: {
                     title: "MagAid Hospitals – Official Website & Appointment Booking",
                     description: "MagAid Hospitals website is a static yet fully functional platform designed to showcase the hospital’s services, share essential information, and allow patients to book appointments seamlessly. With a clean, modern, and responsive design, the website ensures visitors can easily explore hospital details, access service information, and schedule consultations using the integrated appointment form.",
@@ -852,7 +860,7 @@ const portfolioData = [
                 category: "Professional",
                 tag: "live",
                 slug: "conceiva-fertility",
-                techUsed: ["React", "Tailwind CSS", "EmailJS / Form Handling", "Vercel"],
+                techUsed: ["React", "Tailwind CSS", "Material UI", "SCSS",],
                 header: {
                     title: "Conceiva Fertility – Official Website & Appointment Booking",
                     description: "Conceiva Fertility website is a static, responsive platform built to showcase specialized fertility care services for both men and women. The website highlights treatments, facilities, and expertise while providing patients with a seamless way to book appointments online through an integrated form. Its clean, user-friendly design ensures patients can quickly access vital information and connect with the clinic.",

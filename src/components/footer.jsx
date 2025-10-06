@@ -9,7 +9,6 @@ import { Link, useLocation } from "react-router-dom";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import SplitText from "./SplitText";
 import BlurText from "./BlurText";
 const Footer = () => {
   const { darkMode } = useContext(AppContext);
@@ -31,7 +30,7 @@ const Footer = () => {
   return (
     <>
       <footer
-        className={`flex justify-center w-full items-center z-10 pt-12 ps-6 pe-1 overflow-hidden `}
+        className={`flex justify-center w-full items-center z-10 pt-12  overflow-hidden `}
       >
         <div
           style={cardStyle}
@@ -39,42 +38,31 @@ const Footer = () => {
             !darkMode
               ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
               : "bg-transparent  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-          }  flex justify-center w-[98%] z-10 flex-col backdrop-blur-sm 2xl:ps-20 xl:ps-8 lg:ps-16 md:ps-8 overflow-hidden rounded-t-xl`}
+          }  flex justify-center w-11/12  z-10 flex-col items-center backdrop-blur-sm  overflow-hidden rounded-t-xl`}
         >
-          <div className="w-full grid xl:grid-cols-4 sm:grid-cols-2 gap-10 xl:gap-0 2xl:p-12 md:p-10 p-6">
+          <div className=" grid xl:grid-cols-4 sm:grid-cols-2 gap-10 xl:gap-0 2xl:p-12 md:p-10 p-6">
             {/* Left Logo + Info */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 ">
               <Link to="/" className="w-48">
                 <img
-                 
                   src={!darkMode ? dark_logo : light_logo}
                   alt="Logo"
                   className="w-full"
                 />
               </Link>
               <h3 className="text-xl font-medium font-heading">
-                <SplitText
-                  delay={40}
-                  duration={0.6}
-                  ease="power3.out"
-                  splitType="chars"
-                  from={{ opacity: 0, y: 40 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0.1}
-                  className="text-left"
-                  text="Himanshu Kumar Mishra"
-                />
+                Himanshu Kumar Mishra
               </h3>
-              <p className="text-lg font-para font-medium 2xl:pe-28 md:pe-20 pe-14">
+              <div className="text-lg font-para font-medium 2xl:pe-28 md:pe-20 pe-14">
                 <BlurText
                   text="Passionate about building clean and modern UIs & Web Apps"
                   delay={20}
                   animateBy="words"
                   direction="bottom"
                 />
-              </p>
+              </div>
 
-              <p className="text-lg font-para flex items-center gap-2 group">
+              <div className="text-lg font-para flex items-center gap-2 group">
                 <EmailIcon className="group-hover:text-[#f59e0b] transition-all duration-200" />
                 <a
                   href="mailto:manshu010m@gmail.com"
@@ -87,9 +75,9 @@ const Footer = () => {
                     direction="bottom"
                   />
                 </a>
-              </p>
+              </div>
 
-              <p className="text-lg font-para flex items-center gap-2 group">
+              <div className="text-lg font-para flex items-center gap-2 group">
                 <PhoneIcon className="group-hover:text-[#f59e0b] transition-all duration-200" />
                 <a
                   href="tel:+917804825835"
@@ -102,25 +90,11 @@ const Footer = () => {
                     direction="bottom"
                   />
                 </a>
-              </p>
+              </div>
             </div>
             {/* Links */}
-            <div>
-              <h3 className="text-2xl font-heading">
-
-
-                 <SplitText
-                  delay={40}
-                  duration={0.6}
-                  ease="power3.out"
-                  splitType="chars"
-                  from={{ opacity: 0, y: 40 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0.1}
-                  className="text-left"
-                  text="Links"
-                />
-              </h3>
+            <div className="">
+              <h3 className="text-2xl font-heading">Links</h3>
               <ul className="flex flex-col font-medium mt-6 font-heading capitalize text-lg space-y-2">
                 {links.map((item, index) => (
                   <Link
@@ -143,20 +117,8 @@ const Footer = () => {
               </ul>
             </div>
             {/* Expertise */}
-            <div>
-              <h3 className="text-2xl font-heading">
-                 <SplitText
-                  delay={40}
-                  duration={0.6}
-                  ease="power3.out"
-                  splitType="chars"
-                  from={{ opacity: 0, y: 40 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0.1}
-                  className="text-left"
-                  text="Experties"
-                />
-              </h3>
+            <div className="">
+              <h3 className="text-2xl font-heading">Experties</h3>
               <ul className="flex flex-col font-medium mt-6 font-heading text-lg space-y-2">
                 {[
                   "Frontend Developer",
@@ -178,20 +140,8 @@ const Footer = () => {
             </div>
 
             {/* Social + Connect */}
-            <div>
-              <h3 className="text-2xl font-heading">
-                 <SplitText
-                  delay={40}
-                  duration={0.6}
-                  ease="power3.out"
-                  splitType="chars"
-                  from={{ opacity: 0, y: 40 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0.1}
-                  className="text-left"
-                  text="Social"
-                />
-              </h3>
+            <div className="">
+              <h3 className="text-2xl font-heading">Social</h3>
               <ul className="flex flex-col font-medium mt-6 font-heading w-32 text-lg space-y-3">
                 <li>
                   <a
@@ -276,15 +226,14 @@ const Footer = () => {
           </div>
           <div>
             <hr className="border-t border-gray-300 mx-6" />
-            <p className="text-center text-lg flex justify-center items-center font-para m-6">
+            <div className="text-center text-lg flex justify-center items-center font-para m-6">
               <BlurText
-                      text="© 2025 Himanshu | All rights reserved."
-                      delay={15}
-                      animateBy="words"
-                      direction="bottom"
-                    />
-              
-            </p>
+                text="© 2025 Himanshu | All rights reserved."
+                delay={15}
+                animateBy="words"
+                direction="bottom"
+              />
+            </div>
           </div>
         </div>
       </footer>

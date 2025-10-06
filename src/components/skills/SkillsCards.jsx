@@ -6,7 +6,7 @@ import expressdark from "../../assets/images/icons8-express-js-256.png";
 import aws from "../../assets/images/icons8-aws-256.png";
 import aws_dark from "../../assets/images/aws_dark.png";
 import nextJs from "../../assets/images/icons8-nextjs-96 (1).png";
-import next_dark from "../../assets/images/icons8-nextjs-96.png"
+import next_dark from "../../assets/images/icons8-nextjs-96.png";
 import SplitText from "../SplitText";
 const SkillsCards = () => {
   const { darkMode, skills } = useContext(AppContext);
@@ -17,10 +17,9 @@ const SkillsCards = () => {
     skills?.icons?.filter((item) => item.category === "backend") || [];
   const additionalIcons =
     skills?.icons?.filter((item) => item.category === "tools") || [];
-const learningIcons = skills?.icons?.filter((item) => item.category === "learning") || [];
-  useEffect(() => {
-    console.log(skills);
-  }, []);
+  const learningIcons =
+    skills?.icons?.filter((item) => item.category === "learning") || [];
+
   return (
     <>
       <div

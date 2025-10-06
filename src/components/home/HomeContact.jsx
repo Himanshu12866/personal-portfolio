@@ -58,7 +58,7 @@ const HomeContact = () => {
     }
     const dateNow = new Date();
     formData.date = dateNow;
-    console.log("Form submitted:", formData);
+    
     try {
       setLoding(!loading);
       const response = await axios.post("/form.php", formData);

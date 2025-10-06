@@ -12,7 +12,22 @@ const SkillsPage = () => {
     lenisRef?.current?.scrollTo(0); // top of the page
   }, []);
   return (
-    <div>
+    <>
+      <title>Himanshu's Skills | Frontend Expertise & Modern Web Tech</title>
+        <meta
+          name="description"
+          content="Explore Himanshu’s technical skillset: React, Tailwind CSS, JavaScript, Node.js, and modern web technologies. Building interactive, responsive, and creative web solutions."
+        />
+        <meta
+          name="keywords"
+          content="Himanshu, Frontend Developer, Skills, React JS, Tailwind CSS, JavaScript, Node.js, MongoDB, Express, Web Development, Responsive Design, UI/UX, Portfolio"
+        />
+        {/* Open Graph */}
+        <meta property="og:title" content="Himanshu's Skills | Frontend Expertise & Modern Web Tech" />
+        <meta property="og:description" content="Check out Himanshu’s skills in React, Tailwind CSS, JavaScript, Node.js, and other modern web technologies for creative, responsive projects." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourportfolio.com/skills" />
+        <meta property="og:image" content="https://yourportfolio.com/skills-preview.png" />
       <SkillBanner />
       <SkillsAbout />
       <SkillsCards />
@@ -24,7 +39,7 @@ const SkillsPage = () => {
         interactive={true}
         marqueeText="🔁 Repeat 😴 Sleep 💻 Code 🍔 Eat 🔁 Repeat 😴 Sleep 💻 Code 🍔 Eat 🔁 Repeat 😴 Sleep 💻 Code 🍔 Eat"
       />
-    </div>
+    </>
   );
 };
 

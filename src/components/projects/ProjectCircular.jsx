@@ -551,7 +551,7 @@ export default function CircularGallery({
   bend = 20,
   textColor = "#ffffff",
   borderRadius = 0.05,
-  font = "900 30px Sans-serif",
+  font = "900 35px",
   scrollSpeed = 2,
   scrollEase = 0.05,
 }) {
@@ -581,7 +581,7 @@ export default function CircularGallery({
 
   return (
     <div
-      className="w-full h-[600px] overflow-hidden cursor-grab my-32 z-10 active:cursor-grabbing"
+      className="w-full h-[600px] overflow-hidden cursor-grab  my-32 z-10 active:cursor-grabbing"
       ref={containerRef}
     />
   );
