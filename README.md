@@ -14,27 +14,26 @@ Everything here is custom-built using **React**, styled with **Tailwind CSS**, a
 
 ## 📂 Project Structure
 
+```bash
 src/
 │
-├── assets/ # Images, icons, background visuals
-├── components/ # Reusable UI components (Navbar, Footer, ScrollTopBtn, etc.)
-│ ├── home/ # Hero, about me ,  Skills, Projects, Github section ,contact me
-│ ├── home/ # about, experiecce, certificate, education
-│ ├── projects/ # animation Case Studies, Circular Showcase
-│ ├── skills/ # SkillsCards, Animated skill sections
-│ ├── contact/ # social media, contact form
-│ └── 
+├── assets/               # Images, icons, background visuals
+├── components/           # Reusable UI components (Navbar, Footer, ScrollTopBtn, etc.)
+│   ├── home/             # Hero, Skills, Projects, Github section
+│   ├── projects/         # Case Studies, Circular Showcase
+│   ├── skills/           # SkillsCards, Animated skill sections
+│   └── ...
 │
-├── context/ # App context / global state if used
-├── data/ # JSON or JS files storing project and skills data
-├── pages/ # Each route in the portfolio (Home, About, Projects, Skills, Contact)
-│ ├── home/
-│ ├── about/
-│ ├── projects/
-│ ├── skills/
-│ └── contact/
+├── context/              # App context / global state if used
+├── data/                 # JSON or JS files storing project and skills data
+├── pages/                # Each route in the portfolio (Home, About, Projects, Skills, Contact)
+│   ├── home/
+│   ├── about/
+│   ├── projects/
+│   ├── skills/
+│   └── contact/
 │
-└── App.js # Main route handling and layout setup
+└── App.js                # Main route handling and layout setup
 ---
 
 ## 🌈 Pages Overview
