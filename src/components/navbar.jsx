@@ -208,7 +208,7 @@ const Navbar = () => {
               <a href="/" className="flex items-center w-48">
                 <img src={light_logo} alt="logo" />
               </a>
-              <button onClick={() => setMobName(false)}>
+              <button   onClick={() => {setMobName(false);   setDropDown(false);}}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-10 h-10"
@@ -226,7 +226,10 @@ const Navbar = () => {
                   className={`${
                     location.pathname === "/" ? "text-[#f59e0b]" : ""
                   } hover:text-[#f59e0b]   transition-all duration-200`}
-                  onClick={() => setMobName(false)}
+                  onClick={() => {
+                    setMobName(false);
+                    setDropDown(false);
+                  }}
                 >
                   Home
                 </Link>
@@ -235,7 +238,10 @@ const Navbar = () => {
                   className={`${
                     location.pathname.includes("/about") ? "text-[#f59e0b]" : ""
                   } hover:text-[#f59e0b]   transition-all duration-200`}
-                  onClick={() => setMobName(false)}
+                  onClick={() => {
+                    setMobName(false);
+                    setDropDown(false);
+                  }}
                 >
                   About
                 </Link>
@@ -246,20 +252,39 @@ const Navbar = () => {
                       ? "text-[#f59e0b]"
                       : ""
                   } hover:text-[#f59e0b]   transition-all duration-200`}
-                  onClick={() => setMobName(false)}
+                  onClick={() => {
+                    setMobName(false);
+                    setDropDown(false);
+                  }}
                 >
                   Skills
                 </Link>
+                <Link
+                  to="/projects"
+                  className={`${
+                    location.pathname.includes("/skills")
+                      ? "text-[#f59e0b]"
+                      : ""
+                  } hover:text-[#f59e0b]   transition-all duration-200`}
+                  onClick={() => {
+                    setMobName(false);
+                    setDropDown(false);
+                  }}
+                >
+                  All Projects
+                </Link>
                 <li className="flex justify-start flex-col items-start gap-1 relative group">
                   <button
-                    onClick={() => setDropDown(!dropDown)} // mobile toggle
+                    onClick={() => {
+                      setDropDown(!dropDown);
+                    }} // mobile toggle
                     className={`main-nav-links flex justify-center items-center ${
-                      location.pathname.includes("/projects")
+                      location.pathname.includes("/case-study")
                         ? "text-[#f59e0b]"
                         : ""
                     }`}
                   >
-                    Projects{" "}
+                    Project Casestudy
                     <KeyboardArrowDownIcon
                       fontSize="small"
                       className={`ml-1 transition-transform duration-200 ${
@@ -342,7 +367,10 @@ const Navbar = () => {
                   className={`${
                     location.pathname === "/contact" ? "text-[#f59e0b]" : ""
                   } hover:text-[#f59e0b]  transition-all duration-200`}
-                  onClick={() => setMobName(false)}
+                  onClick={() => {
+                    setMobName(false);
+                    setDropDown(false);
+                  }}
                 >
                   Contact Me
                 </Link>
