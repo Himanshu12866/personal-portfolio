@@ -1,4 +1,4 @@
-# 🧭 Hemanshu's Portfolio
+# 🧭 Himanshu's Portfolio
 
 Welcome to my personal developer portfolio — a crafted blend of creativity, technology, and storytelling.  
 This project reflects not just my frontend skills but also the vision I bring into building immersive digital experiences.  
