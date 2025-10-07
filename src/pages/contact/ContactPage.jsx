@@ -8,7 +8,7 @@ const ContactPage = () => {
   const lenisRef = useLenis();
   useEffect(() => {
     lenisRef?.current?.scrollTo(0); // top of the page
-  }, []);
+  }, [lenisRef]);
   return (
     <>
       <title>Contact Himanshu | Web Development Projects & Hiring</title>

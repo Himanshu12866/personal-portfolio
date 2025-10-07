@@ -15,13 +15,6 @@ const Navbar = () => {
   const [dropDown, setDropDown] = useState(false);
   const [perProjects, setPerProjects] = useState([]);
   const [profProjects, setProfProjects] = useState([]);
-  const links = [
-    { name: "home", link: "/" },
-    { name: "about", link: "/about" },
-    { name: "skills", link: "/skills" },
-    { name: "projects", link: "/projects" },
-    { name: "contact", link: "/contact" },
-  ];
   const location = useLocation();
 
   useEffect(() => {

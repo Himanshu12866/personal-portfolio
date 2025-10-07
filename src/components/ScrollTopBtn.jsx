@@ -3,13 +3,8 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { AppContext } from "../context/datacontext";
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [scrollPercent, setScrollPercent] = useState(0);
   const handleScroll = () => {
     const scrollTop = window.scrollY;
-    const docHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = (scrollTop / docHeight) * 100;
-    setScrollPercent(Math.round(scrolled));
     setIsVisible(scrollTop > 200);
   };
   useEffect(() => {
