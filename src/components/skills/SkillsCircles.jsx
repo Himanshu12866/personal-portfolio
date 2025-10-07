@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // import React from 'react'
 // // import { gsap } from "gsap";
 // import nodejs from "../../assets/icons_logos/icons8-nodejs-48.png";
