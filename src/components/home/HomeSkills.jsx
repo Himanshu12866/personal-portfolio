@@ -3,7 +3,6 @@ import { AppContext } from "../../context/datacontext";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import SkillScrollerScrollBoost from "./HomeScrollSkills";
 import { Link } from "react-router-dom";
-import BlurText from "../BlurText";
 import SplitText from "../SplitText";
 const HomeSkills = () => {
   const { darkMode } = useContext(AppContext);

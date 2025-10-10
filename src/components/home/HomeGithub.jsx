@@ -1,15 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../../context/datacontext";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import SplitText from "../SplitText";
 const HomeGithub = () => {
-  const { darkMode, homeData } = useContext(AppContext);
-  const [projects, setProject] = useState([]);
-  useEffect(() => {
-    const allProjects = homeData.find((item) => item.id === 12);
-    const projectsData = allProjects?.projects || null;
-    setProject(projectsData);
-  }, [homeData]);
+  const { darkMode} = useContext(AppContext);
+  
+ 
  
 
   return (

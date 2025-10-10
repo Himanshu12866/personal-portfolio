@@ -994,7 +994,7 @@ appointments.`,
                 header: {
                     title: "Dr. Appointment Booking Web App",
                     description: "A full-stack web application that allows patients to securely register, log in, browse available doctors, and book appointments online. The platform is built with JWT-based authentication, hashed passwords for security, and integrated payment gateway to streamline consultation payments.",
-                    duration: "March 2024 – May 2024",
+                    duration: "July 2024 – November 2024",
                     role: "Full-Stack Developer",
                 },
                 context: {
@@ -1128,7 +1128,7 @@ appointments.`,
                 header: {
                     title: "Doctor & Admin Control Panel",
                     description: "A web application built for administrators and doctors to manage hospital operations. The admin has full control over managing doctors, patients, and appointments, while doctors can log in to view and manage their schedules. The system features secure authentication, CRUD operations, and a responsive dashboard interface.",
-                    duration: "May 2024 – July 2024",
+                    duration: "July 2024 – November 2024",
                     role: "Full-Stack Developer",
                 },
                 context: {
