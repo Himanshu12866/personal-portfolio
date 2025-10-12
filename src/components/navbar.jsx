@@ -46,7 +46,7 @@ const Navbar = () => {
           } rounded-4xl  z-10  md:mx-4 mx-2 backdrop-blur-[5px] `}
         >
           <div className="w-full flex flex-wrap items-center justify-between  xl:px-16 px-8 py-1">
-            <Link to="/" className="flex items-center w-48">
+            <Link to="/" className="flex items-center sm:w-48 w-44">
               <img
                 src={!darkMode ? dark_logo : light_logo}
                 className=""

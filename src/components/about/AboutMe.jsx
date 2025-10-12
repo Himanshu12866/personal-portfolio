@@ -84,7 +84,7 @@ const AboutMe = () => {
           >
             <img
               src={profileData.pic || about_pic}
-              alt="about page illustration"
+              alt="about page illustration" className="rounded-xl "
             />
           </div>
           <div

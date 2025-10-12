@@ -14,7 +14,7 @@ const HomeGithub = () => {
 
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full py-20 `}
+      className={`flex justify-center flex-col gap-24 items-center w-full py-20  overflow-hidden`}
     >
       <h2 className="text-4xl font-bold">
         <SplitText
