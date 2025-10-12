@@ -38,7 +38,9 @@ const HomeGithub = () => {
         }`}
       >
         <div className="md:pt-8 pt-3 flex justify-center items-center">
-          <img
+          <img    width="auto"
+                  height="auto"
+                  loading="lazy"
             src={`https://github-profile-trophy.vercel.app/?username=himanshu12866&theme=${
               darkMode ? "dracula" : "flat"
             }&margin-w=15&margin-h=15`}
@@ -53,6 +55,7 @@ const HomeGithub = () => {
             }&locale=en&hide_border=false&order=1`}
             height="400"
             width=""
+            loading="lazy"
             className="w-full"
             alt="stats graph"
           />
@@ -60,6 +63,7 @@ const HomeGithub = () => {
             className="w-full"
             height="400"
             width=""
+            loading="lazy"
             src={`https://github-readme-stats.vercel.app/api/top-langs?username=himanshu12866&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=${
               darkMode ? "dracula" : "flat"
             }&hide_border=false&order=2`}
@@ -68,7 +72,9 @@ const HomeGithub = () => {
         </div>
         <div className="md:p-4 flex justify-center items-center">
           <img
-            alt="commit graph"
+            alt="commit graph"    width="auto"
+                  height="auto"
+                  loading="lazy"
             align="center" className="md:pb-8 pb-3"
             src={`https://github-readme-activity-graph.vercel.app/graph?username=himanshu12866&theme=${
               darkMode ? "dracula" : "flat"

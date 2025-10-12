@@ -55,6 +55,9 @@ const AboutCertificate = () => {
                   data-aos="fade-in"
                   src={item.logo}
                   alt="novatales logo"
+                  width="auto"
+                  height="auto"
+                  loading="lazy"
                   className=" brightness-200"
                 />
               </div>
@@ -160,7 +163,7 @@ const AboutCertificate = () => {
                     className="w-12 flex justify-center items-center"
                   >
                     <img
-                      data-aos="zoom-in"
+                      data-aos="zoom-in"    
                       data-aos-delay={50 * index}
                       src={
                         item.name === "Express.js"

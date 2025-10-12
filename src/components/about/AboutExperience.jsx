@@ -62,7 +62,9 @@ const AboutExperience = () => {
               } lg:w-4/12 flex flex-col gap-4 p-2   `}
             >
               <div className="flex justify-center items-center">
-                <img data-aos="fade-in" src={item.logo} alt="novatales logo" />
+                <img data-aos="fade-in" src={item.logo}    width="auto"
+                  height="auto"
+                  loading="lazy" alt="novatales logo" />
               </div>
               <div className="flex flex-row gap-3 pointer-events-auto mt-4 text-xl sm:ps-6 font-para font-medium">
                 <h3>

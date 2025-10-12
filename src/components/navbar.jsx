@@ -51,6 +51,9 @@ const Navbar = () => {
                 src={!darkMode ? dark_logo : light_logo}
                 className=""
                 alt="Flowbite Logo"
+                width="192px"
+                height="auto"
+                loading="lazy"
               />
             </Link>
             <div
@@ -213,7 +216,11 @@ const Navbar = () => {
           >
             <div className="flex justify-between sm:mx-8 mx-4 mt-2">
               <a href="/" className="flex items-center w-48">
-                <img src={light_logo} alt="logo" />
+                <img src={light_logo} alt="logo" 
+                width="192px"
+                height="auto"
+                loading="lazy"
+                 />
               </a>
               <button onClick={() => setMobName(false)}>
                 <svg

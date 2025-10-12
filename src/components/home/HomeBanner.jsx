@@ -133,7 +133,9 @@ const HomeBanner = () => {
         </div>
         <div className="flex lg:justify-end justify-center lg:order-2 order-1 w-full">
           <img
-            src={main_pic}
+            src={main_pic}    width="auto"
+                  height="auto"
+                  loading="lazy"
             alt="personal photo_"
             className={`${
               !darkMode

@@ -145,6 +145,9 @@ const CaseStudy = () => {
                 src={projectData?.image}
                 className="rounded-xl"
                 alt={projectData?.text}
+                   width="auto"
+                  height="auto"
+                  loading="lazy"
               />
             </div>
             <p className="text-2xl font-para">

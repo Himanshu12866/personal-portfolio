@@ -215,6 +215,9 @@ export default function Masonry({
         >
           <img
             src={items[boxIndex].img}
+               width="auto"
+                  height="auto"
+                  loading="lazy"
             alt="modal-img"
             style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", borderRadius: 20 }}
           />

@@ -42,11 +42,10 @@ const SkillsCards = () => {
           {frontendIcons.map((icon, index) => (
             <Tilt
               key={index}
-              className={`background-stripes parallax-effect-glare-scale  flex flex-col justify-between gap-5 pt-4 z-[3] rounded-[20px] relative  md:pb-2 backdrop-blur-sm ${
-                !darkMode
-                  ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-                  : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
+              className={`background-stripes parallax-effect-glare-scale  flex flex-col justify-between gap-5 pt-4 z-[3] rounded-[20px] relative  md:pb-2 backdrop-blur-sm ${!darkMode
+                ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                }`}
               perspective={500}
               glareEnable={true}
               glareMaxOpacity={0.45}
@@ -58,7 +57,10 @@ const SkillsCards = () => {
                   data-aos="zoom-in"
                   data-aos-delay={50 * index}
                   className=" w-20"
-                  alt="react-logo"
+                  alt={icon.name}
+                  width="auto"
+                  height="auto"
+                  loading="lazy"
                 />
               </div>
               <h3 className="py-3 text-center md:text-2xl xl:text-3xl text-xl">
@@ -88,11 +90,10 @@ const SkillsCards = () => {
           {BackendIcons.map((icon, index) => (
             <Tilt
               key={index}
-              className={`background-stripes parallax-effect-glare-scale  flex flex-col justify-between gap-5 pt-4 z-[3] rounded-[20px] relative  md:pb-4 backdrop-blur-sm ${
-                !darkMode
-                  ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-                  : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
+              className={`background-stripes parallax-effect-glare-scale  flex flex-col justify-between gap-5 pt-4 z-[3] rounded-[20px] relative  md:pb-4 backdrop-blur-sm ${!darkMode
+                ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                }`}
               perspective={500}
               glareEnable={true}
               glareMaxOpacity={0.45}
@@ -110,7 +111,10 @@ const SkillsCards = () => {
                       : icon.iconlarge
                   }
                   className="md:w-24 md:h-24 w-20"
-                  alt="react-logo"
+                  width="auto"
+                  height="auto"
+                  loading="lazy"
+                  alt={icon.name}
                 />
               </div>
               <h3 className="py-3 text-center md:text-2xl xl:text-3xl text-xl">
@@ -140,11 +144,10 @@ const SkillsCards = () => {
           {additionalIcons.map((icon, index) => (
             <Tilt
               key={index}
-              className={`background-stripes parallax-effect-glare-scale  flex flex-col justify-between gap-5 pt-4 z-[3] rounded-[20px] relative  md:pb-4 backdrop-blur-sm ${
-                !darkMode
-                  ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-                  : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
+              className={`background-stripes parallax-effect-glare-scale  flex flex-col justify-between gap-5 pt-4 z-[3] rounded-[20px] relative  md:pb-4 backdrop-blur-sm ${!darkMode
+                ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                }`}
               perspective={500}
               glareEnable={true}
               glareMaxOpacity={0.45}
@@ -162,7 +165,10 @@ const SkillsCards = () => {
                       : icon.iconlarge
                   }
                   className="md:w-24 md:h-24 w-20"
-                  alt="react-logo"
+                  alt={icon.name}
+                  width="auto"
+                  height="auto"
+                  loading="lazy"
                 />
               </div>
               <h3 className="py-3 text-center md:text-2xl xl:text-3xl text-xl">
@@ -192,11 +198,10 @@ const SkillsCards = () => {
           {learningIcons.map((icon, index) => (
             <Tilt
               key={index}
-              className={`background-stripes parallax-effect-glare-scale  flex flex-col justify-between gap-5 pt-4 z-[3] rounded-[20px] relative  md:pb-4 backdrop-blur-sm ${
-                !darkMode
-                  ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
-                  : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              }`}
+              className={`background-stripes parallax-effect-glare-scale  flex flex-col justify-between gap-5 pt-4 z-[3] rounded-[20px] relative  md:pb-4 backdrop-blur-sm ${!darkMode
+                ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
+                : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
+                }`}
               perspective={500}
               glareEnable={true}
               glareMaxOpacity={0.45}
@@ -213,8 +218,11 @@ const SkillsCards = () => {
                         : next_dark
                       : icon.iconlarge
                   }
+                  width="auto"
+                  height="auto"
+                  loading="lazy"
                   className="md:w-24 md:h-24 w-20"
-                  alt="react-logo"
+                  alt={icon.name}
                 />
               </div>
               <h3 className="py-3 text-center md:text-2xl xl:text-3xl text-xl">

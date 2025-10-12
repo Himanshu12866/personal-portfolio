@@ -44,7 +44,8 @@ const Footer = () => {
             {/* Left Logo + Info */}
             <div className="flex flex-col gap-4 ">
               <Link to="/" className="w-48">
-                <img
+                <img loading="lazy" width="192px"
+                height="auto"
                   src={!darkMode ? dark_logo : light_logo}
                   alt="Logo"
                   className="w-full"
