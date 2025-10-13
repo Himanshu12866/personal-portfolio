@@ -7,8 +7,8 @@ Everything here is custom-built using **React**, styled with **Tailwind CSS**, a
 ---
 
 ## 🚀 Live Demo
-🔗 **[Visit My Portfolio](https://jolly-hotteok-ce0b8c.netlify.app/)**  
-*(Deployed on  Netlify for smooth CI/CD experience)*
+🔗 **[Visit My Portfolio](https://hemanshu-mishra.vercel.app/)**  
+*(Deployed on  Vercel for smooth CI/CD experience)*
 
 ---
 
