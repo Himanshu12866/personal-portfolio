@@ -70,7 +70,7 @@ Everything here is custom-built using **React**, styled with **Tailwind CSS**, a
 | Frontend        | React          
 | Styling         | Tailwind CSS, Custom CSS utilities , MUI        |
 | Animations      | Framer Motion, Lenis , GSAP                  |
-| Deployment      |  Netlify                           |
+| Deployment      | Vercel                           |
 | Version Control | Git + GitHub                               |
 | Icons           | MUI Icons                          |
 
