@@ -162,5 +162,6 @@ Case Study Page
 
 https://codepen.io/valencia123/pen/eYjpeME
 https://imagekit.io/format-converter/convert-to-webp/
+https://www.svgviewer.dev/
 
 ✅ This structure ensures your portfolio looks **professional, detailed, and recruiter-friendly**, with proper case studies for projects.
