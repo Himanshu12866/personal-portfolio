@@ -208,7 +208,12 @@ const Navbar = () => {
               <a href="/" className="flex items-center w-48">
                 <img src={light_logo} alt="logo" />
               </a>
-              <button   onClick={() => {setMobName(false);   setDropDown(false);}}>
+              <button
+                onClick={() => {
+                  setMobName(false);
+                  setDropDown(false);
+                }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-10 h-10"
@@ -301,7 +306,7 @@ const Navbar = () => {
         transition-all duration-300 ease-in-out 
         ${
           !darkMode
-            ? "bg-[rgba(245,245,245,1)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_1px_2px,rgba(0,0,0,0.08)_0px_2px_4px,rgba(0,0,0,0.07)_0px_4px_8px,rgba(0,0,0,0.07)_0px_8px_16px,rgba(0,0,0,0.05)_0px_16px_32px,rgba(0,0,0,0.02)_0px_32px_64px]"
+            ? "bg-[#000000c9] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_1px_2px,rgba(0,0,0,0.08)_0px_2px_4px,rgba(0,0,0,0.07)_0px_4px_8px,rgba(0,0,0,0.07)_0px_8px_16px,rgba(0,0,0,0.05)_0px_16px_32px,rgba(0,0,0,0.02)_0px_32px_64px]"
             : "bg-[#000000c9] rounded-xl shadow-[0_0_12px_rgba(0,255,255,0.6)]"
         } backdrop-blur-[10px] px-6 py-5 z-50`}
                     >

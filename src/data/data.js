@@ -307,25 +307,28 @@ const portfolioData = [
                 title: "Projects",
                 projects: [
                     {
-                        projectType: "Company Porject",
+                        projectType: "Personal Porject",
                         projectId: 121,
-                        projectName: "Livvon Comforts",
+                        projectName: "Synk Chat App",
                         projectDesc:
-                            "A real-time e-commerce web app like Amazon with product management, cart, checkout, payment, and live inventory updates & Admin control.",
+                            "A real-time, full-stack chat application enabling instant, persistent, one-on-one, and group communication between users. Includes secure authentication and an intuitive user interface.",
                         projectStacks: [
                             "ReactJS",
                             "NodeJS",
                             "Material UI",
                             "MongoDB",
+                            "Express.js",
                             "Tailwind CSS",
+                            "DaisyUI",
+                            "Socket.io"
                         ],
-                        projectLink: "https://livoncustomer-dev.novatales.com/",
-                        projectCaseStudyLink: "/projects/case-study/livvon-customer-portal",
+                        projectLink: "https://synk-chat-five.vercel.app/",
+                        projectCaseStudyLink: "/projects/case-study/synk-chat-app",
                         myContribution: [
-                            "Developed product listing, cart, and checkout features",
-                            "Implemented live inventory tracking with MongoDB",
-                            "Integrated Razorpay for payments",
-                            "Built admin dashboard for CRUD operations",
+                            "Engineered secure real-time messaging with Socket.IO",
+                            "Developed JWT authentication for protected user sessions",
+                            "Built responsive chat UI using React",
+                            "Implemented scalable data persistence with MongoDB",
                         ],
                     },
                     {
@@ -344,17 +347,8 @@ const portfolioData = [
                         projectCaseStudyLink: "/projects/case-study/dr-appointment-webapp",
                         myContribution: [
                             "Designed responsive UI with React & Tailwind CSS",
-                            "Integrated JWT-based user, doctor & admin login","Developed admin panel for managing doctors & users",
-                            `Enabled 
-patients 
-to 
-easily 
-register, 
-
-and 
-book 
-appointments.`,
-                            
+                            "Integrated JWT-based user, doctor & admin login", "Developed admin panel for managing doctors & users",
+                            `Enabled patients to easily register, and book appointments.`,
                         ],
                     },
                 ],
@@ -986,6 +980,155 @@ appointments.`,
             },
 
             //Personal Projects 
+            {
+                "category": "Personal",
+                "tag": "Live",
+                "slug": "synk-chat-app",
+                "techUsed": [
+                    "React",
+                    "Node.js",
+                    "Express",
+                    "MongoDB Atlas",
+                    "Socket.io",
+                    "Tailwind CSS",
+                    "JWT Authentication",
+                    "bcrypt",
+                    "DaisyUI",
+                    "Context API",
+                    "Vercel (Frontend)",
+                    "Render (Backend)"
+                ],
+                "header": {
+                    "title": "Synk Chat Application",
+                    "description": "A full-stack, real-time communication platform (WhatsApp-style) engineered for instant, secure messaging. Features include end-to-end encryption (E2EE), multi-type media sharing, advanced UX with alphabetical contacts, archiving, and 36+ customizable themes.",
+                    "duration": "July 2024 – November 2024",
+                    "role": "Full-Stack Developer (Solo Project)"
+                },
+                "context": {
+                    "title": "Problem Statement / Intention",
+                    "goals": [
+                        "Architect and deploy a feature-rich, full-stack application that handles high-performance real-time communication.",
+                        "Implement robust, multilayered security, including JWT-mandated access and End-to-End Encryption (E2EE) for message content.",
+                        "Deliver an intuitive and responsive user experience with modern features like contact organization and media sharing (images, docs, audio).",
+                        "Enable extensive user customization by integrating 36+ thematic options via DaisyUI.",
+                        "Utilize Socket.io for persistent, real-time, bidirectional messaging between users."
+                    ]
+                },
+                "process": {
+                    "title": "Process & Challenges",
+                    "challenge": [
+                        "Integrating Socket.io into the Express backend for low-latency, real-time message broadcasting and status updates.",
+                        "Implementing E2EE and robust JWT-based authentication combined with bcrypt for user session and data security.",
+                        "Developing efficient file handling and categorization for multi-format media sharing (images, docs, audio, location, links).",
+                        "Designing a highly responsive UI with advanced features like alphabetical contact sorting, archiving, and bookmarking.",
+                        "Managing complex global state (Context API) to support 36+ dynamic themes via DaisyUI."
+                    ]
+                },
+                "myContribution": {
+                    "title": "My Contribution",
+                    "myrole": [
+                        "Engineered the entire **Socket.io-based real-time communication layer** for instant message delivery.",
+                        "Developed the **secure authentication pipeline** (login/signup) using **JWT** for token generation and **bcrypt** for password hashing.",
+                        "Implemented **End-to-End Encryption (E2EE)** logic to secure all chat content.",
+                        "Designed and built the **fully responsive frontend** using React, Tailwind CSS, and Context API.",
+                        "Created backend APIs for handling, categorizing, and serving **multi-format media** (images, docs, audio, links, location).",
+                        "Added advanced UX features: **alphabetical contact tabs**, **bookmark tab**, and **archive tab**.",
+                        "Integrated **DaisyUI** to provide users with **36+ theme customization** options.",
+                        "Managed scalable message and user data storage using a **MongoDB Atlas** cluster."
+                    ]
+                },
+                "outcomes": {
+                    "title": "Outcomes",
+                    "results": [
+                        "Successfully delivered a secure, highly scalable, full-stack, real-time chat application with a professional feature set.",
+                        "Validated proficiency in architecting and deploying complex MERN-stack applications, hosted on **Vercel** (frontend) and **Render** (backend).",
+                        "Achieved robust security through the mandatory **JWT/bcrypt** system and the implementation of **E2EE**.",
+                        "Provided a superior and customizable user experience featuring fast API fetching, multi-media sharing, and extensive thematic control.",
+                        "Demonstrated the ability to integrate advanced real-time libraries (**Socket.io**) and modern styling frameworks (**Tailwind/DaisyUI**) effectively."
+                    ]
+                },
+
+                visualgallery: {
+                    title: "Visual Gallery",
+                    screenShots: [
+                        {
+                            title: "",
+                            image: dr_web_cust_1,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_2,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_3,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_4,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_5,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_6,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_7,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_8,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_9,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_10,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_11,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_12,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_13,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_14,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_15,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_16,
+                        },
+                        {
+                            title: "",
+                            image: dr_web_cust_17,
+                        },
+
+                    ],
+                },
+                navigation: {
+                    demo: "https://drbookwebapp-frontend.onrender.com/",
+                    repo: "https://github.com/Himanshu12866/drbookwebapp"
+                },
+                image: dr_web_cust_3,
+                text: "Synk Chat App",
+            },
             {
                 category: "Personal",
                 tag: "Live",
