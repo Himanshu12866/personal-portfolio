@@ -9,7 +9,7 @@ import React, {
 import { gsap } from "gsap";
 import MuiMasonry from "@mui/lab/Masonry"; // aliased to avoid naming collision
 import Box from "@mui/material/Box";
-import { AppContext , darkMode} from "../../context/datacontext";
+import { AppContext} from "../../context/datacontext";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import CloseIcon from "@mui/icons-material/Close";
