@@ -11,15 +11,15 @@ import gcp from "../../assets/icons_logos/icons8-google-cloud-48.png";
 import mui from "../../assets/icons_logos/icons8-material-ui-48.png";
 import git from "../../assets/icons_logos/icons8-git-48.png";
 import sass from "../../assets/icons_logos/icons8-sass-48.png"
-
+import express_light from "../../assets/icons_logos/icons8-express-js-48.png"
 import bootstrap from "../../assets/icons_logos/icons8-bootstrap-48.png"
 import { AppContext } from "../../context/datacontext";
 
 const SkillsOrbit = () => {
-    const { darkMode } = useContext(AppContext)
+    const { darkMode} = useContext(AppContext)
     const icons = [sass, git, gcp, postman];
     const icons3 = [mui, javascript, css, bootstrap];
-    const icons2 = [nodejs, express, mongodb, tailwind];
+    const icons2 = [nodejs, darkMode ?  express_light : express , mongodb, tailwind];
 
     return (
         <div

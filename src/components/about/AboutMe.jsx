@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useContext } from "react";
 import { AppContext } from "../../context/datacontext";
-import about_pic from "../../assets/images/about_pic.png";
+import about_pic from "../../assets/images/about_pic-01-01.png";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import VerifiedIcon from "@mui/icons-material/Verified";
@@ -9,6 +9,7 @@ import express_light from "../../assets/icons_logos/icons8-express-js-48.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BlurText from "../BlurText";
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 const AboutMe = () => {
   const { darkMode, aboutData, skills } = useContext(AppContext);
@@ -117,9 +118,9 @@ const AboutMe = () => {
                   darkMode ? "text-black" : ""
                 } rounded-[10px] font-para  sm:w-48 w-full  font-medium sm:px-8 px-4 py-3 opacity-100 hover:opacity-60 transition-all hover:duration-200 shadow-[rgba(158,158,158,0.69)_0px_0.706592px_0.706592px_-0.583333px,rgba(158,158,158,0.68)_0px_1.80656px_1.80656px_-1.16667px,rgba(158,158,158,0.65)_0px_3.62176px_3.62176px_-1.75px,rgba(158,158,158,0.61)_0px_6.8656px_6.8656px_-2.33333px,rgba(158,158,158,0.52)_0px_13.6468px_13.6468px_-2.91667px,rgba(158,158,158,0.3)_0px_30px_30px_-3.5px,rgba(255,255,255,1)_0px_3px_1px_0px_inset]`}
               >
-                <a href="/">
+                <Link to="/contact">
                   Contact Me <ArrowOutwardIcon />
-                </a>
+                </Link>
               </button>
             </div>
           </div>

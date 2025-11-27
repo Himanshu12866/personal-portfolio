@@ -7,7 +7,7 @@ const HomeQuote = () => {
     >
       
       <BlurText
-        text="I craft clean UIs, build scalable web apps, and make ideas click into code. From design to deployment, I don’t just develop — I deliver."
+        text="I craft clean UIs, build scalable web apps, and make ideas click into code. From design to deployment, I don’t just develop - I deliver."
         delay={50}
         animateBy="words"
         direction="bottom"

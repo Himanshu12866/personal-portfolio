@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 // import fallback from "../../assets/images/home_banner_fallback.png";
 // import home_video from "../../assets/video/home_banner.mp4";
-import main_pic from "../../assets/images/home_pic-01.png";
+import main_pic from "../../assets/images/home_pic-01-02.png";
 import { AppContext } from "../../context/datacontext";
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
@@ -131,7 +131,7 @@ const HomeBanner = () => {
             </div>
           </div>
         </div>
-        <div className="flex lg:justify-end justify-center lg:order-2 order-1 w-full">
+        <div className="flex lg:justify-end justify-center lg:order-2 order-1 xl:w-3/4">
           <img
             src={main_pic}
             alt="personal photo_"

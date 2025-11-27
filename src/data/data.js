@@ -153,6 +153,37 @@ import dr_web_admin_8 from "../assets/images/DrWebAdmin/dr_web_adm_8_converted.w
 import dr_web_admin_9 from "../assets/images/DrWebAdmin/dr_web_adm_9_converted.webp";
 import dr_web_admin_10 from "../assets/images/DrWebAdmin/dr_web_adm_10_converted.webp";
 
+
+
+// Synk Web Chat Application
+
+import synk_chat_1 from "../assets/images/synkchat/synk_chat_1.webp";
+import synk_chat_2 from "../assets/images/synkchat/synk_chat_2.webp";
+import synk_chat_3 from "../assets/images/synkchat/synk_chat_3.webp";
+import synk_chat_4 from "../assets/images/synkchat/synk_chat_4.webp";
+import synk_chat_5 from "../assets/images/synkchat/synk_chat_5.webp";
+import synk_chat_6 from "../assets/images/synkchat/synk_chat_6.webp";
+import synk_chat_7 from "../assets/images/synkchat/synk_chat_7.webp";
+import synk_chat_8 from "../assets/images/synkchat/synk_chat_8.webp";
+import synk_chat_9 from "../assets/images/synkchat/synk_chat_9.webp";
+import synk_chat_10 from "../assets/images/synkchat/synk_chat_10.webp";
+import synk_chat_11 from "../assets/images/synkchat/synk_chat_11.webp";
+import synk_chat_12 from "../assets/images/synkchat/synk_chat_12.webp";
+import synk_chat_13 from "../assets/images/synkchat/synk_chat_13.webp";
+import synk_chat_14 from "../assets/images/synkchat/synk_chat_14.webp";
+import synk_chat_15 from "../assets/images/synkchat/synk_chat_15.webp";
+import synk_chat_16 from "../assets/images/synkchat/synk_chat_16.webp";
+import synk_chat_17 from "../assets/images/synkchat/synk_chat_17.webp";
+import synk_chat_18 from "../assets/images/synkchat/synk_chat_18.webp";
+import synk_chat_19 from "../assets/images/synkchat/synk_chat_19.webp";
+import synk_chat_20 from "../assets/images/synkchat/synk_chat_20.webp";
+import synk_chat_21 from "../assets/images/synkchat/synk_chat_21.webp";
+import synk_chat_22 from "../assets/images/synkchat/synk_chat_22.webp";
+import synk_chat_23 from "../assets/images/synkchat/synk_chat_23.webp";
+import synk_chat_24 from "../assets/images/synkchat/synk_chat_24.webp";
+import synk_chat_25 from "../assets/images/synkchat/synk_chat_25.webp";
+
+
 const portfolioData = [
     // Skills Data and icons
     {
@@ -449,7 +480,7 @@ const portfolioData = [
                 header: {
                     title: "Livvon Comforts – E-Commerce Web Application",
                     description: "Livvon Comforts is a modern e-commerce web application designed to provide customers with a seamless shopping experience for mattresses, pillows, and related comfort products. Inspired by leading platforms like Amazon and Flipkart, the project focuses on delivering a clean, reliable, and user-friendly interface where customers can explore, purchase, and manage their comfort essentials with ease.",
-                    duration: "Navember - May-2025",
+                    duration: "Navember 2024 - May-2025",
                     role: "Frontend Developer",
                 },
                 context: {
@@ -591,7 +622,7 @@ const portfolioData = [
                 header: {
                     title: "Livvon Admin Portal – Centralized Management System",
                     description: "The Livvon Admin Portal is a centralized application built to manage the Livvon Customer Platform. It provides administrators with powerful tools to maintain products, track orders, and manage customer data efficiently. Alongside these core operations, the portal also features secure OTP-based login and a role-based access system (Superadmin, Admin, Member) to ensure structured control and smooth collaboration within the team.",
-                    duration: "April - July 2025",
+                    duration: "April 2025 - July 2025",
                     role: "Full-Stack Developer",
                 },
                 context: {
@@ -718,7 +749,7 @@ const portfolioData = [
                 header: {
                     title: "MagAid Hospitals – Official Website & Appointment Booking",
                     description: "MagAid Hospitals website is a static yet fully functional platform designed to showcase the hospital’s services, share essential information, and allow patients to book appointments seamlessly. With a clean, modern, and responsive design, the website ensures visitors can easily explore hospital details, access service information, and schedule consultations using the integrated appointment form.",
-                    duration: "June – August 2025",
+                    duration: "June 2025 – August 2025",
                     role: "Frontend Developer",
                 },
                 context: {
@@ -858,7 +889,7 @@ const portfolioData = [
                 header: {
                     title: "Conceiva Fertility – Official Website & Appointment Booking",
                     description: "Conceiva Fertility website is a static, responsive platform built to showcase specialized fertility care services for both men and women. The website highlights treatments, facilities, and expertise while providing patients with a seamless way to book appointments online through an integrated form. Its clean, user-friendly design ensures patients can quickly access vital information and connect with the clinic.",
-                    duration: "April - May 2025",
+                    duration: "April 2025 - May 2025",
                     role: "Frontend Developer",
                 },
                 context: {
@@ -984,6 +1015,7 @@ const portfolioData = [
                 "category": "Personal",
                 "tag": "Live",
                 "slug": "synk-chat-app",
+
                 "techUsed": [
                     "React",
                     "Node.js",
@@ -995,56 +1027,70 @@ const portfolioData = [
                     "bcrypt",
                     "DaisyUI",
                     "Context API",
+                    "Cloudinary",
                     "Vercel (Frontend)",
                     "Render (Backend)"
                 ],
+
                 "header": {
                     "title": "Synk Chat Application",
-                    "description": "A full-stack, real-time communication platform (WhatsApp-style) engineered for instant, secure messaging. Features include end-to-end encryption (E2EE), multi-type media sharing, advanced UX with alphabetical contacts, archiving, and 36+ customizable themes.",
-                    "duration": "July 2024 – November 2024",
+                    "description": "A modern, full-stack real-time chat application inspired by WhatsApp. Built with end-to-end encryption, secure authentication, Cloudinary media storage, multi-format message support, archiving, bookmarking, theme customization, and a highly polished user experience powered by Socket.io.", "duration": "October 2025 – November 2025",
                     "role": "Full-Stack Developer (Solo Project)"
                 },
+
                 "context": {
                     "title": "Problem Statement / Intention",
                     "goals": [
-                        "Architect and deploy a feature-rich, full-stack application that handles high-performance real-time communication.",
-                        "Implement robust, multilayered security, including JWT-mandated access and End-to-End Encryption (E2EE) for message content.",
-                        "Deliver an intuitive and responsive user experience with modern features like contact organization and media sharing (images, docs, audio).",
-                        "Enable extensive user customization by integrating 36+ thematic options via DaisyUI.",
-                        "Utilize Socket.io for persistent, real-time, bidirectional messaging between users."
+                        "Create a high-performance real-time communication app with reliable message delivery and zero-lag interactions.",
+                        "Implement enterprise-level security using JWT authentication, bcrypt password hashing, and custom E2EE.",
+                        "Support rich media messaging—images, documents, audio—with efficient Cloudinary-based storage.",
+                        "Build a modern, intuitive UI featuring alphabetical contacts, chat archiving, bookmarking, and smooth modal/image viewers.",
+                        "Deliver deep visual customization with 36+ user-selectable themes.",
+                        "Use Socket.io for stable real-time presence updates, message events, and live typing indicators."
                     ]
                 },
+
                 "process": {
                     "title": "Process & Challenges",
                     "challenge": [
-                        "Integrating Socket.io into the Express backend for low-latency, real-time message broadcasting and status updates.",
-                        "Implementing E2EE and robust JWT-based authentication combined with bcrypt for user session and data security.",
-                        "Developing efficient file handling and categorization for multi-format media sharing (images, docs, audio, location, links).",
-                        "Designing a highly responsive UI with advanced features like alphabetical contact sorting, archiving, and bookmarking.",
-                        "Managing complex global state (Context API) to support 36+ dynamic themes via DaisyUI."
+                        "Building a robust Socket.io setup inside the Express environment to handle real-time messaging, status broadcasting, and notification events.",
+                        "Implementing end-to-end encryption to ensure message payloads stay unreadable—even on the server.",
+                        "Designing a secure JWT-based authentication system with bcrypt-hashed passwords for complete user protection.",
+                        "Managing global state for chats, themes, user sessions, and UI interactions using Context API.",
+                        "Handling multiple media formats and integrating Cloudinary to store, categorize, and deliver optimized media files.",
+                        "Creating smooth UX components including modals, full-screen image viewers, and link preview cards.",
+                        "Ensuring clean global state management for features like themes, modals, contact filters, and multi-chat behaviors.",
+                        "Building advanced features such as alphabetical contact lists, chat archiving, and a dedicated bookmark system.",
+
                     ]
                 },
+
                 "myContribution": {
                     "title": "My Contribution",
                     "myrole": [
-                        "Engineered the entire **Socket.io-based real-time communication layer** for instant message delivery.",
-                        "Developed the **secure authentication pipeline** (login/signup) using **JWT** for token generation and **bcrypt** for password hashing.",
-                        "Implemented **End-to-End Encryption (E2EE)** logic to secure all chat content.",
-                        "Designed and built the **fully responsive frontend** using React, Tailwind CSS, and Context API.",
-                        "Created backend APIs for handling, categorizing, and serving **multi-format media** (images, docs, audio, links, location).",
-                        "Added advanced UX features: **alphabetical contact tabs**, **bookmark tab**, and **archive tab**.",
-                        "Integrated **DaisyUI** to provide users with **36+ theme customization** options.",
-                        "Managed scalable message and user data storage using a **MongoDB Atlas** cluster."
+                        "Developed the full Socket.io real-time messaging layer including delivery events, read receipts, online/offline presence, and typing indicators.",
+                        "Created a secure JWT authentication system with bcrypt password hashing and protected user sessions.",
+                        "Implemented End-to-End Encryption (E2EE) ensuring messages are encrypted before leaving the client.",
+                        "Integrated Cloudinary to store, compress, and deliver all media uploads (images, docs, audio) efficiently.",
+                        "Built a polished UI with React, Tailwind CSS, DaisyUI, and custom components like modals, image viewers, and link preview cards.",
+                        "Implemented advanced chat features including archive, bookmark, and quick contact filtering.",
+                        "Designed alphabetical contact grouping and created dynamic navigation for A–Z contact browsing.",
+                        "Developed backend REST APIs for messages, media, user profiles, link previews, archived chats, and bookmarks.",
+                        "Managed global theme and state with Context API, powering 36+ customizable UI themes.",
+                        "Optimized MongoDB models and queries for scalable, real-time data delivery over WebSockets."
                     ]
                 },
+
                 "outcomes": {
                     "title": "Outcomes",
                     "results": [
-                        "Successfully delivered a secure, highly scalable, full-stack, real-time chat application with a professional feature set.",
-                        "Validated proficiency in architecting and deploying complex MERN-stack applications, hosted on **Vercel** (frontend) and **Render** (backend).",
-                        "Achieved robust security through the mandatory **JWT/bcrypt** system and the implementation of **E2EE**.",
-                        "Provided a superior and customizable user experience featuring fast API fetching, multi-media sharing, and extensive thematic control.",
-                        "Demonstrated the ability to integrate advanced real-time libraries (**Socket.io**) and modern styling frameworks (**Tailwind/DaisyUI**) effectively."
+                        "Delivered a fully functional, secure, scalable real-time messaging system with modern features and reliable performance.",
+                        "Successfully demonstrated complete ownership of a full-stack product—from backend architecture to UI engineering.",
+                        "Successfully integrated Cloudinary, enabling instant cloud-based media uploads with optimized delivery.",
+                        "Achieved strong security using JWT, bcrypt, and E2EE, ensuring user data privacy and message integrity.",
+                        "Implemented premium UX touches including image viewer modals, link previews, theme personalization, and organized contact sorting.",
+                        "Validated expertise in real-time architecture, encryption handling, cloud media storage, and production deployment workflows.",
+                        "Demonstrated strong command of real-time systems, encryption, cloud services, global state, and modern UI patterns."
                     ]
                 },
 
@@ -1053,80 +1099,112 @@ const portfolioData = [
                     screenShots: [
                         {
                             title: "",
-                            image: dr_web_cust_1,
+                            image: synk_chat_1,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_2,
+                            image: synk_chat_2,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_3,
+                            image: synk_chat_3,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_4,
+                            image: synk_chat_4,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_5,
+                            image: synk_chat_5,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_6,
+                            image: synk_chat_6,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_7,
+                            image: synk_chat_7,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_8,
+                            image: synk_chat_8,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_9,
+                            image: synk_chat_9,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_10,
+                            image: synk_chat_10,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_11,
+                            image: synk_chat_11,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_12,
+                            image: synk_chat_12,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_13,
+                            image: synk_chat_13,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_14,
+                            image: synk_chat_14,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_15,
+                            image: synk_chat_15,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_16,
+                            image: synk_chat_16,
                         },
                         {
                             title: "",
-                            image: dr_web_cust_17,
+                            image: synk_chat_17,
+                        },
+                        {
+                            title: "",
+                            image: synk_chat_18,
+                        },
+                        {
+                            title: "",
+                            image: synk_chat_19,
+                        },
+                        {
+                            title: "",
+                            image: synk_chat_20,
+                        },
+                        {
+                            title: "",
+                            image: synk_chat_21,
+                        },
+                        {
+                            title: "",
+                            image: synk_chat_22,
+                        },
+                        {
+                            title: "",
+                            image: synk_chat_23,
+                        },
+                        {
+                            title: "",
+                            image: synk_chat_24,
+                        },
+                        {
+                            title: "",
+                            image: synk_chat_25,
                         },
 
                     ],
                 },
                 navigation: {
-                    demo: "https://drbookwebapp-frontend.onrender.com/",
-                    repo: "https://github.com/Himanshu12866/drbookwebapp"
+                    demo: "https://synk-chat-five.vercel.app/",
+                    repo: "https://github.com/Himanshu12866/synk_chat.git"
                 },
-                image: dr_web_cust_3,
+                image: synk_chat_10,
                 text: "Synk Chat App",
             },
             {
@@ -1138,7 +1216,7 @@ const portfolioData = [
                     title: "Dr. Appointment Booking Web App",
                     description: "A full-stack web application that allows patients to securely register, log in, browse available doctors, and book appointments online. The platform is built with JWT-based authentication, hashed passwords for security, and integrated payment gateway to streamline consultation payments.",
                     duration: "July 2024 – November 2024",
-                    role: "Full-Stack Developer",
+                    role: "Full-Stack Developer (Solo Project)",
                 },
                 context: {
                     title: "Problem Statement / Intention",
@@ -1272,7 +1350,7 @@ const portfolioData = [
                     title: "Doctor & Admin Control Panel",
                     description: "A web application built for administrators and doctors to manage hospital operations. The admin has full control over managing doctors, patients, and appointments, while doctors can log in to view and manage their schedules. The system features secure authentication, CRUD operations, and a responsive dashboard interface.",
                     duration: "July 2024 – November 2024",
-                    role: "Full-Stack Developer",
+                    role: "Full-Stack Developer (Solo Project)",
                 },
                 context: {
                     title: "Problem Statement / Intention",

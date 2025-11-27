@@ -9,10 +9,10 @@ import React, {
 import { gsap } from "gsap";
 import MuiMasonry from "@mui/lab/Masonry"; // aliased to avoid naming collision
 import Box from "@mui/material/Box";
-import { AppContext } from "../../context/datacontext";
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import CloseIcon from '@mui/icons-material/Close';
+import { AppContext , darkMode} from "../../context/datacontext";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import CloseIcon from "@mui/icons-material/Close";
 /* ---------- helpers (kept from your original) ---------- */
 const useMedia = (queries, values, defaultValue) => {
   const get = () =>
@@ -109,7 +109,8 @@ export default function Masonry({
       let startY = 0;
       let dirs = ["top", "bottom", "left", "right"];
       let direction = animateFrom;
-      if (animateFrom === "random") direction = dirs[Math.floor(Math.random() * dirs.length)];
+      if (animateFrom === "random")
+        direction = dirs[Math.floor(Math.random() * dirs.length)];
 
       switch (direction) {
         case "top":
@@ -167,12 +168,21 @@ export default function Masonry({
       itemRefs.current.forEach((el) => {
         try {
           gsap.killTweensOf(el);
-        } catch (e) { }
+        } catch (e) {}
       });
     };
     // we intentionally include columns so layout changes retrigger
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [imagesReady, items, columns, animateFrom, stagger, duration, ease, blurToFocus]);
+  }, [
+    imagesReady,
+    items,
+    columns,
+    animateFrom,
+    stagger,
+    duration,
+    ease,
+    blurToFocus,
+  ]);
   // hover handlers (operate on DOM node)
   const handleMouseEnter = (id, element) => {
     if (scaleOnHover) {
@@ -205,28 +215,46 @@ export default function Masonry({
   const openModalBox = (item, index) => setBoxIndex(index);
   const closeModalBox = () => setBoxIndex(null);
   const showNext = () => setBoxIndex((prev) => (prev + 1) % items.length);
-  const showPrev = () => setBoxIndex((prev) => (prev - 1 + items.length) % items.length);
-  const { darkMode } = useContext(AppContext)
+  const showPrev = () =>
+    setBoxIndex((prev) => (prev - 1 + items.length) % items.length);
+  const { darkMode } = useContext(AppContext);
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        closeModalBox(); // your close function
+      }
+    };
+
+    window.addEventListener("keydown", handleEsc);
+
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
   return (
     <>
       {boxIndex !== null && (
         <div
-          className={`flex justify-center items-center p-5 fixed top-0 left-0 w-full h-full z-50 bg-black/80`}
+          className={`flex justify-center items-center p-5 fixed top-0 left-0 w-full h-full z-50 ${darkMode ? 'bg-black/80' : 'bg-white/80'} `}
         >
           <img
             src={items[boxIndex].img}
             alt="modal-img"
-            style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", borderRadius: 20 }}
+            style={{
+              maxWidth: "100%",
+              maxHeight: "100%",
+              objectFit: "contain",
+              borderRadius: 20,
+            }}
           />
           <button
             style={{
               zIndex: "999",
             }}
             onClick={closeModalBox}
-            className={` backdrop-blur-sm ${!darkMode
+            className={` backdrop-blur-sm ${
+              !darkMode
                 ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
                 : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              } absolute top-6 right-6 p-2 w-10 h-10 rounded-full transition-opacity hover:duration-300 flex items-center justify-center flex-col text-xl font-semibold group `}
+            } absolute top-6 right-6 p-2 w-10 h-10 rounded-full transition-opacity hover:duration-300 flex items-center justify-center flex-col text-xl font-semibold group `}
             aria-label="Scroll to top"
           >
             <CloseIcon fontSize="30px" className="text-xl" />
@@ -238,10 +266,11 @@ export default function Masonry({
               left: 20,
               top: "50%",
             }}
-            className={` backdrop-blur-sm ${!darkMode
+            className={` backdrop-blur-sm ${
+              !darkMode
                 ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
                 : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              } absolute top-6 right-6 p-2 w-10 h-10 rounded-full transition-opacity hover:duration-300 flex items-center justify-center flex-col text-xl font-semibold group `}
+            } absolute top-6 right-6 p-2 w-10 h-10 rounded-full transition-opacity hover:duration-300 flex items-center justify-center flex-col text-xl font-semibold group `}
             aria-label="previous image"
           >
             <NavigateBeforeIcon className="text-2xl" fontSize="30px" />
@@ -253,10 +282,11 @@ export default function Masonry({
               right: 20,
               top: "50%",
             }}
-            className={` backdrop-blur-sm ${!darkMode
+            className={` backdrop-blur-sm ${
+              !darkMode
                 ? "bg-[rgba(245,245,245,0.9)]  shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
                 : "bg-[#00000052]  shadow-[0_0_8px_rgba(0,255,255,0.6)]"
-              } absolute top-6 right-6 p-2 w-10 h-10 rounded-full transition-opacity hover:duration-300 flex items-center justify-center flex-col text-xl font-semibold group `}
+            } absolute top-6 right-6 p-2 w-10 h-10 rounded-full transition-opacity hover:duration-300 flex items-center justify-center flex-col text-xl font-semibold group `}
             aria-label="next image"
           >
             <NavigateNextIcon />
@@ -264,7 +294,18 @@ export default function Masonry({
         </div>
       )}
 
-      <Box sx={{ width: "100%", p: 1,borderRadius: 5, border:"1px solid rgba(255,255,255,0.4)", display:"flex",justifyContent:"center",alignItems:"center",mb:4 }}>
+      <Box
+        sx={{
+          width: "100%",
+          p: 1,
+          borderRadius: 5,
+          border: "1px solid rgba(255,255,255,0.4)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          mb: 4,
+        }}
+      >
         <MuiMasonry columns={columns} spacing={2}>
           {items.map((item, index) => {
             const size = imageSizes[index] || { width: 400, height: 300 };
@@ -304,7 +345,8 @@ export default function Masonry({
                       position: "absolute",
                       inset: 0,
                       borderRadius: "10px",
-                      background: "linear-gradient(to top right, rgba(236,72,153,0.5), rgba(14,165,233,0.5))",
+                      background:
+                        "linear-gradient(to top right, rgba(236,72,153,0.5), rgba(14,165,233,0.5))",
                       opacity: 0,
                       pointerEvents: "none",
                     }}
