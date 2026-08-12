@@ -1,15 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../../context/datacontext";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import SplitText from "../SplitText";
 const HomeGithub = () => {
-  const { darkMode, homeData } = useContext(AppContext);
-  const [projects, setProject] = useState([]);
-  useEffect(() => {
-    const allProjects = homeData.find((item) => item.id === 12);
-    const projectsData = allProjects?.projects || null;
-    setProject(projectsData);
-  }, [homeData]);
+  const { darkMode} = useContext(AppContext);
+  
+ 
  
 
   return (
@@ -31,24 +27,22 @@ const HomeGithub = () => {
       </h2>
 
       <div
-        className={` xl:w-4/5 3xl:w-3/5 w-11/12 xl:p-0 p-4  flex flex-col justify-between gap-5  z-[3] rounded-[20px] relative  pb-6 backdrop-blur-sm ${
+        className={` xl:w-4/5 3xl:w-3/5 w-11/12 xl:p-0 p-4  flex flex-col justify-between gap-5  z-[3] rounded-[20px] relative backdrop-blur-sm ${
           !darkMode
             ? "bg-[rgba(245,245,245,0.9)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_0.706592px_0.706592px_-0.666667px,rgba(0,0,0,0.08)_0px_1.80656px_1.80656px_-1.33333px,rgba(0,0,0,0.07)_0px_3.62176px_3.62176px_-2px,rgba(0,0,0,0.07)_0px_6.8656px_6.8656px_-2.66667px,rgba(0,0,0,0.05)_0px_13.6468px_13.6468px_-3.33333px,rgba(0,0,0,0.02)_0px_30px_30px_-4px,rgb(255,255,255)_0px_3px_1px_0px_inset]"
             : "bg-[#00000052] rounded-xl shadow-[0_0_8px_rgba(0,255,255,0.6)]"
         }`}
       >
-        <div className="md:pt-8 pt-3 flex justify-center items-center">
-          <img    width="auto"
-                  height="auto"
-                  loading="lazy"
+        {/* <div className="md:pt-8 pt-3 flex justify-center items-center">
+          <img
             src={`https://github-profile-trophy.vercel.app/?username=himanshu12866&theme=${
               darkMode ? "dracula" : "flat"
             }&margin-w=15&margin-h=15`}
             alt="himanshu12866"
             className="md:p-4"
           />
-        </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-8 md:p-4 items-center justify-center">
+        </div> */}
+        {/* <div className="grid md:grid-cols-2 grid-cols-1 gap-8 md:p-4 items-center justify-center">
           <img
             src={`https://github-readme-stats.vercel.app/api?username=himanshu12866&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=${
               darkMode ? "dracula" : "flat"
@@ -69,13 +63,11 @@ const HomeGithub = () => {
             }&hide_border=false&order=2`}
             alt="languages graph"
           />{" "}
-        </div>
+        </div> */}
         <div className="md:p-4 flex justify-center items-center">
           <img
-            alt="commit graph"    width="auto"
-                  height="auto"
-                  loading="lazy"
-            align="center" className="md:pb-8 pb-3"
+            alt="commit graph"
+            align="center" className=""
             src={`https://github-readme-activity-graph.vercel.app/graph?username=himanshu12866&theme=${
               darkMode ? "dracula" : "flat"
             }`}

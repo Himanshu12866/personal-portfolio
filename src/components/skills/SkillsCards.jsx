@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../../context/datacontext";
 import Tilt from "react-parallax-tilt";
 import expresslight from "../../assets/images/express.png";

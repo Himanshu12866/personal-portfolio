@@ -1,18 +1,13 @@
-import React, { useEffect, useRef, useContext } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../../context/datacontext";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BlurText from "../BlurText";
 import SplitText from "../SplitText";
 import axios from "axios";
 import { toast } from "react-toastify";
-gsap.registerPlugin(ScrollTrigger);
 const HomeContact = () => {
   const { darkMode } = useContext(AppContext);
-  const containerRef = useRef(null);
-  const stickyLeftRef = useRef(null);
   const initialFormData = {
     name: "",
     email: "",
@@ -82,37 +77,9 @@ const HomeContact = () => {
       setLoding(false);
     }
   };
-  useEffect(() => {
-    let trigger;
-    const createScrollTrigger = () => {
-      if (
-        window.innerWidth >= 1024 &&
-        containerRef.current &&
-        stickyLeftRef.current
-      ) {
-        trigger = ScrollTrigger.create({
-          trigger: containerRef.current,
-          start: "top 25%",
-          end: "bottom bottom",
-          pin: stickyLeftRef.current,
-          pinSpacing: true,
-        });
-      }
-    };
-    createScrollTrigger();
-    const handleResize = () => {
-      if (trigger) trigger.kill();
-      createScrollTrigger();
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      if (trigger) trigger.kill();
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div
-      className={`flex justify-center flex-col gap-24 items-center w-full md:py-20 `}
+      className={`flex justify-center flex-col gap-24 relative items-center w-full md:py-20 `}
     >
       {window.location.pathname === "/" && (
         <h2 className="text-4xl font-bold text-center">
@@ -131,13 +98,9 @@ const HomeContact = () => {
         </h2>
       )}
       <div
-        ref={containerRef}
-        style={{ minHeight: "108vh" }}
-        className="2xl:w-3/5  xl:w-4/5 w-full  px-4 xl:px-0 flex lg:flex-row flex-col justify-center items-start gap-6 "
-      >
+        className="2xl:w-3/5  xl:w-4/5 w-full  px-4 xl:px-0 flex lg:flex-row flex-col justify-center items-start gap-6">
         <div
-          ref={stickyLeftRef}
-          className="lg:w-2/5 w-full flex flex-col gap-4 z-[4]"
+          className="lg:w-2/5 w-full flex flex-col lg:sticky lg:top-0 gap-4 z-[4]"
         >
           <div
             className={` w-full flex flex-col gap-3  p-4 md:px-8 px-6 rounded-[20px] backdrop-blur-sm ${
@@ -291,7 +254,7 @@ const HomeContact = () => {
               <div className="flex flex-col gap-2 mb-2 relative">
                 <label className="text-lg text-left font-para flex justify-start items-center pt-2 pb-1 px-2 font-normal">
                   <BlurText
-                    text="phone"
+                    text="Phone"
                     delay={5}
                     animateBy="words"
                     direction="bottom"

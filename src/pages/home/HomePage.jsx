@@ -13,7 +13,7 @@ const HomePage = () => {
   const lenisRef = useLenis();
   useEffect(() => {
     lenisRef?.current?.scrollTo(0); // top of the page
-  }, []);
+  }, [lenisRef]);
   return (
     <>
       <title>

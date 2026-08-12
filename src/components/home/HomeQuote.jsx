@@ -7,11 +7,11 @@ const HomeQuote = () => {
     >
       
       <BlurText
-        text="I craft clean UIs, build scalable web apps, and make ideas click into code. From design to deployment, I don’t just develop — I deliver."
+        text="I craft clean UIs, build scalable web apps, and make ideas click into code. From design to deployment, I don’t just develop - I deliver."
         delay={50}
         animateBy="words"
         direction="bottom"
-        className="md:px-20 font-medium px-8 text-center font-heading text-[#f59e0b] md:text-4xl text-2xl flex justify-center items-center tracking-wide "
+        className="md:px-20 font-medium px-8 text-center font-heading text-[#059669] md:text-4xl text-2xl flex justify-center items-center tracking-wide "
       />
     </div>
   );

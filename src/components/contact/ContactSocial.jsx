@@ -33,9 +33,9 @@ const ContactSocial = () => {
                 href="https://github.com/himanshu12866"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
+                className="flex items-center gap-3 hover:text-[#059669] transition-all duration-200"
               >
-                <GitHubIcon className="text-[#f59e0b]" fontSize="30px" />{" "}
+                <GitHubIcon className="text-[#059669]" fontSize="30px" />{" "}
                 <BlurText
                   text="Github"
                   delay={5}
@@ -49,9 +49,9 @@ const ContactSocial = () => {
                 href="https://linkedin.com/in/himanshumishra17/"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
+                className="flex items-center gap-3 hover:text-[#059669] transition-all duration-200"
               >
-                <LinkedInIcon fontSize="30px" className="text-[#f59e0b]" />{" "}
+                <LinkedInIcon fontSize="30px" className="text-[#059669]" />{" "}
                 <BlurText
                   text="LinkedIn"
                   delay={10}
@@ -65,9 +65,9 @@ const ContactSocial = () => {
                 href="https://twitter.com/hema_nshu"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
+                className="flex items-center gap-3 hover:text-[#059669] transition-all duration-200"
               >
-                <XIcon fontSize="30px" className="text-[#f59e0b]" />{" "}
+                <XIcon fontSize="30px" className="text-[#059669]" />{" "}
                 <BlurText
                   text="Twitter (X)"
                   delay={15}
@@ -81,9 +81,9 @@ const ContactSocial = () => {
                 href="https://wa.me/917804825835?text=Hello%20there!"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
+                className="flex items-center gap-3 hover:text-[#059669] transition-all duration-200"
               >
-                <WhatsAppIcon fontSize="30px" className="text-[#f59e0b]" />{" "}
+                <WhatsAppIcon fontSize="30px" className="text-[#059669]" />{" "}
                 <BlurText
                   text="WhatsApp"
                   delay={20}

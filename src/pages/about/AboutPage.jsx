@@ -10,7 +10,7 @@ const AboutPage = () => {
   const lenisRef = useLenis();
   useEffect(() => {
     lenisRef?.current?.scrollTo(0); // top of the page
-  }, []);
+  }, [lenisRef]);
   return (
     <><title>Get to Know Himanshu's Personal details, Education, Experience</title>
       <meta

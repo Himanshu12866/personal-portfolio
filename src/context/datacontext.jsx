@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import portfolioData from "../data/data";
+import portfolioData from "../data/data.js";
 
 export const AppContext = createContext();
 const AppContextProvider = (props) => {

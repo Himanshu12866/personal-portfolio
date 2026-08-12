@@ -181,7 +181,7 @@ const AboutCertificate = () => {
                 <p className="text-xl font-medium font-heading">
                   View Certificate :
                 </p>
-                <div className="lg:gap-0 flex justify-center   items-center text-[#f59e0b] gap-2   text-4xl">
+                <div className="lg:gap-0 flex justify-center   items-center text-[#059669] gap-2   text-4xl">
                   <a
                     className="hover:text-[#e69494] transition-all flex flex-row gap-2 justify-center items-center hover:duration-200"
                     href={item.certificateLink}
@@ -229,7 +229,7 @@ const AboutCertificate = () => {
                       key={index}
                       className="flex flex-row gap-2 justify-start ism:items-center items-start my-3"
                     >
-                      <VerifiedIcon className="text-[#f59e0b]" />
+                      <VerifiedIcon className="text-[#059669]" />
                       <BlurText
                         text={item}
                         delay={5}
@@ -247,7 +247,7 @@ const AboutCertificate = () => {
                       key={index}
                       className="flex flex-row gap-2 justify-start ism:items-center items-start my-4"
                     >
-                      <VerifiedIcon className="text-[#f59e0b]" />
+                      <VerifiedIcon className="text-[#059669]" />
                       <BlurText
                         text={item}
                         delay={5}

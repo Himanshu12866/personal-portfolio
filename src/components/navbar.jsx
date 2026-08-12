@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import dark_logo from "../assets/icons_logos/mern_black_mode-01.png";
-import light_logo from "../assets/icons_logos/mern_light_mode.png";
+import dark_logo from "../assets/icons_logos/new_logo-01.png";
+import light_logo from "../assets/icons_logos/new_logo-01.png";
 import GsapToggle from "./toggleswitch";
 import { AppContext } from "../context/datacontext";
 import { Link, useLocation } from "react-router-dom";
@@ -15,13 +15,6 @@ const Navbar = () => {
   const [dropDown, setDropDown] = useState(false);
   const [perProjects, setPerProjects] = useState([]);
   const [profProjects, setProfProjects] = useState([]);
-  const links = [
-    { name: "home", link: "/" },
-    { name: "about", link: "/about" },
-    { name: "skills", link: "/skills" },
-    { name: "projects", link: "/projects" },
-    { name: "contact", link: "/contact" },
-  ];
   const location = useLocation();
 
   useEffect(() => {
@@ -64,7 +57,7 @@ const Navbar = () => {
                 <Link
                   to="/"
                   className={`main-nav-links ${
-                    location.pathname === "/" ? "text-[#f59e0b]" : ""
+                    location.pathname === "/" ? "text-[#059669]" : ""
                   }`}
                 >
                   Home
@@ -73,7 +66,7 @@ const Navbar = () => {
                 <Link
                   to="/about"
                   className={`main-nav-links ${
-                    location.pathname.includes("/about") ? "text-[#f59e0b]" : ""
+                    location.pathname.includes("/about") ? "text-[#059669]" : ""
                   }`}
                 >
                   About
@@ -82,7 +75,7 @@ const Navbar = () => {
                   to="/skills"
                   className={`main-nav-links ${
                     location.pathname.includes("/skills")
-                      ? "text-[#f59e0b]"
+                      ? "text-[#059669]"
                       : ""
                   }`}
                 >
@@ -96,7 +89,7 @@ const Navbar = () => {
                     to="/projects"
                     className={`main-nav-links flex justify-center items-center ${
                       location.pathname.includes("/projects")
-                        ? "text-[#f59e0b]"
+                        ? "text-[#059669]"
                         : ""
                     }`}
                   >
@@ -130,9 +123,9 @@ const Navbar = () => {
                             <Link
                               key={index}
                               to={`projects/case-study/${item.slug}`}
-                              className={`truncate w-48 hover:text-[#f59e0b] transition-colors ${
+                              className={`truncate w-48 hover:text-[#059669] transition-colors ${
                                 location.pathname.includes(item.slug)
-                                  ? "text-[#f59e0b]"
+                                  ? "text-[#059669]"
                                   : ""
                               }`}
                               title={item.text}
@@ -154,7 +147,7 @@ const Navbar = () => {
                             <Link
                               key={index}
                               to={`projects/case-study/${item.slug}`}
-                              className="truncate w-48 hover:text-[#f59e0b] transition-colors"
+                              className="truncate w-48 hover:text-[#059669] transition-colors"
                               title={item.text}
                               onClick={() => setDropDown(false)}
                             >
@@ -171,7 +164,7 @@ const Navbar = () => {
                   to="/contact"
                   className={`main-nav-links ${
                     location.pathname.includes("/contact")
-                      ? "text-[#f59e0b]"
+                      ? "text-[#059669]"
                       : ""
                   }`}
                 >
@@ -222,7 +215,12 @@ const Navbar = () => {
                 loading="lazy"
                  />
               </a>
-              <button onClick={() => setMobName(false)}>
+              <button
+                onClick={() => {
+                  setMobName(false);
+                  setDropDown(false);
+                }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-10 h-10"
@@ -238,18 +236,24 @@ const Navbar = () => {
                 <Link
                   to="/"
                   className={`${
-                    location.pathname === "/" ? "text-[#f59e0b]" : ""
-                  } hover:text-[#f59e0b]   transition-all duration-200`}
-                  onClick={() => setMobName(false)}
+                    location.pathname === "/" ? "text-[#059669]" : ""
+                  } hover:text-[#059669]   transition-all duration-200`}
+                  onClick={() => {
+                    setMobName(false);
+                    setDropDown(false);
+                  }}
                 >
                   Home
                 </Link>
                 <Link
                   to="/about"
                   className={`${
-                    location.pathname.includes("/about") ? "text-[#f59e0b]" : ""
-                  } hover:text-[#f59e0b]   transition-all duration-200`}
-                  onClick={() => setMobName(false)}
+                    location.pathname.includes("/about") ? "text-[#059669]" : ""
+                  } hover:text-[#059669]   transition-all duration-200`}
+                  onClick={() => {
+                    setMobName(false);
+                    setDropDown(false);
+                  }}
                 >
                   About
                 </Link>
@@ -257,23 +261,42 @@ const Navbar = () => {
                   to="/skills"
                   className={`${
                     location.pathname.includes("/skills")
-                      ? "text-[#f59e0b]"
+                      ? "text-[#059669]"
                       : ""
-                  } hover:text-[#f59e0b]   transition-all duration-200`}
-                  onClick={() => setMobName(false)}
+                  } hover:text-[#059669]   transition-all duration-200`}
+                  onClick={() => {
+                    setMobName(false);
+                    setDropDown(false);
+                  }}
                 >
                   Skills
                 </Link>
+                <Link
+                  to="/projects"
+                  className={`${
+                    location.pathname.includes("/skills")
+                      ? "text-[#059669]"
+                      : ""
+                  } hover:text-[#059669]   transition-all duration-200`}
+                  onClick={() => {
+                    setMobName(false);
+                    setDropDown(false);
+                  }}
+                >
+                  All Projects
+                </Link>
                 <li className="flex justify-start flex-col items-start gap-1 relative group">
                   <button
-                    onClick={() => setDropDown(!dropDown)} // mobile toggle
+                    onClick={() => {
+                      setDropDown(!dropDown);
+                    }} // mobile toggle
                     className={`main-nav-links flex justify-center items-center ${
-                      location.pathname.includes("/projects")
-                        ? "text-[#f59e0b]"
+                      location.pathname.includes("/case-study")
+                        ? "text-[#059669]"
                         : ""
                     }`}
                   >
-                    Projects{" "}
+                    Project Casestudy
                     <KeyboardArrowDownIcon
                       fontSize="small"
                       className={`ml-1 transition-transform duration-200 ${
@@ -290,7 +313,7 @@ const Navbar = () => {
         transition-all duration-300 ease-in-out 
         ${
           !darkMode
-            ? "bg-[rgba(245,245,245,1)] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_1px_2px,rgba(0,0,0,0.08)_0px_2px_4px,rgba(0,0,0,0.07)_0px_4px_8px,rgba(0,0,0,0.07)_0px_8px_16px,rgba(0,0,0,0.05)_0px_16px_32px,rgba(0,0,0,0.02)_0px_32px_64px]"
+            ? "bg-[#000000c9] rounded-xl shadow-[rgba(0,0,0,0.08)_0px_1px_2px,rgba(0,0,0,0.08)_0px_2px_4px,rgba(0,0,0,0.07)_0px_4px_8px,rgba(0,0,0,0.07)_0px_8px_16px,rgba(0,0,0,0.05)_0px_16px_32px,rgba(0,0,0,0.02)_0px_32px_64px]"
             : "bg-[#000000c9] rounded-xl shadow-[0_0_12px_rgba(0,255,255,0.6)]"
         } backdrop-blur-[10px] px-6 py-5 z-50`}
                     >
@@ -304,9 +327,9 @@ const Navbar = () => {
                             <Link
                               key={index}
                               to={`projects/case-study/${item.slug}`}
-                              className={`truncate w-full md:w-48 hover:text-[#f59e0b] transition-colors ${
+                              className={`truncate w-full md:w-48 hover:text-[#059669] transition-colors ${
                                 location.pathname.includes(item.slug)
-                                  ? "text-[#f59e0b]"
+                                  ? "text-[#059669]"
                                   : ""
                               }`}
                               title={item.text}
@@ -331,9 +354,9 @@ const Navbar = () => {
                             <Link
                               key={index}
                               to={`projects/case-study/${item.slug}`}
-                              className={`truncate w-full md:w-48 hover:text-[#f59e0b] transition-colors ${
+                              className={`truncate w-full md:w-48 hover:text-[#059669] transition-colors ${
                                 location.pathname.includes(item.slug)
-                                  ? "text-[#f59e0b]"
+                                  ? "text-[#059669]"
                                   : ""
                               }`}
                               title={item.text}
@@ -354,9 +377,12 @@ const Navbar = () => {
                 <Link
                   to="/contact"
                   className={`${
-                    location.pathname === "/contact" ? "text-[#f59e0b]" : ""
-                  } hover:text-[#f59e0b]  transition-all duration-200`}
-                  onClick={() => setMobName(false)}
+                    location.pathname === "/contact" ? "text-[#059669]" : ""
+                  } hover:text-[#059669]  transition-all duration-200`}
+                  onClick={() => {
+                    setMobName(false);
+                    setDropDown(false);
+                  }}
                 >
                   Contact Me
                 </Link>

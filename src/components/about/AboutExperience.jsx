@@ -210,7 +210,7 @@ const AboutExperience = () => {
                       key={index}
                       className="flex flex-row gap-2 justify-start ism:items-center items-start my-3"
                     >
-                      <VerifiedIcon className="text-[#f59e0b]" />
+                      <VerifiedIcon className="text-[#059669]" />
                       <BlurText
                         text={item}
                         delay={5}
@@ -228,7 +228,7 @@ const AboutExperience = () => {
                       key={index}
                       className="flex flex-row gap-2 justify-start ism:items-center items-start my-4"
                     >
-                      <VerifiedIcon className="text-[#f59e0b]" />
+                      <VerifiedIcon className="text-[#059669]" />
                       <BlurText
                         text={item}
                         delay={5}
