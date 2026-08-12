@@ -124,7 +124,7 @@ const HomeBanner = () => {
                     : " shadow-[0_0_8px_rgba(0,255,255,0.6)]"
                 } rounded-[10px] font-para font-medium sm:px-8 px-3 py-3 opacity-100 hover:opacity-60 transition-all hover:duration-200 shadow-[rgba(158,158,158,0.69)_0px_0.706592px_0.706592px_-0.583333px,rgba(158,158,158,0.68)_0px_1.80656px_1.80656px_-1.16667px,rgba(158,158,158,0.65)_0px_3.62176px_3.62176px_-1.75px,rgba(158,158,158,0.61)_0px_6.8656px_6.8656px_-2.33333px,rgba(158,158,158,0.52)_0px_13.6468px_13.6468px_-2.91667px,rgba(158,158,158,0.3)_0px_30px_30px_-3.5px,rgba(255,255,255,1)_0px_3px_1px_0px_inset]`}
               >
-                <a href="/">
+                <a href="/contact">
                   Contact Me <ArrowOutwardIcon />
                 </a>
               </button>

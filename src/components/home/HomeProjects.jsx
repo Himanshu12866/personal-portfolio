@@ -135,7 +135,7 @@ const HomeProjects = () => {
                       key={key / 2}
                       className="flex flex-row gap-2 justify-start pb-2 sm:items-center items-start"
                     >
-                      <VerifiedIcon className="text-[#f59e0b]" />
+                      <VerifiedIcon className="text-[#059669]" />
                       <BlurText
                         text={item}
                         delay={5}

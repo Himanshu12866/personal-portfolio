@@ -110,7 +110,7 @@ export default function GsapToggle() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           ref={sunRef}
-          fill="#331D2C"
+          fill="#059669"
           viewBox="0 0 16 16"
           className="w-12 h-12 absolute"
         >
@@ -121,7 +121,7 @@ export default function GsapToggle() {
         <svg
           ref={moonRef}
           xmlns="http://www.w3.org/2000/svg"
-          fill="#f59e0b"
+          fill="#059669"
           className="w-8 h-8 absolute"
           viewBox="0 0 16 16"
         >

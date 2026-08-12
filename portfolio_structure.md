@@ -104,7 +104,7 @@
 
 ## Colors
 
--- **Heading for light abd dark theme** #f59e0b [orange]
+-- **Heading for light abd dark theme** #059669 [orange]
 -- **Paragraph for light theme** #273755 [blue]
 -- **Paragraph for dark theme** #ffffff [white]
 

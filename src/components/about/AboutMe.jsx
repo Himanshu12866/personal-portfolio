@@ -213,7 +213,7 @@ const AboutMe = () => {
                 key={(index * index) / 2}
                 className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2"
               >
-                <VerifiedIcon className="text-[#f59e0b]" />{" "}
+                <VerifiedIcon className="text-[#059669]" />{" "}
                 <BlurText
                   text={item}
                   delay={5}
@@ -242,7 +242,7 @@ const AboutMe = () => {
                 key={(index * index) / 2}
                 className="flex flex-row gap-2 justify-start ism:items-center items-start mt-2"
               >
-                <VerifiedIcon className="text-[#f59e0b]" />{" "}
+                <VerifiedIcon className="text-[#059669]" />{" "}
                 <BlurText
                   text={item}
                   delay={5}

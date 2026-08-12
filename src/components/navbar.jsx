@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import dark_logo from "../assets/icons_logos/mern_black_mode-01.png";
-import light_logo from "../assets/icons_logos/mern_light_mode.png";
+import dark_logo from "../assets/icons_logos/new_logo-01.png";
+import light_logo from "../assets/icons_logos/new_logo-01.png";
 import GsapToggle from "./toggleswitch";
 import { AppContext } from "../context/datacontext";
 import { Link, useLocation } from "react-router-dom";
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <Link
                   to="/"
                   className={`main-nav-links ${
-                    location.pathname === "/" ? "text-[#f59e0b]" : ""
+                    location.pathname === "/" ? "text-[#059669]" : ""
                   }`}
                 >
                   Home
@@ -63,7 +63,7 @@ const Navbar = () => {
                 <Link
                   to="/about"
                   className={`main-nav-links ${
-                    location.pathname.includes("/about") ? "text-[#f59e0b]" : ""
+                    location.pathname.includes("/about") ? "text-[#059669]" : ""
                   }`}
                 >
                   About
@@ -72,7 +72,7 @@ const Navbar = () => {
                   to="/skills"
                   className={`main-nav-links ${
                     location.pathname.includes("/skills")
-                      ? "text-[#f59e0b]"
+                      ? "text-[#059669]"
                       : ""
                   }`}
                 >
@@ -86,7 +86,7 @@ const Navbar = () => {
                     to="/projects"
                     className={`main-nav-links flex justify-center items-center ${
                       location.pathname.includes("/projects")
-                        ? "text-[#f59e0b]"
+                        ? "text-[#059669]"
                         : ""
                     }`}
                   >
@@ -120,9 +120,9 @@ const Navbar = () => {
                             <Link
                               key={index}
                               to={`projects/case-study/${item.slug}`}
-                              className={`truncate w-48 hover:text-[#f59e0b] transition-colors ${
+                              className={`truncate w-48 hover:text-[#059669] transition-colors ${
                                 location.pathname.includes(item.slug)
-                                  ? "text-[#f59e0b]"
+                                  ? "text-[#059669]"
                                   : ""
                               }`}
                               title={item.text}
@@ -144,7 +144,7 @@ const Navbar = () => {
                             <Link
                               key={index}
                               to={`projects/case-study/${item.slug}`}
-                              className="truncate w-48 hover:text-[#f59e0b] transition-colors"
+                              className="truncate w-48 hover:text-[#059669] transition-colors"
                               title={item.text}
                               onClick={() => setDropDown(false)}
                             >
@@ -161,7 +161,7 @@ const Navbar = () => {
                   to="/contact"
                   className={`main-nav-links ${
                     location.pathname.includes("/contact")
-                      ? "text-[#f59e0b]"
+                      ? "text-[#059669]"
                       : ""
                   }`}
                 >
@@ -229,8 +229,8 @@ const Navbar = () => {
                 <Link
                   to="/"
                   className={`${
-                    location.pathname === "/" ? "text-[#f59e0b]" : ""
-                  } hover:text-[#f59e0b]   transition-all duration-200`}
+                    location.pathname === "/" ? "text-[#059669]" : ""
+                  } hover:text-[#059669]   transition-all duration-200`}
                   onClick={() => {
                     setMobName(false);
                     setDropDown(false);
@@ -241,8 +241,8 @@ const Navbar = () => {
                 <Link
                   to="/about"
                   className={`${
-                    location.pathname.includes("/about") ? "text-[#f59e0b]" : ""
-                  } hover:text-[#f59e0b]   transition-all duration-200`}
+                    location.pathname.includes("/about") ? "text-[#059669]" : ""
+                  } hover:text-[#059669]   transition-all duration-200`}
                   onClick={() => {
                     setMobName(false);
                     setDropDown(false);
@@ -254,9 +254,9 @@ const Navbar = () => {
                   to="/skills"
                   className={`${
                     location.pathname.includes("/skills")
-                      ? "text-[#f59e0b]"
+                      ? "text-[#059669]"
                       : ""
-                  } hover:text-[#f59e0b]   transition-all duration-200`}
+                  } hover:text-[#059669]   transition-all duration-200`}
                   onClick={() => {
                     setMobName(false);
                     setDropDown(false);
@@ -268,9 +268,9 @@ const Navbar = () => {
                   to="/projects"
                   className={`${
                     location.pathname.includes("/skills")
-                      ? "text-[#f59e0b]"
+                      ? "text-[#059669]"
                       : ""
-                  } hover:text-[#f59e0b]   transition-all duration-200`}
+                  } hover:text-[#059669]   transition-all duration-200`}
                   onClick={() => {
                     setMobName(false);
                     setDropDown(false);
@@ -285,7 +285,7 @@ const Navbar = () => {
                     }} // mobile toggle
                     className={`main-nav-links flex justify-center items-center ${
                       location.pathname.includes("/case-study")
-                        ? "text-[#f59e0b]"
+                        ? "text-[#059669]"
                         : ""
                     }`}
                   >
@@ -320,9 +320,9 @@ const Navbar = () => {
                             <Link
                               key={index}
                               to={`projects/case-study/${item.slug}`}
-                              className={`truncate w-full md:w-48 hover:text-[#f59e0b] transition-colors ${
+                              className={`truncate w-full md:w-48 hover:text-[#059669] transition-colors ${
                                 location.pathname.includes(item.slug)
-                                  ? "text-[#f59e0b]"
+                                  ? "text-[#059669]"
                                   : ""
                               }`}
                               title={item.text}
@@ -347,9 +347,9 @@ const Navbar = () => {
                             <Link
                               key={index}
                               to={`projects/case-study/${item.slug}`}
-                              className={`truncate w-full md:w-48 hover:text-[#f59e0b] transition-colors ${
+                              className={`truncate w-full md:w-48 hover:text-[#059669] transition-colors ${
                                 location.pathname.includes(item.slug)
-                                  ? "text-[#f59e0b]"
+                                  ? "text-[#059669]"
                                   : ""
                               }`}
                               title={item.text}
@@ -370,8 +370,8 @@ const Navbar = () => {
                 <Link
                   to="/contact"
                   className={`${
-                    location.pathname === "/contact" ? "text-[#f59e0b]" : ""
-                  } hover:text-[#f59e0b]  transition-all duration-200`}
+                    location.pathname === "/contact" ? "text-[#059669]" : ""
+                  } hover:text-[#059669]  transition-all duration-200`}
                   onClick={() => {
                     setMobName(false);
                     setDropDown(false);

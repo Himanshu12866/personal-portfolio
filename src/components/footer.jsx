@@ -63,10 +63,10 @@ const Footer = () => {
               </div>
 
               <div className="text-lg font-para flex items-center gap-2 group">
-                <EmailIcon className="group-hover:text-[#f59e0b] transition-all duration-200" />
+                <EmailIcon className="group-hover:text-[#059669] transition-all duration-200" />
                 <a
                   href="mailto:manshu010m@gmail.com"
-                  className="group-hover:text-[#f59e0b] transition-all duration-200"
+                  className="group-hover:text-[#059669] transition-all duration-200"
                 >
                   <BlurText
                     text="manshu010m@gmail.com"
@@ -78,10 +78,10 @@ const Footer = () => {
               </div>
 
               <div className="text-lg font-para flex items-center gap-2 group">
-                <PhoneIcon className="group-hover:text-[#f59e0b] transition-all duration-200" />
+                <PhoneIcon className="group-hover:text-[#059669] transition-all duration-200" />
                 <a
                   href="tel:+917804825835"
-                  className="group-hover:text-[#f59e0b] transition-all duration-200"
+                  className="group-hover:text-[#059669] transition-all duration-200"
                 >
                   <BlurText
                     text="+91 78048 25835"
@@ -102,9 +102,9 @@ const Footer = () => {
                     to={item.link}
                     className={`${
                       location.pathname.includes(item.name)
-                        ? "text-[#f59e0b]"
+                        ? "text-[#059669]"
                         : ""
-                    } hover:text-[#f59e0b] w-28  transition-all duration-200`}
+                    } hover:text-[#059669] w-28  transition-all duration-200`}
                   >
                     <BlurText
                       text={item.name}
@@ -148,9 +148,9 @@ const Footer = () => {
                     href="https://github.com/himanshu12866"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
+                    className="flex items-center gap-3 hover:text-[#059669] transition-all duration-200"
                   >
-                    <GitHubIcon className="text-[#f59e0b]" />{" "}
+                    <GitHubIcon className="text-[#059669]" />{" "}
                     <BlurText
                       text="Github"
                       delay={5}
@@ -164,9 +164,9 @@ const Footer = () => {
                     href="https://linkedin.com/in/himanshumishra17/"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
+                    className="flex items-center gap-3 hover:text-[#059669] transition-all duration-200"
                   >
-                    <LinkedInIcon className="text-[#f59e0b]" />{" "}
+                    <LinkedInIcon className="text-[#059669]" />{" "}
                     <BlurText
                       text="LinkedIn"
                       delay={10}
@@ -180,9 +180,9 @@ const Footer = () => {
                     href="https://twitter.com/hema_nshu"
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="flex items-center gap-3 hover:text-[#f59e0b] transition-all duration-200"
+                    className="flex items-center gap-3 hover:text-[#059669] transition-all duration-200"
                   >
-                    <XIcon className="text-[#f59e0b]" />{" "}
+                    <XIcon className="text-[#059669]" />{" "}
                     <BlurText
                       text="Twitter (X)"
                       delay={15}
@@ -228,7 +228,7 @@ const Footer = () => {
             <hr className="border-t border-gray-300 mx-6" />
             <div className="text-center text-lg flex justify-center items-center font-para m-6">
               <BlurText
-                text="© 2025 Himanshu | All rights reserved."
+                text="© 2026 Himanshu | All rights reserved."
                 delay={15}
                 animateBy="words"
                 direction="bottom"

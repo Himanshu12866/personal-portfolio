@@ -138,7 +138,7 @@ const CurvedLoop = ({
           />
         </defs>
         {ready && (
-          <text xmlSpace="preserve" className={`fill-[#f59e0b] ${className ?? ""}`}>
+          <text xmlSpace="preserve" className={`fill-[#059669] ${className ?? ""}`}>
             <textPath
               ref={textPathRef}
               href={`#${pathId}`}

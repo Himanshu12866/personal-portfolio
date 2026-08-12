@@ -51,11 +51,11 @@
   height: 2px;
   left: 0;
   bottom: -2px;
-  background: #f59e0b; 
+  background: #059669; 
   transition: width 0.3s ease;
 }
 .main-nav-links:hover{
-    color: #f59e0b;
+    color: #059669;
     transition: width 0.5s ease;
     font-weight:500;
 }

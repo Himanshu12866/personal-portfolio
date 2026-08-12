@@ -32,7 +32,7 @@ const ProjectsAll = () => {
             text="Professional Journey"
           />
         </h2>
-        <CircularGallery items={items} textColor={`#ff7700`} />
+        <CircularGallery items={items} textColor={`#059669`} />
       </div>
     </>
   );
